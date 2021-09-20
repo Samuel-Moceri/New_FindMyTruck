@@ -49,8 +49,11 @@
   },
   "dependencies": {
     "@syncfusion/ej2-maps": "^19.2.60",
+    "axios": "^0.21.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1"
   }
 }
