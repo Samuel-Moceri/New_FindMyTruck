@@ -1,8 +1,7 @@
 export const initialState = {
-  logged: false,
-  email: '',
-  password: '',
-  pseudo: '',
+  logged: true,
+  password: '123456',
+  username: 'findmytruck2021@gmail.com',
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -16,15 +15,14 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         logged: true,
-        email: '',
         password: '',
-        pseudo: action.pseudo,
+        username: '',
       };
     case 'LOGOUT':
       return {
         ...state,
         logged: false,
-        pseudo: '',
+        username: '',
       };
     default:
       return state;
