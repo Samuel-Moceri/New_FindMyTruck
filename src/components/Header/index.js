@@ -1,7 +1,7 @@
 import logo from 'src/assets/images/logo.png';
 import loginLogo from 'src/assets/images/logo-login.png';
 
-import './styles.scss';
+import './style.scss';
 
 const Header = () => {
 

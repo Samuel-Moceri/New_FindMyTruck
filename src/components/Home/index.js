@@ -1,8 +1,9 @@
-const Home = () => {
+import SearchBar from 'src/components/SearchBar';
 
-    return (
-      <h1></h1>
-    )
-}
+const Home = () => (
+  <div className="home">
+   <SearchBar />   
+  </div>
+);
 
 export default Home;
