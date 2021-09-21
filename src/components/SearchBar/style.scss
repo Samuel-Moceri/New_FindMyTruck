@@ -1,5 +1,19 @@
 .searchBar {
+  display: flex;
   width: 80%;
   text-align: center;
-
+  padding: 20px;
+  border: 1px solid black;
+  border-radius : 10px;
+  font-size : 2rem;
+  justify-content: space-around;
 }
+
+.searchBar_text {
+  width: 70%;
+  
+& input{
+  width: 100%;
+}
+}
+

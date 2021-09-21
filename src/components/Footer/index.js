@@ -1,5 +1,8 @@
 import './style.scss';
 
+/**
+ * We have a composant to make our 'footer' with different 'li'
+ */
 const Footer = () => (
   <div className="footer">
     <ul className="footer_list">
