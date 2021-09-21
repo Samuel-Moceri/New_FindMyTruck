@@ -13,12 +13,9 @@ import App from 'src/components/App';
  * REACT element 
  */
 const rootReactElement = (
-  
     <BrowserRouter>
       <App />
     </BrowserRouter>
-
-
 );
 
 const target = document.getElementById('root');

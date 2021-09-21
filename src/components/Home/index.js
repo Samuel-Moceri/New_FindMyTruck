@@ -1,6 +1,6 @@
 import SearchBar from 'src/components/SearchBar';
-import './style.scss';
 
+import './style.scss';
 
 const Home = () => (
   <div className="home">
