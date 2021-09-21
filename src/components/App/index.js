@@ -1,10 +1,7 @@
 // == Import
 import './styles.scss';
-
 import Header from 'src/components/Header';
 import Home from 'src/components/Home';
-
-
 
 // == Composant
 const App = () => (
