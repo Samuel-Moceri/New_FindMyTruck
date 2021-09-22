@@ -1,5 +1,6 @@
 // == Import
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Switch, useLocation } from 'react-router-dom';
 
 import './style.scss';
@@ -11,12 +12,20 @@ import Login from 'src/components/Login';
 
 
 
+// == Composant
 function App() {
 
   const { pathname } = useLocation();
+  // We use a hook to dispatch our action
+  const dispatch = useDispatch();
+  
+  useEffect(() => { 
+    // On emet donc l'action avec le type 'LOG_USER'
+    dispatch({
+      type: 'LOG_USER',
+    });
+  }, []);
  
-
-// == Composant
 // We call the views to display them on the page
 return (
     <div className="app">
