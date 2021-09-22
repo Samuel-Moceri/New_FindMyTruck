@@ -1,7 +1,7 @@
 import './style.scss';
 
 /**
- * We have a composant to make our 'footer' with different 'li'
+ * Composant to make our 'footer' with different 'li' and links
  */
 const Footer = () => (
   <div className="footer">
