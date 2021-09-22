@@ -5,7 +5,7 @@ const Login = () => {
     
     return (
       <div className="login">
-        <h1>ICI on se LOG ! </h1>
+        <h1>Ici on se LOG</h1>
       </div>
     );
 };
