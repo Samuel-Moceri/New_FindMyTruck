@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { LOG_USER } from '../actions/users';
+import { TRY_LOGIN, login } from '../actions/users';
+
 // set the baseURl
 const api = axios.create({
   baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public/api',
@@ -9,17 +10,30 @@ const ajax = (store) => (next) => (action) => {
 
   switch(action.type) {
     // Define every params for the LOG_USER's case
-    case LOG_USER: 
-    // API request that will add itself to the baseURL with username/pass params
+    case TRY_LOGIN: 
+      const state = store.getState();
+
+      // API request that will add itself to the baseURL with username/pass params
       api.post('/login_check', {
-        username: 'findmytruck2021@gmail.com',
-        password: '123456',
-        
+        username: state.user.email,
+        password: state.user.password,
       })
+
       // What we do if the request worked
-      .then(function (response) {
-        console.log(response);
+      .then((response) => {
+        // if the connection is successful, we save the token
+        // https://github.com/axios/axios#custom-instance-defaults
+        api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
+        // console.log(response.data.token);
+
+        store.dispatch(login(response.data.token))
       })
+      
+      .catch((error) => {
+        console.error(error);
+       
+        alert('Authentification échouée');
+      });
 
       next(action);
 

@@ -1,0 +1,33 @@
+.image{
+position: absolute;
+border-radius: 50px;
+z-index: -1;
+opacity: 0.8;
+width: 80%
+}
+.contact{
+  position: absolute;
+  top : 500px;
+  right : 100px;
+  background-color: rgba(102, 102, 102, 0.50);
+  // background: url(https://iloveshoplifting.files.wordpress.com/2011/02/img_3430.jpg) no-repeat  top ; 
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+
+}
+
+.contact_form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    &_message {
+        width: 50%;
+        height: 20%;
+    }
+}
