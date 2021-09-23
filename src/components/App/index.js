@@ -1,6 +1,6 @@
 // == Import
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, Switch, useLocation } from 'react-router-dom';
 
 import './style.scss';
@@ -8,7 +8,6 @@ import Header from 'src/components/Header';
 import Home from 'src/components/Home';
 import Footer from 'src/components/Footer';
 import LoginForm from 'src/components/LoginForm';
-import TEST from 'src/components/TEST';
 
 
 
@@ -16,6 +15,7 @@ import TEST from 'src/components/TEST';
 // == Composant
 function App() {
 
+  const logged = useSelector(state => state.user.logged);
   const { pathname } = useLocation();
   // We use a hook to dispatch our action
   const dispatch = useDispatch();
@@ -34,8 +34,9 @@ return (
     {/* Switch allows you to link components with routes that you define */}
       <Switch>
         <Route path="/" exact component={Home} />
+        
         <Route path="/connexion" exact component={LoginForm} />
-        <Route path="/test" exact component={TEST} />
+        
         {/* {logged && (<Route path="/favoris" exact component={Fav} />)} */}
       </Switch>
 

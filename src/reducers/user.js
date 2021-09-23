@@ -1,10 +1,11 @@
-import { CHANGE_VALUE } from 'src/actions/users';
+import { CHANGE_VALUE, LOGIN } from 'src/actions/users';
 
 // set the initial state
 export const initialState = {
     logged: false,
     email: '',
-    password: ''
+    password: '',
+    token: ''
 };
 
 // define the reducer's properties/params
@@ -15,14 +16,14 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         [action.key]: action.value
       }
-    case 'TRY_LOGIN':
-      // requete axios pour essayer de co l'user
-
+    case LOGIN:
+      // the new state will have the new values (action.value)
       return {
         ...state,
+        logged: true,
         password: '',
         email: '',
-        logged: true
+        token: action.token
       }
     default:
       return state;
