@@ -8,6 +8,7 @@ import Header from 'src/components/Header';
 import Home from 'src/components/Home';
 import Footer from 'src/components/Footer';
 import LoginForm from 'src/components/LoginForm';
+import Contact from 'src/components/Contact';
 
 
 
@@ -33,8 +34,8 @@ return (
       <Header />
     {/* Switch allows you to link components with routes that you define */}
       <Switch>
-        <Route path="/" exact component={Home} />
-        
+      <Route path="/" exact component={Home} />
+        <Route path="/contact" exact component={Contact} />
         <Route path="/connexion" exact component={LoginForm} />
         
         {/* {logged && (<Route path="/favoris" exact component={Fav} />)} */}
