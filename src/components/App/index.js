@@ -34,7 +34,7 @@ return (
       <Header />
     {/* Switch allows you to link components with routes that you define */}
       <Switch>
-      <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/equipe" exact component={Team} />
         <Route path="/connexion" exact component={LoginForm} />
