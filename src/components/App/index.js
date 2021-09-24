@@ -9,7 +9,7 @@ import Home from 'src/components/Home';
 import Footer from 'src/components/Footer';
 import LoginForm from 'src/components/LoginForm';
 import Contact from 'src/components/Contact';
-
+import Team from 'src/components/Team';
 
 
 
@@ -36,6 +36,7 @@ return (
       <Switch>
       <Route path="/" exact component={Home} />
         <Route path="/contact" exact component={Contact} />
+        <Route path="/equipe" exact component={Team} />
         <Route path="/connexion" exact component={LoginForm} />
         
         {/* {logged && (<Route path="/favoris" exact component={Fav} />)} */}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+.team {
+  font-family: 'Varela Round', sans-serif;
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 3rem;
+}
+@keyframes pop_1 {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  transition: all 2s;
+  &:hover {
+    .text {
+      bottom: 40px;
+      opacity : 1;
+    }
+    .img{
+      transform: scale(1.1);
+      bottom: 47px;
+      // TEST: Shadow behing a clear png - CSS part
+      -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.3));
+      filter: url(#drop-shadow);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+      filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
+  }
+}
+
+@keyframes pop_2 {
+  0%   { transform: scale(1,1)    translateY(0); }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.9,1.1) translateY(-50px); }
+  50%  { transform: scale(1,1)    translateY(0); }
+  100% { transform: scale(1,1)    translateY(0); }
+}
+
+.card_1 {
+  animation: pop_2 1.7s;
+}
+
+.card_2 {
+  animation: pop_2 1.3s;
+}
+
+.card_3 {
+  animation: pop_2 1.5s;
+}
+
+.card_4 {
+  animation: pop_2 1.9s;
+}
+
+.card_5 {
+  animation: pop_2 1.1s;
+}
+
+
+.circle {
+  background-color: #BBB;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  filter: blur(2px);
+}
+.img {
+  position: relative;
+  width: 260px;
+  bottom: 30px;
+  transition: all .5s;
+}
+
+.color_1 {
+  background-color: #71be77;
+}
+
+.color_2 {
+  background-color: #f39f18;
+}
+
+.color_3 {
+  background-color: #1ca7a9;
+}
+
+.color_4 {
+  background-color: #65c9ff;
+}
+
+.color_5 {
+  background-color:  #e9383f;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 110px;
+  z-index: -1;
+  transition:  .8s;
+  opacity : 0;
+}
+
+.name {
+  font-size : 2rem;
+  font-weight: bold;
+}
+
+.role {
+  font-size : 1rem;
+  font-weight: bold;
+}
+
+.title {
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
