@@ -3,7 +3,7 @@ import { TRY_LOGIN, login } from '../actions/users';
 
 // set the baseURl
 const api = axios.create({
-  baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public/api',
+  baseURL: 'http://ec2-100-26-195-84.compute-1.amazonaws.com/api',
 });
 
 const ajax = (store) => (next) => (action) => {
