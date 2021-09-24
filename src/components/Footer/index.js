@@ -17,12 +17,14 @@ import { NavLink } from 'react-router-dom';
         >
           <li  className="footer_list_el">Contact </li>
         </NavLink>
+
         <NavLink 
         to="/equipe"
         exact
         >
           <li  className="footer_list_el">Find My Truck - since 2021</li>
         </NavLink>
+
         <NavLink 
         to="/mentions_legales"
         exact
