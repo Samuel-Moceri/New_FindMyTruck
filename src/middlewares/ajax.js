@@ -24,11 +24,11 @@ const ajax = (store) => (next) => (action) => {
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
         api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
-        // console.log(response.data.token);
 
-        store.dispatch(login(response.data.token))
+        console.log(response.data);
+        localStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data.token))
       })
-      
+
       .catch((error) => {
         console.error(error);
        
