@@ -1,0 +1,13 @@
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  width: 20%;
+  
+    & button{
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+  }
+}

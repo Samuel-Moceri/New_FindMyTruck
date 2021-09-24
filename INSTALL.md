@@ -31,7 +31,7 @@ yarn start
 ```
 
 Voilà, le modèle tourne, mais en fait ça ne sert pas à grand chose. L'idée est de se _baser sur_ le modèle, mais de le faire tourner dans un autre projet.
-
+cc
 ---
 
 Comment démarrer un projet avec ce modèle ?
