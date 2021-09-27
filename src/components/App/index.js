@@ -10,6 +10,8 @@ import Footer from 'src/components/Footer';
 import LoginForm from 'src/components/LoginForm';
 import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
+import Legals from 'src/components/Legals';
+
 
 
 
@@ -37,6 +39,7 @@ return (
         <Route path="/" exact component={Home} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/equipe" exact component={Team} />
+        <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
         
         {/* {logged && (<Route path="/favoris" exact component={Fav} />)} */}
