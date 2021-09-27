@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
 import userReducer from './user';
+import contactReducer from './contact';
 
 
 // We pass to the combineReducers an object which has the shape of the desired state
@@ -8,6 +9,7 @@ import userReducer from './user';
 // we associate to each compartment the reducer that handles this part of the state
 const rootReducer = combineReducers({
   user: userReducer,
+  contact: contactReducer,
 });
 
 export default rootReducer;

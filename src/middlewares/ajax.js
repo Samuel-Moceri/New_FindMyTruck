@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { TRY_LOGIN, login } from '../actions/users';
+import { TRY_LOGIN, login, } from '../actions/users';
+import { SEND_MESSAGE } from '../actions/contact';
 
 // set the baseURl
 const api = axios.create({
@@ -36,10 +37,27 @@ const ajax = (store) => (next) => (action) => {
       });
 
       next(action);
+    break;
+
+    case SEND_MESSAGE:
+      // const state = store.getState();
+
+      api.post('/v1/contact', {
+        name: state.contact.name,
+        email: state.contact.email,
+        object: state.contact.object,
+        message: state.contact.message,
+      })
+
+      // What we do if the request worked
+      .then((response) => {
+        console.log(response);
+      })
+    next(action); 
 
     default:
-      next(action);
-      break;
+    next(action);
+    break;
   }
  
 };

@@ -1,7 +1,7 @@
 import Field from 'src/components/Forms/Field';
 
 import { changeValue } from 'src/actions/users';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router';
 
 import './style.scss';
