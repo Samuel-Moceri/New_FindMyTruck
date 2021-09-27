@@ -10,211 +10,218 @@ const Legals = () => {
     <div className="mentions_background">
       <div className="mentions_title">Mentions légales ...</div>
       <div className="mentions_box">
-        <p>Ceci est une zone reservée aux mentions légales de FIND MY TRUC.</p>  
-        <br/>  
-        <p>Vous trouverez, ci dessous, un Lorem Ipsum tout ce qu'il y a de plus standard.</p>      
-        <br/>   
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, odit ducimus unde id tenetur voluptate reiciendis praesentium. Facere earum cupiditate voluptas praesentium, sint maiores quasi similique, velit voluptate eveniet cumque.
-        Totam dolores blanditiis modi dolor dolore amet ab, temporibus nulla odio facilis necessitatibus atque harum debitis architecto a exercitationem numquam, tempore quis consectetur illo repudiandae, accusamus quod laborum vero. Nesciunt.
-        Deserunt nesciunt molestias quaerat itaque ipsum ullam officiis harum provident. Similique est neque veniam eligendi quis. Odit necessitatibus dolores culpa dolor nam eum, aliquid fuga officiis rem perspiciatis consectetur ipsa.
-        Ex quos modi soluta ipsa voluptas accusamus assumenda hic accusantium autem nam! Repudiandae debitis autem laborum maxime sequi ipsum et. Qui laborum labore vel aperiam suscipit sunt distinctio adipisci voluptas?
-        Esse sit incidunt rerum quos. Facere reiciendis suscipit nulla, veniam velit natus at eveniet quos quibusdam, perspiciatis autem unde voluptatibus atque, corrupti voluptatem sit. Cumque voluptatibus ducimus amet exercitationem beatae!
-        Ullam iure optio nulla dolorum ratione velit hic tempora magni, dolores eos? Sunt optio ut dicta dolorem, quia id beatae labore excepturi illum delectus repellendus et quis! Voluptate, blanditiis quo.
-        Illo exercitationem quas dignissimos, officiis sunt qui nulla tempore voluptatibus dolores, illum corrupti quasi! Sapiente iste laboriosam doloribus expedita id temporibus, quod autem accusamus repudiandae repellat perspiciatis porro debitis dolores.
-        Voluptatem, eligendi voluptatum? Dolorem, voluptatum exercitationem. Hic iusto eum corrupti quo voluptatibus recusandae doloribus ab optio, quae autem corporis temporibus rerum in illo eligendi perspiciatis eveniet? Ipsam vero molestias nisi?
-        Suscipit quo odio ducimus animi officia repudiandae doloribus, nulla modi, exercitationem temporibus sapiente beatae facilis perferendis! Assumenda esse sint molestias deleniti non consequatur adipisci aliquid, quaerat, cupiditate explicabo placeat excepturi.
-        Quia inventore excepturi maxime dolores corrupti enim rem eius omnis ea, iure perspiciatis laudantium dolore architecto saepe incidunt quibusdam debitis temporibus totam recusandae earum amet velit eveniet vitae? Natus, id?
-        Facere eum at dolor exercitationem, minima suscipit temporibus similique, distinctio repellat ea provident, voluptas modi ducimus. Tempore minus quis suscipit aspernatur autem quas mollitia, velit quisquam distinctio quibusdam maiores natus.
-        Aliquam dolorem nobis tempore sunt blanditiis neque quaerat vitae in facere non facilis, doloribus porro tenetur veritatis dolores mollitia eaque voluptatem ut laboriosam ea necessitatibus illo, consectetur accusantium. Dolorum, voluptas.
-        Quasi id doloremque dolore itaque libero reprehenderit earum odio consectetur beatae ab. Temporibus cumque illum voluptate eligendi molestias consequuntur eum possimus culpa consequatur ea impedit saepe beatae eos, veniam voluptatibus?
-        Necessitatibus est rem sunt eius nulla repellat repellendus ipsam libero. Optio ut necessitatibus, illum nesciunt porro, nam suscipit quam deserunt soluta autem illo veritatis facere enim quas possimus quis incidunt?
-        Ratione eaque ullam officia facere eligendi tempore quae aliquid mollitia amet animi sint, doloribus repellat soluta perferendis minima odit fugit. Quidem aliquam sapiente possimus officiis repudiandae. A non in consectetur.
-        Fugit cumque voluptatibus quos iure placeat earum enim magnam laborum, rerum inventore quis maxime! Assumenda eius dolorem possimus ipsa esse culpa quod. Error, fugit. A, impedit necessitatibus! Debitis, libero vero!
-        Corrupti cupiditate, qui consequatur suscipit autem amet odit accusamus magni asperiores magnam, impedit quos ullam labore cumque laborum temporibus sed dolore? Inventore commodi doloribus, nostrum fugiat ipsam molestias ullam repudiandae.
-        Cum itaque tempora architecto earum eius, sed assumenda ducimus placeat eligendi, corrupti magni rerum debitis repudiandae aperiam in ab id necessitatibus, odit at dolorum quos! Vitae officiis ipsa deserunt eaque.
-        Animi, expedita iusto? Maxime eveniet vitae, esse soluta aspernatur natus ullam voluptate, quia a vero inventore dicta tempora delectus veniam distinctio magni quam accusantium quod tenetur, vel dolorum molestias! Voluptatem.
-        Corrupti natus ex fugiat blanditiis placeat molestias, aspernatur distinctio, et quae deleniti totam consequuntur laudantium provident, ducimus harum laborum voluptas aperiam nesciunt temporibus repellendus. Repudiandae ad corrupti nisi rerum aperiam.
-        Quia quae rerum, provident suscipit, architecto excepturi ullam iusto veritatis, placeat consequatur doloremque neque nobis libero velit minima tenetur est rem ea deleniti eum eius? Delectus tenetur laudantium in ut!
-        Eos quae repellendus voluptate aliquam commodi ab, tempora a praesentium corrupti. Omnis eligendi quasi natus consectetur nesciunt qui animi molestiae ab cupiditate magni, nam sunt corporis minus dolorem harum quaerat.
-        Modi consequatur sit, illo saepe similique ab unde voluptate libero qui alias, dolorum distinctio explicabo laboriosam tenetur ad autem eligendi excepturi optio ex facilis nostrum corporis eum! Veniam, laborum earum?
-        Facere explicabo error veritatis tempora, consequuntur hic quas commodi doloribus nihil inventore fugiat rerum iste totam maxime fugit necessitatibus minus aperiam obcaecati delectus quos pariatur incidunt. Quidem ullam aliquam pariatur?
-        Dolorum odit, similique aut repudiandae, sunt doloremque voluptas blanditiis aperiam distinctio optio facilis! Modi accusamus ducimus, porro perspiciatis eos nihil itaque architecto neque quo aliquid odio rem, delectus tempora autem.
-        Est maxime dicta cupiditate quas nulla, ad distinctio repellendus vero accusantium voluptate. Natus, dignissimos blanditiis possimus dolorem porro quasi, quam enim ex quae soluta odit, sint quaerat. Vitae, eius totam.
-        Officia, ab qui optio odit animi aliquid vitae earum sint? Optio tenetur distinctio, dicta voluptate obcaecati sint dolorum totam aperiam ratione odio! Beatae distinctio sit iste debitis, eveniet fugit. Molestiae.
-        A error officia temporibus laborum vitae molestias rerum ad ab delectus? Maiores distinctio delectus magni fugit quo optio culpa tenetur libero? Officiis officia consequuntur repudiandae ullam quas cum deserunt ipsum.
-        Sit aperiam earum, velit rem eos voluptate magni explicabo fugit perferendis dicta voluptates, veniam corporis, cum ex dolore exercitationem accusamus quaerat saepe harum nulla vel reprehenderit rerum facilis. Autem, accusantium!
-        Accusantium, aperiam facere illo unde provident, molestias praesentium voluptates nesciunt soluta doloribus nostrum placeat inventore cum aspernatur necessitatibus deleniti minus, quam blanditiis tempore nobis quasi. Aspernatur perspiciatis odio magni voluptas!
-        Fuga autem at voluptates sint veniam hic labore, doloremque enim quisquam excepturi! Cumque quos exercitationem sit eos saepe cum itaque! Facilis doloremque illum corporis. Temporibus facilis labore dolores ab inventore.
-        Eius deleniti aperiam, provident sequi accusamus at culpa voluptates ab, optio ipsam deserunt nam vel praesentium ratione ipsa iste vero voluptate! Aspernatur soluta voluptate laborum labore dicta, quis voluptates ab?
-        Error quae aut ad necessitatibus pariatur dolor dicta soluta architecto nam tempora expedita delectus, animi voluptas optio nisi aliquam voluptates similique iure et neque, nesciunt eum voluptatum corporis. Adipisci, necessitatibus!
-        Perspiciatis, deserunt! Fuga itaque aliquam eaque optio necessitatibus dicta officia fugiat repellat velit esse nulla, odit sit sunt. Repellat similique voluptates veritatis. Quisquam officia nam aliquid molestiae modi facere harum?
-        Neque sunt earum laborum provident, iste, unde aperiam sed mollitia eveniet asperiores beatae dolore accusantium aliquid inventore, amet ratione commodi illo optio quod nulla fugiat molestiae praesentium. Quod, facilis itaque!
-        Quibusdam saepe sed explicabo possimus amet ipsa ab corporis, temporibus officiis consectetur laudantium ullam, repellat commodi fuga soluta velit repellendus odit et, exercitationem nostrum ut in. Sunt hic dolorum sequi!
-        Voluptas officia quaerat fugiat maxime. Voluptates doloremque distinctio nulla necessitatibus optio dignissimos iure possimus, voluptatum quae cum! Fugiat aut rerum nihil sequi, eaque perferendis, amet, eveniet nostrum odio quo consequuntur.
-        Iste, nam quam odio, dolor at nisi obcaecati hic maxime, perferendis delectus dolores sequi optio aspernatur ullam minus alias quaerat. Placeat exercitationem voluptatem, in deserunt laboriosam officia odio consequatur pariatur?
-        Beatae explicabo laborum nostrum inventore repellat? Tenetur voluptas numquam consectetur eius, atque sequi! Dolorem dolor quia quaerat temporibus corporis veritatis odit? Eveniet nihil iure tempore excepturi quos. At, dolorem reiciendis?
-        Recusandae, totam voluptas vero ut dolores cumque modi reiciendis optio, expedita quo labore aperiam commodi iusto repellendus soluta! Illo, qui unde. Unde consequatur dolores doloremque alias fuga voluptates quos saepe.
-        Quibusdam optio, iure officia dolorem blanditiis obcaecati pariatur commodi quo delectus iste odit dolorum atque consequuntur illum placeat sequi totam dolor expedita minus accusamus explicabo voluptatibus. Autem in placeat culpa.
-        Accusamus, amet facere dignissimos commodi quam tempore voluptatum iure consequatur autem fugiat sequi molestiae officiis velit exercitationem fuga et, accusantium saepe nihil voluptates! Voluptate, eos vel! Ipsa voluptatum delectus temporibus!
-        Suscipit obcaecati rerum fugit unde excepturi reiciendis sit, iusto similique exercitationem dolorem commodi repellendus molestias doloremque labore a optio error dolores nesciunt alias quidem, officiis soluta sed eum et. Reprehenderit.
-        Porro cum pariatur repellendus quisquam, quas aperiam doloremque iure repudiandae eveniet beatae quaerat fugiat labore vel animi voluptatibus, laudantium, quo debitis veniam. Omnis veritatis laudantium obcaecati sint, ad consectetur tenetur.
-        Nemo mollitia quis placeat eum architecto impedit commodi alias omnis quod provident officia, sed odit quae officiis aut molestias, sapiente enim ad, ratione suscipit debitis deserunt quisquam explicabo. Beatae, atque.
-        Tempore aperiam quod dolor accusamus. Nam temporibus distinctio at sit itaque reiciendis eveniet maxime et ipsum in veritatis, ad voluptate provident animi iste quam delectus, velit repellendus explicabo laboriosam voluptatibus?
-        Repudiandae quam nesciunt veniam tempora voluptate quo hic non. Alias, culpa voluptatibus corrupti sint aperiam esse fugiat temporibus voluptate, ipsam quisquam veritatis aliquam aut asperiores deleniti reiciendis doloremque unde dolorem.
-        Natus odio rem, distinctio eius ducimus, aliquam beatae repudiandae laudantium cumque debitis hic fugiat ipsum numquam maiores. Eaque, sed minima error quis qui beatae, ducimus necessitatibus perferendis placeat, quod quibusdam?
-        Molestiae minima odit autem consequuntur enim ea ab cumque, placeat a atque pariatur saepe blanditiis voluptatem hic! Facilis necessitatibus rerum unde? Corporis, tempora. Maiores beatae officia consequuntur quasi corrupti? Distinctio.
-        Amet iusto corrupti, itaque quasi nobis quam. Quas animi praesentium obcaecati suscipit soluta earum sit quis natus libero, recusandae, ut officiis sint magni neque corporis quia illum quod odit? Quo.
-        Vero sint inventore iure qui obcaecati cupiditate totam, autem, illo ullam deserunt sapiente, dignissimos consequatur vel? Dolor quidem delectus quasi. Eum dicta iste corrupti saepe ducimus vero rerum esse incidunt.
-        Necessitatibus obcaecati veritatis omnis at nam? Eos sit eum mollitia nisi ex atque possimus similique saepe. Ipsa alias eveniet, veniam nesciunt totam numquam esse placeat officiis minima eligendi nobis consequuntur?
-        Eaque, suscipit itaque. Quas, inventore! Repellat culpa omnis ad aspernatur numquam eum voluptate sapiente odio unde esse aperiam maxime error ut autem, libero nihil cumque. Autem eveniet cum dicta at!
-        Illo blanditiis modi, corrupti facere amet, nisi itaque, porro nesciunt quod similique maiores quisquam inventore tempora. Provident, architecto illum, incidunt omnis non in sit pariatur temporibus nulla repellendus rerum doloribus.
-        Quasi consequatur non architecto sequi consequuntur. Distinctio eligendi, doloribus itaque tempore consequatur ex ut repellat, assumenda dignissimos officiis minima dolore nihil fuga delectus architecto perspiciatis sit sed amet, excepturi molestiae!
-        Perspiciatis nihil ducimus itaque, ab, officiis odio voluptas deleniti suscipit eius placeat distinctio. Deserunt quae adipisci incidunt molestias laudantium neque dolores in veniam? Sequi assumenda id quam neque, quas adipisci.
-        Accusantium sit officiis necessitatibus sint, pariatur doloribus vitae! Eum, voluptatibus fugiat laboriosam blanditiis tenetur eveniet tempora magnam quas repudiandae dolorum perspiciatis laborum porro eligendi, ullam maiores soluta! Qui, perspiciatis quos?
-        Sapiente vel asperiores facere sunt mollitia quod rerum? Sint dolorum tempore, perspiciatis atque tenetur expedita consequuntur distinctio sit non, aspernatur, voluptates neque repellendus. Magnam vitae autem commodi quidem fugiat sint.
-        Eum consectetur commodi magni ad officiis nulla obcaecati praesentium harum dolores, iure, accusantium soluta. Non fugit cum repudiandae sapiente hic voluptatibus aliquid doloribus! Ipsum deleniti quam nostrum vero sed assumenda.
-        Dolor nihil eum ad fuga dicta suscipit quos rem! Eum corrupti eveniet quod deleniti a ut voluptatibus, blanditiis, ex sunt consequatur veniam quae voluptatem unde et quam illo quia quo?
-        Ducimus ex minus velit iusto non consectetur sunt quas odio quis unde mollitia voluptatum vero, reiciendis nihil optio voluptate, libero nostrum quo animi dolorum quam tempora harum! Illum, accusamus consequatur?
-        Quis omnis reprehenderit cum a similique voluptatibus molestias laudantium est molestiae accusamus quos voluptates illo labore laboriosam aliquid veniam ab voluptatum fugit obcaecati, recusandae assumenda, cupiditate commodi, architecto asperiores! Animi!
-        Nam, ex non porro illum architecto eius harum quaerat earum accusantium adipisci. Dolorem tenetur, delectus veniam maiores deserunt eaque sapiente, perspiciatis culpa dolores asperiores nesciunt explicabo unde expedita nisi hic.
-        Laboriosam eius vel natus deleniti atque molestiae eaque maiores iure commodi harum deserunt vero aliquid qui nobis quidem debitis, fugit velit. Debitis minus amet et architecto quos explicabo repellat nemo!
-        Vitae, cumque id? Esse maiores consequuntur ratione vero cumque, praesentium minus sint nostrum sed, nulla soluta distinctio quisquam amet sit alias enim error neque voluptatem. Odio possimus quam quos illo!
-        Praesentium culpa nesciunt temporibus sapiente explicabo! Quas, fugiat. Quidem veniam corporis facere. Necessitatibus dolorum debitis voluptates dolor id aliquid ab hic deserunt vel officiis rerum, optio rem expedita dolores recusandae.
-        Inventore earum animi minima, tenetur laborum maxime commodi aliquam nisi, molestiae incidunt reprehenderit! Consequatur, nostrum ea. Modi cumque animi quis tempora qui repellat nostrum repudiandae quia, assumenda nulla eaque similique.
-        Repudiandae veritatis quasi aperiam iste sed magnam laboriosam eos qui. Ex modi voluptatem, harum qui at repellat alias? Voluptate perspiciatis odit nulla. Recusandae labore fugit voluptatem, in molestias blanditiis ratione.
-        In explicabo id aperiam beatae eos nisi hic consequatur debitis, autem aut ullam laudantium, aliquid sit ex odit. Ipsum voluptatibus hic voluptas obcaecati dolore? Cumque iure repellendus ducimus tempora error!
-        Enim corrupti fugiat, cupiditate sint itaque odio a dolores eligendi. Facilis harum deserunt doloribus labore quas nisi impedit. Quis consequatur fugit sed assumenda rerum id magnam animi quisquam inventore labore.
-        Dignissimos, amet quia corporis dolor voluptates iste. Cum atque deleniti itaque ab. Eum similique labore voluptatum repellat eligendi dicta, nostrum a minima, iusto dolorem ipsam tenetur voluptates alias unde sit.
-        Architecto, adipisci necessitatibus. Officiis, dolorum natus voluptatem quisquam nobis labore ad ea eius mollitia, porro maxime quia! Aspernatur consequatur rem placeat itaque, praesentium cumque nemo quas adipisci commodi doloremque modi.
-        Laborum consequatur ab temporibus ipsum aspernatur consequuntur aliquid nihil maxime explicabo illum id perferendis, rem tenetur aliquam, amet debitis sit iure a cum dolore maiores saepe at? Rerum, suscipit ducimus.
-        Laborum nam ab corrupti ipsa quis nisi necessitatibus, eaque temporibus commodi expedita consectetur rem delectus, perspiciatis aliquam, quia fugit voluptas sapiente aliquid natus. Assumenda quisquam velit vitae repellat eos accusantium.
-        Voluptates veritatis libero optio ullam, nobis autem? Soluta reprehenderit odit, laudantium maxime tempore dolor est mollitia omnis commodi magnam laboriosam libero qui beatae consequatur molestiae? Laudantium eveniet modi molestiae. Placeat.
-        Doloremque quos nemo quas minus adipisci expedita autem, accusamus impedit obcaecati modi rem possimus harum magnam deserunt aut. Repudiandae nemo sed molestiae! Cumque earum numquam aut laborum impedit inventore placeat!
-        Ullam consectetur dolorem consequatur quisquam, accusantium sint debitis, reiciendis libero ex qui minus? Ipsam fugiat aspernatur assumenda accusamus sequi veritatis recusandae! Aliquid inventore nihil adipisci deleniti molestias repellendus, accusamus sequi?
-        Illum beatae a exercitationem ratione consequatur consequuntur perspiciatis officia ex molestias doloribus animi corrupti accusantium ipsam, iusto illo eligendi commodi. Commodi facilis cupiditate eligendi eaque ipsa? Neque vitae quasi ut.
-        Nihil cumque rem doloremque odit assumenda natus cupiditate odio delectus, aliquam aliquid earum obcaecati repudiandae iusto optio! Reprehenderit, autem repellendus. Magnam quo dolor dolore repellat, veritatis ipsam temporibus quidem debitis.
-        Cumque sed rem dolore doloribus, id est incidunt cupiditate hic praesentium ducimus vero aliquam temporibus quae eos laborum harum reiciendis. Provident nostrum sunt excepturi reprehenderit nemo minus placeat, veritatis facilis!
-        Cumque neque, ducimus quidem eveniet incidunt excepturi, enim nisi, sequi eum aperiam eius nam! Odio impedit ullam quod aliquam explicabo rerum, tempore, dolore porro sapiente officia, dolorem quis vel eaque.
-        Omnis dolorum doloremque sed porro numquam atque blanditiis dolor. Officia fugit, labore vero placeat, consequuntur, quo facere asperiores expedita corrupti pariatur dolores excepturi totam eum veniam earum error id quidem.
-        Nobis perferendis magni itaque, quaerat iure eius labore corporis tempora quas aspernatur omnis. Enim consequatur voluptate incidunt mollitia cumque unde pariatur, aliquid praesentium qui, adipisci, reprehenderit dicta voluptatibus iste aperiam!
-        Delectus explicabo a totam perferendis obcaecati ducimus, deserunt maiores quas sunt labore? Eius, voluptatibus culpa autem quisquam sed mollitia eos nam itaque dignissimos repellat, minus ratione similique aliquid nisi! Rem.
-        Iure aliquam magnam facere quis optio minus nisi fugiat incidunt obcaecati nesciunt, porro recusandae maxime ex ipsum, non cumque, eius et quae quaerat accusantium placeat. Iste, ipsum? Adipisci, at sit!
-        Beatae non sequi voluptatibus a molestiae. Omnis officia in perferendis cum. Nemo distinctio tempore, exercitationem est optio similique natus sed deserunt blanditiis quia et numquam tenetur eum eaque ipsum ea.
-        Libero esse facilis quis quisquam, nobis officia laborum accusamus illo autem ea iure! Necessitatibus totam neque, deserunt quod illo similique inventore, repellendus aperiam facilis repudiandae cumque! Explicabo error vitae reiciendis?
-        Fuga totam accusamus debitis enim, cum mollitia nulla voluptatem cumque animi fugiat, aliquam repellat alias sint ducimus voluptatum, quia iste similique natus. Neque mollitia optio a magni perferendis! Voluptas, aperiam?
-        Sequi veniam unde temporibus vel exercitationem laborum, adipisci tempora illum. Ad ducimus aut neque fugit perferendis nihil facere officia voluptas ratione. Consectetur, qui! Maiores voluptatibus, porro quam sit quisquam ea.
-        Incidunt accusantium autem illum omnis molestiae, aliquid veritatis, vel consequatur repudiandae explicabo tempore. Odio ipsum commodi deserunt mollitia nihil laudantium aliquam consectetur animi ipsam. Quod saepe a laudantium labore quos!
-        Ad animi et totam veniam magni distinctio incidunt voluptates repellat, ipsam, quos inventore accusantium perspiciatis ipsa quaerat minus. Officia et repellendus ullam tenetur. At voluptatum, nesciunt perspiciatis hic reiciendis nemo!
-        Veniam ex rerum iste illum modi, accusamus voluptas quo neque ratione optio. Voluptatibus sunt quaerat provident incidunt nobis nisi, maiores autem alias modi sit quod ipsum placeat, sed, numquam sequi.
-        Harum atque, suscipit vitae provident rerum quam sint aliquam tenetur officia, accusamus aperiam recusandae? Reiciendis sint officiis et aut excepturi, exercitationem dolore cupiditate iure nobis doloremque placeat tempore suscipit. Nostrum?
-        Asperiores corrupti eveniet quidem perferendis dicta atque quas in cum aut doloribus neque necessitatibus, fuga facilis quam possimus dignissimos ad numquam, dolorum voluptatibus odio porro reprehenderit eum debitis? Magnam, amet!
-        In facere dolor adipisci doloribus eligendi molestias sunt magnam. Cum pariatur cumque amet et a. Praesentium beatae fugit maiores nostrum ex nihil iste iusto exercitationem, aliquid totam, quis explicabo esse?
-        Excepturi ducimus quia magnam, iste quibusdam minima facere ratione dolore temporibus rerum recusandae corrupti nemo pariatur sint voluptates consectetur rem ea officia quisquam ipsam assumenda dolorum dolores provident nisi! Neque.
-        Quaerat saepe vero distinctio similique ex minima at dolorum et quos, veniam numquam vel quas, natus dolore. Dolorem natus libero delectus voluptas omnis, facilis doloremque laboriosam beatae et voluptatem officia.
-        Voluptatibus tempore commodi at provident vero harum pariatur ut quam esse odit facere obcaecati deleniti quaerat corrupti quibusdam, magni illo dicta iure exercitationem ex perspiciatis sit qui voluptate? Dignissimos, nulla!
-        Id dicta harum porro ullam ea veniam cupiditate, quidem laboriosam hic doloremque soluta sunt tempora laudantium fugit atque debitis iste, pariatur esse nobis deleniti ipsam autem non, sed tenetur. Minima?
-        Eligendi maxime aut, facilis ut vero odit accusantium mollitia inventore explicabo quibusdam laudantium dicta sit perferendis assumenda sequi animi omnis qui nesciunt. Nostrum minima repellat molestias aspernatur quaerat rerum ab.
-        Similique, adipisci officia quibusdam voluptas id repudiandae eius ex? Necessitatibus temporibus molestias sit tenetur aut? Necessitatibus facere non distinctio repellat, autem esse doloremque, enim blanditiis aperiam repellendus delectus eaque vero.
-        Ab, magni quas at atque explicabo esse officia maxime dicta asperiores delectus quasi non laudantium repellat quo eaque illum totam expedita voluptatibus a velit porro? Iure possimus iusto facere dignissimos.
-        Suscipit, possimus voluptatibus asperiores numquam animi totam dignissimos iure dolor unde libero distinctio aliquam aperiam quae quibusdam provident nam in hic id quidem omnis praesentium corrupti? Dolorum beatae aperiam reiciendis.
-        Assumenda totam inventore doloribus quod libero fugit dolorum eligendi mollitia, optio eos, blanditiis tempora illum? Obcaecati hic quibusdam neque veritatis doloremque reiciendis fugit amet cumque, id asperiores voluptatibus quam porro.
-        Repudiandae perferendis asperiores, suscipit eligendi nam placeat expedita rem tempora impedit natus aliquid veritatis laborum inventore! Aliquam natus eligendi voluptates! Vel assumenda maiores quidem dolores debitis voluptatum porro facilis nisi!
-        Consequatur minima fuga voluptatem, maiores, tenetur eligendi, vitae excepturi odit deserunt repellat odio est magni? Ipsa libero voluptates laboriosam id officiis distinctio, magnam, quasi velit voluptate praesentium sequi aperiam eveniet?
-        Exercitationem id cupiditate earum reprehenderit animi iste aspernatur fugiat deleniti rem ea amet, hic repudiandae aliquam nemo dicta consequuntur est itaque ratione blanditiis cumque magni? Voluptas odio a recusandae quos?
-        Ad, repellendus ullam recusandae quis et quia esse natus beatae, provident saepe modi quam nesciunt facilis id dolores tenetur magnam minima eius voluptates obcaecati quae, perferendis ipsam. Voluptatum, temporibus voluptatibus?
-        Quam perspiciatis, ipsa eligendi iusto doloribus obcaecati dolore enim, officia ut facilis tempore, nemo cupiditate error sint odit esse veniam repellendus similique? Aliquid esse suscipit reiciendis ut debitis dicta officiis!
-        Quisquam non beatae cupiditate ut autem facilis, voluptatibus explicabo quidem dicta nostrum doloremque necessitatibus aliquid ad vel. Vel, molestias quo aliquid excepturi dolorem laborum hic obcaecati adipisci quas nobis deserunt?
-        Odit, consequatur maiores accusantium officiis ad voluptas odio minus neque ab tenetur laudantium assumenda voluptates, veniam numquam quam aperiam eum vero ducimus rem aliquam pariatur, tempore natus? Consequuntur, rem esse.
-        Repudiandae molestiae nobis deleniti odio iste minus tempore quod dolores vero unde magnam, ipsam soluta commodi earum quisquam voluptatum quidem mollitia voluptas consequuntur impedit nesciunt. Rem veniam quasi libero dolorum.
-        Soluta sapiente maiores, sequi cum nisi vitae! Molestias officiis, eligendi explicabo facere impedit itaque magnam perferendis nesciunt doloremque dignissimos reiciendis eum sit! Assumenda quia nisi modi ea ducimus delectus a.
-        Itaque sunt assumenda inventore officia voluptate aliquam voluptatibus voluptates deleniti laborum hic similique sit, sint ratione, nesciunt sequi earum, incidunt dolores quae asperiores aliquid cumque. Nostrum tempora nobis inventore non!
-        Magnam quidem quo aperiam, accusantium perspiciatis dignissimos eaque quae magni quas quis. Laborum, quidem ea pariatur debitis eaque eius dolore itaque explicabo officia impedit. Eligendi voluptatem dicta aliquid beatae nesciunt.
-        Molestias quod earum repellendus non minus? Omnis dolor obcaecati ab recusandae et, totam voluptatibus ea officia placeat numquam enim voluptatum ipsam non cupiditate atque similique. Vitae maxime sunt unde voluptas.
-        Qui odit ipsa voluptate voluptatum laborum, quidem quibusdam! Reiciendis, sapiente. Harum illum nostrum molestias tempore itaque distinctio maxime optio excepturi soluta libero fugit tenetur rerum cumque omnis exercitationem, quo sapiente.
-        Exercitationem ipsum id animi inventore cumque iusto tenetur deleniti odio minus doloremque neque explicabo magnam, accusantium dolorem. Quam dolorem explicabo, nisi quasi in nemo rerum, placeat illo voluptas quas quibusdam.
-        Rem incidunt pariatur id expedita unde, officia culpa. Ad rerum beatae pariatur ipsa aspernatur quaerat a distinctio. Commodi, cupiditate, corporis provident veniam maiores non voluptatum saepe dolore soluta obcaecati iste?
-        Corrupti officia recusandae impedit esse debitis, aliquid ipsum! Aperiam minus tempora neque nemo deleniti distinctio veritatis exercitationem perferendis ea, maiores necessitatibus, expedita rem totam facilis possimus, dolore saepe ipsum harum?
-        Voluptatum modi aliquid eos perspiciatis, dolores magnam commodi recusandae debitis? Quod voluptatibus vel esse! Illum, autem veniam odio in itaque minima provident placeat accusantium saepe voluptate adipisci. Veniam, minus officia.
-        Omnis, animi quisquam. Optio minima, aliquam facilis recusandae eos accusantium assumenda laborum excepturi eius iure soluta quos aspernatur exercitationem corrupti, necessitatibus atque fugiat beatae? Libero nisi saepe molestiae corrupti dicta.
-        Sequi blanditiis dolores accusantium esse ex iusto velit at odit, officiis quibusdam assumenda cum consequuntur delectus atque laudantium dignissimos omnis illo consequatur deserunt tempora in porro. Facilis debitis porro ducimus!
-        Cupiditate magnam, quas exercitationem voluptatum cumque nesciunt. Sequi consequuntur nam, veniam explicabo similique aspernatur quisquam dignissimos quidem! Numquam repudiandae doloremque dicta molestiae deleniti corporis atque quisquam, et, libero aliquid fugiat.
-        Qui facilis labore temporibus numquam velit magni? Repudiandae iusto sunt praesentium dicta ut. Cumque id, adipisci tenetur dignissimos quia, veniam ex vero hic atque voluptatem veritatis laborum ducimus reiciendis expedita.
-        Dolorem, distinctio omnis enim placeat, unde nobis laborum ex iusto quibusdam quos quasi debitis accusantium eligendi tenetur. Deserunt ipsa doloremque quae, facere dolore quod ullam, iste odio maxime excepturi aut?
-        Esse aut rem vel, eos neque temporibus exercitationem accusantium! Cumque harum quam, dolorem quibusdam dolore, accusantium assumenda eligendi nam fuga, optio tenetur! Sapiente, eveniet excepturi ducimus illo molestiae esse aliquid.
-        Dolorum aut magni, harum, ullam rerum cupiditate numquam, temporibus incidunt ab vel nemo culpa possimus. Tempore fuga eaque eveniet et quos rerum quo nam repellat, commodi nihil dolore odit tempora!
-        Voluptatibus rerum esse deleniti voluptate commodi cupiditate veniam dolore possimus accusamus veritatis minima neque mollitia fugit fugiat vel totam animi, natus assumenda. Quas, fugit praesentium molestias voluptatem possimus quidem officiis?
-        Necessitatibus fugiat tenetur iusto qui alias labore repellendus quaerat culpa accusamus accusantium recusandae maiores illum eum aperiam delectus velit quas, ipsam, explicabo illo earum a hic tempore. Accusantium, corporis architecto.
-        Cupiditate facere atque velit consequatur? Eius aspernatur hic totam voluptate ipsam. Accusamus, alias. Eveniet iure reprehenderit eius iste quae sit delectus possimus facere. Sed aliquam voluptatum error. Quod, eius pariatur.
-        Rem autem esse incidunt excepturi, doloribus quod quidem culpa quibusdam nesciunt. Facilis fugiat dignissimos odio ab quasi, placeat suscipit quis. A voluptatum debitis esse. Officiis enim suscipit a non aliquam.
-        Beatae voluptate modi voluptatem dicta aut, sed minima ea voluptas at quod, molestias laboriosam sint deserunt cum. Sequi atque, commodi deserunt nisi asperiores dolorem temporibus illum ea voluptate vitae quas!
-        Molestias voluptate expedita, nemo placeat sed sunt eius dolorum, qui aut magnam quasi! Iure magni quisquam suscipit fugit? Iusto quasi facere, ipsum aspernatur nulla dolorum consequatur? Minima consequatur illum in.
-        Eveniet natus perspiciatis ab veritatis dolores, aliquid cum suscipit quam. Molestiae consequatur, deleniti aperiam dolor cumque fugit esse sapiente similique dolorum corporis. Explicabo esse dicta ipsum mollitia ipsa suscipit ullam?
-        Natus rerum aliquam sint facilis quae voluptatibus quas soluta minus pariatur distinctio aperiam eveniet dolore optio, aspernatur quia hic labore id cum quibusdam. Necessitatibus quisquam, eum autem inventore libero corporis.
-        Atque asperiores, sint exercitationem facilis fuga nam magnam non veritatis! Eaque minima quae quidem recusandae sequi unde aliquam qui voluptatum dignissimos numquam eum, est, sunt debitis omnis itaque voluptas! Culpa!
-        Totam beatae in quia quas error dignissimos incidunt repellendus debitis magni soluta distinctio aliquam iste ipsa voluptatibus animi sapiente numquam expedita cum officia, voluptas facilis officiis. Atque voluptatem officia temporibus.
-        Hic laboriosam molestias accusamus voluptate explicabo nemo blanditiis sequi at itaque earum eaque debitis a illum ut, voluptates ducimus, quia molestiae, saepe deserunt inventore dolorem quam modi? Reprehenderit, nemo quam?
-        Aspernatur, reprehenderit! Placeat minima molestiae impedit nisi neque dolorum porro, veritatis earum eaque aliquid culpa corporis cum! Consequuntur rerum aut alias, unde, magnam cupiditate placeat obcaecati repellat culpa, labore sit!
-        Fuga sunt enim aut beatae suscipit aliquid officia repudiandae? Repellendus unde temporibus, fugit architecto labore voluptas. Hic architecto error rerum ea, perferendis eaque pariatur beatae id quasi fuga nulla dolores!
-        Libero praesentium ab laudantium tempora sit fuga et blanditiis provident nemo, ex deserunt nam, accusantium expedita corrupti saepe officia. In quidem nemo facere suscipit repudiandae officia, magni sint perspiciatis saepe.
-        Saepe doloribus aliquam voluptatibus hic ipsam quia dicta delectus, cum commodi assumenda! Harum, qui nostrum fugit debitis quos tempore ea porro enim atque quasi sequi aut, magnam veniam? Iure, reprehenderit.
-        Odio dolor nam facilis explicabo commodi sequi ut repellat minima ea quas? Natus, porro? Rem id, repellat quas quo quidem veritatis consectetur itaque laborum, sunt eaque suscipit vel alias facere?
-        Rerum laboriosam illo, ad nemo eius aperiam voluptate doloremque et totam saepe vitae architecto at fugiat labore delectus ut sit reprehenderit a quisquam, ab esse, libero ipsam. Consectetur, unde neque?
-        Aut, nesciunt alias modi et ad debitis nam, odit praesentium voluptatem natus perspiciatis tempora vitae optio non similique enim. Distinctio sint dicta sed incidunt adipisci tempore accusamus rem assumenda blanditiis.
-        Recusandae aspernatur velit nulla? Earum provident quis dolorem ea? Impedit modi molestias dicta corporis numquam, facilis neque recusandae ut doloribus nobis atque vitae eum architecto repellendus aut fugiat ipsa sapiente.
-        Iusto ad unde quibusdam fuga eius aut atque quam nesciunt perspiciatis? Non praesentium saepe odit quas recusandae corrupti temporibus nostrum magnam, explicabo neque! Aut corporis nobis ut itaque, blanditiis rerum.
-        Eum nostrum repudiandae voluptatibus omnis corrupti aliquid, magni ipsam numquam labore dicta eligendi velit animi ex libero et quod molestias beatae commodi, possimus pariatur fuga nam sit laboriosam eaque. Eum.
-        Ipsa sint, deleniti aut tempora nisi animi repellat eius, quas eaque error reiciendis quaerat, soluta saepe commodi sed? Dolore corporis dolores unde consectetur doloremque recusandae sunt enim. Molestias, ducimus maxime!
-        Quaerat, deserunt sapiente cupiditate atque inventore adipisci nemo odio. Atque quos id, laborum iste suscipit, cum modi consectetur reprehenderit ipsum accusamus debitis, exercitationem quidem laudantium nam doloremque alias voluptas fuga.
-        Harum, mollitia. Eligendi repudiandae necessitatibus tenetur, nisi rem quis nihil provident debitis harum architecto natus, assumenda possimus eaque obcaecati recusandae excepturi dolorum dolor maiores quaerat alias? Corrupti quam tenetur suscipit?
-        Odit excepturi id in quo velit aliquid debitis eos nisi iusto nesciunt consectetur optio aliquam, mollitia repellat distinctio asperiores ipsam eius veritatis. Ducimus quae aspernatur facere fugit labore placeat quam.
-        Tempore, tenetur ab doloribus perferendis molestias asperiores. Quidem illo voluptatum temporibus voluptatem animi? Molestiae similique omnis saepe quia quibusdam itaque velit amet, accusamus nostrum sequi! Quis earum magni iste similique.
-        Molestiae est voluptatem quae unde necessitatibus aliquid. Ea cum, quia dignissimos sunt optio iusto, ad molestiae eum odit harum aspernatur impedit. Officiis quibusdam enim dolorem numquam, beatae perspiciatis error quod!
-        Assumenda, hic. Aliquid consequuntur molestias voluptate quaerat provident dolores, dolor modi, quam consectetur fugiat fuga labore eius mollitia nam expedita aliquam voluptatibus odio ut vero! Exercitationem qui expedita sed explicabo.
-        Dolorem officia ad sequi debitis quae ullam soluta velit ea porro expedita repellat id odio assumenda animi rem, quasi autem odit, similique eaque totam quaerat neque consequuntur aliquid explicabo? In?
-        Exercitationem voluptas aspernatur iste optio, ut dolorem qui fugit, quod animi officiis itaque ipsam blanditiis, dolor recusandae molestiae! Quos fugit totam a qui quo nisi sed eaque commodi iste suscipit?
-        Repudiandae laboriosam enim, eos nesciunt doloremque recusandae quae sapiente fugit. Laudantium, nihil perspiciatis. Doloribus optio neque veniam beatae, labore minima delectus rerum ea magnam, quis nisi? Enim distinctio in neque!
-        Quidem nisi quaerat voluptatibus neque beatae, quam in ab suscipit qui impedit vel, officiis quo saepe optio, blanditiis doloremque. Voluptatibus officia earum aperiam aliquid distinctio explicabo consequatur iste asperiores odio?
-        Repellat eum nostrum nulla alias modi quasi harum dolores deserunt reprehenderit voluptate, impedit possimus neque exercitationem, sit consequatur. Obcaecati vel vero nam doloremque enim? Necessitatibus totam ratione quo omnis officia.
-        Reiciendis voluptatibus ducimus distinctio eaque, animi porro nam dolorum sequi beatae voluptates praesentium soluta molestias veritatis cum hic! Deserunt alias perspiciatis velit exercitationem quo, ad corporis voluptatum fugiat cum rerum.
-        Sit quia inventore at autem ea perferendis rem voluptatem minima distinctio cum doloribus ipsum in amet cumque delectus optio, dolore unde reiciendis dolorum! Ab optio sapiente, adipisci sed consequatur voluptatibus!
-        Nostrum, exercitationem quo. Fugit nesciunt amet quam repellendus, voluptatum vitae! Facilis minus libero quibusdam dicta reiciendis sint! Quasi mollitia minima, esse repellat amet, dolorem sed nemo labore, itaque laborum cupiditate.
-        Sunt porro molestiae cum exercitationem ratione, consectetur asperiores inventore, aliquam quam eveniet optio perspiciatis dolor necessitatibus, dolorem maiores repudiandae nostrum deserunt ex veniam pariatur tempora illo repellendus ut? Quasi, recusandae.
-        Adipisci fugiat hic eveniet consequuntur cum corporis quod ut iure exercitationem, officiis veritatis quam quis reprehenderit vitae nisi natus, molestiae quibusdam aliquid sed soluta? Suscipit, illo? Ipsa impedit omnis ab!
-        Dolores nesciunt magnam nemo rerum atque quasi dolore recusandae amet vero impedit, similique laborum doloremque cum blanditiis corrupti. Libero tempora laboriosam sequi tenetur esse totam facilis, atque voluptatum placeat iure.
-        Delectus animi ea voluptates est aspernatur placeat hic, nesciunt doloremque qui quam tenetur debitis. Deleniti id fuga facilis nam temporibus commodi eius repellat natus dolor incidunt. Repellat, molestiae. Fuga, sunt?
-        Nostrum quidem repellendus nesciunt necessitatibus accusamus, deleniti cumque nemo dolores sunt consequuntur error hic ea dolorem blanditiis eaque soluta ullam optio quod velit eveniet! Nostrum, minus cum! Explicabo, sit incidunt!
-        Esse iusto eum itaque alias tenetur laborum accusantium quibusdam quasi! Similique corrupti cumque minus illum enim, iure nesciunt quis, temporibus explicabo consequuntur quam molestias ipsa aliquam. Magnam omnis quas non.
-        Dolores, sequi nihil dolorem doloremque eligendi animi veritatis natus quasi maiores impedit pariatur quidem quae earum unde quo itaque, facilis illo blanditiis numquam molestias magnam! Reprehenderit architecto voluptate nisi cum!
-        Omnis, dicta! Nisi itaque aliquid in dolor reiciendis dolorum excepturi ipsum et mollitia, consectetur dolore? Molestias praesentium voluptatem sequi libero impedit facilis recusandae, dicta provident eius, facere animi quaerat repellendus.
-        Aliquid aut impedit inventore quae eligendi quos ad fugiat, debitis, voluptates laudantium molestias repellendus, nostrum voluptatibus doloribus vel a? Quia, fugiat? Placeat doloribus, illo libero atque fugit distinctio aliquam qui.
-        Qui quia architecto vel saepe excepturi iure aliquid ipsam voluptas obcaecati dolor dolorem nisi libero, similique magni quo autem expedita veniam deleniti atque doloremque aspernatur. Ducimus asperiores natus quia corrupti!
-        Dolor, minus quidem. Minima facere eligendi eos minus aut nulla vero incidunt cumque atque ducimus. Laborum iste debitis quae quasi. Sit consequuntur deserunt officia facere tempora recusandae tempore, expedita quae!
-        Esse assumenda explicabo molestiae nobis delectus earum excepturi iure blanditiis labore vel vitae pariatur consequatur itaque quis repellat culpa quasi aliquam, adipisci magnam doloribus ullam dolorem cum voluptatem. Voluptatum, hic!
-        Quae recusandae rerum temporibus quos dolore dolores sunt enim amet voluptatem odio nostrum nemo voluptate, consequuntur, inventore aspernatur saepe dolorum odit magni in nulla eligendi blanditiis modi? Libero, sed placeat!
-        Vel corporis quaerat odit quos pariatur mollitia facilis beatae alias nesciunt ab? Nostrum dignissimos suscipit ipsum quaerat facere sunt vero nihil tempora voluptatibus! Doloremque pariatur id praesentium accusamus illum commodi!
-        Modi ipsam assumenda repellendus velit adipisci dolorum, ipsa pariatur minus minima tenetur? Nostrum esse, expedita magnam exercitationem quis explicabo, autem, illum quas aspernatur quasi a dicta tempore assumenda est repellat?
-        Sit explicabo quod, harum expedita quos accusamus veritatis eum rerum molestiae voluptate. Quisquam vel est soluta quasi. Dolorum sed doloribus cumque, quae, ab, tempore obcaecati repellendus optio est vel enim!
-        Neque illum nam laboriosam rem dolore reiciendis aspernatur enim, illo cum consectetur quaerat inventore impedit temporibus quis. Eius quae optio dolorem omnis, debitis culpa assumenda doloribus quo qui voluptatum error.
-        Corrupti autem quo eligendi cum porro maiores laudantium eaque qui fugiat enim, pariatur fugit deserunt voluptatem itaque reiciendis obcaecati doloribus eveniet asperiores earum distinctio dolore praesentium aliquam sunt. Inventore, fugiat.
-        Quaerat, omnis? Cum fugit odit odio facilis, quasi qui quod repellendus error nisi incidunt consectetur tenetur, blanditiis nobis quia, impedit numquam. Odit vitae aperiam deleniti neque nihil et obcaecati accusantium!
-        Modi nisi velit praesentium totam exercitationem illum quia repellendus tempora libero, animi aperiam dignissimos nemo sequi eum molestiae facere illo earum hic maiores provident. Dolorum cupiditate reiciendis et impedit corrupti?
-        Voluptates voluptatibus maxime aliquid itaque officia. Iste recusandae explicabo necessitatibus asperiores, eaque impedit veritatis quidem ut sequi velit commodi iure repudiandae hic ipsa inventore? Molestiae optio sequi aperiam nihil fuga?
-        Voluptatem temporibus quo consectetur natus minima voluptates quisquam, exercitationem nihil modi corporis voluptas praesentium dignissimos architecto perspiciatis cumque aliquam minus dolore similique est esse delectus eum quos quaerat. Aut, facilis?
-        Provident perferendis nemo dolor accusantium modi dicta! Sed magni voluptas assumenda quasi, blanditiis eligendi aut facere natus nam pariatur autem, deserunt aliquid eaque! Illum optio officia dolore impedit repellat ipsum?
-        Eos molestias id, illo, beatae tenetur maxime officia aliquam sit omnis voluptate dolores accusantium repellat quasi incidunt vero sed, laudantium expedita iusto? Magnam aut fuga beatae ea deserunt repudiandae odio.
-        Placeat voluptates soluta minima repellat temporibus sunt exercitationem perferendis obcaecati dolor nobis, vitae hic consectetur cum. Eveniet eos minus, vitae sint nemo odit dolor, delectus magni iure quia, soluta quo.
-        Facilis recusandae doloribus, dolore accusantium vitae ex molestias nam temporibus cupiditate perspiciatis eum dignissimos asperiores repudiandae. Necessitatibus ut odit dolorum incidunt tempore debitis ex ipsam, velit quis ad laborum illum.
-        Consequatur, quia corporis veritatis, suscipit eos accusamus mollitia dolorem obcaecati rem, distinctio odio modi assumenda! Fuga velit obcaecati, quos ad autem laudantium! Molestias dolore ut dignissimos, accusantium sapiente temporibus explicabo.
-        Quia quae veniam soluta corporis, aspernatur exercitationem nihil magni molestiae tempore fugit alias eveniet expedita accusamus aliquam hic est sit nisi similique consequuntur amet facere voluptate! Aut voluptates quos mollitia?
-        Eveniet, illo. Ea aperiam vel nulla magnam optio rerum quos rem magni, sint explicabo, exercitationem odio. Cupiditate corrupti error, impedit vitae maiores animi illo laudantium dolore dolor ducimus, accusantium culpa?
-        Nam, totam eum. Corporis, inventore. Veniam dolorem saepe, ipsam aut ea ad hic minima est sint sunt distinctio ullam debitis dignissimos vero at temporibus illo asperiores. Mollitia optio itaque corrupti.
-        Itaque nostrum sapiente corrupti illo corporis officiis architecto, nulla quisquam soluta quis, deleniti perspiciatis eos, tempora ad? Cupiditate qui sequi enim eaque, fugit vero doloremque a non. Perferendis, non error?
-        Quidem saepe aliquam nemo nulla omnis magni. Aliquam debitis fugit harum quibusdam vero, numquam eum qui odio hic vel, tempora fugiat fuga doloribus voluptates at blanditiis id! Molestiae, nisi ad!
-        Quaerat cumque nihil cupiditate, natus architecto consectetur exercitationem dolorem nostrum ducimus. Sunt et harum quidem amet tempora, esse natus architecto molestias, perferendis placeat a qui nihil porro reiciendis minima sapiente!
-        Enim provident sapiente minus a consectetur placeat molestias aspernatur minima excepturi nisi! Mollitia, dicta possimus cupiditate vel tempora, magnam omnis dignissimos ex unde nesciunt, provident ut a corrupti illum dolore.
-        Consequuntur mollitia possimus sapiente minus cupiditate, optio numquam reprehenderit eos inventore vel repudiandae assumenda cumque, vero corrupti laborum itaque. Aut ea minima nisi a aspernatur tempore esse soluta libero culpa!
-        Veritatis assumenda a est vitae error eius, molestias eum aut! Vitae laboriosam quod ipsam, explicabo iusto deleniti nostrum quas modi molestias? Magni odio voluptate dolorum, quo eligendi eum similique non!</p>        
+      <h2>Définitions</h2>
+                <p><b>Client :</b> tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.<br />
+                <b>Prestations et Services :</b> <a href="https://findmytruck.com">https://findmytruck.com</a> met à disposition des Clients :</p>
+
+                <p><b>Contenu :</b> Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.</p>
+
+                <p><b>Informations clients :</b> Ci après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par <a href="https://findmytruck.com">https://findmytruck.com</a> pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques.</p>
+
+
+                <p><b>Utilisateur :</b> Internaute se connectant, utilisant le site susnommé.</p>
+                <p><b>Informations personnelles :</b> « Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
+                <p>Les termes « données à caractère personnel », « personne concernée », « sous traitant » et « données sensibles » ont le sens défini par le Règlement Général sur la Protection des Données (RGPD : n° 2016-679)</p>
+
+                <h2>1. Présentation du site internet.</h2>
+                <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet <a href="https://findmytruck.com">https://findmytruck.com</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
+                </p><p><strong>Propriétaire</strong> :  SAS FIND MY TRUCK Capital social de 1 680 026 € Numéro de TVA: 666 666 666 – 10 rue de Penthievre 75008 Paris<br />
+                              
+                <strong>Responsable publication</strong> : FIND MY TRUCK – findmytruck2021@gmail.com<br />
+                Le responsable publication est une personne physique ou une personne morale.<br />
+                <strong>Webmaster</strong> : FIND MY TRUCK – findmytruck2021@gmail.com<br />
+                <strong>Hébergeur</strong> : ovh – 2 rue Kellermann 59100 Roubaix 1007<br />
+                <strong>Délégué à la protection des données</strong> : FIND MY TRUCK – findmytruck2021@gmail.com<br />
+                </p>
+
+                <div ng-bind-html="linkHTML"><p>Les mentions légales sont issues du modèle proposé par le  <a href="https://fr.orson.io/1371/generateur-mentions-legales" title="générateur de mentions légales RGPD d">générateur de mentions légales RGPD d'Orson.io</a></p></div>
+
+
+
+                <h2>2. Conditions générales d’utilisation du site et des services proposés.</h2>
+
+                <p>Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété Intellectuelle et des Réglementations Internationales applicables. 
+                Le Client ne peut en aucune manière réutiliser, céder ou exploiter pour son propre compte tout ou partie des éléments ou travaux du Site.</p>
+
+                <p>L’utilisation du site <a href="https://findmytruck.com">https://findmytruck.com</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href="https://findmytruck.com">https://findmytruck.com</a> sont donc invités à les consulter de manière régulière.</p>
+
+                <p>Ce site internet est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par <a href="https://findmytruck.com">https://findmytruck.com</a>, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.
+                Le site web <a href="https://findmytruck.com">https://findmytruck.com</a> est mis à jour régulièrement par <a href="https://findmytruck.com">https://findmytruck.com</a> responsable. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>
+
+                <h2>3. Description des services fournis.</h2>
+
+                <p>Le site internet <a href="https://findmytruck.com">https://findmytruck.com</a> a pour objet de fournir une information concernant l’ensemble des activités de la société.
+                <a href="https://findmytruck.com">https://findmytruck.com</a> s’efforce de fournir sur le site <a href="https://findmytruck.com">https://findmytruck.com</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
+
+                <p>Toutes les informations indiquées sur le site <a href="https://findmytruck.com">https://findmytruck.com</a> sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site <a href="https://findmytruck.com">https://findmytruck.com</a> ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+
+                <h2>4. Limitations contractuelles sur les données techniques.</h2>
+
+                <p>Le site utilise la technologie JavaScript.
+
+                Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour
+                Le site <a href="https://findmytruck.com">https://findmytruck.com</a> est hébergé chez un prestataire sur le territoire de l’Union Européenne conformément aux dispositions du Règlement Général sur la Protection des Données (RGPD : n° 2016-679)</p>
+
+                <p>L’objectif est d’apporter une prestation qui assure le meilleur taux d’accessibilité. L’hébergeur assure la continuité de son service 24 Heures sur 24, tous les jours de l’année. Il se réserve néanmoins la possibilité d’interrompre le service d’hébergement pour les durées les plus courtes possibles notamment à des fins de maintenance, d’amélioration de ses infrastructures, de défaillance de ses infrastructures ou si les Prestations et Services génèrent un trafic réputé anormal.</p>
+
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> et l’hébergeur ne pourront être tenus responsables en cas de dysfonctionnement du réseau Internet, des lignes téléphoniques ou du matériel informatique et de téléphonie lié notamment à l’encombrement du réseau empêchant l’accès au serveur.</p>
+
+                <h2>5. Propriété intellectuelle et contrefaçons.</h2>
+
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> est propriétaire des droits de propriété intellectuelle et détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les textes, images, graphismes, logos, vidéos, icônes et sons.
+                Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : <a href="https://findmytruck.com">https://findmytruck.com</a>.</p>
+
+                <p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+
+                <h2>6. Limitations de responsabilité.</h2>
+
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> agit en tant qu’éditeur du site. <a href="https://findmytruck.com">https://findmytruck.com</a>  est responsable de la qualité et de la véracité du Contenu qu’il publie. </p>
+
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> ne pourra être tenu responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site internet <a href="https://findmytruck.com">https://findmytruck.com</a>, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.</p>
+
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> ne pourra également être tenu responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site <a href="https://findmytruck.com">https://findmytruck.com</a>.
+                Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. <a href="https://findmytruck.com">https://findmytruck.com</a> se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, <a href="https://findmytruck.com">https://findmytruck.com</a> se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie …).</p>
+
+                <h2>7. Gestion des données personnelles.</h2>
+
+                <p>Le Client est informé des réglementations concernant la communication marketing, la loi du 21 Juin 2014 pour la confiance dans l’Economie Numérique, la Loi Informatique et Liberté du 06 Août 2004 ainsi que du Règlement Général sur la Protection des Données (RGPD : n° 2016-679). </p>
+
+                <h3>7.1 Responsables de la collecte des données personnelles</h3>
+
+                <p>Pour les Données Personnelles collectées dans le cadre de la création du compte personnel de l’Utilisateur et de sa navigation sur le Site, le responsable du traitement des Données Personnelles est : FIND MY TRUCK. <a href="https://findmytruck.com">https://findmytruck.com</a>est représenté par FIND MY TRUCK, son représentant légal</p>
+
+                <p>En tant que responsable du traitement des données qu’il collecte, <a href="https://findmytruck.com">https://findmytruck.com</a> s’engage à respecter le cadre des dispositions légales en vigueur. Il lui appartient notamment au Client d’établir les finalités de ses traitements de données, de fournir à ses prospects et clients, à partir de la collecte de leurs consentements, une information complète sur le traitement de leurs données personnelles et de maintenir un registre des traitements conforme à la réalité.
+                Chaque fois que <a href="https://findmytruck.com">https://findmytruck.com</a> traite des Données Personnelles, <a href="https://findmytruck.com">https://findmytruck.com</a> prend toutes les mesures raisonnables pour s’assurer de l’exactitude et de la pertinence des Données Personnelles au regard des finalités pour lesquelles <a href="https://findmytruck.com">https://findmytruck.com</a> les traite.</p>
+                 
+                <h3>7.2 Finalité des données collectées</h3>
+                 
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> est susceptible de traiter tout ou partie des données : </p>
+
+                <ul>
+                  
+                <li>pour permettre la navigation sur le Site et la gestion et la traçabilité des prestations et services commandés par l’utilisateur : données de connexion et d’utilisation du Site, facturation, historique des commandes, etc. </li>
+                 
+                <li>pour prévenir et lutter contre la fraude informatique (spamming, hacking…) : matériel informatique utilisé pour la navigation, l’adresse IP, le mot de passe (hashé) </li>
+                 
+                <li>pour améliorer la navigation sur le Site : données de connexion et d’utilisation </li>
+                 
+                <li>pour mener des enquêtes de satisfaction facultatives sur <a href="https://findmytruck.com">https://findmytruck.com</a> : adresse email </li>
+                <li>pour mener des campagnes de communication (sms, mail) : numéro de téléphone, adresse email</li>
+
+
+                </ul>
+
+                <p><a href="https://findmytruck.com">https://findmytruck.com</a> ne commercialise pas vos données personnelles qui sont donc uniquement utilisées par nécessité ou à des fins statistiques et d’analyses.</p>
+                 
+                <h3>7.3 Droit d’accès, de rectification et d’opposition</h3>
+                 
+                <p>
+                Conformément à la réglementation européenne en vigueur, les Utilisateurs de <a href="https://findmytruck.com">https://findmytruck.com</a> disposent des droits suivants : </p>
+                 <ul>
+
+                <li>droit d'accès (article 15 RGPD) et de rectification (article 16 RGPD), de mise à jour, de complétude des données des Utilisateurs droit de verrouillage ou d’effacement des données des Utilisateurs à caractère personnel (article 17 du RGPD), lorsqu’elles sont inexactes, incomplètes, équivoques, périmées, ou dont la collecte, l'utilisation, la communication ou la conservation est interdite </li>
+                 
+                <li>droit de retirer à tout moment un consentement (article 13-2c RGPD) </li>
+                 
+                <li>droit à la limitation du traitement des données des Utilisateurs (article 18 RGPD) </li>
+                 
+                <li>droit d’opposition au traitement des données des Utilisateurs (article 21 RGPD) </li>
+                 
+                <li>droit à la portabilité des données que les Utilisateurs auront fournies, lorsque ces données font l’objet de traitements automatisés fondés sur leur consentement ou sur un contrat (article 20 RGPD) </li>
+                 
+                <li>droit de définir le sort des données des Utilisateurs après leur mort et de choisir à qui <a href="https://findmytruck.com">https://findmytruck.com</a> devra communiquer (ou non) ses données à un tiers qu’ils aura préalablement désigné</li>
+                 </ul>
+
+                <p>Dès que <a href="https://findmytruck.com">https://findmytruck.com</a> a connaissance du décès d’un Utilisateur et à défaut d’instructions de sa part, <a href="https://findmytruck.com">https://findmytruck.com</a> s’engage à détruire ses données, sauf si leur conservation s’avère nécessaire à des fins probatoires ou pour répondre à une obligation légale.</p>
+                 
+                <p>Si l’Utilisateur souhaite savoir comment <a href="https://findmytruck.com">https://findmytruck.com</a> utilise ses Données Personnelles, demander à les rectifier ou s’oppose à leur traitement, l’Utilisateur peut contacter <a href="https://findmytruck.com">https://findmytruck.com</a> par écrit à l’adresse suivante : </p>
+                 
+                FIND MY TRUCK – DPO, FIND MY TRUCK <br />
+                10 rue de Penthievre 75008 Paris.
+                 
+                <p>Dans ce cas, l’Utilisateur doit indiquer les Données Personnelles qu’il souhaiterait que <a href="https://findmytruck.com">https://findmytruck.com</a> corrige, mette à jour ou supprime, en s’identifiant précisément avec une copie d’une pièce d’identité (carte d’identité ou passeport). </p>
+
+                <p>
+                Les demandes de suppression de Données Personnelles seront soumises aux obligations qui sont imposées à <a href="https://findmytruck.com">https://findmytruck.com</a> par la loi, notamment en matière de conservation ou d’archivage des documents. Enfin, les Utilisateurs de <a href="https://findmytruck.com">https://findmytruck.com</a> peuvent déposer une réclamation auprès des autorités de contrôle, et notamment de la CNIL (https://www.cnil.fr/fr/plaintes).</p>
+                 
+                <h3>7.4 Non-communication des données personnelles</h3>
+
+                <p>
+                <a href="https://findmytruck.com">https://findmytruck.com</a> s’interdit de traiter, héberger ou transférer les Informations collectées sur ses Clients vers un pays situé en dehors de l’Union européenne ou reconnu comme « non adéquat » par la Commission européenne sans en informer préalablement le client. Pour autant, <a href="https://findmytruck.com">https://findmytruck.com</a> reste libre du choix de ses sous-traitants techniques et commerciaux à la condition qu’il présentent les garanties suffisantes au regard des exigences du Règlement Général sur la Protection des Données (RGPD : n° 2016-679).</p>
+
+                <p>
+                <a href="https://findmytruck.com">https://findmytruck.com</a> s’engage à prendre toutes les précautions nécessaires afin de préserver la sécurité des Informations et notamment qu’elles ne soient pas communiquées à des personnes non autorisées. Cependant, si un incident impactant l’intégrité ou la confidentialité des Informations du Client est portée à la connaissance de <a href="https://findmytruck.com">https://findmytruck.com</a>, celle-ci devra dans les meilleurs délais informer le Client et lui communiquer les mesures de corrections prises. Par ailleurs <a href="https://findmytruck.com">https://findmytruck.com</a> ne collecte aucune « données sensibles ».</p>
+
+                <p>
+                Les Données Personnelles de l’Utilisateur peuvent être traitées par des filiales de <a href="https://findmytruck.com">https://findmytruck.com</a> et des sous-traitants (prestataires de services), exclusivement afin de réaliser les finalités de la présente politique.</p>
+                <p>
+                Dans la limite de leurs attributions respectives et pour les finalités rappelées ci-dessus, les principales personnes susceptibles d’avoir accès aux données des Utilisateurs de <a href="https://findmytruck.com">https://findmytruck.com</a> sont principalement les agents de notre service client.</p>
                 
+                <div ng-bind-html="rgpdHTML"></div>
+
+
+                <h2>8. Notification d’incident</h2>
+                <p>
+                Quels que soient les efforts fournis, aucune méthode de transmission sur Internet et aucune méthode de stockage électronique n'est complètement sûre. Nous ne pouvons en conséquence pas garantir une sécurité absolue. 
+                Si nous prenions connaissance d'une brèche de la sécurité, nous avertirions les utilisateurs concernés afin qu'ils puissent prendre les mesures appropriées. Nos procédures de notification d’incident tiennent compte de nos obligations légales, qu'elles se situent au niveau national ou européen. Nous nous engageons à informer pleinement nos clients de toutes les questions relevant de la sécurité de leur compte et à leur fournir toutes les informations nécessaires pour les aider à respecter leurs propres obligations réglementaires en matière de reporting.</p>
+                <p>
+                Aucune information personnelle de l'utilisateur du site <a href="https://findmytruck.com">https://findmytruck.com</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de <a href="https://findmytruck.com">https://findmytruck.com</a> et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site <a href="https://findmytruck.com">https://findmytruck.com</a>.</p>
+
+                <h3>Sécurité</h3>
+
+                <p>
+                Pour assurer la sécurité et la confidentialité des Données Personnelles et des Données Personnelles de Santé, <a href="https://findmytruck.com">https://findmytruck.com</a> utilise des réseaux protégés par des dispositifs standards tels que par pare-feu, la pseudonymisation, l’encryption et mot de passe. </p>
+                 
+                <p>
+                Lors du traitement des Données Personnelles, <a href="https://findmytruck.com">https://findmytruck.com</a>prend toutes les mesures raisonnables visant à les protéger contre toute perte, utilisation détournée, accès non autorisé, divulgation, altération ou destruction.</p>
+                 
+                <h2>9. Liens hypertextes « cookies » et balises (“tags”) internet</h2>
+                <p>
+                Le site <a href="https://findmytruck.com">https://findmytruck.com</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de <a href="https://findmytruck.com">https://findmytruck.com</a>. Cependant, <a href="https://findmytruck.com">https://findmytruck.com</a> n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.</p>
+                Sauf si vous décidez de désactiver les cookies, vous acceptez que le site puisse les utiliser. Vous pouvez à tout moment désactiver ces cookies et ce gratuitement à partir des possibilités de désactivation qui vous sont offertes et rappelées ci-après, sachant que cela peut réduire ou empêcher l’accessibilité à tout ou partie des Services proposés par le site.
+                <p></p>
+
+                <h3>9.1. « COOKIES »</h3>
+                 <p>
+                Un « cookie » est un petit fichier d’information envoyé sur le navigateur de l’Utilisateur et enregistré au sein du terminal de l’Utilisateur (ex : ordinateur, smartphone), (ci-après « Cookies »). Ce fichier comprend des informations telles que le nom de domaine de l’Utilisateur, le fournisseur d’accès Internet de l’Utilisateur, le système d’exploitation de l’Utilisateur, ainsi que la date et l’heure d’accès. Les Cookies ne risquent en aucun cas d’endommager le terminal de l’Utilisateur.</p>
+                 <p>
+                <a href="https://findmytruck.com">https://findmytruck.com</a> est susceptible de traiter les informations de l’Utilisateur concernant sa visite du Site, telles que les pages consultées, les recherches effectuées. Ces informations permettent à <a href="https://findmytruck.com">https://findmytruck.com</a> d’améliorer le contenu du Site, de la navigation de l’Utilisateur.</p>
+                 <p>
+                Les Cookies facilitant la navigation et/ou la fourniture des services proposés par le Site, l’Utilisateur peut configurer son navigateur pour qu’il lui permette de décider s’il souhaite ou non les accepter de manière à ce que des Cookies soient enregistrés dans le terminal ou, au contraire, qu’ils soient rejetés, soit systématiquement, soit selon leur émetteur. L’Utilisateur peut également configurer son logiciel de navigation de manière à ce que l’acceptation ou le refus des Cookies lui soient proposés ponctuellement, avant qu’un Cookie soit susceptible d’être enregistré dans son terminal. <a href="https://findmytruck.com">https://findmytruck.com</a> informe l’Utilisateur que, dans ce cas, il se peut que les fonctionnalités de son logiciel de navigation ne soient pas toutes disponibles.</p>
+                 <p>
+                Si l’Utilisateur refuse l’enregistrement de Cookies dans son terminal ou son navigateur, ou si l’Utilisateur supprime ceux qui y sont enregistrés, l’Utilisateur est informé que sa navigation et son expérience sur le Site peuvent être limitées. Cela pourrait également être le cas lorsque <a href="https://findmytruck.com">https://findmytruck.com</a> ou l’un de ses prestataires ne peut pas reconnaître, à des fins de compatibilité technique, le type de navigateur utilisé par le terminal, les paramètres de langue et d’affichage ou le pays depuis lequel le terminal semble connecté à Internet.</p>
+                 <p>
+                Le cas échéant, <a href="https://findmytruck.com">https://findmytruck.com</a> décline toute responsabilité pour les conséquences liées au fonctionnement dégradé du Site et des services éventuellement proposés par <a href="https://findmytruck.com">https://findmytruck.com</a>, résultant (i) du refus de Cookies par l’Utilisateur (ii) de l’impossibilité pour <a href="https://findmytruck.com">https://findmytruck.com</a> d’enregistrer ou de consulter les Cookies nécessaires à leur fonctionnement du fait du choix de l’Utilisateur. Pour la gestion des Cookies et des choix de l’Utilisateur, la configuration de chaque navigateur est différente. Elle est décrite dans le menu d’aide du navigateur, qui permettra de savoir de quelle manière l’Utilisateur peut modifier ses souhaits en matière de Cookies.</p>
+                 <p>
+                À tout moment, l’Utilisateur peut faire le choix d’exprimer et de modifier ses souhaits en matière de Cookies. <a href="https://findmytruck.com">https://findmytruck.com</a> pourra en outre faire appel aux services de prestataires externes pour l’aider à recueillir et traiter les informations décrites dans cette section.</p>
+                 <p>
+                Enfin, en cliquant sur les icônes dédiées aux réseaux sociaux Twitter, Facebook, Linkedin et Google Plus figurant sur le Site de <a href="https://findmytruck.com">https://findmytruck.com</a> ou dans son application mobile et si l’Utilisateur a accepté le dépôt de cookies en poursuivant sa navigation sur le Site Internet ou l’application mobile de <a href="https://findmytruck.com">https://findmytruck.com</a>, Twitter, Facebook, Linkedin et Google Plus peuvent également déposer des cookies sur vos terminaux (ordinateur, tablette, téléphone portable).</p>
+                 <p>
+                Ces types de cookies ne sont déposés sur vos terminaux qu’à condition que vous y consentiez, en continuant votre navigation sur le Site Internet ou l’application mobile de <a href="https://findmytruck.com">https://findmytruck.com</a>. À tout moment, l’Utilisateur peut néanmoins revenir sur son consentement à ce que <a href="https://findmytruck.com">https://findmytruck.com</a> dépose ce type de cookies.</p>
+                 
+                <h3>Article 9.2. BALISES (“TAGS”) INTERNET</h3>
+                 
+
+                <p>
+
+                <a href="https://findmytruck.com">https://findmytruck.com</a> peut employer occasionnellement des balises Internet (également appelées « tags », ou balises d’action, GIF à un pixel, GIF transparents, GIF invisibles et GIF un à un) et les déployer par l’intermédiaire d’un partenaire spécialiste d’analyses Web susceptible de se trouver (et donc de stocker les informations correspondantes, y compris l’adresse IP de l’Utilisateur) dans un pays étranger.</p>
+                 
+                <p>
+                Ces balises sont placées à la fois dans les publicités en ligne permettant aux internautes d’accéder au Site, et sur les différentes pages de celui-ci. 
+                 </p>
+                <p>
+                Cette technologie permet à <a href="https://findmytruck.com">https://findmytruck.com</a> d’évaluer les réponses des visiteurs face au Site et l’efficacité de ses actions (par exemple, le nombre de fois où une page est ouverte et les informations consultées), ainsi que l’utilisation de ce Site par l’Utilisateur. </p>
+                 <p>
+                Le prestataire externe pourra éventuellement recueillir des informations sur les visiteurs du Site et d’autres sites Internet grâce à ces balises, constituer des rapports sur l’activité du Site à l’attention de <a href="https://findmytruck.com">https://findmytruck.com</a>, et fournir d’autres services relatifs à l’utilisation de celui-ci et d’Internet.</p>
+                 <p>
+                </p><h2>10. Droit applicable et attribution de juridiction.</h2>  
+                 <p>
+                Tout litige en relation avec l’utilisation du site <a href="https://findmytruck.com">https://findmytruck.com</a> est soumis au droit français. 
+                En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris</p>
+
+
+
+                            
 
       </div>
       <img src={background}></img>
