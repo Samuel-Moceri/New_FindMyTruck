@@ -1,6 +1,6 @@
-import { changeValue } from 'src/actions/contact';
+import { changeValues } from 'src/actions/contact';
 import { useDispatch, useSelector } from 'react-redux';
-import Field from 'src/components/Forms/Field';
+import ContactField from 'src/components/Contact/Field';
 
 import './style.scss';
 
@@ -13,48 +13,48 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatchEvent({
+    dispatch({
       type: 'SEND_MESSAGE'
     })
   }
 
   const dispatch = useDispatch();
-  const onFieldChange = (key, value) => {
+  const onFieldContactChange = (key, value) => {
     dispatch(
-      changeValue(key, value)
+      changeValues(key, value)
     );
   }
     // Tester de créer notre propre onchange au lieu du OnField
   return(
 <>
 <form onSubmit={handleSubmit} className="settings-form">
-        <Field
+        <ContactField
           name="nameContact"
           value={nameContact}
           type="name"
           placeholder="Nom"
-          onFieldChange={onFieldChange}
+          onFieldContactChange={onFieldContactChange}
         />
-        <Field
+        <ContactField
           name="emailContact"
           value={emailContact}
           type="email"
           placeholder="E-mail"
-          onFieldChange={onFieldChange}
+          onFieldContactChange={onFieldContactChange}
         />
-        <Field
+        <ContactField
           name="objectContact"
           value={objectContact}
           type="object"
           placeholder="Objet du message"
-          onFieldChange={onFieldChange}
+          onFieldContactChange={onFieldContactChange}
         />
-        <Field
+        <ContactField
           name="messageContact"
           value={messageContact}
-          type="message}"
+          type="message"
           placeholder="Votre message"
-          onFieldChange={onFieldChange}
+          onFieldContactChange={onFieldContactChange}
         />
         <button 
         type="submit"
@@ -62,8 +62,7 @@ const Contact = () => {
         >
           Envoyer
         </button>
-      </form>   
-   
+      </form>
 </>
   );
 };

@@ -3,9 +3,9 @@ export const sendMessage = () => ({
   type: SEND_MESSAGE,
 });
 
-export const CHANGE_VALUE = 'CHANGE_VALUE';
-export const changeValue = (key, value) => ({
-  type: CHANGE_VALUE,
+export const CHANGE_VALUES = 'CHANGE_VALUES';
+export const changeValues = (key, value) => ({
+  type: CHANGE_VALUES,
   key: key,
   value: value,
 });

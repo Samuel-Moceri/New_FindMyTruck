@@ -1,4 +1,4 @@
-import { CHANGE_VALUE, SEND_MESSAGE } from 'src/actions/contact';
+import { CHANGE_VALUES, SEND_MESSAGE } from 'src/actions/contact';
 
 // set the initial state
 export const initialState = {
@@ -11,7 +11,7 @@ export const initialState = {
 // define the reducer's properties/params
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_VALUE:
+    case CHANGE_VALUES:
       return {
         ...state,
         [action.key]: action.value
