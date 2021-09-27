@@ -3,16 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // == Composant
-const Field = ({
+const ContactField = ({
   value,
   type,
   name,
   placeholder,
-  onFieldChange,
+  onFieldContactChange,
   
 }) => {
   const handleChange = (evt) => {
-    onFieldChange(name, evt.target.value);
+    onFieldContactChange(name, evt.target.value);
   };
 
   const inputId = `field-${name}`;
@@ -41,19 +41,19 @@ const Field = ({
   );
 };
 
-Field.propTypes = {
+ContactField.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  onFieldChange: PropTypes.func.isRequired,
+  onFieldContactChange: PropTypes.func.isRequired,
 };
 
 // Valeurs par défaut pour les props
-Field.defaultProps = {
+ContactField.defaultProps = {
   value: '',
   type: 'text',
 };
 
 // == Export
-export default Field;
+export default ContactField;
