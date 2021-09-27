@@ -1,7 +1,7 @@
 import logo from 'src/assets/images/logo.png';
 import loginLogo from 'src/assets/images/logo-login.png';
 import { NavLink } from 'react-router-dom';
-
+// import ajax from 'src/components/middlewares';
 
 import './style.scss';
 
