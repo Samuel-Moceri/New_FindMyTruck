@@ -24,7 +24,7 @@ const Contact = () => {
       changeValue(key, value)
     );
   }
- 
+    // Tester de créer notre propre onchange au lieu du OnField
   return(
 <>
 <form onSubmit={handleSubmit} className="settings-form">
