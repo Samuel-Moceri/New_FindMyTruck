@@ -8,6 +8,7 @@ import Header from 'src/components/Header';
 import Home from 'src/components/Home';
 import Footer from 'src/components/Footer';
 import LoginForm from 'src/components/LoginForm';
+import Register from 'src/components/Register';
 import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
@@ -18,7 +19,7 @@ import Legals from 'src/components/Legals';
 // == Composant
 function App() {
 
-  const logged = useSelector(state => state.user.logged);
+  const isLogged = useSelector(state => state.user.isLogged);
   const { pathname } = useLocation();
   // We use a hook to dispatch our action
   const dispatch = useDispatch();
@@ -41,8 +42,10 @@ return (
         <Route path="/equipe" exact component={Team} />
         <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
+        <Route path="/inscription" exact component={Register} />
+
         
-        {/* {logged && (<Route path="/favoris" exact component={Fav} />)} */}
+        {/* {logged && (<Route path="/profil" exact component={Profil} />)} */}
       </Switch>
 
       <Footer />

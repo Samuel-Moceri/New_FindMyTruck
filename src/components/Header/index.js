@@ -1,15 +1,17 @@
 import logo from 'src/assets/images/logo.png';
-import loginLogo from 'src/assets/images/logo-login.png';
+// import loginLogo from 'src/assets/images/logo-login.png';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
 import './style.scss';
 
 
-const Header = () => {
+const Header = ({
+  isLogged,
+}) => {
 
 function handleClick() {
-  console.log('j\'écoute');
+  // console.log('j\'écoute');
 }
 
  return (
@@ -28,16 +30,39 @@ function handleClick() {
         <h1>FIND MY TRUCK</h1>
       </div>
     </NavLink>
-    
+
     <NavLink
-       className='login' 
-       to="/connexion"
-       exact
-       >
-      <button className='login_img'>
-        <img src={loginLogo} alt="logoLogin"/>
-      </button>
-      </NavLink>
+      className="connexion"
+      to="/connexion"
+      exact
+      onClick={handleClick}
+      >
+      <div className="connexion_text">
+        <p>connexion</p>
+      </div>
+    </NavLink>
+
+    <NavLink
+      className="inscription"
+      to="/inscription"
+      exact
+      onClick={handleClick}
+      >
+      <div className="inscription_text">
+      <p>inscription</p>
+      </div>
+    </NavLink>
+
+      {/* { <NavLink
+        className='login' 
+        to="/connexion"
+        exact
+        >
+        <button className='login_img'>
+          <img src={loginLogo} alt="logoLogin"/>
+        </button>
+      </NavLink> } */}
+
   </header>
  );
 };
