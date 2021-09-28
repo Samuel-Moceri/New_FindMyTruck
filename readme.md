@@ -1,5 +1,8 @@
 Salut je suis un projet cool
 
+tu fais YARN
+Tu fais YARN START
+Tu vis ta meilleure vie
 
 <p align="center">
   BIENVENUE SUR LE PROJET D'APOTHEOSE "FIND MY TRUCK"
