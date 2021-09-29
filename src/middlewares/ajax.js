@@ -29,10 +29,11 @@ const ajax = (store) => (next) => (action) => {
         api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
 
         console.log(response.data);
-        localStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data.token))
+        localStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data))
       
         store.dispatch({
           type: LOGIN,
+          nickname: response.data.data.nickname,
           token: response.data.token,
         })
       })

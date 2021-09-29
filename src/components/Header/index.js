@@ -13,6 +13,11 @@ const Header = ({
 
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
+  const nickname = useSelector(state => state.user.nickname);
+  // localStorage.setItem('nickname', JSON.stringify(response.data.data.nickname));
+  // const nickname = JSON.parse(localStorage.getItem('nickname'));
+  // console.log(nickname);
+  
 function handleClick() {
   // console.log('j\'écoute');
 }
@@ -60,17 +65,19 @@ function handleClick() {
         </div>
       </NavLink> 
     )}
-
     {logged===true && (
+      <>
+        <div>Bonjour {nickname}</div>
         <NavLink
-        className='login' 
-        to="/connexion"
-        exact
-        >
-        <button className='login_img'>
-          <img src={loginLogo} alt="logoLogin"/>
-        </button>
-      </NavLink> 
+          className='login' 
+          to="/profil"
+          exact
+          >
+          <button className='login_img'>
+            <img src={loginLogo} alt="logoLogin"/>
+          </button>
+        </NavLink> 
+      </>
     )}
 
   </header>
