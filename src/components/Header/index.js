@@ -1,5 +1,6 @@
 import logo from 'src/assets/images/logo.png';
-// import loginLogo from 'src/assets/images/logo-login.png';
+import loginLogo from 'src/assets/images/logo-login.png';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
@@ -7,14 +8,17 @@ import './style.scss';
 
 
 const Header = ({
-  isLogged,
+  // console.log('blabla');
 }) => {
 
+  const registered = useSelector(state => state.register.registered);
+  const logged = useSelector(state => state.user.logged);
 function handleClick() {
   // console.log('j\'écoute');
 }
 
  return (
+
   <header className="header">
     <NavLink 
       className='logo'
@@ -31,29 +35,34 @@ function handleClick() {
       </div>
     </NavLink>
 
-    <NavLink
-      className="connexion"
-      to="/connexion"
-      exact
-      onClick={handleClick}
-      >
-      <div className="connexion_text">
-        <p>connexion</p>
-      </div>
-    </NavLink>
+    {!logged && (
+      <NavLink
+        className="connexion"
+        to="/connexion"
+        exact
+        onClick={handleClick}
+        >
+        <div className="connexion_text">
+          <p>Connexion</p>
+        </div>
+      </NavLink>
+    )}
+    
+    {!registered && !logged &&(
+      <NavLink
+        className="inscription"
+        to="/inscription"
+        exact
+        onClick={handleClick}
+        >
+        <div className="inscription_text">
+        <p>Inscription</p>
+        </div>
+      </NavLink> 
+    )}
 
-    <NavLink
-      className="inscription"
-      to="/inscription"
-      exact
-      onClick={handleClick}
-      >
-      <div className="inscription_text">
-      <p>inscription</p>
-      </div>
-    </NavLink>
-
-      {/* { <NavLink
+    {logged===true && (
+        <NavLink
         className='login' 
         to="/connexion"
         exact
@@ -61,7 +70,8 @@ function handleClick() {
         <button className='login_img'>
           <img src={loginLogo} alt="logoLogin"/>
         </button>
-      </NavLink> } */}
+      </NavLink> 
+    )}
 
   </header>
  );
