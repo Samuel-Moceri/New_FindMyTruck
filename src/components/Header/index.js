@@ -1,18 +1,24 @@
 import logo from 'src/assets/images/logo.png';
 import loginLogo from 'src/assets/images/logo-login.png';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
 import './style.scss';
 
 
-const Header = () => {
+const Header = ({
+  // console.log('blabla');
+}) => {
 
+  const registered = useSelector(state => state.register.registered);
+  const logged = useSelector(state => state.user.logged);
 function handleClick() {
-  console.log('j\'écoute');
+  // console.log('j\'écoute');
 }
 
  return (
+
   <header className="header">
     <NavLink 
       className='logo'
@@ -28,16 +34,45 @@ function handleClick() {
         <h1>FIND MY TRUCK</h1>
       </div>
     </NavLink>
-    
-    <NavLink
-       className='login' 
-       to="/connexion"
-       exact
-       >
-      <button className='login_img'>
-        <img src={loginLogo} alt="logoLogin"/>
-      </button>
+
+    {!logged && (
+      <NavLink
+        className="connexion"
+        to="/connexion"
+        exact
+        onClick={handleClick}
+        >
+        <div className="connexion_text">
+          <p>Connexion</p>
+        </div>
       </NavLink>
+    )}
+    
+    {!registered && !logged &&(
+      <NavLink
+        className="inscription"
+        to="/inscription"
+        exact
+        onClick={handleClick}
+        >
+        <div className="inscription_text">
+        <p>Inscription</p>
+        </div>
+      </NavLink> 
+    )}
+
+    {logged===true && (
+        <NavLink
+        className='login' 
+        to="/connexion"
+        exact
+        >
+        <button className='login_img'>
+          <img src={loginLogo} alt="logoLogin"/>
+        </button>
+      </NavLink> 
+    )}
+
   </header>
  );
 };
