@@ -12,10 +12,12 @@ import Register from 'src/components/Register';
 import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
-import Test from 'src/components/Test';
+import Profil from 'src/components/Profil';
+
 
 // == Composant
 function App() {
+  const logged = useSelector(state => state.user.logged);
 
   const isLogged = useSelector(state => state.user.isLogged);
   const { pathname } = useLocation();
@@ -41,10 +43,10 @@ return (
         <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
-        <Route path="/test" exact component={Test} />
+        {/* <Route path="/test" exact component={Test} /> */}
 
-        
-        {/* {logged && (<Route path="/profil" exact component={Profil} />)} */}
+        {logged && (<Route path="/profil" exact component={Profil} />)}
+
       </Switch>
 
       <Footer />
