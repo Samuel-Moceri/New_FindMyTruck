@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { TRY_LOGIN, LOGIN } from '../actions/users';
 import { SEND_MESSAGE } from '../actions/contact';
+import { REGISTER } from '../actions/register';
 
 // set the baseURl
 const api = axios.create({
   // baseURL: 'http://ec2-100-26-195-84.compute-1.amazonaws.com/api',
-  baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public/api',
+  baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
 });
 
 const ajax = (store) => (next) => (action) => {
@@ -16,7 +17,7 @@ const ajax = (store) => (next) => (action) => {
       const state = store.getState();
 
       // API request that will add itself to the baseURL with username/pass params
-      api.post('/login_check', {
+      api.post('/api/login_check', {
         username: state.user.email,
         password: state.user.password,
       })
@@ -38,7 +39,7 @@ const ajax = (store) => (next) => (action) => {
 
       .catch((error) => {
         console.error(error);
-       
+
         alert('Authentification échouée');
       });
 
@@ -48,7 +49,7 @@ const ajax = (store) => (next) => (action) => {
     case SEND_MESSAGE:
       const stateContact = store.getState();
 
-      api.post('/v1/contact', {
+      api.post('/api/v1/contact', {
         nom: stateContact.contact.nameContact,
         email: stateContact.contact.emailContact,
         objet: stateContact.contact.objectContact,
@@ -60,8 +61,23 @@ const ajax = (store) => (next) => (action) => {
         console.log(response);
       })
 
-      next(action); 
+      next(action);
+    break;
 
+    case REGISTER:
+      const stateRegister = store.getState();
+
+      api.post('/register', {
+        nickname: stateRegister.register.nameRegister,
+        email: stateRegister.register.emailRegister,
+        plainPassword: stateRegister.register.passwordRegister,
+      })
+
+    .then((response) => {
+      console.log(response);
+    })
+    
+    next(action);
     default:
       next(action);
     break;
