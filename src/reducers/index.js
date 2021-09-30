@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import userReducer from './user';
 import contactReducer from './contact';
 import registerReducer from './register';
+import foodtruckReducer from './foodtruck';
 
 
 
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   contact: contactReducer,
   register: registerReducer,
+  foodtruck: foodtruckReducer,
 });
 
 export default rootReducer;

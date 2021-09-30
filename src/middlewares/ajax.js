@@ -2,6 +2,7 @@ import axios from 'axios';
 import { TRY_LOGIN, LOGIN } from '../actions/users';
 import { SEND_MESSAGE } from '../actions/contact';
 import { REGISTER } from '../actions/register';
+import { FETCH_FOODTRUCK } from '../actions/foodtruck';
 
 // set the baseURl
 const api = axios.create({
@@ -64,6 +65,22 @@ const ajax = (store) => (next) => (action) => {
 
       next(action);
     break;
+
+    case FETCH_FOODTRUCK :
+      // const stateFoodtruck = store.getState();
+
+      api.get('/api/v1/search?lat=46.73591400&lon=0.83311200&km=10')
+
+      .then((response)=> {
+        console.log(response);
+        store.dispatch({
+          type: 'SAVE_FOODTRUCKLIST',
+          foodtruck: response.data,
+        })
+      })
+      
+      next(action);
+      break;
 
     case REGISTER:
       const stateRegister = store.getState();
