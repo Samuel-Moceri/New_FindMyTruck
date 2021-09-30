@@ -1,7 +1,27 @@
+@use 'src/styles/vars';
+
+
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 15px;
+  padding: 15px;
+  background-color: vars.$paleyellow ;
+
+  & .connexion {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: vars.$palepink;
+  }
+
+  & .inscription{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: vars.$palepink;
+  }
 }
 
 .logo {

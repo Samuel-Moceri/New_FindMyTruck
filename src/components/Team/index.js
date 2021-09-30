@@ -3,7 +3,7 @@ import Arnaud from 'src/assets/images/equipe/Arnaud_clear.png';
 import Julien from 'src/assets/images/equipe/Julien_clear.png';
 import Ludo from 'src/assets/images/equipe/Ludo_clear.png';
 import Samuel from 'src/assets/images/equipe/Samuel_clear.png';
-import Vincent from 'src/assets/images/equipe/Vincent_clear.png';
+import Vincent from 'src/assets/images/equipe/Vincent_clear_02.png';
 
 
 
