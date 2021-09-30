@@ -4,49 +4,56 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  background-color: vars.$paleyellow ;
+  padding: 1rem;
 
-  & .connexion {
+  &_right {
     display: flex;
-    align-items: center;
-    border-radius: 15px;
-    padding: 5px;
-    background-color: vars.$palepink;
-  }
 
-  & .inscription{
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    padding: 5px;
-    background-color: vars.$palepink;
-  }
+    &_connexion_text, 
+    &_inscription_text {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      border-radius: .5rem;
+      padding: 1rem;
+      margin-left: 1rem;
+      background-color: vars.$palepink;
+    }
 }
+  & 
+
+//   & .inscription{
+//     display: flex;
+//     align-items: center;
+//     border-radius: 15px;
+//     padding: 5px;
+//     background-color: vars.$palepink;
+//   }
+// }
 
 .logo {
-  display: flex;
-  align-items: center;
-  &_img img {
-    height :50px;
-  }
+//   display: flex;
+//   align-items: center;
+//   &_img img {
+//     height :50px;
+//   }
   &_title {
     font-size: 3em;
     letter-spacing: -4px;
   }
 }
 
-.login {
-  & button {
-    color : none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: inherit;
-  }
-  &_img img{
-    height :50px;
-  }
+// .login {
+//   & button {
+//     color : none;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//     outline: inherit;
+//   }
+//   &_img img{
+//     height :50px;
+//   }
 }
 
 

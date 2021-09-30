@@ -37,8 +37,10 @@ const RegisterForm = () => {
   return (
     <>
       {!registered && 
-      <form onSubmit={handleSubmit} className="settings-form">
+      <form onSubmit={handleSubmit} className="register_form">
+        <div className="register_form_title">Inscription</div>
         <Field
+          form="register"
           name="nameRegister"
           value={nameRegister}
           type="name"
@@ -46,6 +48,7 @@ const RegisterForm = () => {
           onFieldChange={onFieldChange}
         />
         <Field
+          form="register"
           name="emailRegister"
           value={emailRegister}
           type="email"
@@ -53,6 +56,7 @@ const RegisterForm = () => {
           onFieldChange={onFieldChange}
         />
         <Field
+          form="register"
           name="passwordRegister"
           value={passwordRegister}
           type="password"
@@ -61,10 +65,13 @@ const RegisterForm = () => {
         />
         <button 
         type="submit"
-        className="login-form-button"
+        className="register_form_button"
         >
           S'inscrire
         </button>
+
+          <div className="login_form_member"> <a href="/connexion">Déjà inscrit ?</a></div>
+
       </form>   
       }
 

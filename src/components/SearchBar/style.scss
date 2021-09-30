@@ -1,19 +1,73 @@
+@use '../../styles/vars';
+
 .searchBar {
   display: flex;
-  width: 80%;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius : 10px;
-  font-size : 2rem;
-  justify-content: space-around;
+  width: 90%;
+  padding: 2rem;
+  border-radius: .5rem;
+  margin: 5rem auto;
+  width: 90%;
+  background-color: #FFF;
+}
+
+.searchBar_geolocate{
+  background-color: vars.$paleblue;
+  border: none;
+  border-radius: .5rem;
+  padding: 1rem;
+  color: #FFF;
+}
+
+.searchBar_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .searchBar_text {
-  width: 70%;
-  
-& input{
-  width: 100%;
-}
+  position: relative;
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 0 1rem;
+  border: none;
+  padding: 1rem 1rem 13px 1rem ;
 }
 
+.searchBar_text input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 13px;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #666;
+  border-bottom: 1px solid #666;
+}
+
+.searchBar_text input:focus {
+  border-bottom: 2px solid vars.$paleblue;
+}
+
+.searchBar_text span {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  padding: 10px;
+  display: inline-block;
+  transition: .3s;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #666;
+  pointer-events: none;
+}
+
+.searchBar_text input:focus ~ span,
+.searchBar_text input:valid ~ span {
+  transform: translateX(-10px) translateY(-32px);
+  font-size: .8rem;
+  color: vars.$paleblue;
+}

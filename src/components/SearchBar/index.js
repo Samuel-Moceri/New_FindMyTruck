@@ -1,29 +1,31 @@
 import './style.scss';
+import * as Icon from 'react-feather';
 
 const SearchBar = () => {
   
+
   return (
   
   // SearchBar Zone
-  <div className="searchBar">
-    {/* Geolocate Zone */}
-    <div className="searchBar_geolocate">
-      <button>
-        Where Am I ?
-      </button>
-    </div>
-    {/* Search Text Zone */}
-    <div className="searchBar_text">
-      <input className="textArea"
-      placeholder={"Chercher un Food Truck"}
-      />
-    </div>
-    {/* Search Button Zone */}
-    <div className="searchBar_button">
-      <button>
-        Search
-      </button>
-    </div>
+    <div className="searchBar">
+    <button className="searchBar_geolocate">
+    <Icon.MapPin />      
+    </button>
+    
+    <form className="searchBar_form">
+
+        {/* Search Text Zone */}
+        <div className="searchBar_text">
+          <input type="text" required="required"/>
+          <span>Chercher un foodtruck</span>
+        </div>
+
+        {/* Search Button Zone */}
+        <button className="searchBar_geolocate">
+        <Icon.Search />      
+        </button>
+
+    </form>
   </div>
   );
 }

@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
+import * as Icon from 'react-feather';
+
+
 import './style.scss';
 
 
@@ -20,59 +23,61 @@ function handleClick() {
  return (
 
   <header className="header">
-    <NavLink 
-      className='logo'
-      to="/"
-      exact
-      onClick={handleClick}
-      >
-      <div className='logo_img'> 
-        <img src={logo} alt="Logo FindMyTruck"/>
-      </div>
-
-      <div className='logo_title'> 
-        <h1>FIND MY TRUCK</h1>
-      </div>
-    </NavLink>
-
-    {!logged && (
-      <NavLink
-        className="connexion"
-        to="/connexion"
+    <section className="header_left">
+      <NavLink 
+        className='logo'
+        to="/"
         exact
         onClick={handleClick}
         >
-        <div className="connexion_text">
-          <p>Connexion</p>
+        {/* <div className='logo_img'> 
+          <img src={logo} alt="Logo FindMyTruck"/>
+        </div> */}
+
+        <div className='logo_title'> 
+          <h1>FIND MY TRUCK</h1>
         </div>
       </NavLink>
-    )}
-    
-    {!registered && !logged &&(
-      <NavLink
-        className="inscription"
-        to="/inscription"
-        exact
-        onClick={handleClick}
-        >
-        <div className="inscription_text">
-        <p>Inscription</p>
-        </div>
-      </NavLink> 
-    )}
-
-    {logged===true && (
+    </section>
+    <section className="header_right">      
+      {!logged && (
         <NavLink
-        className='login' 
-        to="/connexion"
-        exact
-        >
-        <button className='login_img'>
-          <img src={loginLogo} alt="logoLogin"/>
-        </button>
-      </NavLink> 
-    )}
+          className="header_right_connexion"
+          to="/connexion"
+          exact
+          onClick={handleClick}
+          >
+          <div className="header_right_connexion_text">
+            <p>Connexion</p>
+          </div>
+        </NavLink>
+      )}
+    
+      {!registered && !logged &&(
+        <NavLink
+          className="header_right_inscription"
+          to="/inscription"
+          exact
+          onClick={handleClick}
+          >
+          <div className="header_right_inscription_text">
+          <p>Inscription</p>
+          </div>
+        </NavLink> 
+      )}
 
+      {logged===true && (
+          <NavLink
+          className='login' 
+          to="/connexion"
+          exact
+          >
+          <button className='login_img'>
+          <Icon.UserCheck /> 
+          </button>
+        </NavLink> 
+      )}
+    </section>
   </header>
  );
 };

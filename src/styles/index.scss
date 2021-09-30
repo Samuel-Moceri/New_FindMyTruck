@@ -1,8 +1,18 @@
 @use 'reset';
 @use 'vars';
 
-body {
+* {-moz-box-sizing: border-box; box-sizing: border-box;}
+
+html {
+  height: 100%;
   font-family: sans-serif;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: whitesmoke;
 }
 
 
