@@ -43,7 +43,6 @@ return (
         <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
-        {/* <Route path="/test" exact component={Test} /> */}
 
         {logged && (<Route path="/profil" exact component={Profil} />)}
 

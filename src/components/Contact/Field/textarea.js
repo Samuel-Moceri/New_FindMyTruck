@@ -11,6 +11,7 @@ const ContactFieldTextarea = ({
   name,
   placeholder,
   onFieldContactChange,
+  required,
   
 }) => {
   const handleChange = (evt) => {
@@ -38,6 +39,7 @@ const ContactFieldTextarea = ({
         className="field-input-textarea"
         placeholder={placeholder}
         name={name}
+        required='required'
       />
 
 

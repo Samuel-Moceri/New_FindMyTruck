@@ -72,6 +72,7 @@ const ajax = (store) => (next) => (action) => {
         nickname: stateRegister.register.nameRegister,
         email: stateRegister.register.emailRegister,
         plainPassword: stateRegister.register.passwordRegister,
+        roles: stateRegister.register.role,
       })
 
     .then((response) => {

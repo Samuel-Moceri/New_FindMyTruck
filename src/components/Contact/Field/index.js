@@ -10,6 +10,7 @@ const ContactField = ({
   name,
   placeholder,
   onFieldContactChange,
+  required,
   
 }) => {
   const handleChange = (evt) => {
@@ -32,6 +33,7 @@ const ContactField = ({
         className="field-input"
         placeholder={placeholder}
         className={className}
+        required='required'
 
         name={name}
       />

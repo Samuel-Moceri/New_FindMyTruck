@@ -48,6 +48,7 @@ const LoginForm = () => {
           type="email"
           placeholder="E-mail"
           onFieldChange={onFieldChange}
+          required='required'
         />
 
         <Field
@@ -57,6 +58,7 @@ const LoginForm = () => {
           type="password"
           placeholder="Mot de passe"
           onFieldChange={onFieldChange}
+          required='required'
         />
         <div className="login_form_forget"> <a href="">Mot de passe oublié ?</a> </div>
 
