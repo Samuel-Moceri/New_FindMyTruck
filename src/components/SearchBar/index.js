@@ -1,4 +1,5 @@
 import './style.scss';
+// import * as Icon from 'react-feather';
 import * as Icon from 'react-feather';
 
 const SearchBar = () => {

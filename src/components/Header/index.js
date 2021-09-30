@@ -4,8 +4,6 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
-// import * as Icon from 'react-feather';
-
 
 import './style.scss';
 
