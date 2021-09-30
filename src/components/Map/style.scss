@@ -1,0 +1,40 @@
+.geocode {
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+    border-radius: 50px;
+    }
+  
+  
+  .mapboxgl-map {
+    border-radius: 15px;
+  }
+  
+  .mapboxgl-ctrl-group{
+    position: fixed;
+    left: 70px;
+    top : 80px;
+  }
+  
+//   .mapboxgl-ctrl-top-left {
+//     position: fixed !important; //prendre le dessus sur le style imposé de mapbox pour sortir la searchbar de la map
+//     top: 67px !important;
+//     left: 100px !important;
+//     // opacity: 1 !important;
+//   }
+  
+   // PERMET DE 'CACHER' LE LOGO MAPBOX ET LE COPYRIGHT EN BAS DE LA CARTE
+  .mapboxgl-ctrl-attrib-inner,
+  .mapboxgl-ctrl-attrib,
+  .mapboxgl-ctrl-bottom-left {
+    // display: none;
+  }
+  
+  .mapboxgl-ctrl-geocoder {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  
+  
+

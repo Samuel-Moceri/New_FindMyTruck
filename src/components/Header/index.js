@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
-import * as Icon from 'react-feather';
+// import * as Icon from 'react-feather';
 
 
 import './style.scss';
@@ -44,6 +44,7 @@ function handleClick() {
         </div>
       </NavLink>
     </section>
+
     <section className="header_right">      
       {!logged && (
         <NavLink
@@ -58,33 +59,35 @@ function handleClick() {
         </NavLink>
       )}
     
-    {!registered && !logged &&(
-      <NavLink
-        className="inscription"
-        to="/inscription"
-        exact
-        onClick={handleClick}
-        >
-        <div className="inscription_text">
-        <p>Inscription</p>
-        </div>
-      </NavLink> 
-    )}
-    {logged===true && (
-      <>
-        <div>Bonjour {nickname}</div>
+      {!registered && !logged &&(
         <NavLink
-          className='login' 
-          to="/profil"
+          className="header_right_inscription"
+          to="/inscription"
           exact
+          onClick={handleClick}
           >
-          <button className='login_img'>
-            <img src={loginLogo} alt="logoLogin"/>
-          </button>
+          <div className="header_right_inscription_text">
+          <p>Inscription</p>
+          </div>
         </NavLink> 
-      </>
-    )}
+      )}
+
+      {logged===true && (
+        <>
+          <div>Bonjour {nickname}</div>
+          <NavLink
+            className='login' 
+            to="/profil"
+            exact
+            >
+            <button className='login_img'>
+              <img src={loginLogo} alt="logoLogin"/>
+            </button>
+          </NavLink> 
+        </>
+      )}
     </section>
+
   </header>
  );
 };
