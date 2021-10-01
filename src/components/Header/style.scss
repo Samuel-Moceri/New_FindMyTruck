@@ -1,6 +1,10 @@
 @use 'src/styles/vars';
+@use 'src/styles';
 
 
+.logo_title {
+  font-family: 'Blazing Sun Regular', sans-serif;
+}
 .header {
   display: flex;
   justify-content: space-between;

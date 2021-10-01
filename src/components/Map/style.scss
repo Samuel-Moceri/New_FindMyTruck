@@ -1,22 +1,62 @@
 .geocode {
-  display: flex;
-  width: 90%;
+  width: 800px;
   height: 400px;
-  margin: 0rem auto 1rem;
-  border-radius: 50px;
+  margin: 0 auto 1rem auto;
+  border-radius: .5rem;
   }
 
-.overlays {
-  width: 100%;
-}
 
 .mapboxgl-map {
-  border-radius: 0.5rem;
+  border-radius: 15px;
 }
 
-// PERMET DE 'CACHER' LE LOGO MAPBOX ET LE COPYRIGHT EN BAS DE LA CARTE
+
+ // PERMET DE 'CACHER' LE LOGO MAPBOX ET LE COPYRIGHT EN BAS DE LA CARTE
 .mapboxgl-ctrl-attrib-inner,
 .mapboxgl-ctrl-attrib,
 .mapboxgl-ctrl-bottom-left {
   display: none;
 }
+
+// .mapboxgl-ctrl-geocoder {
+//   width: 100%;
+//   margin: 0 auto;
+// }
+
+
+
+// .mapboxgl-canvas {
+  // position: fixed;
+  // display: none;
+// Hiding the map without hiding control likes geocode & location
+// }
+
+
+.map-container {
+  width: 800px;
+  height: 400px;
+  margin: 1rem auto;
+  border-radius: .5rem
+}
+
+.infobar {
+  width: 800px;
+  background-color: #23374be6;
+  color: #fff;
+  padding: .5rem 1rem;
+  z-index: 1;
+
+  margin: 1rem auto 0 auto;
+  border-radius: .5rem;
+  }
+
+  .geocoder {
+    width: 800px;
+  background-color: #ffae19;
+  color: #fff;
+  padding: .5rem 1rem;
+  z-index: 1;
+
+  margin: 1rem auto 0 auto;
+  border-radius: .5rem;
+  }

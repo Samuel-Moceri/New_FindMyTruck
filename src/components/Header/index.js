@@ -1,4 +1,6 @@
 import logo from 'src/assets/images/logo.png';
+import textlogo from 'src/assets/images/FMT_clear.png';
+
 import loginLogo from 'src/assets/images/logo-login.png';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -33,13 +35,13 @@ function handleClick() {
         exact
         onClick={handleClick}
         >
-        {/* <div className='logo_img'> 
-          <img src={logo} alt="Logo FindMyTruck"/>
-        </div> */}
-
-        <div className='logo_title'> 
-          <h1>FIND MY TRUCK</h1>
+        <div className='logo_img'> 
+          <img src={textlogo} alt="Logo FindMyTruck"/>
         </div>
+
+        {/* <div className='logo_title'> 
+          <h1 >FIND MY TRUCK</h1>
+        </div> */}
       </NavLink>
     </section>
 
