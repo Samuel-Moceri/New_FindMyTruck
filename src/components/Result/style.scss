@@ -1,0 +1,16 @@
+.result {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result_cards {
+  display: flex;
+  width: 90%;
+  height: 500px;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin: 2rem auto 1rem;
+  background-color: #FFF;
+}

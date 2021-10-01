@@ -68,6 +68,7 @@ const ajax = (store) => (next) => (action) => {
 
     case FETCH_FOODTRUCK :
       // const stateFoodtruck = store.getState();
+      
 
       api.get('/api/v1/search?lat=46.73591400&lon=0.83311200&km=10')
 

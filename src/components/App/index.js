@@ -13,6 +13,7 @@ import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
+import Result from 'src/components/Result';
 
 
 // == Composant
@@ -43,6 +44,7 @@ return (
         <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
+        <Route path="/resultat" exact component={Result} />
 
         {logged && (<Route path="/profil" exact component={Profil} />)}
 
