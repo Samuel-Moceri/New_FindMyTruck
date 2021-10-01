@@ -11,7 +11,7 @@ const Home = () => {
     <div className="home">
     <SearchBar /> 
     <div className="test">
-    <Map />
+    {/* <Map /> */}
     </div>  
     </div>
   )

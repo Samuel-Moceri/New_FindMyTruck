@@ -1,6 +1,6 @@
 import './style.scss';
-import { useDispatch } from 'react-redux';
-import React, { useState, useRef, useCallback } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useState, useRef, useCallback, useEffect } from 'react'
 import Result from 'src/components/Result';
 import { NavLink } from 'react-router-dom';
 
@@ -10,29 +10,35 @@ import * as Icon from 'react-feather';
 
 const SearchBar = () => {
 
-  // const getLocation = () => {
-  //   if (!navigator.geolocation) {
-  //     setStatus('Geolocation is not supported by your browser');
-  //   } else {
-  //     setStatus('Locating...');
-  //     navigator.geolocation.getCurrentPosition((position) => {
-  //       setStatus(null);
-  //       setLat(position.coords.latitude);
-  //       console.log(position.coords.latitude);
-  //       setLng(position.coords.longitude);
-  //       console.log(position.coords.longitude);
-        
-  //     }, () => {
-  //       setStatus('Unable to retrieve your location');
-  //     });
-  //   }
-  // }
-
-  // const [lat, setLat] = useState(null);
-  // const [lng, setLng] = useState(null);
-  // const [status, setStatus] = useState(null);
-
+  const address = useSelector(state => state.user.address);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+
+      if (!navigator.geolocation) {
+          console.log('Geolocation is not supported by your browser');
+      } else {
+        console.log('Locating...');
+          navigator.geolocation.getCurrentPosition((position) => {
+              
+          dispatch({
+              type: 'SAVE_LAT_LNG',
+              lat: position.coords.latitude,
+              lon: position.coords.longitude
+          })
+
+          dispatch({
+            type: 'FETCH_FOODTRUCK_ON_LOAD',
+          })
+          
+          
+      }, () => {
+        console.log('Unable to retrieve your location');
+      });
+      }
+
+  }, []);
+ 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,48 +46,24 @@ const SearchBar = () => {
       type: 'FETCH_FOODTRUCK'
     })
   }
+
+  const handleChange = (event) => {
+    dispatch({
+      type: 'CHANGE_VALUE',
+      key: 'address',
+      value: event.target.value
+    })
+  }
+  
   return (
   <>
-  {/* SearchBar Zone */}
-  <form action="submit" onSubmit={handleSubmit} >
-  <input type="submit"/>
-  </form>
-
-    <div className="searchBar">
-
-      <NavLink 
-        to="/resultat"
-        exact
-      >
-        <div 
-          className="searchBar_geolocate" 
-          onClick={getLocation} >
-          <Icon.MapPin />
-        </div>
-        </NavLink>
+  {/* SearchBar Zone */} 
     
-    <form className="searchBar_form" >
-
-        {/* Search Text Zone */}
-        <div className="searchBar_text">
-          <input type="text" required="required"/>
-          <span>Chercher un foodtruck</span>
-          <button onSubmit></button>
-        </div>
-        {/* Search Button Zone */}
-        {/* <NavLink 
-        to="/resultat"
-        exact
-      >
-        <div 
-          className="searchBar_geolocate" 
-          onClick={getLocation} >
-          <Icon.Search />
-        </div>
-        </NavLink> */}
+    <form className="searchBar_form" onSubmit={handleSubmit} >
+      <input type="text" onChange={handleChange} value={address}/>
+      <button>Rechercher à proximité</button>
 
     </form>
-  </div>
   </>
   );
 }

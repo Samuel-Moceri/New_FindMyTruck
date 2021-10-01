@@ -65,21 +65,60 @@ const ajax = (store) => (next) => (action) => {
 
       next(action);
     break;
+    case 'FETCH_FOODTRUCK_ON_LOAD' :
+      const stateFoodtruckOnLoad = store.getState();
 
-    case FETCH_FOODTRUCK :
-      // const stateFoodtruck = store.getState();
-      
-
-      api.get('/api/v1/search?lat=46.73591400&lon=0.83311200&km=10')
+      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=500`)
 
       .then((response)=> {
+
+        if(!response.data.length) {
+          alert('Aucun foodtruck');
+          return;
+        }
+
         console.log(response);
         store.dispatch({
           type: 'SAVE_FOODTRUCKLIST',
           foodtruck: response.data,
         })
       })
+    break;
+    case FETCH_FOODTRUCK :
+      // const stateFoodtruck = store.getState();
+        
+      const stateFoodtruck = store.getState();
+      const address = stateFoodtruck.user.address;
 
+      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}`)
+      .then((response)=> {
+
+        if(!response.data.features.length) {
+          alert('Votre adresse ne correspond à aucune connue.');
+          return;
+        }
+        console.log(response);
+        const lon = response.data.features[0].geometry.coordinates[0];
+        const lat = response.data.features[0].geometry.coordinates[1];
+
+        api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=100`)
+
+        .then((response)=> {
+
+          if(!response.data.length) {
+            alert('Aucun foodtruck');
+            return;
+          }
+
+          console.log(response);
+          store.dispatch({
+            type: 'SAVE_FOODTRUCKLIST',
+            foodtruck: response.data,
+          })
+        })
+      })
+
+    
       next(action);
       break;
 

@@ -7,6 +7,9 @@ export const initialState = {
     password: '',
     nickname: '',
     token: '',
+    address: '',
+    lat: '',
+    lon: ''
 };
 
 // define the reducer's properties/params
@@ -26,6 +29,12 @@ const reducer = (state = initialState, action = {}) => {
         email: '',
         nickname: action.nickname,
         token: action.token,
+      }
+    case 'SAVE_LAT_LNG': 
+      return {
+        ...state,
+        lat: action.lat,
+        lon: action.lon
       }
     default:
       return state;
