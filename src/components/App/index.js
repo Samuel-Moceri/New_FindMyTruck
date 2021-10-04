@@ -21,6 +21,7 @@ import Foodtruck from 'src/components/Foodtruck';
 // == Composant
 function App() {
   const logged = useSelector(state => state.user.logged);
+  const foodtruckList = useSelector((state) => state.foodtruck.list);
 
   const isLogged = useSelector(state => state.user.isLogged);
   const { pathname } = useLocation();
@@ -41,15 +42,22 @@ return (
     {/* Switch allows you to link components with routes that you define */}
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/equipe" exact component={Team} />
-        <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
         <Route path="/resultat" exact component={Result} />
-        <Route path="/foodtruck" exact component={Foodtruck} />
-        
 
+        {foodtruckList.map((foodtruck) => (
+          <Route
+          key={foodtruck.id}
+          path={`/foodtruck/${foodtruck.slug}`}
+          exact
+          component={Foodtruck}
+          />
+        ))}
+
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/equipe" exact component={Team} />
+        <Route path="/mentions_legales" exact component={Legals} />
         {logged && (<Route path="/profil" exact component={Profil} />)}
 
       </Switch>

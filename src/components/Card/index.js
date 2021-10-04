@@ -1,5 +1,6 @@
 import React from 'react';
 import {CgPin } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 
 import './style.scss';
 
@@ -9,6 +10,7 @@ const Card = ({
   location,
   category,
   picture,
+  slug,
 }) => {
     
   const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
@@ -17,27 +19,27 @@ const Card = ({
   const pictureURL = baseURL+`${picture}`;
 
   return(
-  
-  <section className="card_foodtruck">
-    <img 
-      className="card_foodtruck_img"
-      src={pictureURL} 
-      // src={thumbnail} 
-      // alt={title}  
-    />
-    <div className="card_foodtruck_content">
-      <p className="card_foodtruck_content_title">{name}</p>
-      <div className="card_foodtruck_content_subtitle">
-        <p className="card_foodtruck_content_category">{categoryName}</p>
-        <p className="card_foodtruck_content_rating"></p>
+  <Link to={`/foodtruck/${slug}`} className="card-link">
+    <section className="card_foodtruck">
+      <img 
+        className="card_foodtruck_img"
+        src={pictureURL} 
+        // src={thumbnail} 
+        // alt={title}  
+      />
+      <div className="card_foodtruck_content">
+        <p className="card_foodtruck_content_title">{name}</p>
+        <div className="card_foodtruck_content_subtitle">
+          <p className="card_foodtruck_content_category">{categoryName}</p>
+          <p className="card_foodtruck_content_rating"></p>
+        </div>
+        <div className="card_foodtruck_content_description">
+          <CgPin />
+          <p>{location}</p> 
+        </div>
       </div>
-      <div className="card_foodtruck_content_description">
-        <CgPin />
-        <p>{location}</p> 
-      </div>
-      {/* <Link to={`/foodtruck/${name}`} className="card-link">Voir le FT</Link> */}
-    </div>
-  </section>
+    </section>
+  </Link>
 
 );
 }

@@ -15,7 +15,13 @@ import { NavLink } from 'react-router-dom';
         to="/contact"
         exact
         >
-          <li  className="footer_list_el">Contact </li>
+          <li  className="footer_list_el">Contact</li>
+        </NavLink>
+        <NavLink 
+        to="/foodtruck"
+        exact
+        >
+          <li  className="footer_list_el">FOODTRUCKMONREUF</li>
         </NavLink>
 
         <NavLink 

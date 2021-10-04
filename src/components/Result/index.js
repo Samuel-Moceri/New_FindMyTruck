@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
-
-import SearchBar from 'src/components/SearchBar';
-import Card from 'src/components/Card';
-import Foodtruck from 'src/components/Foodtruck';
-
-import './style.scss';
-import Map from 'src/components/Map';
 import { useSelector } from 'react-redux';
 
+import SearchBar from 'src/components/SearchBar';
+import Foodtruck from 'src/components/Foodtruck';
+import Card from 'src/components/Card';
+import Map from 'src/components/Map';
 
+import './style.scss';
 
 const Result = () => {
   
@@ -20,31 +18,24 @@ const Result = () => {
   
     <SearchBar />
     <p className="result_title">Résultats de votre recherche</p>
-    
   
   <div className="result">
 
     <div className="result_map">
-    <Map />
+      {/* <Map /> */}
     </div>
 
     <div className="result_cards">
-    {foodtrucks.map((foodtruck) => (
-          <Card key={foodtruck.id} {...foodtruck}/>
-          
+      {foodtrucks.map((foodtruck) => (
+        <Card key={foodtruck.id} {...foodtruck}/>
         ))}
-        {foodtrucks.map((foodtruck) => (
-          <Foodtruck key={foodtruck.id} {...foodtruck}/>
-          
-        ))}
-        
     </div>
   </div>
+      {/* {foodtrucks.map((foodtruck) => (
+        <Foodtruck key={foodtruck.id} {...foodtruck}/>  
+      ))} */}
 </>
 );
 }
 
-
-
 export default Result;
-
