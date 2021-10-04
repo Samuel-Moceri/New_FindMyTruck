@@ -13,6 +13,9 @@ import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
+import Result from 'src/components/Result';
+import Foodtruck from 'src/components/Foodtruck';
+
 
 
 // == Composant
@@ -43,7 +46,9 @@ return (
         <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
-        {/* <Route path="/test" exact component={Test} /> */}
+        <Route path="/resultat" exact component={Result} />
+        <Route path="/foodtruck" exact component={Foodtruck} />
+        
 
         {logged && (<Route path="/profil" exact component={Profil} />)}
 
@@ -56,6 +61,3 @@ return (
 
 // == Export
 export default App;
-
-
-// https://reactrouter.com/web/api/Switch

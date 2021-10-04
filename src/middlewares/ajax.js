@@ -2,6 +2,7 @@ import axios from 'axios';
 import { TRY_LOGIN, LOGIN } from '../actions/users';
 import { SEND_MESSAGE } from '../actions/contact';
 import { REGISTER } from '../actions/register';
+import { FETCH_FOODTRUCK } from '../actions/foodtruck';
 
 // set the baseURl
 const api = axios.create({
@@ -64,6 +65,62 @@ const ajax = (store) => (next) => (action) => {
 
       next(action);
     break;
+    case 'FETCH_FOODTRUCK_ON_LOAD' :
+      const stateFoodtruckOnLoad = store.getState();
+
+      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=500`)
+
+      .then((response)=> {
+
+        if(!response.data.length) {
+          console.log();('Aucun foodtruck');
+          return;
+        }
+
+        console.log(response);
+        store.dispatch({
+          type: 'SAVE_FOODTRUCKLIST',
+          foodtruck: response.data,
+        })
+      })
+    break;
+    case FETCH_FOODTRUCK :
+      // const stateFoodtruck = store.getState();
+        
+      const stateFoodtruck = store.getState();
+      const address = stateFoodtruck.user.address;
+
+      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}`)
+      .then((response)=> {
+
+        if(!response.data.features.length) {
+          console.log();('Votre adresse ne correspond à aucune connue.');
+          return;
+        }
+        console.log(response);
+        const lon = response.data.features[0].geometry.coordinates[0];
+        const lat = response.data.features[0].geometry.coordinates[1];
+
+        api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=10`)
+
+        .then((response)=> {
+
+          if(!response.data.length) {
+            console.log();('Aucun foodtruck');
+            return;
+          }
+
+          console.log(response);
+          store.dispatch({
+            type: 'SAVE_FOODTRUCKLIST',
+            foodtruck: response.data,
+          })
+        })
+      })
+
+    
+      next(action);
+      break;
 
     case REGISTER:
       const stateRegister = store.getState();
@@ -72,6 +129,7 @@ const ajax = (store) => (next) => (action) => {
         nickname: stateRegister.register.nameRegister,
         email: stateRegister.register.emailRegister,
         plainPassword: stateRegister.register.passwordRegister,
+        roles: stateRegister.register.role,
       })
 
     .then((response) => {

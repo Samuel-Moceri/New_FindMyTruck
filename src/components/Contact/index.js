@@ -37,6 +37,7 @@ const Contact = () => {
           type="name"
           placeholder="Nom"
           onFieldContactChange={onFieldContactChange}
+          required='required'
         />
         <ContactField
           name="emailContact"
@@ -44,6 +45,7 @@ const Contact = () => {
           type="email"
           placeholder="E-mail"
           onFieldContactChange={onFieldContactChange}
+          required='required'
         />
         <ContactField
           name="objectContact"
@@ -51,6 +53,7 @@ const Contact = () => {
           type="object"
           placeholder="Objet du message"
           onFieldContactChange={onFieldContactChange}
+          required='required'
         />
         <ContactFieldTextarea 
               name="messageContact"
@@ -58,6 +61,7 @@ const Contact = () => {
               type="message"          
               placeholder="Votre message"
               onFieldContactChange={onFieldContactChange}
+              required='required'
             />
         <button 
         type="submit"

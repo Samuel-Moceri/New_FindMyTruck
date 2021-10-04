@@ -17,6 +17,7 @@ const RegisterForm = () => {
   const nameRegister = useSelector(state => state.register.nameRegister);
   const emailRegister = useSelector(state => state.register.emailRegister);
   const passwordRegister = useSelector(state => state.register.passwordRegister);
+  // const checked = useSelector(state => state.register.checked);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -63,6 +64,32 @@ const RegisterForm = () => {
           placeholder="Mot de passe"
           onFieldChange={onFieldChange}
         />
+        <Field 
+          form="register"
+          name="role"
+          value= '1'
+          type="radio"
+          placeholder='Professionnel'
+          onFieldChange={onFieldChange}
+        />
+        <Field 
+          form="register"
+          name="role"
+          value= '0'
+          type="radio"
+          placeholder='Utilisateur'
+          onFieldChange={onFieldChange}
+        />
+
+
+      {/* <Field
+        <label>
+          <span>Switch with default style</span>
+          <Switch onChange={onFieldChange} checked={checked} />
+        </label>
+      /> */}
+
+      {/* // Professionnel <input type="checkbox" value='1'/> */}
         <button 
         type="submit"
         className="register_form_button"

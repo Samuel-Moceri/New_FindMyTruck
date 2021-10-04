@@ -7,6 +7,7 @@ export const initialState = {
     passwordRegister: '',
     verifPasswordRegister: '',
     registered: false,
+    role: '0',
 };
 
 // define the reducer's properties/params
@@ -26,6 +27,8 @@ const reducer = (state = initialState, action = {}) => {
         passwordRegister: '',
         verifPasswordRegister: '',
         registered: true,
+        role: '',
+        // checked : false,
       }
     default:
       return state;

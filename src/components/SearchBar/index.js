@@ -1,32 +1,97 @@
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router'
+
+import Result from 'src/components/Result';
+import TypeWriter_search from 'src/components/Typewriter/typewriter_search';
+
+
 import './style.scss';
-import * as Icon from 'react-feather';
+import {FiTruck} from 'react-icons/fi';
+
 
 const SearchBar = () => {
-  
 
-  return (
-  
-  // SearchBar Zone
-    <div className="searchBar">
-    <button className="searchBar_geolocate">
-    <Icon.MapPin />      
-    </button>
+  const address = useSelector(state => state.user.address);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+
+      if (!navigator.geolocation) {
+          console.log('Geolocation is not supported by your browser');
+      } else {
+        console.log('Locating...');
+          navigator.geolocation.getCurrentPosition((position) => {
+              
+          dispatch({
+              type: 'SAVE_LAT_LNG',
+              lat: position.coords.latitude,
+              lon: position.coords.longitude
+          })
+
+          dispatch({
+            type: 'FETCH_FOODTRUCK_ON_LOAD',
+          })
+          
+          
+      }, () => {
+        console.log('Unable to retrieve your location');
+      });
+      }
+
+  }, []);
+ 
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: 'FETCH_FOODTRUCK'
+    });
+
+  }
+
+  const handleChange = (event) => {
+    dispatch({
+      type: 'CHANGE_VALUE',
+      key: 'address',
+      value: event.target.value
+    })
     
-    <form className="searchBar_form">
+  }
+  
+  return (
+  <>
+    {/* SearchBar Zone */}
+    <div className="searchBar">
+      <form className="searchBar_form" onSubmit={handleSubmit} >
 
         {/* Search Text Zone */}
         <div className="searchBar_text">
-          <input type="text" required="required"/>
-          <span>Chercher un foodtruck</span>
+          <input 
+            type="text" 
+            onChange={handleChange} 
+            value={address} required="required"
+          />
+          <span>
+            <FiTruck />     
+            {/* <TypeWriter_search /> */}
+          </span>
         </div>
 
         {/* Search Button Zone */}
-        <button className="searchBar_geolocate">
-        <Icon.Search />      
-        </button>
+   
+        <input type="submit" className="searchBar_geolocate">
+          {/* <Icon.Search />       */}
+        </input>
 
-    </form>
-  </div>
+      </form> 
+
+    </div>
+    {/* {search===true && (
+      <Redirect to="/resultat"/>
+    )} */}
+  </>
   );
 }
 

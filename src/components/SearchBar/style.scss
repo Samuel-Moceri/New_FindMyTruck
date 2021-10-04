@@ -3,10 +3,9 @@
 .searchBar {
   display: flex;
   width: 90%;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: .5rem;
-  margin: 5rem auto;
-  width: 90%;
+  margin: 2rem auto 1rem;
   background-color: #FFF;
 }
 
@@ -16,6 +15,10 @@
   border-radius: .5rem;
   padding: 1rem;
   color: #FFF;
+  &:active {
+    background-color: vars.$paleyellow;
+
+  }
 }
 
 .searchBar_form {
@@ -67,7 +70,7 @@
 
 .searchBar_text input:focus ~ span,
 .searchBar_text input:valid ~ span {
-  transform: translateX(-10px) translateY(-32px);
+  transform: translateX(-10px) translateY(-15px);
   font-size: .8rem;
   color: vars.$paleblue;
 }
