@@ -1,19 +1,21 @@
-Salut je suis un projet cool
+# FIND MY TRUCK 
 
-tu fais YARN
-Tu fais YARN START
-Tu vis ta meilleure vie
+ Salut je suis un projet cool.  *(this part must stay in french)*
 
-<p align="center">
-  BIENVENUE SUR LE PROJET D'APOTHEOSE "FIND MY TRUCK"
-  <img src="https://cdn.dribbble.com/users/778581/screenshots/2049806/media/c6eb7d9d78d76ce56189fd24942a3c4d.gif">
-</p>
+## TL;DR
 
-# FIND MY TRUCK
+ 1. import and open folder - go to the Terminal :
+ 2. - `yarn`
+	 -	`yarnstart`
+3. code.
+4. watch your code live on [http://localhost:8080](http://localhost:8080) .
+5. enjoy .
 
-Welcome in the Projet d'Apothéose FIND MY TRUCK
+![this is a gif of a ranom foodtruck found on internet](https://i.pinimg.com/originals/fc/d5/ee/fcd5ee36eb745fd51c61ec01c5910529.gif)
 
-## Available Scripts
+Welcome in the Projet d'Apothéose FIND MY TRUCK.
+
+## [Your wish is my command](https://www.youtube.com/watch?v=6okxuiiHx2w)
 
 In the project directory, you can run:
 
@@ -50,6 +52,9 @@ you may encounter a problem if you try to open the front and the back projets at
 
 To change the port (8080), open `projet-find-my-truck-front/config/webpack.dev.js` and change `const port = 8080;` to whatever port you want.
 
+## Backend depot
+[The Backend part of this project can be found here on GitHub.](https://github.com/O-clock-Ulysse/projet-find-my-truck)
+
 ## Learn More
 
-Just like [Captain Planet and the Planeteers](https://www.youtube.com/watch?v=PgQOPktUfuE), we are five students from O'Clock, and with our new skills ardently learned, we summon O'Clock's greatest champion : ~Captain Planet~ FIND MY TRUCK.
+Just like [Captain Planet and the Planeteers](https://www.youtube.com/watch?v=PgQOPktUfuE), we are five students from O'Clock, and with our new skills ardently learned, we summon O'Clock's greatest champion : ~~Captain Planet~~ FIND MY TRUCK.
