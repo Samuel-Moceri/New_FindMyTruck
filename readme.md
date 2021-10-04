@@ -44,6 +44,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Change port
+
+You may face to an issue if you try to open the front and the back projets at the same time during your test session (yarn start stuff).
+To change the port (8080), `open projet-find-my-truck-front/config/webpack.dev.js` and change `const port = 8080;` to whatever port you want.
 
 ## Learn More
 
