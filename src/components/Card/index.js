@@ -1,5 +1,5 @@
 import React from 'react';
-import {CgPin } from "react-icons/cg";
+import {CgPin} from "react-icons/cg";
 
 import './style.scss';
 
