@@ -75,15 +75,18 @@ const SearchBar = () => {
           />
           <span>
             <FiTruck />     
-            {/* <TypeWriter_search /> */}
+            <TypeWriter_search />
           </span>
         </div>
 
         {/* Search Button Zone */}
    
-        <input type="submit" className="searchBar_geolocate">
-          {/* <Icon.Search />       */}
-        </input>
+        <div id="searchBar_button">
+          <button type="submit">
+            <div id="searchBar_button_circle"></div>
+            <span></span>
+          </button>
+        </div>
 
       </form> 
 
