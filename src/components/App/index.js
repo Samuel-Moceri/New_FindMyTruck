@@ -14,6 +14,8 @@ import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
 import Result from 'src/components/Result';
+import Foodtruck from 'src/components/Foodtruck';
+
 
 
 // == Composant
@@ -45,6 +47,8 @@ return (
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
         <Route path="/resultat" exact component={Result} />
+        <Route path="/foodtruck" exact component={Foodtruck} />
+        
 
         {logged && (<Route path="/profil" exact component={Profil} />)}
 

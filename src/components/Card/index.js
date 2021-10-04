@@ -35,7 +35,7 @@ const Card = ({
         <CgPin />
         <p>{location}</p> 
       </div>
-      {/* <Link to={`/foodtruck/${slug}`} className="card-link">Voir le FT</Link> */}
+      {/* <Link to={`/foodtruck/${name}`} className="card-link">Voir le FT</Link> */}
     </div>
   </section>
 

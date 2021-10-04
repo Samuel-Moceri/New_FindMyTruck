@@ -13,7 +13,6 @@ import {FiTruck} from 'react-icons/fi';
 
 const SearchBar = () => {
 
-  const search = useSelector(state => state.foodtruck.search);
   const address = useSelector(state => state.user.address);
   const dispatch = useDispatch();
 
@@ -97,29 +96,3 @@ const SearchBar = () => {
 }
 
 export default SearchBar
-
-
-   {/* SearchBar Zone */} 
-    
-{/* //   <form className="searchBar_form" onSubmit={handleSubmit} >
-//   <input type="text" onChange={handleChange} value={address}/> */}
-
-
-   {/* <button>Rechercher à proximité</button> */}
-{/* 
-//   <NavLink 
-//     to="/resultat"
-//     exact
-//     >
-//     <div id="searchBar_button">
-//     <form className="searchBar_form" onSubmit={handleSubmit} >
-//       <input type="text" onChange={handleChange}value={address}>
-//         <div id="searchBar_button_circle"></div>
-//         <span></span>
-//         <img className="searchBar_Icon"  alt="RECHERCHE"/> 
-//       </button>
-//       </form>
-//     </div>
-//     </NavLink>
-
-// </form> */}
