@@ -68,12 +68,12 @@ const ajax = (store) => (next) => (action) => {
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 
-      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=500`)
+      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=10`)
 
       .then((response)=> {
 
         if(!response.data.length) {
-          alert('Aucun foodtruck');
+          console.log();('Aucun foodtruck');
           return;
         }
 
@@ -94,19 +94,19 @@ const ajax = (store) => (next) => (action) => {
       .then((response)=> {
 
         if(!response.data.features.length) {
-          alert('Votre adresse ne correspond à aucune connue.');
+          console.log();('Votre adresse ne correspond à aucune connue.');
           return;
         }
         console.log(response);
         const lon = response.data.features[0].geometry.coordinates[0];
         const lat = response.data.features[0].geometry.coordinates[1];
 
-        api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=100`)
+        api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=10`)
 
         .then((response)=> {
 
           if(!response.data.length) {
-            alert('Aucun foodtruck');
+            console.log();('Aucun foodtruck');
             return;
           }
 

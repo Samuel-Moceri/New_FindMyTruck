@@ -1,26 +1,5 @@
 @use '../../styles/vars';
 
-/* custom scrollbar with nesting */
-::-webkit-scrollbar {
-width: 20px;
-&-track {
-  background-color: #999; /*background color of the scrollbar*/
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
-&-thumb {
-  background-color: vars.$darkgreen; /*base scrollbar cursor color*/
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-  &:hover {
-    background-color: vars.$palegreen; /*hover scrollbar cursor color*/
-  }
-}
-}
-
-
 
 
 .legals_box {

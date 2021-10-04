@@ -9,7 +9,7 @@ export const initialState = {
     token: '',
     address: '',
     lat: '',
-    lon: ''
+    lon: '',
 };
 
 // define the reducer's properties/params

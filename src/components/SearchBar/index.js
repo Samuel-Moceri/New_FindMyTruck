@@ -1,15 +1,19 @@
-import './style.scss';
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import React, { useState, useRef, useCallback, useEffect } from 'react'
-import Result from 'src/components/Result';
 import { NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router'
+
+import Result from 'src/components/Result';
+import TypeWriter_search from 'src/components/Typewriter/typewriter_search';
 
 
-import * as Icon from 'react-feather';
+import './style.scss';
+import {FiTruck} from 'react-icons/fi';
 
 
 const SearchBar = () => {
 
+  const search = useSelector(state => state.foodtruck.search);
   const address = useSelector(state => state.user.address);
   const dispatch = useDispatch();
 
@@ -44,7 +48,8 @@ const SearchBar = () => {
     event.preventDefault();
     dispatch({
       type: 'FETCH_FOODTRUCK'
-    })
+    });
+
   }
 
   const handleChange = (event) => {
@@ -53,19 +58,68 @@ const SearchBar = () => {
       key: 'address',
       value: event.target.value
     })
+    
   }
   
   return (
   <>
-  {/* SearchBar Zone */} 
-    
-    <form className="searchBar_form" onSubmit={handleSubmit} >
-      <input type="text" onChange={handleChange} value={address}/>
-      <button>Rechercher à proximité</button>
+    {/* SearchBar Zone */}
+    <div className="searchBar">
+      <form className="searchBar_form" onSubmit={handleSubmit} >
 
-    </form>
+        {/* Search Text Zone */}
+        <div className="searchBar_text">
+          <input 
+            type="text" 
+            onChange={handleChange} 
+            value={address} required="required"
+          />
+          <span>
+            <FiTruck />     
+            {/* <TypeWriter_search /> */}
+          </span>
+        </div>
+
+        {/* Search Button Zone */}
+   
+        <input type="submit" className="searchBar_geolocate">
+          {/* <Icon.Search />       */}
+        </input>
+
+      </form> 
+
+    </div>
+    {/* {search===true && (
+      <Redirect to="/resultat"/>
+    )} */}
   </>
   );
 }
 
 export default SearchBar
+
+
+   {/* SearchBar Zone */} 
+    
+{/* //   <form className="searchBar_form" onSubmit={handleSubmit} >
+//   <input type="text" onChange={handleChange} value={address}/> */}
+
+
+   {/* <button>Rechercher à proximité</button> */}
+{/* 
+//   <NavLink 
+//     to="/resultat"
+//     exact
+//     >
+//     <div id="searchBar_button">
+//     <form className="searchBar_form" onSubmit={handleSubmit} >
+//       <input type="text" onChange={handleChange}value={address}>
+//         <div id="searchBar_button_circle"></div>
+//         <span></span>
+//         <img className="searchBar_Icon"  alt="RECHERCHE"/> 
+//       </button>
+//       </form>
+//     </div>
+//     </NavLink>
+
+// </form> */}

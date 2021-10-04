@@ -57,6 +57,3 @@ return (
 
 // == Export
 export default App;
-
-
-// https://reactrouter.com/web/api/Switch

@@ -7,6 +7,7 @@ import Result from 'src/components/Result';
 import './style.scss';
 
 const Home = () => { 
+
   return (
     <div className="home">
     <SearchBar /> 

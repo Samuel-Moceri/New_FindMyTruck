@@ -1,24 +1,29 @@
 import './style.scss';
 
-import * as Icon from 'react-feather';
-
-
 /* global document */
 import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import React, { useState, useRef, useCallback } from 'react'
+
 import MapGL, {GeolocateControl} from 'react-map-gl'
 import Geocoder from 'react-map-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 
+
+
 const Map = () => {
+
+  
 
   //Map generator
   const [viewport, setViewport] = useState({
+
+    
     // lat & long : starting position on the map (O'Clock's office)
-    latitude: 48.8730929,
-    longitude: 2.3165648,
+    latitude: 47.7,
+    longitude: -1.65
+  ,
     // W&H are define in style.scss (.map), map take 100% of this area
     width: "100%",
     height: "100%",
@@ -86,20 +91,20 @@ const Map = () => {
           className="geolocate_area"
           positionOptions={{enableHighAccuracy: true}}
           trackUserLocation={true}
-          showUserHeading={true}
-          position="top-right" 
+          // showUserHeading={true}
+          auto 
           // onGeolocate= {GeolocationCoordinates}
   
         />
 
         {/* Searchbar geocoder display */}
-        <Geocoder
+        {/* <Geocoder
           className="geocode_area"
           mapRef={mapRef}
           onViewportChange={handleGeocoderViewportChange}
           mapboxApiAccessToken={mapboxApiKey}
 
-        />
+        /> */}
       
       </MapGL>
     </div>
