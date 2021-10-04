@@ -4,9 +4,9 @@
 
 ## TL;DR
 
- 1. import and open folder - go to the Terminal :
- 2. - `yarn`
-	 -	`yarnstart`
+1. import and open folder - go to the Terminal :
+2. 	- `yarn`
+ 	- `yarn start`
 3. code.
 4. watch your code live on [http://localhost:8080](http://localhost:8080) .
 5. enjoy .
