@@ -6,6 +6,12 @@ import Foodtruck from 'src/components/Foodtruck';
 import Card from 'src/components/Card';
 import Map from 'src/components/Map';
 
+import Fake_Card from 'src/components/Card/fake_card';
+
+
+import {CgPin} from 'react-icons/cg';
+
+
 import './style.scss';
 
 const Result = () => {
@@ -22,14 +28,19 @@ const Result = () => {
   <div className="result">
 
     <div className="result_map">
-      {/* <Map /> */}
+      <Map />
     </div>
 
     <div className="result_cards">
       {foodtrucks.map((foodtruck) => (
         <Card key={foodtruck.id} {...foodtruck}/>
         ))}
+
+        <Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card />
     </div>
+
+    
+
   </div>
       {/* {foodtrucks.map((foodtruck) => (
         <Foodtruck key={foodtruck.id} {...foodtruck}/>  

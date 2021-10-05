@@ -5,46 +5,33 @@ import { CgPin } from 'react-icons/cg';
 
 import './style.scss';
 
-const Card = ({
-  id,
-  name,
-  category,
-  picture,
-  slug,
-  city,
-  postal_code,
-  payment,
-  street,
-  phone,
-}) => {
+const Fake_Card = ({}) => {
     
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-
-  const categoryName = category.name
-  const pictureURL = baseURL+`${picture}`;
-
+  
   return(
     <>
     <section className="card_foodtruck">
       <img 
         className="card_foodtruck_img"
-        src={pictureURL} 
-        // src={thumbnail} 
-        alt={slug}  
+
       />
       <div className="card_foodtruck_content">
-        <p className="card_foodtruck_content_title">{name}</p>
+        <p className="card_foodtruck_content_title">NOM DU FOODTRUCK</p>
         <div className="card_foodtruck_content_subtitle">
-          <p className="card_foodtruck_content_category">{categoryName}</p>
+          <p className="card_foodtruck_content_category">catégorie</p>
           <p className="card_foodtruck_content_rating"></p>
         </div>
         <div className="card_foodtruck_content_description">
-          <CgPin />
-          <p>{street}</p>
-          <p>{city}</p>
-          <p>{postal_code}</p>
-          <p>{payment}</p>
-          <p>{phone}</p>
+          <div className="card_foodtruck_content_description_adress">
+            <CgPin /> 
+            <p className="card_foodtruck_content_description_adress_street">Rue</p>
+            <p className="card_foodtruck_content_description_adress_postalcode">Code Postal</p>
+            <p className="card_foodtruck_content_description_adress_city">Ville</p>
+          </div>
+          <div className="card_foodtruck_content_description_details">
+            <p>Mode de paiement</p>
+            <p>Téléphone</p>
+          </div>
         </div>
       </div>
     </section>
@@ -66,4 +53,4 @@ const Card = ({
 //   slug: PropTypes.string.isRequired,
 // };
 
-export default Card;
+export default Fake_Card;

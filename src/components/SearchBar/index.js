@@ -77,19 +77,26 @@ const SearchBar = () => {
           />
           <span>
             <FiTruck />     
-           <TypeWriter_search />
+            <TypeWriter_search />
           </span>
         </div>
 
         {/* Search Button Zone */}
-   
+        <NavLink 
+          to="/resultat"
+          exact
+        >
+
         <div id="searchBar_button">
+          
           <button type="submit">
             <div id="searchBar_button_circle"></div>
             <span></span>
           </button>
         </div>
 
+        </NavLink>
+        
         {/* <input type="submit" className="searchBar_geolocate"></input> */}
 
       </form> 
