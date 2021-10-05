@@ -24,8 +24,8 @@
   display: grid;
   gap: .5rem;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 2fr));
-  justify-content: space-between;
-  justify-content: center;
+  // justify-content: space-between;
+  // justify-content: center;
   width: 90rem;
   height: 30rem;
   overflow: auto;
