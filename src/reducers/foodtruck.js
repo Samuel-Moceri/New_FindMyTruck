@@ -1,7 +1,9 @@
 // import data from 'src/data';
+import { FETCH_ALL_FOODTRUCKS  } from 'src/actions/foodtruck';
 
 export const initialState = {
     list: [],
+    id: '',
     // search: false,
   };
   
@@ -13,8 +15,15 @@ export const initialState = {
           list: action.foodtruck,
           // search: true,
         }
-      default:
-        return state;
+
+      // case FETCH_ALL_FOODTRUCKS :
+      //   return {
+      //     ...state,
+      //     id: action.id,
+      //   }
+      // default:
+      //   return state;
+          
     }
   };
   

@@ -14,9 +14,9 @@ import Map from 'src/components/Map';
 const Result = () => {
   const dispatch = useDispatch();
   const foodtrucks = useSelector(state => state.foodtruck.list);
-  console.log(foodtrucks);
-  useEffect(() => {
+  // console.log(foodtrucks);
 
+  useEffect(() => {
     if (!navigator.geolocation) {
         console.log('Geolocation is not supported by your browser');
     } else {
@@ -32,21 +32,16 @@ const Result = () => {
         dispatch({
           type: 'FETCH_FOODTRUCK_ON_LOAD',
         })
-        
-        
     }, () => {
       console.log('Unable to retrieve your location');
     });
-    }
-
+  }
 }, []);
 
   return (
 <>
-  
     <SearchBar />
     <p className="result_title">Résultats de votre recherche pour : </p>
-    
   
   <div className="result">
 

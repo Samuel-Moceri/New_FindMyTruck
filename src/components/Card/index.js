@@ -1,6 +1,8 @@
-import React from 'react';
-import {CgPin } from "react-icons/cg";
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+import {CgPin } from "react-icons/cg";
 
 import './style.scss';
 
@@ -17,8 +19,25 @@ const Card = ({
   const categoryName = category.name
   const pictureURL = baseURL+`${picture}`;
 
+  const handleClick = (event) => {
+    dispatch({
+      type: 'FETCH_ALL_FOODTRUCKS ',
+      id: id
+    })
+  }
+  const dispatch = useDispatch();
+  
+  // useEffect(() => {
+  //   dispatch({
+  //     type: 'LOAD_FOOD_TRUCK_DETAIL',
+  //     id: id
+  //   })
+  // }, []);
+
   return(
-  <Link to={`/foodtruck/${slug}`} className="card-link">
+  <Link to={`/foodtruck/${id}`} className="card-link" 
+  onClick={handleClick}
+  >
     <section className="card_foodtruck">
       <img 
         className="card_foodtruck_img"

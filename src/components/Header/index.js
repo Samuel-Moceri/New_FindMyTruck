@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
-import {Fiuser} from 'react-icons/fi';
+import {FiUser} from 'react-icons/fi';
 import './style.scss';
 
 
@@ -82,9 +82,9 @@ function handleClick() {
               to="/profil"
               exact
               >
-              <button className='header_right_link_logged_icon'>
-              {/* <Fiuser /> This icon generates conection issue */}
-              </button>
+              <div className='header_right_link_logged_icon'>
+               <FiUser /> {/*This icon generates conection issue */}
+              </div>
             </NavLink> 
           </div>
         </> 

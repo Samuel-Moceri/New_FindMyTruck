@@ -1,6 +1,6 @@
-import './style.scss';
 import { NavLink } from 'react-router-dom';
 
+import './style.scss';
 
 /**
  * Composant to make our 'footer' with different 'li' and links

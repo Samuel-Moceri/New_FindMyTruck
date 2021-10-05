@@ -65,7 +65,13 @@
   border-radius: 50%;
   background-color: vars.$palepink;
   margin-left: 1rem;
-
+  & svg {
+    position: relative;
+    top : .45rem;
+    left: .45rem;
+    width: 2rem;
+  height: 2rem;
+  }
 
 }
 

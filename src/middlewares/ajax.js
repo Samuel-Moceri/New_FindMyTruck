@@ -2,7 +2,7 @@ import axios from 'axios';
 import { TRY_LOGIN, LOGIN } from '../actions/users';
 import { SEND_MESSAGE } from '../actions/contact';
 import { REGISTER } from '../actions/register';
-import { FETCH_FOODTRUCK } from '../actions/foodtruck';
+import { FETCH_FOODTRUCK, FETCH_ALL_FOODTRUCKS  } from '../actions/foodtruck';
 
 // set the baseURl
 const api = axios.create({
@@ -29,7 +29,7 @@ const ajax = (store) => (next) => (action) => {
         // https://github.com/axios/axios#custom-instance-defaults
         api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
 
-        console.log(response.data);
+        // console.log(response.data);
         localStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data))
       
         store.dispatch({
@@ -60,11 +60,26 @@ const ajax = (store) => (next) => (action) => {
 
       // What we do if the request worked
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       })
 
       next(action);
     break;
+
+    // case FETCH_ALL_FOODTRUCKS :
+    //   const stateTruck = store.getState();
+    //   console.log(stateTruck);
+    //   const id = stateTruck.foodtruck.id;   
+    //   console.log(id);
+
+    //   api.get(`/api/v1/foodtruck/`)
+
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+
+    //   next(action);
+    //   break;
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 
@@ -77,13 +92,14 @@ const ajax = (store) => (next) => (action) => {
           return;
         }
 
-        console.log(response);
+        // console.log(response);
         store.dispatch({
           type: 'SAVE_FOODTRUCKLIST',
           foodtruck: response.data,
         })
       })
     break;
+
     case FETCH_FOODTRUCK :
       // const stateFoodtruck = store.getState();
         
@@ -97,7 +113,7 @@ const ajax = (store) => (next) => (action) => {
           console.log();('Votre adresse ne correspond à aucune connue.');
           return;
         }
-        console.log(response);
+        // console.log(response);
         const lon = response.data.features[0].geometry.coordinates[0];
         const lat = response.data.features[0].geometry.coordinates[1];
 
@@ -110,17 +126,16 @@ const ajax = (store) => (next) => (action) => {
             return;
           }
 
-          console.log(response);
+          // console.log(response);
           store.dispatch({
             type: 'SAVE_FOODTRUCKLIST',
             foodtruck: response.data,
           })
         })
       })
-
-    
       next(action);
       break;
+
 
     case REGISTER:
       const stateRegister = store.getState();
@@ -133,7 +148,7 @@ const ajax = (store) => (next) => (action) => {
       })
 
     .then((response) => {
-      console.log(response);
+      // console.log(response);
     })
     
     next(action);

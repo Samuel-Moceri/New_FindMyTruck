@@ -22,12 +22,15 @@ import Test from 'src/components/Test';
 // == Composant
 function App() {
   const logged = useSelector(state => state.user.logged);
-  const foodtruckList = useSelector((state) => state.foodtruck.list);
+  // const foodtruckList = useSelector((state) => state.foodtruck.list);
 
   const isLogged = useSelector(state => state.user.isLogged);
   const { pathname } = useLocation();
   // We use a hook to dispatch our action
   const dispatch = useDispatch();
+
+  // const id = useSelector(state => state.foodtruck.id);
+  // console.log('blabla: '+id);
   
   useEffect(() => { 
     // On emet donc l'action avec le type 'LOG_USER'
@@ -47,18 +50,12 @@ return (
         <Route path="/inscription" exact component={Register} />
         <Route path="/resultat" exact component={Result} />
 
-        {foodtruckList.map((foodtruck) => (
-          <Route
-          key={foodtruck.id}
-          path={`/foodtruck/${foodtruck.slug}`}
-          exact
-          component={Foodtruck}
-          />
-        ))}
+        {/* <Route path={`/foodtruck/${id}`} exact component={Foodtruck}/> */}
 
         <Route path="/contact" exact component={Contact} />
         <Route path="/equipe" exact component={Team} />
         <Route path="/mentions_legales" exact component={Legals} />
+
         {logged && (<Route path="/profil" exact component={Profil} />)}
 
       </Switch>
