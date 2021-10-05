@@ -3,8 +3,8 @@ import { CHANGE_VALUE, LOGIN } from 'src/actions/users';
 // set the initial state
 export const initialState = {
     logged: false,
-    email: '',
-    password: '',
+    email: 'findmytruck2021@gmail.com',
+    password: '123456',
     nickname: '',
     token: '',
     address: '',

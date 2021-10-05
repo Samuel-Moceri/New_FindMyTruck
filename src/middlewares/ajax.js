@@ -2,7 +2,7 @@ import axios from 'axios';
 import { TRY_LOGIN, LOGIN } from '../actions/users';
 import { SEND_MESSAGE } from '../actions/contact';
 import { REGISTER } from '../actions/register';
-import { FETCH_FOODTRUCK, FETCH_ALL_FOODTRUCKS  } from '../actions/foodtruck';
+import { FETCH_FOODTRUCK } from '../actions/foodtruck';
 
 // set the baseURl
 const api = axios.create({
@@ -66,20 +66,6 @@ const ajax = (store) => (next) => (action) => {
       next(action);
     break;
 
-    // case FETCH_ALL_FOODTRUCKS :
-    //   const stateTruck = store.getState();
-    //   console.log(stateTruck);
-    //   const id = stateTruck.foodtruck.id;   
-    //   console.log(id);
-
-    //   api.get(`/api/v1/foodtruck/`)
-
-    //   .then((response) => {
-    //     console.log(response);
-    //   })
-
-    //   next(action);
-    //   break;
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 

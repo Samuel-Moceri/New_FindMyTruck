@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import SearchBar from 'src/components/SearchBar';
-import Card from 'src/components/Card';
 import Foodtruck from 'src/components/Foodtruck';
+import Card from 'src/components/Card';
 
 import './style.scss';
 import Map from 'src/components/Map';
@@ -13,7 +13,7 @@ import Map from 'src/components/Map';
 
 const Result = () => {
   const dispatch = useDispatch();
-  const foodtrucks = useSelector(state => state.foodtruck.list);
+  // const foodtrucks = useSelector(state => state.foodtruck.list);
   // console.log(foodtrucks);
 
   useEffect(() => {
@@ -52,8 +52,7 @@ const Result = () => {
     <div className="result_cards">
     {foodtrucks.map((foodtruck) => (
           <Card key={foodtruck.id} {...foodtruck}/>
-          
-        ))}
+    ))}
         
     </div>
   </div>

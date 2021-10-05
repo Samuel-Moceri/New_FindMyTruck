@@ -16,10 +16,7 @@ const SearchBar = () => {
   const address = useSelector(state => state.user.address);
   const dispatch = useDispatch();
 
-  //ZONE DE TEST
 
-
-  //ZONE DE TEST
 
   useEffect(() => {
 

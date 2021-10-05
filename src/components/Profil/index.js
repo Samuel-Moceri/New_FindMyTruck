@@ -9,7 +9,7 @@ import './style.scss';
 
   return (
 
-<div>On est sur ton profil VINCENT BOUCHARD</div>
+<div>On est sur ton profil</div>
   );
 };
 

@@ -19,13 +19,13 @@ const Card = ({
   const categoryName = category.name
   const pictureURL = baseURL+`${picture}`;
 
-  const handleClick = (event) => {
-    dispatch({
-      type: 'FETCH_ALL_FOODTRUCKS ',
-      id: id
-    })
-  }
-  const dispatch = useDispatch();
+  // const handleClick = (event) => {
+  //   dispatch({
+  //     type: 'FETCH_ALL_FOODTRUCKS ',
+  //     id: id
+  //   })
+  // }
+  // const dispatch = useDispatch();
   
   // useEffect(() => {
   //   dispatch({
@@ -35,9 +35,9 @@ const Card = ({
   // }, []);
 
   return(
-  <Link to={`/foodtruck/${id}`} className="card-link" 
-  onClick={handleClick}
-  >
+  // <Link to={`/foodtruck/${id}`} className="card-link" 
+  // onClick={handleClick}
+  // >
     <section className="card_foodtruck">
       <img 
         className="card_foodtruck_img"
@@ -57,7 +57,7 @@ const Card = ({
         </div>
       </div>
     </section>
-  </Link>
+  // </Link>
 
 );
 }
