@@ -1,5 +1,6 @@
-
 import './style.scss';
+import {CgPin} from 'react-icons/cg';
+
 
 const Foodtruck = ({
     id,

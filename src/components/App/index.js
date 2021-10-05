@@ -15,6 +15,7 @@ import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
 import Result from 'src/components/Result';
 import Foodtruck from 'src/components/Foodtruck';
+import Test from 'src/components/Test';
 
 
 
@@ -48,7 +49,7 @@ return (
         <Route path="/inscription" exact component={Register} />
         <Route path="/resultat" exact component={Result} />
         <Route path="/foodtruck" exact component={Foodtruck} />
-        
+        <Route path="/test" exact component={Test} />
 
         {logged && (<Route path="/profil" exact component={Profil} />)}
 

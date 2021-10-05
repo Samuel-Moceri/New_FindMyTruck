@@ -68,7 +68,7 @@ const ajax = (store) => (next) => (action) => {
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 
-      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=500`)
+      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=20`)
 
       .then((response)=> {
 
@@ -90,7 +90,7 @@ const ajax = (store) => (next) => (action) => {
       const stateFoodtruck = store.getState();
       const address = stateFoodtruck.user.address;
 
-      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}`)
+      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}&autocomplete=1`)
       .then((response)=> {
 
         if(!response.data.features.length) {
