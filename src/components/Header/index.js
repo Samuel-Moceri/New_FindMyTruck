@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 // import ajax from 'src/components/middlewares';
 
+import { FiUser } from 'react-icons/fi';
+
 
 import './style.scss';
 
@@ -73,18 +75,18 @@ function handleClick() {
       )}
 
       {logged===true && (
-        <>
-          <div>Bonjour {nickname}</div>
+        <div className="header_right_logged">
+          <div className="header_right_logged_hello">Bonjour <span className="header_right_logged_hello_nickname">{nickname}</span> !</div>
           <NavLink
-            className='login' 
+            className='header_right_link' 
             to="/profil"
             exact
             >
-            <button className='login_img'>
-              <img src={loginLogo} alt="logoLogin"/>
+            <button className='header_right_link_logged_icon'>
+              <FiUser />      
             </button>
           </NavLink> 
-        </>
+        </div>
       )}
     </section>
 

@@ -2,7 +2,7 @@ import { CHANGE_VALUE, LOGIN } from 'src/actions/users';
 
 // set the initial state
 export const initialState = {
-    logged: false,
+    logged: true,
     email: '',
     password: '',
     nickname: '',

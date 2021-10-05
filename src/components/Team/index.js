@@ -4,8 +4,11 @@ import Julien from 'src/assets/images/equipe/Julien_clear.png';
 import Ludo from 'src/assets/images/equipe/Ludo_clear.png';
 import Samuel from 'src/assets/images/equipe/Samuel_clear.png';
 import Vincent from 'src/assets/images/equipe/Vincent_clear_02.png';
+import Anaglyph from 'src/assets/images/equipe/Anaglyph.png';
 
 
+
+import {IoLogoLinkedin, IoLogoGithub, IoMailSharp} from "react-icons/io5";
 
 const Team = () => {
   
@@ -13,53 +16,81 @@ const Team = () => {
     
     <>
 
-      <p className="title">Les génies derrière ce magnifique projet</p>
+      <p className="team_card_title">Les génies derrière ce magnifique projet</p>
 
       <div className="team">
 
 
-        <div className="card card_1">
-          <div className="circle color_1" />
-          <img className="img" src={Arnaud} />
-          <div className="text">
-            <div className="name">Arnaud</div>
-            <div className="role">Git Master</div>
+        <div className="team_card team_card_1">
+          <div className="team_card_circle color_1" />
+          <img className="team_card_img" src={Arnaud} />
+          <div className="team_card_text">
+            <div className="team_card_name">Arnaud</div>
+            <div className="team_card_role">Git Master</div>
+            <div className="team_card_contact">
+              <a className="team_card_contact_icon" href=""><IoLogoLinkedin /></a>
+              <a className="team_card_contact_icon" href=""><IoLogoGithub /></a>
+              <a className="team_card_contact_icon" href="toto@gmail.com"><IoMailSharp /></a>
+            </div>
+
           </div>
         </div>
 
-        <div className="card card_2">
-          <div className="circle color_2" />
-          <img className="img" src={Julien} />
-          <div className="text">
-            <div className="name">Julien</div>
-            <div className="role">Lead Dev Back</div>
+        <div className="team_card team_card_2">
+          <div className="team_card_circle color_2" />
+          <img className="team_card_img" src={Julien} />
+          <div className="team_card_text">
+            <div className="team_card_name">Julien</div>
+            <div className="team_card_role">Lead Dev Back</div>
+            <div className="team_card_contact">
+              <a className="team_card_contact_icon" href=""><IoLogoLinkedin /></a>
+              <a className="team_card_contact_icon" href=""><IoLogoGithub /></a>
+              <a className="team_card_contact_icon" href="toto@gmail.com"><IoMailSharp /></a>
+            </div>
           </div>
         </div>
 
-        <div className="card card_3">
-          <div className="circle color_3" />
-          <img className="img" src={Ludo} />
-          <div className="text">
-            <div className="name">Ludo</div>
-            <div className="role">Lead Dev Front</div>
+        <div className="team_card team_card_3">
+          <div className="team_card_circle color_3" />
+          <img className="team_card_img" src={Ludo} />
+          <img id="anaglyph_img" className="team_card_img_bonus" src={Anaglyph} />
+          <div id="anaglyph_txt" className="team_card_text">
+            <div className="team_card_name">Ludo</div>
+            <div className="team_card_role">Lead Dev Front</div>
+            <div className="team_card_contact">
+              <a className="team_card_contact_icon" href=""><IoLogoLinkedin /></a>
+              <a className="team_card_contact_icon" href=""><IoLogoGithub /></a>
+              <a className="team_card_contact_icon" href="toto@gmail.com"><IoMailSharp /></a>
+            </div>
           </div>
         </div>
 
-        <div className="card card_4">
-          <div className="circle color_4" />
-          <img className="img" src={Samuel} />
-          <div className="text">
-            <div className="name">Samuel</div>
-            <div className="role">Product Owner</div>
+        <div className="team_card team_card_4">
+          <div className="team_card_circle color_4" />
+          <img className="team_card_img" src={Samuel} />
+          <div className="team_card_text">
+            <div className="team_card_name">Samuel</div>
+            <div className="team_card_role">Product Owner</div>
+            <div className="team_card_contact">
+              <a className="team_card_contact_icon" href=""><IoLogoLinkedin /></a>
+              <a className="team_card_contact_icon" href=""><IoLogoGithub /></a>
+              <a className="team_card_contact_icon" href="toto@gmail.com"><IoMailSharp /></a>
+            </div>
           </div>
         </div>
 
-        <div className="card card_5">
-          <div className="circle color_5" />
-          <img className="img" src={Vincent} />
-          <div className="text">
-            <div className="name">Vincent</div>
-            <div className="role">Project Manager</div>
+        <div className="team_card team_card_5">
+          <div className="team_card_circle color_5" />
+          <img className="team_card_img" src={Vincent} />
+          <div className="team_card_text">
+            <div className="team_card_name">Vincent</div>
+            <div className="team_card_role">Project Manager</div>
+            <div className="team_card_contact"></div>
+            <div className="team_card_contact">
+              <a className="team_card_contact_icon" href=""><IoLogoGithub /></a>
+              <a className="team_card_contact_icon" href=""><IoLogoLinkedin /></a>
+              <a className="team_card_contact_icon" href="toto@gmail.com"><IoMailSharp /></a>
+            </div>
           </div>
         </div>
 

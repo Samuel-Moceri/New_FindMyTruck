@@ -1,9 +1,7 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { CgPin } from 'react-icons/cg';
 
 import './style.scss';
-
-import { CgPin } from "react-icons/cg";
 
 const Foodtruck = ({ slug }) => {
 
@@ -26,7 +24,7 @@ const Foodtruck = ({ slug }) => {
           <p className="page_foodtruck_content_rating">{categoryName}</p>
         </div>
         <div className="page_foodtruck_content_description">
-          <CgPin />
+        <CgPin />
           {/* <p>{location}</p>  */}
         </div>
       </div>

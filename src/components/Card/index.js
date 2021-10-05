@@ -1,6 +1,7 @@
 import React from 'react';
-import {CgPin } from "react-icons/cg";
 import { Link } from 'react-router-dom';
+import { CgPin } from 'react-icons/cg';
+
 
 import './style.scss';
 
