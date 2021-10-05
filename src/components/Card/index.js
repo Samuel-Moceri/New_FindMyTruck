@@ -7,10 +7,14 @@ import './style.scss';
 const Card = ({
   id,
   name,
-  location,
   category,
   picture,
   slug,
+  city,
+  postal_code,
+  payment,
+  street,
+  phone,
 }) => {
     
   const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
@@ -19,13 +23,12 @@ const Card = ({
   const pictureURL = baseURL+`${picture}`;
 
   return(
-  <Link to={`/foodtruck/${slug}`} className="card-link">
     <section className="card_foodtruck">
       <img 
         className="card_foodtruck_img"
         src={pictureURL} 
         // src={thumbnail} 
-        // alt={title}  
+        alt={slug}  
       />
       <div className="card_foodtruck_content">
         <p className="card_foodtruck_content_title">{name}</p>
@@ -35,12 +38,14 @@ const Card = ({
         </div>
         <div className="card_foodtruck_content_description">
           <CgPin />
-          <p>{location}</p> 
+          <p>{street}</p>
+          <p>{city}</p>
+          <p>{postal_code}</p>
+          <p>{payment}</p>
+          <p>{phone}</p>
         </div>
       </div>
     </section>
-  </Link>
-
 );
 }
 

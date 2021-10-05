@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { Redirect } from 'react-router'
+import { NavLink, Redirect } from 'react-router-dom';
+// import Result from 'src/components/Result';
+
 
 import Result from 'src/components/Result';
 import TypeWriter_search from 'src/components/Typewriter/typewriter_search';
@@ -14,6 +15,7 @@ import {FiTruck} from 'react-icons/fi';
 const SearchBar = () => {
 
   const address = useSelector(state => state.user.address);
+  // const search = useSelector(state =>state.foodtruck.search);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -89,7 +91,7 @@ const SearchBar = () => {
 
     </div>
     {/* {search===true && (
-      <Redirect to="/resultat"/>
+      <Result />
     )} */}
   </>
   );

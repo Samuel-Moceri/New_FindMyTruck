@@ -114,6 +114,7 @@ const ajax = (store) => (next) => (action) => {
           store.dispatch({
             type: 'SAVE_FOODTRUCKLIST',
             foodtruck: response.data,
+            search: true,
           })
         })
       })
