@@ -16,6 +16,11 @@ const SearchBar = () => {
   const address = useSelector(state => state.user.address);
   const dispatch = useDispatch();
 
+  //ZONE DE TEST
+
+
+  //ZONE DE TEST
+
   useEffect(() => {
 
       if (!navigator.geolocation) {
@@ -56,9 +61,10 @@ const SearchBar = () => {
       type: 'CHANGE_VALUE',
       key: 'address',
       value: event.target.value
-    })
+    });
     
   }
+
   
   return (
   <>
@@ -80,13 +86,16 @@ const SearchBar = () => {
         </div>
 
         {/* Search Button Zone */}
-   
-        <div id="searchBar_button">
-          <button type="submit">
-            <div id="searchBar_button_circle"></div>
-            <span></span>
-          </button>
-        </div>
+
+
+        
+          <div id="searchBar_button" >
+            <button type="submit">
+              <div id="searchBar_button_circle"></div>
+              <span></span>
+            </button> 
+          </div>
+
 
       </form> 
 
@@ -99,3 +108,4 @@ const SearchBar = () => {
 }
 
 export default SearchBar
+

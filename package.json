@@ -53,6 +53,7 @@
     "@mapbox/mapbox-gl-geocoder": "^4.7.4",
     "@syncfusion/ej2-maps": "^19.2.60",
     "axios": "^0.21.4",
+    "ban-autocomplete-react": "^0.0.1-alpha2",
     "feather-icons": "^4.28.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",

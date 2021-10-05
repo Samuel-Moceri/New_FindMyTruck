@@ -90,7 +90,7 @@ const ajax = (store) => (next) => (action) => {
       const stateFoodtruck = store.getState();
       const address = stateFoodtruck.user.address;
 
-      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}`)
+      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}&autocomplete=1`)
       .then((response)=> {
 
         if(!response.data.features.length) {

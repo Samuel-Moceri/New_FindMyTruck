@@ -19,22 +19,18 @@ const Result = () => {
 <>
   
     <SearchBar />
-    <p className="result_title">Résultats de votre recherche</p>
+    <p className="result_title">Résultats de votre recherche pour : </p>
     
   
   <div className="result">
 
     <div className="result_map">
-    <Map />
+    {/* <Map /> */}
     </div>
 
     <div className="result_cards">
     {foodtrucks.map((foodtruck) => (
           <Card key={foodtruck.id} {...foodtruck}/>
-          
-        ))}
-        {foodtrucks.map((foodtruck) => (
-          <Foodtruck key={foodtruck.id} {...foodtruck}/>
           
         ))}
         
