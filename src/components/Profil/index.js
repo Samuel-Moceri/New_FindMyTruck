@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import { NavLink } from 'react-router-dom';
 
 import './style.scss';
-=======
 import { useDispatch, useSelector } from 'react-redux';
 import { typeValues } from 'src/actions/profil';
 
 import './style.scss';
 
 import Field from 'src/components/Forms/Field';
->>>>>>> feature/foodtruckPage
 
  const Profil = () => {
 
@@ -123,9 +120,6 @@ import Field from 'src/components/Forms/Field';
               />
             </div>
 
-<<<<<<< HEAD
-<div>On est sur ton profil</div>
-=======
             <div className='postCodeForm'>
               <Field
                 form="profil"
@@ -141,7 +135,6 @@ import Field from 'src/components/Forms/Field';
         </form>
       </div>
     </>
->>>>>>> feature/foodtruckPage
   );
 };
 

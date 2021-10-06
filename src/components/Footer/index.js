@@ -29,11 +29,7 @@ import { NavLink } from 'react-router-dom';
         to="/equipe"
         exact
         >
-<<<<<<< HEAD
-          <li  className="footer_list_el">Find My Truck - Dénicheur de Foodtrucks depuis 2021</li>
-=======
-          <li  className="footer_list_el">Find My Truck - Artisan dénicheur depuis 2021</li>
->>>>>>> feature/foodtruckPage
+          <li  className="footer_list_el">Find My Truck - Artisan dénicheur depuis 2021 </li>
         </NavLink>
 
         <NavLink 

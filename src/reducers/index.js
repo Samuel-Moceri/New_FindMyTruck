@@ -3,9 +3,8 @@ import { combineReducers } from 'redux';
 import userReducer from './user';
 import contactReducer from './contact';
 import registerReducer from './register';
-// import profilReducer from './profil';
-import foodtruckReducer from './foodtruck';
 import profilReducer from './profil';
+import foodtruckReducer from './foodtruck';
 
 
 
@@ -16,9 +15,8 @@ const rootReducer = combineReducers({
   user: userReducer,
   contact: contactReducer,
   register: registerReducer,
-  // profil: profilReducer,
-  foodtruck: foodtruckReducer,
   profil: profilReducer,
+  foodtruck: foodtruckReducer,
 });
 
 export default rootReducer;

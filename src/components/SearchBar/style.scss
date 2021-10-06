@@ -10,8 +10,6 @@
   background-color: #FFF;
 }
 
-<<<<<<< HEAD
-=======
 .searchBar_button {
     width: 3.8em;
     height: 3.8rem;
@@ -21,7 +19,6 @@
     border-radius: .5rem;
     padding: 1rem;
 }
->>>>>>> feature/foodtruckPage
 // .searchBar_geolocate{
 //   background-color: vars.$paleblue;
 //   border: none;
@@ -84,11 +81,7 @@
   pointer-events: none;
   & svg {
     position: relative;
-<<<<<<< HEAD
-    bottom: -5px;
-=======
     bottom: -7px;
->>>>>>> feature/foodtruckPage
     width: 1.2rem;
   }
   & .Typewriter__wrapper {
@@ -107,28 +100,17 @@
   font-size: .8rem;
   color: vars.$paleblue;
   & svg {
-<<<<<<< HEAD
-    position: relative;
-    bottom: -13px;
-    width: .8rem;
-  }
-  & .Typewriter__wrapper {
-    transform:  translateX(-5px) translateY(9px);
-=======
     transform:  translateX(-5
     8px) translateY(1px);
     width: .8rem;
   }
   & .Typewriter__wrapper {
     transform:  translateX(-3px) translateY(1px);
->>>>>>> feature/foodtruckPage
     font-size: .8rem;
     color: vars.$paleblue;
     padding-left: 2rem;
     width: 28rem;
   }
-<<<<<<< HEAD
-=======
 }
 
 //Search Button Zone
@@ -243,7 +225,6 @@
   right: -4px;
   width: 15px;
   background-color: #fff;
->>>>>>> feature/foodtruckPage
 }
 
 //Search Button Zone

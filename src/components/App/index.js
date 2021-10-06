@@ -17,17 +17,13 @@ import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
 import Result from 'src/components/Result';
-import Foodtruck from 'src/components/Foodtruck';
+// import Foodtruck from 'src/components/Foodtruck';
 import Test from 'src/components/Test';
 
 // == Composant
 function App() {
   const logged = useSelector(state => state.user.logged);
-<<<<<<< HEAD
-  // const foodtruckList = useSelector((state) => state.foodtruck.list);
-=======
   const foodtruckList = useSelector((state) => state.foodtruck.list);
->>>>>>> feature/foodtruckPage
 
   // const isLogged = useSelector(state => state.user.isLogged);
   // const { pathname } = useLocation();
@@ -62,23 +58,9 @@ return (
       <Header />
     {/* Switch allows you to link components with routes that you define */}
       <Switch>
-<<<<<<< HEAD
-      <Route path="/" exact component={Home} />
-        <Route path="/connexion" exact component={LoginForm} />
-        <Route path="/inscription" exact component={Register} />
-        <Route path="/resultat" exact component={Result} />
-
-        {/* <Route path={`/foodtruck/${id}`} exact component={Foodtruck}/> */}
-
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/equipe" exact component={Team} />
-        <Route path="/mentions_legales" exact component={Legals} />
-
-=======
         <Route path="/" exact component={Home} />
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
->>>>>>> feature/foodtruckPage
         {logged && (<Route path="/profil" exact component={Profil} />)}
 
         {/* <Route path="/resultat" exact component={Result} /> */}

@@ -87,18 +87,6 @@ const SearchBar = () => {
         </div>
 
         {/* Search Button Zone */}
-<<<<<<< HEAD
-
-
-        
-          <div id="searchBar_button" >
-            <button type="submit">
-              <div id="searchBar_button_circle"></div>
-              <span></span>
-            </button> 
-          </div>
-
-=======
         <NavLink 
           to="/resultat"
           exact
@@ -120,7 +108,6 @@ const SearchBar = () => {
         type="submit">
         
         </input>
->>>>>>> feature/foodtruckPage
 
       </form> 
 

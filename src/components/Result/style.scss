@@ -21,18 +21,11 @@
   // overflow:auto;
   display: grid;
   gap: .5rem;
-<<<<<<< HEAD
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 2fr));
-  // justify-content: space-between;
-  // justify-content: center;
-  width: 90rem;
-=======
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 30% 30% 30%;
   // justify-content: space-between;
   // justify-content: center;
   width: 66%;
->>>>>>> feature/foodtruckPage
   height: 30rem;
 }
 
@@ -45,10 +38,6 @@ transition: .3s ease-in-out;
 opacity: 1;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> feature/foodtruckPage
 // @media (max-width:320px) {
 //   // RESULTS
 //   .result {
@@ -74,11 +63,7 @@ opacity: 1;
 //     display: none;
 //   }
 //   .result_cards {
-<<<<<<< HEAD
-//     display: block;
-=======
 //     display: none;
->>>>>>> feature/foodtruckPage
 //   }
 //   .footer {
 //     opacity: 0;
@@ -90,11 +75,7 @@ opacity: 1;
 //   .result {
 //     display: block;
 //     &_cards{
-<<<<<<< HEAD
-//       display: block;
-=======
 //       display: none;
->>>>>>> feature/foodtruckPage
 //     }
 //   }
 // }
@@ -103,11 +84,7 @@ opacity: 1;
 //   // RESULTS
 //   .result {
 //     &_cards{
-<<<<<<< HEAD
-//       display: block;
-=======
 //       display: none;
->>>>>>> feature/foodtruckPage
 //     }
 //   }
 // }
