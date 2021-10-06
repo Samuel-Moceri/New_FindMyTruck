@@ -3,8 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // == Composant
-const ContactField = ({
-  form,
+
+
+const ContactFieldTextarea = ({
   value,
   type,
   name,
@@ -18,37 +19,35 @@ const ContactField = ({
   };
 
   const inputId = `field-${name}`;
-  const className = `${form}_field_input`;
-
 
   return (
     <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-      <input
-        // React - state
-        value={value}
-        onChange={handleChange}
-        // infos de base
-        id={inputId}
-        type={type}
-        className="field-input"
-        placeholder={placeholder}
-        className={className}
-        required='required'
-
-        name={name}
-      />
-
       {/* <label
         htmlFor={inputId}
         className="field-label"
       >
         {placeholder}
       </label> */}
+      
+      <textarea
+        // React - state
+        value={value}
+        onChange={handleChange}
+        // infos de base
+        id={inputId}
+        type={type}
+        className="field-input-textarea"
+        placeholder={placeholder}
+        name={name}
+        required='required'
+      />
+
+
     </div>
   );
 };
 
-ContactField.propTypes = {
+ContactFieldTextarea.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -57,10 +56,10 @@ ContactField.propTypes = {
 };
 
 // Valeurs par défaut pour les props
-ContactField.defaultProps = {
+ContactFieldTextarea.defaultProps = {
   value: '',
   type: 'text',
 };
 
 // == Export
-export default ContactField;
+export default ContactFieldTextarea;

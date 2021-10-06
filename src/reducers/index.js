@@ -2,6 +2,10 @@ import { combineReducers } from 'redux';
 
 import userReducer from './user';
 import contactReducer from './contact';
+import registerReducer from './register';
+import foodtruckReducer from './foodtruck';
+import profilReducer from './profil';
+
 
 
 // We pass to the combineReducers an object which has the shape of the desired state
@@ -10,6 +14,9 @@ import contactReducer from './contact';
 const rootReducer = combineReducers({
   user: userReducer,
   contact: contactReducer,
+  register: registerReducer,
+  foodtruck: foodtruckReducer,
+  profil: profilReducer,
 });
 
 export default rootReducer;
