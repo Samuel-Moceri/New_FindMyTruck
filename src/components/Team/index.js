@@ -5,6 +5,8 @@ import Ludo from 'src/assets/images/equipe/Ludo_clear.png';
 import Samuel from 'src/assets/images/equipe/Samuel_clear.png';
 import Vincent from 'src/assets/images/equipe/Vincent_clear_02.png';
 import Anaglyph from 'src/assets/images/equipe/Anaglyph.png';
+import Oakley from 'src/assets/images/equipe/Oakley_02.png';
+
 
 
 
@@ -68,7 +70,8 @@ const Team = () => {
         <div className="team_card team_card_4">
           <div className="team_card_circle color_4" />
           <img className="team_card_img" src={Samuel} />
-          <div className="team_card_text">
+          <img id="oakley_img" className="team_card_img_bonus" src={Oakley} />
+          <div id="oakley_txt" className="team_card_text">
             <div className="team_card_name">Samuel</div>
             <div className="team_card_role">Product Owner</div>
             <div className="team_card_contact">
