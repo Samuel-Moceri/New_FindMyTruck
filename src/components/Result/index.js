@@ -9,7 +9,7 @@ import Map from 'src/components/Map';
 import Fake_Card from 'src/components/Card/fake_card';
 
 
-import {CgPin} from 'react-icons/cg';
+// import {CgPin} from 'react-icons/cg';
 
 
 import './style.scss';

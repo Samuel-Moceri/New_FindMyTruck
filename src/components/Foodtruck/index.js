@@ -1,5 +1,5 @@
 import React from 'react';
-import { CgPin } from 'react-icons/cg';
+// import { CgPin } from 'react-icons/cg';
 
 import './style.scss';
 
@@ -24,7 +24,7 @@ const Foodtruck = ({ slug }) => {
           <p className="page_foodtruck_content_rating">{categoryName}</p>
         </div>
         <div className="page_foodtruck_content_description">
-        <CgPin />
+        {/* <CgPin /> */}
           {/* <p>{location}</p>  */}
         </div>
       </div>
