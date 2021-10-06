@@ -22,7 +22,7 @@ const Result = () => {
   return (
 <>
   
-    <SearchBar />
+    {/* <SearchBar /> */}
     <p className="result_title">Résultats de votre recherche</p>
   
   <div className="result">

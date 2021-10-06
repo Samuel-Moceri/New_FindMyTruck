@@ -29,11 +29,9 @@ const ajax = (store) => (next) => (action) => {
         // https://github.com/axios/axios#custom-instance-defaults
         console.log(response.data);
         
-        api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
-        // localStorage.setItem('token', response.data.token);
-        // sessionStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data))
         sessionStorage.setItem('key',JSON.stringify(response.data))
-      
+        api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
+
         store.dispatch({
           type: LOGIN,
           nickname: response.data.data.nickname,

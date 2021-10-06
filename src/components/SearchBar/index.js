@@ -100,7 +100,8 @@ const SearchBar = () => {
         </NavLink>
         
         <input 
-        className="searchBar_button" 
+        className="searchBar_button"
+        value="GO" 
         type="submit">
         
         </input>
@@ -108,9 +109,8 @@ const SearchBar = () => {
       </form> 
 
     </div>
-    {/* {search===true && (
       <Result />
-    )} */}
+   
   </>
   );
 }

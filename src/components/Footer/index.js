@@ -11,12 +11,12 @@ import { NavLink } from 'react-router-dom';
 
     <footer className="footer">
       <ul className="footer_list">
-        <NavLink 
+        {/* <NavLink 
           to="/resultat"
           exact
         >
           <li  className="footer_list_el">Résultats</li>
-        </NavLink>
+        </NavLink> */}
 
         <NavLink 
         to="/contact"

@@ -8,9 +8,9 @@ import React, { useState } from 'react';
 import './style.scss';
 
 const Home = () => { 
-  window.onunload = function () {
-    sessionStorage.clear();
-  }
+  // window.onunload = function () {
+  //   sessionStorage.clear();
+  // }
 
   return (
     <div className="home">
