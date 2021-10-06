@@ -5,7 +5,12 @@ export const initialState = {
     logged: false,
     email: '',
     password: '',
-    token: ''
+    nickname: '',
+    token: '',
+    address: '',
+    lat: '',
+    lon: '',
+    
 };
 
 // define the reducer's properties/params
@@ -14,7 +19,7 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_VALUE:
       return {
         ...state,
-        [action.key]: action.value
+        [action.key]: action.value,
       }
     case LOGIN:
       // the new state will have the new values (action.value)
@@ -23,11 +28,27 @@ const reducer = (state = initialState, action = {}) => {
         logged: true,
         password: '',
         email: '',
-        token: action.token
+        nickname: action.nickname,
+        token: action.token,
       }
+    case 'SAVE_LAT_LNG': 
+      return {
+        ...state,
+        lat: action.lat,
+        lon: action.lon,
+      }
+      case 'LOGOUT':
+        return {
+          ...state,
+          logged: false,
+          nickname: '',
+          token: '',
+        };
     default:
       return state;
   }
 };
 
 export default reducer;
+
+// const pseudo = useSelector((state) => state.user.pseudo);

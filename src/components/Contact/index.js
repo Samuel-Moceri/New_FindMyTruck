@@ -1,6 +1,8 @@
 import { changeValues } from 'src/actions/contact';
 import { useDispatch, useSelector } from 'react-redux';
 import ContactField from 'src/components/Contact/Field';
+import ContactFieldTextarea from 'src/components/Contact/Field/textarea';
+
 
 import './style.scss';
 
@@ -27,13 +29,15 @@ const Contact = () => {
     // Tester de créer notre propre onchange au lieu du OnField
   return(
 <>
-<form onSubmit={handleSubmit} className="settings-form">
+<form onSubmit={handleSubmit} className="contact_form">
+  <div className="login_form_title">Contactez-nous</div>
         <ContactField
           name="nameContact"
           value={nameContact}
           type="name"
           placeholder="Nom"
           onFieldContactChange={onFieldContactChange}
+          required='required'
         />
         <ContactField
           name="emailContact"
@@ -41,6 +45,7 @@ const Contact = () => {
           type="email"
           placeholder="E-mail"
           onFieldContactChange={onFieldContactChange}
+          required='required'
         />
         <ContactField
           name="objectContact"
@@ -48,17 +53,19 @@ const Contact = () => {
           type="object"
           placeholder="Objet du message"
           onFieldContactChange={onFieldContactChange}
+          required='required'
         />
-        <ContactField
-          name="messageContact"
-          value={messageContact}
-          type="message"
-          placeholder="Votre message"
-          onFieldContactChange={onFieldContactChange}
-        />
+        <ContactFieldTextarea 
+              name="messageContact"
+              value={messageContact}
+              type="message"          
+              placeholder="Votre message"
+              onFieldContactChange={onFieldContactChange}
+              required='required'
+            />
         <button 
         type="submit"
-        className="login-form-button"
+        className="contact_form_button"
         >
           Envoyer
         </button>
