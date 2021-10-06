@@ -27,11 +27,17 @@ const ajax = (store) => (next) => (action) => {
       .then((response) => {
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
+        console.log(response.data);
+        
+        sessionStorage.setItem('key',JSON.stringify(response.data))
         api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
 
+<<<<<<< HEAD
         // console.log(response.data);
         localStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data))
       
+=======
+>>>>>>> feature/foodtruckPage
         store.dispatch({
           type: LOGIN,
           nickname: response.data.data.nickname,
@@ -106,7 +112,6 @@ const ajax = (store) => (next) => (action) => {
         api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=10`)
 
         .then((response)=> {
-
           if(!response.data.length) {
             console.log();('Aucun foodtruck');
             return;
@@ -116,6 +121,7 @@ const ajax = (store) => (next) => (action) => {
           store.dispatch({
             type: 'SAVE_FOODTRUCKLIST',
             foodtruck: response.data,
+            search: true,
           })
         })
       })

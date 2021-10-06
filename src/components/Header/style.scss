@@ -53,6 +53,7 @@
 .header_right_logged_hello {
   font-size: 1.5rem;
 }  
+<<<<<<< HEAD
 
 .header_right_logged_hello_nickname{
   font-weight: bold;
@@ -73,5 +74,24 @@
   height: 2rem;
   }
 
+=======
+
+.header_right_logged_hello_nickname{
+  font-weight: bold;
+}
+
+.header_right_link_logged_icon {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: vars.$palepink;
+  margin-left: 1rem;
+  & svg {
+    text-align: center;
+    height: 100%;
+    width: 1.5rem;
+  }
+>>>>>>> feature/foodtruckPage
 }
 

@@ -27,11 +27,12 @@
       bottom: 76px;
       opacity : 1;
     }
-    #puke_txt {
+    #oakley_txt {
       position: relative;
-      bottom: 76px;
+      bottom: 80px;
       opacity : 1;
     }
+    
     .team_card_img{
       transform: scale(1.1);
       bottom: 47px;
@@ -48,6 +49,14 @@
       display: block;      
       position: relative;
       transition: .4s ease-in;
+    }
+    #anaglyph_img {
+      bottom: 16.1rem;
+      width: 8rem;
+    }
+    #oakley_img {
+      bottom: 16.1rem;
+      width: 8rem;
     }
     #anaglyph_img {
       bottom: 16.1rem;
@@ -126,12 +135,12 @@
   bottom: 150px;
 }
 
-#puke_img {
-  bottom: 12.2rem; //17rem
-  width: 3.5rem;
+#oakley_img {
+  bottom: 17rem;
+  width: 8rem;
 }
 
-#puke_txt {
+#oakley_txt {
   position: relative;
   bottom: 150px;
 }

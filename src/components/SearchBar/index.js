@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { Redirect } from 'react-router'
+import { NavLink, Redirect } from 'react-router-dom';
+// import Result from 'src/components/Result';
+
 
 import Result from 'src/components/Result';
 import TypeWriter_search from 'src/components/Typewriter/typewriter_search';
@@ -14,6 +15,9 @@ import {FiTruck} from 'react-icons/fi';
 const SearchBar = () => {
 
   const address = useSelector(state => state.user.address);
+  const addressvalue = useSelector(state => state.user.address.value);
+
+  // const search = useSelector(state =>state.foodtruck.search);
   const dispatch = useDispatch();
 
 
@@ -48,7 +52,7 @@ const SearchBar = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch({
-      type: 'FETCH_FOODTRUCK'
+      type: 'FETCH_FOODTRUCK',
     });
 
   }
@@ -83,6 +87,7 @@ const SearchBar = () => {
         </div>
 
         {/* Search Button Zone */}
+<<<<<<< HEAD
 
 
         
@@ -93,13 +98,35 @@ const SearchBar = () => {
             </button> 
           </div>
 
+=======
+        <NavLink 
+          to="/resultat"
+          exact
+        >
+
+        {/* <div id="searchBar_button">
+          
+          <button type="submit">
+            <div id="searchBar_button_circle"></div>
+            <span></span>
+          </button>
+        </div> */}
+
+        </NavLink>
+        
+        <input 
+        className="searchBar_button"
+        value="GO" 
+        type="submit">
+        
+        </input>
+>>>>>>> feature/foodtruckPage
 
       </form> 
 
     </div>
-    {/* {search===true && (
-      <Redirect to="/resultat"/>
-    )} */}
+      <Result />
+   
   </>
   );
 }

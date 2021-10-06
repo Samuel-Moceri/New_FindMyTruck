@@ -11,6 +11,13 @@ import { NavLink } from 'react-router-dom';
 
     <footer className="footer">
       <ul className="footer_list">
+        {/* <NavLink 
+          to="/resultat"
+          exact
+        >
+          <li  className="footer_list_el">Résultats</li>
+        </NavLink> */}
+
         <NavLink 
         to="/contact"
         exact
@@ -22,7 +29,11 @@ import { NavLink } from 'react-router-dom';
         to="/equipe"
         exact
         >
+<<<<<<< HEAD
           <li  className="footer_list_el">Find My Truck - Dénicheur de Foodtrucks depuis 2021</li>
+=======
+          <li  className="footer_list_el">Find My Truck - Artisan dénicheur depuis 2021</li>
+>>>>>>> feature/foodtruckPage
         </NavLink>
 
         <NavLink 

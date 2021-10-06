@@ -1,31 +1,28 @@
-import { CHANGE_VALUE_Profil, Profil } from 'src/actions/profil';
+import { TYPE_VALUES, UPDATE_INFORMATIONS } from 'src/actions/profil';
 
 // set the initial state
 export const initialState = {
-    nameProfil: '',
+    nicknameProfil: '',
     emailProfil: '',
-    passwordProfil: '',
-    verifPasswordProfil: '',
-
+    firstnameProfil: '',
+    lastnameProfil: '',
+    addressProfil: '',
+    cityProfil: '',
+    postCodeProfil: '',
 };
 
 // define the reducer's properties/params
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_VALUE_PROFIL:
+    case TYPE_VALUES:
       return {
         ...state,
         [action.key]: action.value
       }
-    case PROFIL:
+    case UPDATE_INFORMATIONS:
       // the new state will have the new values (action.value)
       return {
         ...state,
-        nameProfil: '',
-        emailProfil: '',
-        passwordProfil: '',
-        verifPasswordProfil: '',
-
       }
     default:
       return state;

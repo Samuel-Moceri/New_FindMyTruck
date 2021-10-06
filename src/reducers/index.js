@@ -5,6 +5,7 @@ import contactReducer from './contact';
 import registerReducer from './register';
 // import profilReducer from './profil';
 import foodtruckReducer from './foodtruck';
+import profilReducer from './profil';
 
 
 
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   register: registerReducer,
   // profil: profilReducer,
   foodtruck: foodtruckReducer,
+  profil: profilReducer,
 });
 
 export default rootReducer;

@@ -9,7 +9,6 @@ const Field = ({
   name,
   placeholder,
   onFieldChange,
-  
 }) => {
   const handleChange = (evt) => {
     onFieldChange(name, evt.target.value);

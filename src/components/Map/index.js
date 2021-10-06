@@ -5,7 +5,7 @@ import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import React, { useState, useRef, useCallback } from 'react'
 
-import MapGL, {GeolocateControl} from 'react-map-gl'
+import MapGL, {GeolocateControl, NavigationControl} from 'react-map-gl'
 import Geocoder from 'react-map-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
@@ -64,7 +64,10 @@ const Map = () => {
 
     // LA C'EST UN TEST DE STYLE DIRECT DANS LE CODE SUR LE BOUTTON DE GEOLOCALSATION
     const geolocateControlStyle= {
-      margin:'1rem',
+      margin:'4.2rem 0 0 .5rem',
+    };
+    const navControlStyle= {
+      margin:'.5rem',
     };
 
 
@@ -94,8 +97,10 @@ const Map = () => {
           // showUserHeading={true}
           auto 
           // onGeolocate= {GeolocationCoordinates}
-  
         />
+
+        {/* zoom in & out + compas button display */}
+        <NavigationControl style={navControlStyle} />
 
         {/* Searchbar geocoder display */}
         {/* <Geocoder

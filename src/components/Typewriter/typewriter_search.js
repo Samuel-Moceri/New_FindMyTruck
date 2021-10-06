@@ -10,6 +10,7 @@ const TypeWriter_search = () => {
         options={{
           autoStart: true,
           loop: true,
+          delay: 65,
         }}
       onInit={(typewriter) => {
         typewriter.typeString('Chercher un foodtruck à ...')

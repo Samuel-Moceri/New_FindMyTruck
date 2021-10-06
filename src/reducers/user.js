@@ -10,6 +10,7 @@ export const initialState = {
     address: '',
     lat: '',
     lon: '',
+    
 };
 
 // define the reducer's properties/params
@@ -18,7 +19,7 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_VALUE:
       return {
         ...state,
-        [action.key]: action.value
+        [action.key]: action.value,
       }
     case LOGIN:
       // the new state will have the new values (action.value)
@@ -34,8 +35,15 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         lat: action.lat,
-        lon: action.lon
+        lon: action.lon,
       }
+      case 'LOGOUT':
+        return {
+          ...state,
+          logged: false,
+          nickname: '',
+          token: '',
+        };
     default:
       return state;
   }
