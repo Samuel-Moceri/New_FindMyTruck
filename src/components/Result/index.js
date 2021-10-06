@@ -35,8 +35,9 @@ const Result = () => {
       {foodtrucks.map((foodtruck) => (
         <Card key={foodtruck.id} {...foodtruck}/>
         ))}
+        
 
-        <Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card />
+        {/* <Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /> */}
     </div>
 
     

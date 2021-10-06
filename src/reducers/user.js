@@ -2,7 +2,7 @@ import { CHANGE_VALUE, LOGIN } from 'src/actions/users';
 
 // set the initial state
 export const initialState = {
-    logged: true,
+    logged: false,
     email: '',
     password: '',
     nickname: '',
@@ -18,7 +18,7 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_VALUE:
       return {
         ...state,
-        [action.key]: action.value
+        [action.key]: action.value,
       }
     case LOGIN:
       // the new state will have the new values (action.value)
@@ -34,7 +34,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         lat: action.lat,
-        lon: action.lon
+        lon: action.lon,
       }
     default:
       return state;

@@ -34,7 +34,8 @@ function App() {
       type: 'LOG_USER',
     });
   }, []);
- 
+
+
 // We call the views to display them on the page
 return (
     <div className="app">

@@ -18,11 +18,13 @@
 }
 
 .result_cards {
+  // overflow:auto;
   display: grid;
   gap: .5rem;
   grid-template-columns: 33% 33% 33%;
-  justify-content: space-between;
-  justify-content: center;
+  grid-template-rows: 30% 30% 30%;
+  // justify-content: space-between;
+  // justify-content: center;
   width: 66%;
   height: 30rem;
 }

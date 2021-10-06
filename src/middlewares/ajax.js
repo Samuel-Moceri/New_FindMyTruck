@@ -27,10 +27,12 @@ const ajax = (store) => (next) => (action) => {
       .then((response) => {
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
-        api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
-
         console.log(response.data);
-        localStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data))
+        
+        api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
+        // localStorage.setItem('token', response.data.token);
+        // sessionStorage.setItem(JSON.stringify(`${response.data.data.id}`),JSON.stringify(response.data))
+        sessionStorage.setItem('key',JSON.stringify(response.data))
       
         store.dispatch({
           type: LOGIN,
@@ -65,6 +67,7 @@ const ajax = (store) => (next) => (action) => {
 
       next(action);
     break;
+
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 
@@ -84,6 +87,7 @@ const ajax = (store) => (next) => (action) => {
         })
       })
     break;
+
     case FETCH_FOODTRUCK :
       // const stateFoodtruck = store.getState();
         
@@ -104,7 +108,6 @@ const ajax = (store) => (next) => (action) => {
         api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=10`)
 
         .then((response)=> {
-
           if(!response.data.length) {
             console.log();('Aucun foodtruck');
             return;
@@ -118,8 +121,6 @@ const ajax = (store) => (next) => (action) => {
           })
         })
       })
-
-    
       next(action);
       break;
 

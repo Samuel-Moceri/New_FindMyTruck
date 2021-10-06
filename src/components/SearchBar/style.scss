@@ -10,6 +10,15 @@
   background-color: #FFF;
 }
 
+.searchBar_button {
+    width: 3.8em;
+    height: 3.8rem;
+    cursor: pointer;
+    background-color: vars.$paleblue;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+}
 // .searchBar_geolocate{
 //   background-color: vars.$paleblue;
 //   border: none;

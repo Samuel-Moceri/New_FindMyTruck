@@ -15,6 +15,8 @@ import {FiTruck} from 'react-icons/fi';
 const SearchBar = () => {
 
   const address = useSelector(state => state.user.address);
+  const addressvalue = useSelector(state => state.user.address.value);
+
   // const search = useSelector(state =>state.foodtruck.search);
   const dispatch = useDispatch();
 
@@ -48,7 +50,7 @@ const SearchBar = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch({
-      type: 'FETCH_FOODTRUCK'
+      type: 'FETCH_FOODTRUCK',
     });
 
   }
@@ -87,17 +89,21 @@ const SearchBar = () => {
           exact
         >
 
-        <div id="searchBar_button">
+        {/* <div id="searchBar_button">
           
           <button type="submit">
             <div id="searchBar_button_circle"></div>
             <span></span>
           </button>
-        </div>
+        </div> */}
 
         </NavLink>
         
-        {/* <input type="submit" className="searchBar_geolocate"></input> */}
+        <input 
+        className="searchBar_button" 
+        type="submit">
+        
+        </input>
 
       </form> 
 

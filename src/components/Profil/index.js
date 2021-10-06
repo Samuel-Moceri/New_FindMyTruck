@@ -7,9 +7,14 @@ import { NavLink } from 'react-router-dom';
  */
  const Profil = () => {
 
+  const data = JSON.parse(sessionStorage.getItem('key'));
+  console.log(data);
+  const informations = data.data;
+  
+
   return (
 
-<div>On est sur ton profil VINCENT BOUCHARD</div>
+<div>On est sur ton profil {informations.email}</div>
   );
 };
 
