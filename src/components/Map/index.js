@@ -41,7 +41,7 @@ const Map = () => {
   );
 
   // Mapbox token to connect with
-  const mapboxApiKey = 'pk.eyJ1Ijoid2VpcmRvZm10IiwiYSI6ImNrdG13ZjQxczBuY2gycW8zZzRpZ21kcHcifQ.vmpsgfGRZoOCrMXKWkRQCQ'
+  const mapboxApiKey = 'pk.eyJ1Ijoid2VpcmRvZm10IiwiYSI6ImNrdWduNXJubTA0Zzgycm96dnV0ejZuOGwifQ.qGNN7kWQ3ot3G8aj1Oa9ew'
 
 
 

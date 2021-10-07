@@ -10,6 +10,8 @@ import Field from 'src/components/Forms/Field';
   // const for the storage data
   const data = JSON.parse(sessionStorage.getItem('key'));
   const informations = data.data;
+  const role = informations.roles;
+  console.log(role);
   console.log(data);
   
 
@@ -21,14 +23,16 @@ import Field from 'src/components/Forms/Field';
   const addressProfil = useSelector(state => state.profil.addressProfil);
   const cityProfil = useSelector(state => state.profil.cityProfil);
   const postCodeProfil = useSelector(state => state.profil.postCodeProfil);
+  const warning = useSelector(state=> state.profil.warning);
+
   
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // dispatch({
-    //   type: 'UPDATE_INFORMATIONS'
-    // })
+    dispatch({
+      type: 'UPDATE_INFORMATIONS'
+    })
   }
 
   const onFieldChange = (key, value) => {
@@ -38,7 +42,7 @@ import Field from 'src/components/Forms/Field';
   }
   
   return (
-    <>
+
       <div>
         <div className="profil">
           <div className="profil_nickname"> On est sur ton profil {informations.nickname} </div>
@@ -95,44 +99,56 @@ import Field from 'src/components/Forms/Field';
               />
             </div>
 
-            <div className='addressForm'>
-              <Field
-                form="profil"
-                name="addressProfil"
-                value={addressProfil}
-                type="text"
-                placeholder="Adresse Postale"
-                onFieldChange={onFieldChange}
-              />
-            </div>
+            {role[0]==="ROLE_PRO" &&
+            <div>
+            
+              <div className='addressForm'>
+                <Field
+                  form="profil"
+                  name="addressProfil"
+                  value={addressProfil}
+                  type="text"
+                  placeholder="Adresse Postale"
+                  onFieldChange={onFieldChange}
+                />
+              </div>
 
-            <div className='cityForm'>
-              <Field
-                form="profil"
-                name="cityProfil"
-                value={cityProfil}
-                type="text"
-                placeholder="Ville"
-                onFieldChange={onFieldChange}
-              />
-            </div>
+              <div className='cityForm'>
+                <Field
+                  form="profil"
+                  name="cityProfil"
+                  value={cityProfil}
+                  type="text"
+                  placeholder="Ville"
+                  onFieldChange={onFieldChange}
+                />
+              </div>
 
-            <div className='postCodeForm'>
-              <Field
-                form="profil"
-                name="postCodeProfil"
-                value={postCodeProfil}
-                type="text"
-                placeholder="Code Postal"
-                onFieldChange={onFieldChange}
-              />
+              <div className='postCodeForm'>
+                <Field
+                  form="profil"
+                  name="postCodeProfil"
+                  value={postCodeProfil}
+                  type="text"
+                  placeholder="Code Postal"
+                  onFieldChange={onFieldChange}
+                />
+              </div>
             </div>
+            }
             
           </div>
+
+          <input type="submit" className="modified_button" value="MODIFIER"></input>
         </form>
+        {warning===true &&
+        <div className="warning">DECO RECO TOI SI TU VEUX VOIR LA DIFFERENCE</div>
+        }
       </div>
-    </>
-  );
+      
+      );
+      
+    
 };
 
 export default Profil;
