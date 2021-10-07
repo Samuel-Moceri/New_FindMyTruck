@@ -10,3 +10,12 @@ export const updateInformations = () => ({
   type: UPDATE_INFORMATIONS,
 });
 
+export const SHOW_MODIFY_INFORMATIONS = 'SHOW_MODIFY_INFORMATIONS';
+export const showModifyInformations = () => ({
+  type: SHOW_MODIFY_INFORMATIONS,
+});
+
+export const HIDE_MODIFY_INFORMATIONS = 'HIDE_MODIFY_INFORMATIONS';
+export const hideModifyInformations = () => ({
+  type: HIDE_MODIFY_INFORMATIONS,
+});

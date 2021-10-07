@@ -10,7 +10,9 @@ import Field from 'src/components/Forms/Field';
   // const for the storage data
   const data = JSON.parse(sessionStorage.getItem('key'));
   const informations = data.data;
-  console.log(data);
+  const role = informations.roles;
+  const informationsFoodtruck = informations.user_foodtruck;
+  console.log(informationsFoodtruck);
   
 
   // const for the state
@@ -18,17 +20,20 @@ import Field from 'src/components/Forms/Field';
   const emailProfil = useSelector(state => state.profil.emailProfil);
   const firstnameProfil = useSelector(state => state.profil.firstnameProfil);
   const lastnameProfil = useSelector(state => state.profil.lastnameProfil);
-  const addressProfil = useSelector(state => state.profil.addressProfil);
+  const streetProfil = useSelector(state => state.profil.streetProfil);
   const cityProfil = useSelector(state => state.profil.cityProfil);
-  const postCodeProfil = useSelector(state => state.profil.postCodeProfil);
+  const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
+  const warning = useSelector(state=> state.profil.warning);
+  const modify = useSelector(state=> state.profil.modify);
+
   
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // dispatch({
-    //   type: 'UPDATE_INFORMATIONS'
-    // })
+    dispatch({
+      type: 'UPDATE_INFORMATIONS',
+    })
   }
 
   const onFieldChange = (key, value) => {
@@ -36,10 +41,25 @@ import Field from 'src/components/Forms/Field';
       typeValues(key, value)
     );
   }
+
+  const handleClick = (event) => {
+    console.log('blabla');
+    dispatch({
+      type: 'SHOW_MODIFY_INFORMATIONS',
+      modify:true
+    })
+  }
+  const hideModify = (event) => {
+    console.log('blabla');
+    dispatch({
+      type: 'HIDE_MODIFY_INFORMATIONS',
+      modify:false
+    })
+  }
   
   return (
-    <>
-      <div>
+    <div>
+    {modify===false &&
         <div className="profil">
           <div className="profil_nickname"> On est sur ton profil {informations.nickname} </div>
           <div className="profil_email"> Voici ton email {informations.email} </div>
@@ -47,6 +67,11 @@ import Field from 'src/components/Forms/Field';
           <div className="profil_lastname"> Voici ton nom de famille {informations.lastname} </div>
           <div className="profil_address"> Voici ton adresse {informations.address} </div>
         </div>
+        }
+       
+
+
+      {modify===true &&
 
         <form onSubmit={handleSubmit} className="profil_form"> 
           <div className='profilForm'>
@@ -57,7 +82,7 @@ import Field from 'src/components/Forms/Field';
                 name="nicknameProfil"
                 value={nicknameProfil}
                 type="text"
-                placeholder="Identifiant"
+                placeholder='IDENTIFIANT'
                 onFieldChange={onFieldChange}
               />
             </div>
@@ -95,44 +120,65 @@ import Field from 'src/components/Forms/Field';
               />
             </div>
 
-            <div className='addressForm'>
-              <Field
-                form="profil"
-                name="addressProfil"
-                value={addressProfil}
-                type="text"
-                placeholder="Adresse Postale"
-                onFieldChange={onFieldChange}
-              />
-            </div>
+            {role[0]==="ROLE_PRO" &&
+            <div>
+            
+              <div className='addressForm'>
+                <Field
+                  form="profil"
+                  name="streetProfil"
+                  value={streetProfil}
+                  type="text"
+                  placeholder="Adresse Postale"
+                  onFieldChange={onFieldChange}
+                />
+              </div>
 
-            <div className='cityForm'>
-              <Field
-                form="profil"
-                name="cityProfil"
-                value={cityProfil}
-                type="text"
-                placeholder="Ville"
-                onFieldChange={onFieldChange}
-              />
-            </div>
+              <div className='cityForm'>
+                <Field
+                  form="profil"
+                  name="cityProfil"
+                  value={cityProfil}
+                  type="text"
+                  placeholder="Ville"
+                  onFieldChange={onFieldChange}
+                />
+              </div>
 
-            <div className='postCodeForm'>
-              <Field
-                form="profil"
-                name="postCodeProfil"
-                value={postCodeProfil}
-                type="text"
-                placeholder="Code Postal"
-                onFieldChange={onFieldChange}
-              />
+              <div className='postal_codeForm'>
+                <Field
+                  form="profil"
+                  name="postalCodeProfil"
+                  value={postalCodeProfil}
+                  type="text"
+                  placeholder="Code Postal"
+                  onFieldChange={onFieldChange}
+                />
+              </div>
             </div>
+            }
             
           </div>
+
+          <input type="submit" className="modified_button" value="ENREGISTRER LES INFORMATIONS"></input>
         </form>
+        
+      }
+      {modify===false &&
+      <button onClick={handleClick}> Modifier les informations </button>
+        }
+
+      {modify===true &&
+      <button onClick={hideModify}> Annuler les changements </button>
+      }
+        {warning===true &&
+        <div className="warning">DECO RECO TOI SI TU VEUX VOIR LA DIFFERENCE</div>
+        }
       </div>
-    </>
-  );
+      
+      );
+      
+    
 };
 
 export default Profil;

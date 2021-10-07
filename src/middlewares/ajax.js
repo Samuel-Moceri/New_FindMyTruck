@@ -3,6 +3,7 @@ import { TRY_LOGIN, LOGIN } from '../actions/users';
 import { SEND_MESSAGE } from '../actions/contact';
 import { REGISTER } from '../actions/register';
 import { FETCH_FOODTRUCK } from '../actions/foodtruck';
+import { UPDATE_INFORMATIONS } from '../actions/profil';
 
 // set the baseURl
 const api = axios.create({
@@ -138,6 +139,26 @@ const ajax = (store) => (next) => (action) => {
     
     next(action);
     default:
+      next(action);
+    break;
+
+  case UPDATE_INFORMATIONS:
+      const stateProfil = store.getState();
+      const data = JSON.parse(sessionStorage.getItem('key'));
+      const id = data.data.id;;
+      console.log(id);
+
+      api.patch(`api/v1/users/${id}`, {
+        nickname: stateProfil.profil.nicknameProfil,
+        email: stateProfil.profil.emailProfil,
+        firstname: stateProfil.profil.firstnameProfil,
+        lastname: stateProfil.profil.lastnameProfil,
+      })
+
+    .then((response) => {
+      console.log(response);
+    })
+    
       next(action);
     break;
   }
