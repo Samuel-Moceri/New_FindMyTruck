@@ -2,7 +2,7 @@ import { TYPE_VALUES, UPDATE_INFORMATIONS } from 'src/actions/profil';
 
 const data = JSON.parse(sessionStorage.getItem('key'));
 const informations = data.data;
-
+const informationsFoodtruck = informations.user_foodtruck;
 
 // set the initial state
 export const initialState = {
@@ -10,9 +10,9 @@ export const initialState = {
     emailProfil: informations.email,
     firstnameProfil: informations.firstname,
     lastnameProfil: informations.lastname,
-    addressProfil: informations.address,
-    cityProfil: informations.city,
-    postCodeProfil: informations.postCode,
+    streetProfil: informationsFoodtruck.street,
+    cityProfil: informationsFoodtruck.city,
+    postalCodeProfil: informationsFoodtruck.postal_code,
     warning:false,
 };
 
@@ -32,9 +32,9 @@ const reducer = (state = initialState, action = {}) => {
       emailProfil: informations.email,
       firstnameProfil: informations.firstname,
       lastnameProfil: informations.lastname,
-      addressProfil: informations.address,
-      cityProfil: informations.city,
-      postCodeProfil: informations.postCode,
+      streetProfil: informationsFoodtruck.street,
+      cityProfil: informationsFoodtruck.city,
+      postalCodeProfil: informationsFoodtruck.postal_code,
       warning:true,
       }
     default:

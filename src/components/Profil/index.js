@@ -11,8 +11,8 @@ import Field from 'src/components/Forms/Field';
   const data = JSON.parse(sessionStorage.getItem('key'));
   const informations = data.data;
   const role = informations.roles;
-  console.log(role);
-  console.log(data);
+  const informationsFoodtruck = informations.user_foodtruck;
+console.log(informationsFoodtruck);
   
 
   // const for the state
@@ -20,9 +20,9 @@ import Field from 'src/components/Forms/Field';
   const emailProfil = useSelector(state => state.profil.emailProfil);
   const firstnameProfil = useSelector(state => state.profil.firstnameProfil);
   const lastnameProfil = useSelector(state => state.profil.lastnameProfil);
-  const addressProfil = useSelector(state => state.profil.addressProfil);
+  const streetProfil = useSelector(state => state.profil.streetProfil);
   const cityProfil = useSelector(state => state.profil.cityProfil);
-  const postCodeProfil = useSelector(state => state.profil.postCodeProfil);
+  const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
   const warning = useSelector(state=> state.profil.warning);
 
   
@@ -105,8 +105,8 @@ import Field from 'src/components/Forms/Field';
               <div className='addressForm'>
                 <Field
                   form="profil"
-                  name="addressProfil"
-                  value={addressProfil}
+                  name="streetProfil"
+                  value={streetProfil}
                   type="text"
                   placeholder="Adresse Postale"
                   onFieldChange={onFieldChange}
@@ -124,11 +124,11 @@ import Field from 'src/components/Forms/Field';
                 />
               </div>
 
-              <div className='postCodeForm'>
+              <div className='postal_codeForm'>
                 <Field
                   form="profil"
-                  name="postCodeProfil"
-                  value={postCodeProfil}
+                  name="postalCodeProfil"
+                  value={postalCodeProfil}
                   type="text"
                   placeholder="Code Postal"
                   onFieldChange={onFieldChange}
