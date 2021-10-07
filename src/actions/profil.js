@@ -10,3 +10,7 @@ export const updateInformations = () => ({
   type: UPDATE_INFORMATIONS,
 });
 
+export const MODIFY_INFORMATIONS = 'MODIFY_INFORMATIONS';
+export const modifyInformations = () => ({
+  type: MODIFY_INFORMATIONS,
+});

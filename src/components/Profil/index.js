@@ -24,6 +24,7 @@ console.log(informationsFoodtruck);
   const cityProfil = useSelector(state => state.profil.cityProfil);
   const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
   const warning = useSelector(state=> state.profil.warning);
+  const modify = useSelector(state=> state.profil.modify);
 
   
   const dispatch = useDispatch();
@@ -40,6 +41,14 @@ console.log(informationsFoodtruck);
       typeValues(key, value)
     );
   }
+
+  const handleClick = (event) => {
+    console.log('blabla');
+    dispatch({
+      type: 'MODIFY_INFORMATIONS',
+      modify:true
+    })
+  }
   
   return (
 
@@ -52,6 +61,9 @@ console.log(informationsFoodtruck);
           <div className="profil_address"> Voici ton adresse {informations.address} </div>
         </div>
 
+      <button onClick={handleClick}> Modifier les informations </button>
+
+      {modify===true &&
         <form onSubmit={handleSubmit} className="profil_form"> 
           <div className='profilForm'>
 
@@ -141,6 +153,7 @@ console.log(informationsFoodtruck);
 
           <input type="submit" className="modified_button" value="MODIFIER"></input>
         </form>
+      }
         {warning===true &&
         <div className="warning">DECO RECO TOI SI TU VEUX VOIR LA DIFFERENCE</div>
         }

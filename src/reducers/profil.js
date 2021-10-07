@@ -1,4 +1,4 @@
-import { TYPE_VALUES, UPDATE_INFORMATIONS } from 'src/actions/profil';
+import { TYPE_VALUES, UPDATE_INFORMATIONS, MODIFY_INFORMATIONS } from 'src/actions/profil';
 
 const data = JSON.parse(sessionStorage.getItem('key'));
 const informations = data.data;
@@ -14,6 +14,7 @@ export const initialState = {
     cityProfil: informationsFoodtruck.city,
     postalCodeProfil: informationsFoodtruck.postal_code,
     warning:false,
+    modify:false,
 };
 
 // define the reducer's properties/params
@@ -39,7 +40,16 @@ const reducer = (state = initialState, action = {}) => {
       }
     default:
       return state;
-  }
+
+    // case MODIFY_INFORMATIONS:
+    //   // the new state will have the new values (action.value)
+    //   return {
+    //     ...state,
+    //     modify: true,
+    //   }
+    // default:
+    //   return state;
+    }
 };
 
 export default reducer;
