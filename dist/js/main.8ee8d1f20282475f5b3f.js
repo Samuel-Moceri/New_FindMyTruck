@@ -2567,7 +2567,7 @@ var fetchFoodtruck = function fetchFoodtruck() {
  // set the baseURl
 
 var api = axios_default().create({
-  baseURL: 'http://ec2-100-26-195-84.compute-1.amazonaws.com/api' // baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
+  baseURL: 'http://ec2-54-174-150-162.compute-1.amazonaws.com' // baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
 
 });
 
