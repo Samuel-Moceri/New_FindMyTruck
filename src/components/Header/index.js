@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 // import ajax from 'src/components/middlewares';
-// import { FiUser } from 'react-icons/fi';
+import { FiUser } from 'react-icons/fi';
 
 import logo from 'src/assets/images/logo.png';
 import textlogo from 'src/assets/images/FMT_clear.png';
@@ -87,14 +87,14 @@ const handleSubmit = (event) => {
             exact
             >
             <button className='header_right_link_logged_icon'>
-              {/* <FiUser />       */}
+              <FiUser />      
             </button>
           </NavLink> 
         </div>
 
         <form  onSubmit={handleSubmit}>
           <div className="header_logout">
-              <input type="submit" className="logout_button" value="CASSE TOI"></input>
+              <input type="submit" className="logout_button" value="Deconnexion"></input>
           </div>
         </form>
           
