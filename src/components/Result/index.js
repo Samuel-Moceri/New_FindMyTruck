@@ -28,7 +28,7 @@ const Result = () => {
   <div className="result">
 
     <div className="result_map">
-      <Map />
+      {/* <Map /> */}
     </div>
 
     <div className="result_cards">
