@@ -1,10 +1,8 @@
 import { TYPE_VALUES, UPDATE_INFORMATIONS, SHOW_MODIFY_INFORMATIONS, HIDE_MODIFY_INFORMATIONS } from 'src/actions/profil';
 
-
-
-const data = JSON.parse(sessionStorage.getItem('key'));
-const informations = data.data;
-const informationsFoodtruck = informations.user_foodtruck;
+// const data = JSON.parse(sessionStorage.getItem('key'));
+// const informations = data.data;
+// const informationsFoodtruck = informations.user_foodtruck;
 
 
 // set the initial state
@@ -30,6 +28,10 @@ const reducer = (state = initialState, action = {}) => {
         [action.key]: action.value
       }
     case UPDATE_INFORMATIONS:
+      const data = JSON.parse(sessionStorage.getItem('key'));
+      const informations = data.data;
+      const informationsFoodtruck = informations.user_foodtruck;
+      
       // console.log(informationsFoodtruck);
       // the new state will have the new values (action.value)
       return {
