@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { CgPin } from 'react-icons/cg';
+import { CgPin } from 'react-icons/cg';
 
 
-import './style.scss';
+
+// import './style.scss';
 
 const Fake_Card = ({}) => {
-    
+  
+
   
   return(
     <>
@@ -23,7 +25,7 @@ const Fake_Card = ({}) => {
         </div>
         <div className="card_foodtruck_content_description">
           <div className="card_foodtruck_content_description_adress">
-            {/* <CgPin />  */}
+            <CgPin /> 
             <p className="card_foodtruck_content_description_adress_street">Rue</p>
             <p className="card_foodtruck_content_description_adress_postalcode">Code Postal</p>
             <p className="card_foodtruck_content_description_adress_city">Ville</p>

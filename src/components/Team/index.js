@@ -42,7 +42,7 @@ const Team = () => {
           <div className="team_card_circle color_2" />
           <img className="team_card_img" src={Julien} />
           <div className="team_card_text">
-            <div className="team_card_name">Julienn</div>
+            <div className="team_card_name">Julien</div>
             <div className="team_card_role">Lead Dev Back</div>
             <div className="team_card_contact">
               <a className="team_card_contact_icon" href=""><IoLogoLinkedin /></a>
