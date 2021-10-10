@@ -6,7 +6,8 @@
   }
 
 .mapboxgl-map {
-  border-radius: .5rem;
+  border-radius: .2rem;
+  @include BoxShadow(1);
 }
 
  // PERMET DE 'CACHER' LE LOGO MAPBOX ET LE COPYRIGHT EN BAS DE LA CARTE

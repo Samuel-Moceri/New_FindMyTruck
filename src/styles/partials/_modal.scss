@@ -31,4 +31,20 @@
   }
 }
 
-  // /MODAL //
+// ----- RESPONSIVE ----- //
+
+.modalBackground {
+  @include for-size(phone-only) {
+    height:72%;
+    background-color: salmon;
+  }
+  @include for-size(tablet-portrait-up) {
+    height:76.5%;
+    background-color: skyblue;
+  }
+  @include for-size(desktop-up) {
+    height:67.5%;
+    background-color: teal;
+  }
+}
+// /MODAL //

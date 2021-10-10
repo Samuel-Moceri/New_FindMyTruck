@@ -7,18 +7,19 @@
   display: flex;
   width: 90%;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: .2rem;
   margin: 2rem auto 1rem;
   background-color: #FFF;
+  @include BoxShadow(1);
 }
 
 .searchBar_button {
-    width: 3.8em;
-    height: 3.8rem;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
     background-color: vars.$paleblue;
     border: none;
-    border-radius: .5rem;
+    border-radius: 50%;
     padding: 1rem;
 }
 // .searchBar_geolocate{
@@ -230,4 +231,49 @@
 }
 
 
+// ----- RESPONSIVE ----- //
 
+.searchBar {
+  @include for-size(phone-only) {
+    padding: 0rem;
+  }
+}
+
+.searchBar_text {
+  @include for-size(phone-only) {
+    margin: 0 0.5rem;
+  }
+}
+
+.searchBar_text_typewriter {
+  @include for-size(phone-only) {
+    display: none;
+  }
+}
+.searchBar_text_typewriter_substitute {
+  @include for-size(phone-only) {
+    position: relative;
+    font-size: 1.4rem;
+    bottom: -.3rem;
+  }
+  @include for-size(tablet-portrait-up) {
+    display: none;
+  }
+}
+
+.searchBar_text input:focus ~ span,
+.searchBar_text input:valid ~ span {
+  
+  @include for-size(phone-only) {
+    .searchBar_text_typewriter_substitute {
+      transform:  translateX(1rem) translateY(4px);
+      font-size: .8rem;
+    }
+  }
+}
+
+.searchBar_button {
+  @include for-size(phone-only) {
+    border-radius: 0 .2rem .2rem 0 ;
+  }
+}

@@ -15,7 +15,6 @@ const Fake_Card = ({}) => {
     <section className="card_foodtruck">
       <img 
         className="card_foodtruck_img"
-
       />
       <div className="card_foodtruck_content">
         <p className="card_foodtruck_content_title">NOM DU FOODTRUCK</p>

@@ -10,11 +10,17 @@
   align-content: space-around;
   width: 90%;
   margin: 1rem auto 0;
+
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+
 }
 .result_map {
   width:  33.33%;
-  height: 30rem;
-  margin-right: .5rem; 
+  height: 30.5rem;
+  // margin-right: .5rem;
+  padding : 0.5rem;
 }
 
 .result_cards {
@@ -23,11 +29,10 @@
   gap: .5rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-content: space-between;
-  justify-content: center;
   width: 66.66%;
+  padding : 0.5rem;
   height:30rem;
-
+  margin-bottom: .5rem;
 }
 
 .result_cards:hover > * {
@@ -39,61 +44,71 @@ transition: .3s ease-in-out;
 opacity: 1;
 }
 
+// ----- RESPONSIVE ----- //
 
-// @media (max-width:320px) {
-//   // RESULTS
-//   .result {
-//     width: 95%;
-//   }
-//   .result_map {
-//     display: none;
-//   }
-//   .result_cards {
-//     display: none;
-//   }
-//   .footer {
-//     opacity: 0;
-//   }
-// }
+.result {
+  @include for-size(phone only) {
+    display: flex;
+    width: 90%;
+  }
+  @include for-size(tablet-portrait-up) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  @include for-size(desktop-up) {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+}
 
-// @media (max-width: 500px) {
-//   // RESULTS
-//   .result {
-//     width: 95%;
-//   }
-//   .result_map {
-//     display: none;
-//   }
-//   .result_cards {
-//     display: none;
-//   }
-//   .footer {
-//     opacity: 0;
-//   }
-// }
+.result_map {
+  @include for-size(phone-only) {
+    display: none;
+  }
+  @include for-size(tablet-portrait-up) {
+    display: block;
+    height: 15rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  @include for-size(desktop-up) {
+    width:  33.33%;
+    height: 30.5rem;
+  }
+}
 
-// @media (max-width: 1450px) and (orientation : portrait) {
-//   // RESULTS
-//   .result {
-//     display: block;
-//     &_cards{
-//       display: none;
-//     }
-//   }
-// }
-
-// @media (min-height: 1025px) and (orientation : portrait) {
-//   // RESULTS
-//   .result {
-//     &_cards{
-//       display: none;
-//     }
-//   }
-// }
-
-
-
-
-
-
-
+.result_cards {
+  @include for-size(phone-only) {
+    display: block ;
+    padding: 0;
+    height: 33rem;
+    width: 100%;
+    overflow: auto;
+    // background-color: red;
+  }
+  @include for-size(tablet-portrait-up) {
+    height: 75%rem;
+    width: 100%;
+    display: grid ;
+    align-items: baseline;
+    // grid-auto-flow: row ;
+    grid-auto-rows: 25% ; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: unset;
+    overflow-y: auto;
+  }
+  @include for-size(desktop-up) {
+    overflow-y:auto;
+    overflow-x: hidden;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 9.5rem;
+    justify-content: space-between;
+    justify-content: center;
+    width: 66.66%;
+    height:30.5rem;    
+  }
+}
