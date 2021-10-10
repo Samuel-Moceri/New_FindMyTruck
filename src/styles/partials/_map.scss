@@ -1,0 +1,83 @@
+@use '../../styles/partials/vars';
+
+.geocode {
+  width: 100%;
+  height: 100%;
+  }
+
+.mapboxgl-map {
+  border-radius: .5rem;
+}
+
+ // PERMET DE 'CACHER' LE LOGO MAPBOX ET LE COPYRIGHT EN BAS DE LA CARTE
+.mapboxgl-ctrl-attrib-inner,
+.mapboxgl-ctrl-attrib,
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}
+
+.geolocate_area {
+  // display: none;
+  z-index: 1;
+}
+
+.map_marker {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50% 50% 50% 12%;
+  transform: rotate(-45deg);
+  background-color: vars.$retroredhot;
+  box-shadow: 5px 5px 5px #666;
+  transition: 0.5s ease all;
+
+
+  &:after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    top: .25rem;
+    left: .25rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  & svg {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    transform: rotate(45deg);
+    color: vars.$retroredhot;
+    z-index: 3;
+  }
+}
+
+.map_marker:hover {
+  transform:scale(1.25) rotate(-45deg) ;
+
+//   animation: clock 1s ease-in-out;
+//   & svg {
+//     animation: anticlock 1s ease-in-out;
+//   }
+}
+
+
+@keyframes clock {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(315deg);
+}
+}
+
+@keyframes anticlock {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+  }

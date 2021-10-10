@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { CgPin } from 'react-icons/cg';
 
 
-import './style.scss';
+// import './style.scss';
 
 const Card = ({
   id,
