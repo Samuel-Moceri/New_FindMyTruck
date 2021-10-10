@@ -10,3 +10,12 @@
     justify-content: space-around;
   }
 }
+
+// ----- RESPONSIVE ----- //
+
+.footer {
+  @include for-size(phone-only) {
+
+    visibility: hidden;
+  }
+}

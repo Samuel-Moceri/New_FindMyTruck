@@ -1,8 +1,12 @@
 @import './partials/reset';
 @import './partials/vars';
+@import './partials/mixin_material';
+@import './partials/mixin';
 
 @import './partials/card';
 @import './partials/footer';
+@import './partials/header';
+
 @import './partials/map';
 
 
@@ -14,17 +18,17 @@
 @import './partials/searchbar';
 
 
-@import './partials/mixin';
+
 
 
 
 
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
   position: relative;
-  background-image: url("https://www.richardsancho.com/img/noise.png");
-  background-color: whitesmoke;
+  background-color: #F3F3F3;
   font-family: sans-serif;
 }
 

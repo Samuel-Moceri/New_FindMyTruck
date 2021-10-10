@@ -136,7 +136,7 @@ const Map = ({
 
         /> */}
 
-
+        {/* // MARKER // */}
         {foodtrucks.map((foodtruck) => (
           <MarkerPin 
           key={foodtruck.id}
@@ -147,7 +147,8 @@ const Map = ({
           //
           
           {...foodtruck}/>))}
-
+        {/* // /MARKER // */}
+        
         {/* <Fake_Marker /> */}
 
       </MapGL>

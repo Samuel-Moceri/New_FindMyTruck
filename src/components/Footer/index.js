@@ -29,7 +29,7 @@ import { NavLink } from 'react-router-dom';
         to="/equipe"
         exact
         >
-          <li  className="footer_list_el">Find My Truck - Conoisseur de Foodtruck depuis 2021</li>
+          <li  className="footer_list_el">FIND MY TRUCK - FOODTRUCK CONOISSEUR - EST. 2021</li>
         </NavLink>
 
         <NavLink 

@@ -8,19 +8,27 @@
   border-radius: .5rem;
   background-color: #fff;
   overflow: hidden;
-  padding: 0.5rem;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) ;
+  padding: 0.2rem;
+  @include BoxShadow(1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
 }
 
 .card_foodtruck:hover {
-  transform: scale(1.01);
+  @include BoxShadow(6)
+
 }
 
-.card_foodtruck_img{
+.card_foodtruck_img {
+  position:relative ;
+  margin: auto auto;
   width: 5rem;
-  height:5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
   object-fit: cover;
-  border-radius: .5rem;
+  background-color: vars.$paleyellow;
+  @include BoxShadow(8);
+
 }
 
 .card_foodtruck_content{
@@ -78,4 +86,16 @@
 
 .card_foodtruck_content_description_adress {
   display: block;
+}
+
+// ----- RESPONSIVE ----- //
+
+.card_foodtruck {
+  @include for-size(phone-only) {
+    margin-bottom: 0.5rem;
+  }
+  @include for-size(tablet-portrait-up) {
+    width: 100%;
+    height: 100%;
+  }
 }
