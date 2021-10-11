@@ -1,3 +1,6 @@
+
+
+
 import { useDispatch, useSelector } from 'react-redux';
 import { typeValues } from 'src/actions/profil';
 
@@ -5,6 +8,8 @@ import './style.scss';
 
 import Field from 'src/components/Forms/Field';
 import { useEffect } from 'react';
+
+import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-icons/md";
 
  const Profil = () => {
 
@@ -79,35 +84,39 @@ import { useEffect } from 'react';
     }
     
     return (
-    <div>
+    <div className="profil_form_element">
+      <div className="profil_form_title">Profil de {nicknameProfil} </div>
       {modify===false &&
-        <div className="profil_user">
-          <div className="profil_nickname"> Bienvenue sur ton profil {nicknameProfil} </div>
-          <div className="profil_firstname"> Prénom {firstnameProfil} </div>
-          <div className="profil_lastname"> Nom de famille {lastnameProfil} </div>
-          <div className="profil_email"> E-mail {emailProfil} </div>
-        </div>
+        <>
+          
+          <div className="profil_form_user">
+            <span className="profil_form_user_title"><MdOutlinePersonPin /> Utilisateur</span>
+            <div className="profil_firstname"> Prénom : {firstnameProfil} </div>
+            <div className="profil_lastname"> Nom de famille : {lastnameProfil} </div>
+            <div className="profil_email"> E-mail : {emailProfil} </div>
+          </div>
+        </>
       }
 
       {role[0]==="ROLE_PRO" && modify===false &&
 
       <>
-        <div className="profil_pro">
-          <h1 className="title_profil_pro">Information du FoodTruck :</h1>
-          <div className="profil_name"> Nom de ton FoodTruck : {informationsFoodtruck.name} </div>
-          <div className="profil_city"> Adresse de stationnement : {informationsFoodtruck.city} </div>
-          <div className="profil_description"> Ta description : {informationsFoodtruck.description} </div>
-          <div className="profil_planning"> Ton planning : {informationsFoodtruck.planning} </div>
-          <div className="profil_phone"> Numéro de téléphone : {informationsFoodtruck.phone} </div>
-          <div className="profil_payment"> Paiement accepté : {informationsFoodtruck.payment} </div>
-          <div className="profil_menu"> Menu : 
+        <div className="profil_form_pro">
+          <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck</span>
+          <div className="profil_form_pro_name"> Nom de ton FoodTruck : {informationsFoodtruck.name} </div>
+          <div className="profil_form_pro_city"> Adresse de stationnement : {informationsFoodtruck.city} </div>
+          <div className="profil_form_pro_description"> Ta description : {informationsFoodtruck.description} </div>
+          <div className="profil_form_pro_planning"> Ton planning : {informationsFoodtruck.planning} </div>
+          <div className="profil_form_pro_phone"> Numéro de téléphone : {informationsFoodtruck.phone} </div>
+          <div className="profil_form_pro_payment"> Paiement accepté : {informationsFoodtruck.payment} </div>
+          <div className="profil_form_pro_menu"> Menu : 
           {/* <img className="menu_foodtruck_content_header_img" src={pictureURL} /> */}
           </div>
         </div>
         
-        <div className="société">
-          <h1 className="society_profil_pro">Société : </h1>
-          <div className="profil_address"> Ton adresse de société {informationsFoodtruck.proadress} </div>
+        <div className="profil_form_compagny">
+          <span className="profil_form_compagny_title"><MdOutlineBusiness />Société</span>
+          <div className="profil_form_compagny_address"> Ton adresse de société {informationsFoodtruck.proadress} </div>
         </div>  
       </>
       }
@@ -271,15 +280,15 @@ import { useEffect } from 'react';
         
       }
       {modify===false &&
-        <button onClick={handleClick}> Modifier les informations </button>
+        <button className="profil_form_button" onClick={handleClick}> Modifier les informations </button>
         }
 
       {modify===true &&
-        <button onClick={hideModify}> Annuler les changements </button>
+        <button className="profil_form_button" onClick={hideModify}> Annuler les changements </button>
       }
 
       {warning===true &&
-        <div className="warning">DECO RECO TOI SI TU VEUX VOIR LA DIFFERENCE</div>
+        <div className="warning">vos modifications seront visibles à votre prochaine connexion</div>
       }
     </div>
       

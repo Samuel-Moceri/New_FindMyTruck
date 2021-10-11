@@ -18,7 +18,7 @@ const Team = () => {
     
     <>
 
-      <p className="team_card_title">Les génies derrière ce magnifique projet</p>
+      <p className="team_card_title">- L'équipe derrière FIND MY TRUCK -</p>
 
       <div className="team">
 

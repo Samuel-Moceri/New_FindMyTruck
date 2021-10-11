@@ -1,0 +1,99 @@
+@use '../../styles/partials/vars';
+
+
+.profil_form_element{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // padding: 2rem;
+  border-radius: .2rem;
+  margin: 5rem auto;
+  width: 40rem;
+  height: 35rem;
+  background-color: #FFF;
+  @include BoxShadow(4);
+}
+
+.profil_form_title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem auto ;
+  font-weight: bold;
+  color: vars.$retroyellow;
+  text-shadow : 0 1px 1px  rgba(0, 0, 0, .14), 0 2px 1px  rgba(0, 0, 0, .12), 0 1px 3px  rgba(0, 0, 0, .20);
+}
+
+.profil_form_user,
+.profil_form_pro,
+.profil_form_compagny {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  border : 1px solid vars.$retroyellow;
+  border-radius: .2rem;
+  padding: 1rem .5rem .5rem .5rem;
+  @include BoxShadow(2);
+}
+
+
+
+.profil_form_user:before,
+.profil_form_pro:before,
+.profil_form_compagny:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  height: 1.5rem;
+  background: vars.$retroyellow;
+  @include BoxShadow(1);
+
+}
+
+.profil_form_user_title,
+.profil_form_pro_title,
+.profil_form_compagny_title{
+  font-weight: bold;
+  position: relative;
+  top: -.7rem;
+  text-transform: uppercase;
+  z-index: 3;
+
+}
+
+
+
+
+
+
+
+
+
+
+.profil_form_button {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: .5rem;
+  border: none;
+  border-radius: .2rem;
+  margin: 1rem auto;
+  width:90%;
+  background-color: vars.$retroyellow;
+  color: #FFF;
+  @include BoxShadow(1);
+  transition: all 0.3s;
+
+}
+
+.profil_form_button:hover {
+  @include BoxShadow(4);
+  transform: scale(1.03);
+
+}
+
+.profil_form_button:active {
+  @include BoxShadow(2);
+    transform: scale(0.98);
+}

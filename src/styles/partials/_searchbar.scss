@@ -258,6 +258,7 @@
 }
 .searchBar_text_typewriter_substitute {
   @include for-size(phone-only) {
+    display: block;
     position: relative;
     font-size: 1.4rem;
     bottom: -.3rem;
