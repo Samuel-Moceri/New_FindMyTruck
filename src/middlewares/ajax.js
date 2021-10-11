@@ -172,9 +172,9 @@ const ajax = (store) => (next) => (action) => {
     break;
 
   case 'GET_USER_INFOS' :
-    const stateProfilInformation = store.getState();
+    // const stateProfilInformation = store.getState();
     const dataInformations = JSON.parse(sessionStorage.getItem('key'));
-    const idInformations = dataInformations.data.id;;
+    const idInformations = dataInformations.data.id;
     api.get(`api/v1/users/${idInformations}`)
 
     .then((response) => {

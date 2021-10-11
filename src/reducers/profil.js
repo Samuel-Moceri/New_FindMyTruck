@@ -21,6 +21,7 @@ export const initialState = {
   planningProfil: '',
   paymentProfil: '',
   proaddressProfil: '',
+  roles:'',
   warning:false,
   modify:false,
 };
@@ -55,6 +56,7 @@ const reducer = (state = initialState, action = {}) => {
       planningProfil: '',
       paymentProfil: '',
       proaddressProfil: '',
+      roles: '',
       warning:true,
       modify: false,
       }
@@ -90,6 +92,7 @@ const reducer = (state = initialState, action = {}) => {
         planningProfil: action.userData.foodtruck.planning,
         paymentProfil: action.userData.foodtruck.payment,
         proaddressProfil: action.userData.foodtruck.proaddress,
+        roles: action.userData.roles,
       }
       break;
     default:

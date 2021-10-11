@@ -11,7 +11,6 @@ import { useEffect } from 'react';
   // const for the storage data
   const data = JSON.parse(sessionStorage.getItem('key'));
   const informations = data.data;
-  const role = informations.roles;
   const informationsFoodtruck = informations.user_foodtruck;
   // console.log(informationsFoodtruck);
   
@@ -33,20 +32,23 @@ import { useEffect } from 'react';
   const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
   const warning = useSelector(state=> state.profil.warning);
   const modify = useSelector(state=> state.profil.modify);
+  const role = useSelector(state=> state.profil.roles);
 
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-  const pictureURL = baseURL+`${informationsFoodtruck.menu}`;
+  console.log(role);
+
   
-  const dispatch = useDispatch();
+  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const pictureURL = baseURL+`${informationsFoodtruck.menu}`;
 
+  const dispatch = useDispatch();
   // Action qui se déclenche au chargement du composant et c'est tout
   useEffect(() => {
     dispatch({
       type: 'GET_USER_INFOS'
     })
   }, []);
-
-
+  
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch({
@@ -54,64 +56,63 @@ import { useEffect } from 'react';
       warning:true,
     })
   }
-
+  
   const onFieldChange = (key, value) => {
     dispatch(
       typeValues(key, value)
-    );
-  }
-
-  const handleClick = (event) => {
-    // console.log('blabla');
-    dispatch({
-      type: 'SHOW_MODIFY_INFORMATIONS',
-      modify:true
-    })
-  }
-  const hideModify = (event) => {
-    // console.log('blabla');
-    dispatch({
-      type: 'HIDE_MODIFY_INFORMATIONS',
-      modify:false
-    })
-  }
-  
-  return (
+      );
+    }
+    
+    const handleClick = (event) => {
+      // console.log('blabla');
+      dispatch({
+        type: 'SHOW_MODIFY_INFORMATIONS',
+        modify:true
+      })
+    }
+    const hideModify = (event) => {
+      // console.log('blabla');
+      dispatch({
+        type: 'HIDE_MODIFY_INFORMATIONS',
+        modify:false
+      })
+    }
+    
+    return (
     <div>
-    {modify===false &&
-      <div className="profil_user">
-        <div className="profil_nickname"> Bienvenue sur ton profil {nicknameProfil} </div>
-        <div className="profil_firstname"> Prénom {firstnameProfil} </div>
-        <div className="profil_lastname"> Nom de famille {lastnameProfil} </div>
-        <div className="profil_email"> E-mail {emailProfil} </div>
-      </div>
-    }
-
-    {role[0]==="ROLE_PRO" && modify===false &&
-    <>
-      <div className="profil_pro">
-        <h1 className="title_profil_pro">Information du FoodTruck :</h1>
-        <div className="profil_name"> Nom de ton FoodTruck : {informationsFoodtruck.name} </div>
-        <div className="profil_city"> Adresse de stationnement : {informationsFoodtruck.city} </div>
-        <div className="profil_description"> Ta description : {informationsFoodtruck.description} </div>
-        <div className="profil_planning"> Ton planning : {informationsFoodtruck.planning} </div>
-        <div className="profil_phone"> Numéro de téléphone : {informationsFoodtruck.phone} </div>
-        <div className="profil_payment"> Paiement accepté : {informationsFoodtruck.payment} </div>
-        <div className="profil_menu"> Menu : 
-        <img className="menu_foodtruck_content_header_img" src={pictureURL} />
+      {modify===false &&
+        <div className="profil_user">
+          <div className="profil_nickname"> Bienvenue sur ton profil {nicknameProfil} </div>
+          <div className="profil_firstname"> Prénom {firstnameProfil} </div>
+          <div className="profil_lastname"> Nom de famille {lastnameProfil} </div>
+          <div className="profil_email"> E-mail {emailProfil} </div>
         </div>
-      </div>
-      
-      <div className="société">
-        <h1 className="society_profil_pro">Société : </h1>
-        <div className="profil_address"> Ton adresse de société {informationsFoodtruck.proadress} </div>
-      </div>  
-    </>
-    }
+      }
 
+      {role[0]==="ROLE_PRO" && modify===false &&
+
+      <>
+        <div className="profil_pro">
+          <h1 className="title_profil_pro">Information du FoodTruck :</h1>
+          <div className="profil_name"> Nom de ton FoodTruck : {informationsFoodtruck.name} </div>
+          <div className="profil_city"> Adresse de stationnement : {informationsFoodtruck.city} </div>
+          <div className="profil_description"> Ta description : {informationsFoodtruck.description} </div>
+          <div className="profil_planning"> Ton planning : {informationsFoodtruck.planning} </div>
+          <div className="profil_phone"> Numéro de téléphone : {informationsFoodtruck.phone} </div>
+          <div className="profil_payment"> Paiement accepté : {informationsFoodtruck.payment} </div>
+          <div className="profil_menu"> Menu : 
+          {/* <img className="menu_foodtruck_content_header_img" src={pictureURL} /> */}
+          </div>
+        </div>
+        
+        <div className="société">
+          <h1 className="society_profil_pro">Société : </h1>
+          <div className="profil_address"> Ton adresse de société {informationsFoodtruck.proadress} </div>
+        </div>  
+      </>
+      }
 
       {modify===true &&
-
         <form onSubmit={handleSubmit} className="profil_form"> 
           <div className='profilForm'>
 
@@ -270,18 +271,19 @@ import { useEffect } from 'react';
         
       }
       {modify===false &&
-      <button onClick={handleClick}> Modifier les informations </button>
+        <button onClick={handleClick}> Modifier les informations </button>
         }
 
       {modify===true &&
-      <button onClick={hideModify}> Annuler les changements </button>
+        <button onClick={hideModify}> Annuler les changements </button>
       }
-        {warning===true &&
+
+      {warning===true &&
         <div className="warning">DECO RECO TOI SI TU VEUX VOIR LA DIFFERENCE</div>
-        }
-      </div>
+      }
+    </div>
       
-      );
+    );
       
     
 };
