@@ -6,6 +6,7 @@
 .searchBar {
   display: flex;
   width: 90%;
+  max-width: 100rem;
   padding: 1rem;
   border-radius: .2rem;
   margin: 2rem auto 1rem;
@@ -114,6 +115,11 @@
     padding-left: 2rem;
     width: 28rem;
   }
+}
+
+.searchBar_text_typewriter_substitute {
+  display: none;
+
 }
 
 //Search Button Zone
@@ -256,7 +262,7 @@
     font-size: 1.4rem;
     bottom: -.3rem;
   }
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-portrait-only) {
     display: none;
   }
 }

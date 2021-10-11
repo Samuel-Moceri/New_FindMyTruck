@@ -38,7 +38,7 @@
     height:72%;
     background-color: salmon;
   }
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-portrait-only) {
     height:76.5%;
     background-color: skyblue;
   }
