@@ -73,7 +73,6 @@ const Map = () => {
 
   return (
     <>
-  
 
     <div className="geocode" >
       {/* map display */}

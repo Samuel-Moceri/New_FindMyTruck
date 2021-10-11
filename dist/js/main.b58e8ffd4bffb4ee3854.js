@@ -387,7 +387,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Map = function Map() {
   //Map generator
-  var _useState = (0,react.useState)({
+  var _useState = useState({
     // lat & long : starting position on the map (O'Clock's office)
     latitude: 47.7,
     longitude: -1.65,
@@ -402,8 +402,8 @@ var Map = function Map() {
       setViewport = _useState2[1]; // TODO Comprendre ces 2 const
 
 
-  var mapRef = (0,react.useRef)();
-  var handleViewportChange = (0,react.useCallback)(function (newViewport) {
+  var mapRef = useRef();
+  var handleViewportChange = useCallback(function (newViewport) {
     return setViewport(newViewport);
   }, []); // Mapbox token to connect with
 
@@ -411,7 +411,7 @@ var Map = function Map() {
 
   var mapboxStyle = "mapbox://styles/weirdofmt/cktvjc1ae2bk017okiy41geat"; // Search's results change viewport -> newViewport
 
-  var handleGeocoderViewportChange = (0,react.useCallback)(function (newViewport) {
+  var handleGeocoderViewportChange = useCallback(function (newViewport) {
     // Transfert from origin point to search's result point with custom duration (ms)
     var geocoderDefaultOverrides = {
       transitionDuration: 3000
@@ -425,17 +425,17 @@ var Map = function Map() {
   var navControlStyle = {
     margin: '.5rem'
   };
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return /*#__PURE__*/_jsx(_Fragment, {
+    children: /*#__PURE__*/_jsx("div", {
       className: "geocode",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(esm/* default */.ZP, _objectSpread(_objectSpread({
+      children: /*#__PURE__*/_jsxs(MapGL, _objectSpread(_objectSpread({
         className: "map_area",
         ref: mapRef
       }, viewport), {}, {
         mapboxApiAccessToken: mapboxApiKey,
         mapStyle: mapboxStyle,
         onViewportChange: handleViewportChange,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(esm/* GeolocateControl */.$j, {
+        children: [/*#__PURE__*/_jsx(GeolocateControl, {
           style: geolocateControlStyle,
           className: "geolocate_area",
           positionOptions: {
@@ -445,7 +445,7 @@ var Map = function Map() {
           ,
           auto: true // onGeolocate= {GeolocationCoordinates}
 
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(esm/* NavigationControl */.Pv, {
+        }), /*#__PURE__*/_jsx(NavigationControl, {
           style: navControlStyle
         })]
       }))
@@ -453,7 +453,7 @@ var Map = function Map() {
   });
 };
 
-/* harmony default export */ const components_Map = (Map); // // Initialize the GeolocateControl.
+/* harmony default export */ const components_Map = ((/* unused pure expression or super */ null && (Map))); // // Initialize the GeolocateControl.
 // const geolocate = new mapboxgl.GeolocateControl({
 //   positionOptions: {
 //   enableHighAccuracy: true
@@ -576,8 +576,7 @@ var Result = function Result() {
     }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
       className: "result",
       children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-        className: "result_map",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(components_Map, {})
+        className: "result_map"
       }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
         className: "result_cards",
         children: foodtrucks.map(function (foodtruck) {

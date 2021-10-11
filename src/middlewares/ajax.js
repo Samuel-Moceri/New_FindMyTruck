@@ -7,7 +7,7 @@ import { UPDATE_INFORMATIONS } from '../actions/profil';
 
 // set the baseURl
 const api = axios.create({
-  baseURL: 'http://ec2-54-174-150-162.compute-1.amazonaws.com',
+  baseURL: 'http://ec2-54-237-187-158.compute-1.amazonaws.com',
   // baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
 });
 
