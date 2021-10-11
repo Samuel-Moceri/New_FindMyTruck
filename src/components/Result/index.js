@@ -61,15 +61,15 @@ const Result = ({
     </div>
         
         {/* // MODAL // */}
-        <Modal className="modalMain" showModal= {openModal} hideModal={hideModal}>
+        <Modal className="modalMain" showModal= {openModal}  hideModal={hideModal}>
           <div className="modalHeader">
               NOMDUFOODTRUCK
           </div>
           <div className="modalBody">
               DESCRIPTION
           </div>
-          <div className="modalFooter">
-            <div className="modalBtn"> <AiOutlineCloseCircle /></div>
+          <div className="modalFooter" >
+            <div className="modalBtn" onClick={hideModal}> <AiOutlineCloseCircle /></div>
           </div>
         </Modal>
 

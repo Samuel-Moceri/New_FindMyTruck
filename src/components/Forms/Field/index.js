@@ -25,8 +25,10 @@ const Field = ({
         // infos de base
         id={inputId}
         type={type}
-        className="field-input"
-        placeholder={placeholder}
+        className=""
+        placeholder=""
+
+        // placeholder="{placeholder}
         name={name}
       />
 
