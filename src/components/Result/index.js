@@ -27,7 +27,7 @@ const Result = ({
 
 
   const foodtrucks = useSelector(state => state.foodtruck.list);
-  console.log(foodtrucks);
+  // console.log(foodtrucks);
 
   // MODAL //
   const [openModal, setOpenModal] = useState (false);

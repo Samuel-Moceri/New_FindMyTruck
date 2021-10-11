@@ -70,7 +70,7 @@ const ajax = (store) => (next) => (action) => {
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 
-      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=1000`)
+      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=100`)
 
       .then((response)=> {
 
@@ -153,6 +153,15 @@ const ajax = (store) => (next) => (action) => {
         email: stateProfil.profil.emailProfil,
         firstname: stateProfil.profil.firstnameProfil,
         lastname: stateProfil.profil.lastnameProfil,
+        street: stateProfil.profil.streetProfil,
+        city: stateProfil.profil.cityProfil,
+        postal_code: stateProfil.profil.postalCodeProfil,
+        name: stateProfil.profil.nameFtProfil,
+        phone: stateProfil.profil.phoneProfil,
+        description: stateProfil.profil.descriptionProfil,
+        planning: stateProfil.profil.planningProfil,
+        payment: stateProfil.profil.paymentProfil,
+        proaddress: stateProfil.profil.proaddressProfil,
       })
 
     .then((response) => {
@@ -161,6 +170,23 @@ const ajax = (store) => (next) => (action) => {
     
       next(action);
     break;
+
+  case 'GET_USER_INFOS' :
+    // const stateProfilInformation = store.getState();
+    const dataInformations = JSON.parse(sessionStorage.getItem('key'));
+    const idInformations = dataInformations.data.id;
+    api.get(`api/v1/users/${idInformations}`)
+
+    .then((response) => {
+      console.log('user', response);
+      store.dispatch({
+        type: 'SAVE_USER_INFOS',
+        userData: response.data
+      })
+    })
+  
+    next(action);
+  break;
   }
  
 };

@@ -46,7 +46,7 @@ const Map = ({
 
   //TEST //
   const foodtrucks = useSelector(state => state.foodtruck.list);
-  console.log(foodtrucks);
+  // console.log(foodtrucks);
   // /TEST //
 
   // Create a constante with an initial value & return a reference (ref)

@@ -10,6 +10,7 @@ import loginLogo from 'src/assets/images/logo-login.png';
 
 
 import './style.scss';
+import { useEffect } from 'react';
 
 
 const Header = ({
@@ -18,20 +19,24 @@ const Header = ({
 
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
-  const nickname = useSelector(state => state.user.nickname);
-  const dispatch = useDispatch();
-  // localStorage.setItem('nickname', JSON.stringify(response.data.data.nickname));
-  // const nickname = JSON.parse(localStorage.getItem('nickname'));
-  // console.log(nickname);
-  
+  const nickname = useSelector(state => state.profil.nicknameProfil);
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  dispatch({
-    type: 'LOGOUT',
-  })
-  sessionStorage.clear();
+  const dispatch = useDispatch();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: 'LOGOUT',
+    })
+    sessionStorage.clear();
+  }
+
+  if (logged===true ){
+    dispatch({
+      type: 'GET_USER_INFOS'
+    })
 }
+  
 
  return (
 
@@ -45,10 +50,6 @@ const handleSubmit = (event) => {
         <div className='logo_img'> 
           <img src={textlogo} alt="Logo FindMyTruck"/>
         </div>
-
-        {/* <div className='logo_title'> 
-          <h1 >FIND MY TRUCK</h1>
-        </div> */}
       </NavLink>
     </section>
 
