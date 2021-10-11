@@ -16,3 +16,6 @@ const Modal = ({showModal, children, hideModal}) => {
 };
 
 export default Modal
+
+
+

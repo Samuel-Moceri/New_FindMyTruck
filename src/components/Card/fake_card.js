@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CgPin } from 'react-icons/cg';
+import { MdLocationOn } from "react-icons/md";
+
+import FMT_Mockup from 'src/assets/images/background/FMT_Mockup.jpg';
 
 
 
@@ -11,38 +13,27 @@ const Fake_Card = ({}) => {
 
   
   return(
-    <>
+
     <section className="card_foodtruck">
-      <img 
-        className="card_foodtruck_img"
-      />
       <div className="card_foodtruck_content">
-        <p className="card_foodtruck_content_title">NOM DU FOODTRUCK</p>
-        <div className="card_foodtruck_content_subtitle">
-          <p className="card_foodtruck_content_category">catégorie</p>
-          <p className="card_foodtruck_content_rating"></p>
+        <div className="card_foodtruck_content_header">
+          <img className="card_foodtruck_content_header_img" src={FMT_Mockup}/>
+          <p className="card_foodtruck_content_header_title">FOODTRUCK</p>
+          <p className="card_foodtruck_content_header_subtitle">catégorie</p>
         </div>
+
         <div className="card_foodtruck_content_description">
+          <MdLocationOn /> 
           <div className="card_foodtruck_content_description_adress">
-            <CgPin /> 
             <p className="card_foodtruck_content_description_adress_street">Rue</p>
-            <p className="card_foodtruck_content_description_adress_postalcode">Code Postal</p>
-            <p className="card_foodtruck_content_description_adress_city">Ville</p>
-          </div>
-          <div className="card_foodtruck_content_description_details">
-            <p>Mode de paiement</p>
-            <p>Téléphone</p>
+            <div className="card_foodtruck_content_description_adress_postalcodeandcity">
+              <p className="card_foodtruck_content_description_adress_postalcode">Code postal &nbsp;</p>
+              <p className="card_foodtruck_content_description_adress_city">Ville</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-
-
-
-
-</>
-
 
 );
 }
