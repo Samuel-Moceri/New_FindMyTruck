@@ -38,7 +38,9 @@ const RegisterForm = () => {
   return (
     <>
       {!registered && 
-      <form onSubmit={handleSubmit} className="register_form">
+
+
+        <form autoComplete="off" className="login_form_element" onSubmit={handleSubmit}>
         <div className="register_form_title">Inscription</div>
         <Field
           form="register"
@@ -64,7 +66,7 @@ const RegisterForm = () => {
           placeholder="Mot de passe"
           onFieldChange={onFieldChange}
         />
-        <Field 
+         <Field 
           form="register"
           name="role"
           value= '1'
@@ -72,14 +74,14 @@ const RegisterForm = () => {
           placeholder='Professionnel'
           onFieldChange={onFieldChange}
         />
-        <Field 
+        {/*<Field 
           form="register"
           name="role"
           value= '0'
           type="radio"
           placeholder='Utilisateur'
           onFieldChange={onFieldChange}
-        />
+        /> */}
 
 
       {/* <Field

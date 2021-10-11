@@ -1,0 +1,136 @@
+@use '../../styles/partials/vars';
+
+
+.register_form_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: .2rem;
+  margin: 5rem auto;
+  width: 30rem;
+  height: 35rem;
+  background-color: #FFF;
+  @include BoxShadow(4);
+}
+
+.register_form_title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem auto ;
+  font-weight: bold;
+  color: vars.$palegreendark;
+}
+
+
+#field-nameRegister,
+#field-emailRegister,
+#field-passwordRegister {
+  position: relative;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #999;
+  padding: .5rem;
+  font-size: 1.5rem;
+  color: #666;
+  transition: 0.3s ease-in ;
+}
+
+#field-nameRegister:focus,
+#field-emailRegister:focus,
+#field-passwordRegister:focus {
+  border-bottom: 2px solid vars.$palegreendark;
+}
+
+// placeholder
+.field-label {
+  position: relative;
+  cursor: text;
+  top: -3.5rem;
+  left: .3rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+.login_form_element .field--has-content
+   {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.375em;
+    /* Accessible outline */
+    /* Remove comment to use */ 
+    /*
+      &:focus-within {
+          outline: .125em solid $primary-color;
+      }
+    */
+    input {
+      position: absolute;
+      left: -9999px;
+      &:checked + span {
+        background-color: mix(#fff, red, 84%);
+        &:before {
+          box-shadow: inset 0 0 0 0.4375em red;
+        }
+      }
+    }
+    label {
+      display: flex;
+      align-items: center;
+      padding: 0.375em 0.75em 0.375em 0.375em;
+      border-radius: 99em; // or something higher...
+      transition: 0.25s ease;
+      &:hover {
+        background-color: mix(#fff, red, 84%);
+      }
+      &:before {
+        display: flex;
+        flex-shrink: 0;
+        content: "";
+        background-color: #fff;
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        margin-right: 0.375em;
+        transition: 0.25s ease;
+        box-shadow: inset 0 0 0 0.125em red;
+      }
+    }
+  }
+
+
+
+.register_form_button {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: .5rem;
+  border: none;
+  border-radius: .2rem;
+  margin: 1rem auto;
+  width:90%;
+  background-color: vars.$palegreendark;
+  color: #FFF;
+  @include BoxShadow(1);
+  transition: all 0.3s;
+
+}
+
+.register_form_button:hover {
+  @include BoxShadow(4);
+  transform: scale(1.03);
+
+}
+
+.register_form_button:active {
+  @include BoxShadow(2);
+    transform: scale(0.98);
+}
+
+.login_form_member {
+  font-size: .8rem;
+  padding: 0 1rem;
+  text-align: center;
+}

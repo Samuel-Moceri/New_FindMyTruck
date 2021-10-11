@@ -39,7 +39,7 @@ const LoginForm = () => {
       {logged && 
       <Redirect to="/" />
       }
-      <form onSubmit={handleSubmit} className="login_form">
+      <form autoComplete="off" className="login_form_element" onSubmit={handleSubmit}>
         <div className="login_form_title">Connexion</div>
         <Field
           form="login"
@@ -47,6 +47,7 @@ const LoginForm = () => {
           value={email}
           type="email"
           placeholder="E-mail"
+          // className="login_form_email_text"
           onFieldChange={onFieldChange}
           required='required'
         />
