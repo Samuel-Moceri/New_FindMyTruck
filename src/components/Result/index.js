@@ -18,12 +18,9 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 // import './style.scss';
 
 
-const Result = ({
-  id,
-  name,
-  }) => {
+const Result = ({}) => {
 
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
 
   const foodtrucks = useSelector(state => state.foodtruck.list);
@@ -57,7 +54,7 @@ const Result = ({
       onClick={() => showModal()}>
         {foodtrucks.map((foodtruck) => (<Card key={foodtruck.id} {...foodtruck}/>))}
 
-      <Fake_Card />
+       <Fake_Card />{/*<Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /><Fake_Card /> */}
     </div>
         
         {/* // MODAL // */}
@@ -72,14 +69,6 @@ const Result = ({
             <div className="modalBtn"> <AiOutlineCloseCircle /></div>
           </div>
         </Modal>
-
-        {/* {foodtrucks.map((foodtruck) => (<Modal key={foodtruck.id} {...foodtruck}/>))} */}
-
-
-        {/* <div className="result_modal">
-        {foodtrucks.map((foodtruck) => (<Modal key={foodtruck.id} {...foodtruck}/>))}
-        </div> */}
-
         {/* // /MODAL // */}
 
 

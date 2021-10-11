@@ -112,7 +112,7 @@ const Map = ({
           style={geolocateControlStyle}
           className="geolocate_area"
           positionOptions={{enableHighAccuracy: true}}
-          trackUserLocation={false}
+          trackUserLocation={true}
           showUserHeading={false}
           auto 
           // onGeolocate= {GeolocationCoordinates}
