@@ -1,4 +1,5 @@
 import Field from 'src/components/Forms/Field';
+import FieldSwitch from 'src/components/Forms/Field/switch';
 
 import { changeValueRegister } from 'src/actions/register';
 import { useSelector, useDispatch } from 'react-redux';
@@ -35,13 +36,38 @@ const RegisterForm = () => {
       changeValueRegister(key, value)
     );
   }
+  const onFieldSwitchChange = (key, value) => {
+    dispatch(
+      changeValueRegister(key, value)
+    );
+  }
   return (
     <>
       {!registered && 
 
 
-        <form autoComplete="off" className="login_form_element" onSubmit={handleSubmit}>
+        <form autoComplete="off" className="register_form_element" onSubmit={handleSubmit}>
         <div className="register_form_title">Inscription</div>
+
+        <div className="register_form_switch">
+          <FieldSwitch 
+            form="register"
+            name="role"
+            value= '1'
+            type="radio"
+            placeholder='Professionnel'
+            onFieldSwitchChange={onFieldSwitchChange}
+          />
+          <FieldSwitch
+            form="register"
+            name="role"
+            value= '0'
+            type="radio"
+            placeholder='Utilisateur'
+            onFieldSwitchChange={onFieldSwitchChange}
+          />
+        </div>
+
         <Field
           form="register"
           name="nameRegister"
@@ -66,22 +92,6 @@ const RegisterForm = () => {
           placeholder="Mot de passe"
           onFieldChange={onFieldChange}
         />
-         <Field 
-          form="register"
-          name="role"
-          value= '1'
-          type="radio"
-          placeholder='Professionnel'
-          onFieldChange={onFieldChange}
-        />
-        {/*<Field 
-          form="register"
-          name="role"
-          value= '0'
-          type="radio"
-          placeholder='Utilisateur'
-          onFieldChange={onFieldChange}
-        /> */}
 
 
       {/* <Field

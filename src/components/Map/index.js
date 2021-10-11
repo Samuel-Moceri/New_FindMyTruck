@@ -88,9 +88,11 @@ const Map = ({
     };
 
 
+
+
+
   return (
     <>
-  
 
     <div className="geocode" >
       {/* map display */}
@@ -112,23 +114,23 @@ const Map = ({
           style={geolocateControlStyle}
           className="geolocate_area"
           positionOptions={{enableHighAccuracy: true}}
-          trackUserLocation={false}
+          trackUserLocation={true}
           showUserHeading={false}
           auto 
-          // onGeolocate= {GeolocationCoordinates}
+          onGeolocate= {GeolocationCoordinates}
         />
 
         {/* zoom in & out + compas button display */}
         <NavigationControl style={navControlStyle} />
 
         {/* Searchbar geocoder display */}
-        {/* <Geocoder
+        <Geocoder
           className="geocode_area"
           mapRef={mapRef}
           onViewportChange={handleGeocoderViewportChange}
           mapboxApiAccessToken={mapboxApiKey}
-
-        /> */}
+          containerRef
+        />
 
         {/* // MARKER // */}
         {foodtrucks.map((foodtruck) => (

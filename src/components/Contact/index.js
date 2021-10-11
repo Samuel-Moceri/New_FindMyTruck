@@ -29,9 +29,10 @@ const Contact = () => {
     // Tester de créer notre propre onchange au lieu du OnField
   return(
 <>
-<form onSubmit={handleSubmit} className="contact_form">
-  <div className="login_form_title">Contactez-nous</div>
+<form onSubmit={handleSubmit} className="contact_form_element">
+  <div className="contact_form_title">Contactez-nous</div>
         <ContactField
+          form="contact"
           name="nameContact"
           value={nameContact}
           type="name"
@@ -40,6 +41,7 @@ const Contact = () => {
           required='required'
         />
         <ContactField
+          form="contact"
           name="emailContact"
           value={emailContact}
           type="email"
@@ -48,6 +50,7 @@ const Contact = () => {
           required='required'
         />
         <ContactField
+          form="contact"
           name="objectContact"
           value={objectContact}
           type="object"
@@ -56,6 +59,7 @@ const Contact = () => {
           required='required'
         />
         <ContactFieldTextarea 
+              form="contact"
               name="messageContact"
               value={messageContact}
               type="message"          
@@ -70,6 +74,8 @@ const Contact = () => {
           Envoyer
         </button>
       </form>
+
+  
 </>
   );
 };

@@ -81,6 +81,11 @@ const handleSubmit = (event) => {
         <>
         <div className="header_right_logged">
           <div className="header_right_logged_hello">Bonjour <span className="header_right_logged_hello_nickname">{nickname}</span> !</div>
+
+          <form  onSubmit={handleSubmit} className="header_right_link_logged_logout">
+            <input type="submit" className="header_right_link_logged_logout_button" value="Deconnexion" />
+          </form>
+
           <NavLink
             className='header_right_link' 
             to="/profil"
@@ -90,13 +95,12 @@ const handleSubmit = (event) => {
               <FiUser />      
             </button>
           </NavLink> 
+
+
+
         </div>
 
-        <form  onSubmit={handleSubmit}>
-          <div className="header_logout">
-              <input type="submit" className="logout_button" value="Deconnexion"></input>
-          </div>
-        </form>
+
           
         </>        
       )}

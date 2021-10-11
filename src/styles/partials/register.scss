@@ -12,6 +12,8 @@
   height: 35rem;
   background-color: #FFF;
   @include BoxShadow(4);
+  text-shadow : 0 1px 1px  rgba(0, 0, 0, .14), 0 2px 1px  rgba(0, 0, 0, .12), 0 1px 3px  rgba(0, 0, 0, .20);
+
 }
 
 .register_form_title {
@@ -23,9 +25,9 @@
 }
 
 
-#field-nameRegister,
-#field-emailRegister,
-#field-passwordRegister {
+.register-name-nameRegister,
+.register-email-emailRegister,
+.register-password-passwordRegister {
   position: relative;
   width: 100%;
   border: none;
@@ -36,14 +38,19 @@
   transition: 0.3s ease-in ;
 }
 
-#field-nameRegister:focus,
-#field-emailRegister:focus,
-#field-passwordRegister:focus {
+.register-name-nameRegister:focus,
+.register-email-emailRegister:focus,
+.register-password-passwordRegister:focus {
   border-bottom: 2px solid vars.$palegreendark;
+  .register-name-nameRegister-label {
+    color: red;
+  }
 }
 
 // placeholder
-.field-label {
+.register-name-nameRegister-label,
+.register-email-emailRegister-label,
+.register-password-passwordRegister-label {
   position: relative;
   cursor: text;
   top: -3.5rem;
@@ -52,54 +59,49 @@
   color: #999;
 }
 
-.login_form_element .field--has-content
-   {
-    display: flex;
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 0.375em;
-    /* Accessible outline */
-    /* Remove comment to use */ 
-    /*
-      &:focus-within {
-          outline: .125em solid $primary-color;
-      }
-    */
-    input {
-      position: absolute;
-      left: -9999px;
-      &:checked + span {
-        background-color: mix(#fff, red, 84%);
-        &:before {
-          box-shadow: inset 0 0 0 0.4375em red;
-        }
-      }
-    }
-    label {
-      display: flex;
-      align-items: center;
-      padding: 0.375em 0.75em 0.375em 0.375em;
-      border-radius: 99em; // or something higher...
-      transition: 0.25s ease;
-      &:hover {
-        background-color: mix(#fff, red, 84%);
-      }
-      &:before {
-        display: flex;
-        flex-shrink: 0;
-        content: "";
-        background-color: #fff;
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 50%;
-        margin-right: 0.375em;
-        transition: 0.25s ease;
-        box-shadow: inset 0 0 0 0.125em red;
-      }
-    }
-  }
+
+.register_form_switch {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+// input
+// .register-radio-role{ 
+// }
+
+// label
+.register-radio-role-label{
+  padding: .5rem 2rem;
+	background-color: #F3F3F3;
+	font-size: 1rem;
+	line-height: 1;
+	text-align: center;
+	transition: all 0.1s ease-in-out;
+  border-radius: .2rem;
+  @include BoxShadow(1);
+
+
+}
+
+.register-radio-role-label:hover {
+	cursor: pointer;
+  @include BoxShadow(4);
+  transform: scale(1.03);
+}
+
+.register-radio-role-label:checked {
+	background-color: #a5dc86;
+  @include BoxShadow(2);
+  transform: scale(0.98);
+}
+
+
+
+
+// --------------------------------------------
+
+
 
 
 
@@ -133,4 +135,21 @@
   font-size: .8rem;
   padding: 0 1rem;
   text-align: center;
+}
+
+
+// ----- RESPONSIVE ----- //
+
+.register_form_element {
+  @include for-size(phone-only) {
+    width: 90%;
+    height: 30rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.register_form_title {
+  @include for-size(phone-only) {
+  font-size: 1.5rem;
+}
 }

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // == Composant
 const Field = ({
+  form,
   value,
   type,
   name,
@@ -15,30 +16,54 @@ const Field = ({
   };
 
   const inputId = `field-${name}`;
+  const className = `${form}-${type}-${name}`;
+  const classNameLab = `${form}-${type}-${name}-label`;
 
   return (
+    // <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
+    //   <input
+    //     // React - state
+    //     value={value}
+    //     onChange={handleChange}
+    //     // infos de base
+    //     id={inputId}
+    //     type={type}
+    //     className={className}
+    //     placeholder=""
+
+    //     // placeholder="{placeholder}
+    //     name={name}
+    //   />
+
+    //   <label
+    //     htmlFor={inputId}
+    //     className={classNameLab}
+    //   >
+    //     {placeholder}
+    //   </label>
+    // </div>
+
+    <>
     <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-      <input
-        // React - state
+      <input 
         value={value}
         onChange={handleChange}
-        // infos de base
         id={inputId}
         type={type}
-        className=""
+        className={className}
         placeholder=""
-
-        // placeholder="{placeholder}
         name={name}
+        checked 
       />
-
       <label
+        for={placeholder}
         htmlFor={inputId}
-        className="field-label"
+        className={classNameLab}
       >
-        {placeholder}
+      {placeholder}
       </label>
     </div>
+    </>
   );
 };
 
