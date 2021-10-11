@@ -18,7 +18,7 @@ const Header = ({
 
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
-  const nickname = useSelector(state => state.user.nickname);
+  const nickname = useSelector(state => state.profil.nicknameProfil);
   const dispatch = useDispatch();
   // localStorage.setItem('nickname', JSON.stringify(response.data.data.nickname));
   // const nickname = JSON.parse(localStorage.getItem('nickname'));

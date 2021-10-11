@@ -7,7 +7,7 @@ import { FaShippingFast } from "react-icons/fa";
 const Fake_Marker = () => {
 
   const foodtrucks = useSelector(state => state.foodtruck.list);
-  console.log(foodtrucks);
+  // console.log(foodtrucks);
     
   return (
     <>

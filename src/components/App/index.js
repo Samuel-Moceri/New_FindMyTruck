@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   const data = JSON.parse(sessionStorage.getItem('key'));
-  console.log(data);
+  // console.log(data);
   
   if(data){
     dispatch({

@@ -41,8 +41,6 @@ const Field = ({
 };
 
 Field.propTypes = {
-  value: PropTypes.string,
-  type: PropTypes.string,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   onFieldChange: PropTypes.func.isRequired,
@@ -51,7 +49,6 @@ Field.propTypes = {
 // Valeurs par défaut pour les props
 Field.defaultProps = {
   value: '',
-  type: 'text',
 };
 
 // == Export
