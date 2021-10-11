@@ -153,6 +153,7 @@ const ajax = (store) => (next) => (action) => {
         email: stateProfil.profil.emailProfil,
         firstname: stateProfil.profil.firstnameProfil,
         lastname: stateProfil.profil.lastnameProfil,
+        city: stateProfil.profil.cityProfil,
       })
 
     .then((response) => {

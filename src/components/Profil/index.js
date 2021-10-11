@@ -12,7 +12,7 @@ import Field from 'src/components/Forms/Field';
   const informations = data.data;
   const role = informations.roles;
   const informationsFoodtruck = informations.user_foodtruck;
-  console.log(informationsFoodtruck);
+  // console.log(informationsFoodtruck);
   
 
   // const for the state
@@ -25,6 +25,7 @@ import Field from 'src/components/Forms/Field';
   const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
   const warning = useSelector(state=> state.profil.warning);
   const modify = useSelector(state=> state.profil.modify);
+  console.log(informations.proadress);
 
   
   const dispatch = useDispatch();
@@ -60,15 +61,20 @@ import Field from 'src/components/Forms/Field';
   return (
     <div>
     {modify===false &&
-        <div className="profil">
-          <div className="profil_nickname"> On est sur ton profil {informations.nickname} </div>
-          <div className="profil_email"> Voici ton email {informations.email} </div>
-          <div className="profil_firstname"> Voici ton prénom {informations.firstname} </div>
-          <div className="profil_lastname"> Voici ton nom de famille {informations.lastname} </div>
-          <div className="profil_address"> Voici ton adresse {informations.address} </div>
-        </div>
-        }
-       
+      <div className="profil">
+        <div className="profil_nickname"> On est sur ton profil {informations.nickname} </div>
+        <div className="profil_email"> Voici ton email {informations.email} </div>
+        <div className="profil_firstname"> Voici ton prénom {informations.firstname} </div>
+        <div className="profil_lastname"> Voici ton nom de famille {informations.lastname} </div>
+      </div>
+    }
+
+    {role[0]==="ROLE_PRO" && modify===false &&
+      <div className="profil">
+        <div className="profil_address"> Voici ton adresse {informations.proadress} </div>
+        <div className="profil_address"> Voici ta ville {informationsFoodtruck.city} </div>
+      </div>
+    }
 
 
       {modify===true &&

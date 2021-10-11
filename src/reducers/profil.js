@@ -28,21 +28,21 @@ const reducer = (state = initialState, action = {}) => {
         [action.key]: action.value
       }
     case UPDATE_INFORMATIONS:
-      const data = JSON.parse(sessionStorage.getItem('key'));
-      const informations = data.data;
-      const informationsFoodtruck = informations.user_foodtruck;
+      // const data = JSON.parse(sessionStorage.getItem('key'));
+      // const informations = data.data;
+      // const informationsFoodtruck = informations.user_foodtruck;
       
       // console.log(informationsFoodtruck);
       // the new state will have the new values (action.value)
       return {
         ...state,
-      nicknameProfil: informations.nickname,
-      emailProfil: informations.email,
-      firstnameProfil: informations.firstname,
-      lastnameProfil: informations.lastname,
-      streetProfil: informationsFoodtruck.street,
-      cityProfil: informationsFoodtruck.city,
-      postalCodeProfil: informationsFoodtruck.postal_code,
+      nicknameProfil: '',
+      emailProfil: '',
+      firstnameProfil: '',
+      lastnameProfil: '',
+      streetProfil: '',
+      cityProfil: '',
+      postalCodeProfil: '',
       warning:true,
       }
 
