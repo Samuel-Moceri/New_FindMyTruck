@@ -11,11 +11,6 @@
   overflow: hidden;
   @include BoxShadow(1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  @include for-size(phone-only) {
-    width: auto;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
   &:hover {
     @include BoxShadow(4);
     .card_foodtruck_content_header_img {
@@ -93,7 +88,7 @@
   padding: .5rem;
   & svg {
     opacity: 0;
-    transform: translateY(80px);
+    // transform: translateY(80px);
     transition: 0.2s ease-in ;
     color: vars.$retroredhot;
     height: 1.5rem;
@@ -119,6 +114,56 @@
   }
 }
 
+// ----- RESPONSIVE ----- //
+
+.card_foodtruck {
+  @include for-size(phone-only) {
+    width: auto;
+    height: 9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.card_foodtruck_content_header_img {
+  @include for-size(phone-only) {
+      opacity: .5;
+  }
+}
+
+.card_foodtruck_content_header_title, 
+.card_foodtruck_content_header_subtitle {
+  @include for-size(phone-only) {
+    transform: translateY(-60px);
+  }
+}
+
+.card_foodtruck_content_description svg{
+  @include for-size(phone-only) {
+    transform: translateY(17px);
+    height: 2rem;
+    opacity: 1;
+    }
+}
+
+.card_foodtruck_content_description_adress_street,
+.card_foodtruck_content_description_adress_postalcode,
+.card_foodtruck_content_description_adress_city {
+  @include for-size(phone-only) {
+    transform: translateY(18px);
+    opacity: 1;
+    }
+}
+
+// .card_foodtruck_content_description_adress_postalcodeandcity {
+//   @include for-size(phone-only) {
+//     transform: translateY(17px);
+//     opacity: 1;
+//     }
+// }
+// &_adress_street, &_adress_postalcode, &_adress_city {
+//   opacity: 1;
+//   transform: translateY(5px);
+// }
 
 // .card_foodtruck_img {
 //   position:relative ;

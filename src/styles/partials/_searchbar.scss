@@ -116,6 +116,11 @@
   }
 }
 
+.searchBar_text_typewriter_substitute {
+  display: none;
+
+}
+
 //Search Button Zone
 #searchBar_button button {
     position: relative;
@@ -256,7 +261,7 @@
     font-size: 1.4rem;
     bottom: -.3rem;
   }
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-portrait-only) {
     display: none;
   }
 }
