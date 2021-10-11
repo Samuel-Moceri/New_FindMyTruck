@@ -1,9 +1,8 @@
 // == Import
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { LOGIN } from '../../actions/users';
-// import { LOGIN } from '../../reducers/user';
 
 import './style.scss';
 
@@ -16,8 +15,6 @@ import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
-import Result from 'src/components/Result';
-import Foodtruck from 'src/components/Foodtruck';
 
 // == Composant
 function App() {

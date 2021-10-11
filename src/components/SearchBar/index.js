@@ -8,7 +8,7 @@ import Result from 'src/components/Result';
 import TypeWriter_search from 'src/components/Typewriter/typewriter_search';
 
 
-import './style.scss';
+// import './style.scss';
 import {FiTruck} from 'react-icons/fi';
 
 
@@ -78,8 +78,12 @@ const SearchBar = () => {
             value={address} required="required"
           />
           <span>
-            <FiTruck />     
-            <TypeWriter_search />
+            <div className="searchBar_text_typewriter">
+              <FiTruck />     
+              <TypeWriter_search />
+            </div>
+            {/* Substitute text for mobile view */}
+            <p className="searchBar_text_typewriter_substitute">Chercher un Foodtruck</p> 
           </span>
         </div>
 
@@ -89,28 +93,30 @@ const SearchBar = () => {
           exact
         >
 
-        {/* <div id="searchBar_button">
-          
-          <button type="submit">
-            <div id="searchBar_button_circle"></div>
-            <span></span>
-          </button>
-        </div> */}
+
 
         </NavLink>
-        
-        <input 
-        className="searchBar_button"
-        value="GO" 
-        type="submit">
-        
-        </input>
+          <div id="searchBar_button">
+            
+            <button type="submit">
+              <div id="searchBar_button_circle"></div>
+              <span></span>
+            </button>
+          </div>
+          
+        {/* <div id="searchBar_button">
+          <button 
+          className="searchBar_button"
+          value="GO" 
+          type="submit">
+          </button>
+        </div> */}
 
       </form> 
 
     </div>
       <Result />
-   
+
   </>
   );
 }

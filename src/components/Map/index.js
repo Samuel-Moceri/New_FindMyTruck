@@ -1,19 +1,31 @@
-import './style.scss';
+// import './style.scss';
 
 /* global document */
 import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import React, { useState, useRef, useCallback } from 'react'
+import React, { useState, useRef, useCallback, Component } from 'react'
+import { useSelector } from 'react-redux';
 
-import MapGL, {GeolocateControl, NavigationControl} from 'react-map-gl'
+import MapGL, {GeolocateControl, NavigationControl, FlyToInterpolator} from 'react-map-gl'
 import Geocoder from 'react-map-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
+import { FaShippingFast } from "react-icons/fa";
+import Fake_Marker from './Fake_Marker'
+import MarkerPin from '../MarkerPin'
 
 
+const Map = ({
+  props,
+  id,
+  latitude,
+  longitude,
+}) => {
+    
+  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
-const Map = () => {
-
+  const lat = Number(latitude);
+  const lng = Number(longitude);
   
 
   //Map generator
@@ -22,8 +34,8 @@ const Map = () => {
     
     // lat & long : starting position on the map (O'Clock's office)
     latitude: 47.7,
-    longitude: -1.65
-  ,
+    longitude: -1.65,
+
     // W&H are define in style.scss (.map), map take 100% of this area
     width: "100%",
     height: "100%",
@@ -32,9 +44,14 @@ const Map = () => {
     ,
   });
 
+  //TEST //
+  const foodtrucks = useSelector(state => state.foodtruck.list);
+  console.log(foodtrucks);
+  // /TEST //
 
-  // TODO Comprendre ces 2 const
+  // Create a constante with an initial value & return a reference (ref)
   const mapRef = useRef();
+  // Send another version of the constant ONLY if something has change
   const handleViewportChange = useCallback(
     (newViewport) => setViewport(newViewport),
     []
@@ -86,6 +103,8 @@ const Map = () => {
         mapboxApiAccessToken={mapboxApiKey}
         mapStyle={mapboxStyle}
         onViewportChange={handleViewportChange}
+        lat= {lat}
+        lng= {lng}
       >
 
         {/* geolocate button display */}
@@ -93,8 +112,8 @@ const Map = () => {
           style={geolocateControlStyle}
           className="geolocate_area"
           positionOptions={{enableHighAccuracy: true}}
-          trackUserLocation={true}
-          // showUserHeading={true}
+          trackUserLocation={false}
+          showUserHeading={false}
           auto 
           // onGeolocate= {GeolocationCoordinates}
         />
@@ -110,7 +129,22 @@ const Map = () => {
           mapboxApiAccessToken={mapboxApiKey}
 
         /> */}
-      
+
+        {/* // MARKER // */}
+        {foodtrucks.map((foodtruck) => (
+          <MarkerPin 
+          key={foodtruck.id}
+
+          // Pas obligé de les renseigner mais pour l'instant je garde ça là pour plus tard
+          latitude={lat} 
+          longitude={lng}
+          //
+          
+          {...foodtruck}/>))}
+        {/* // /MARKER // */}
+        
+        {/* <Fake_Marker /> */}
+
       </MapGL>
     </div>
     </>
@@ -119,19 +153,3 @@ const Map = () => {
 }
 
 export default Map
-
-
-// // Initialize the GeolocateControl.
-// const geolocate = new mapboxgl.GeolocateControl({
-//   positionOptions: {
-//   enableHighAccuracy: true
-//   },
-//   trackUserLocation: true
-//   });
-//   // Add the control to the map.
-//   map.addControl(geolocate);
-//   // Set an event listener that fires
-//   // when a geolocate event occurs.
-//   geolocate.on('geolocate', () => {
-//   console.log('A geolocate event has occurred.');
-//   });
