@@ -6,7 +6,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import React, { useState, useRef, useCallback, Component } from 'react'
 import { useSelector } from 'react-redux';
 
-import MapGL, {GeolocateControl, NavigationControl, Marker} from 'react-map-gl'
+import MapGL, {GeolocateControl, NavigationControl, FlyToInterpolator} from 'react-map-gl'
 import Geocoder from 'react-map-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
@@ -44,16 +44,10 @@ const Map = ({
     ,
   });
 
-
-
-
   //TEST //
   const foodtrucks = useSelector(state => state.foodtruck.list);
   console.log(foodtrucks);
-
-
   // /TEST //
-
 
   // Create a constante with an initial value & return a reference (ref)
   const mapRef = useRef();

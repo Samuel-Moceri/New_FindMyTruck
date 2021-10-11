@@ -93,28 +93,30 @@ const SearchBar = () => {
           exact
         >
 
-        {/* <div id="searchBar_button">
-          
-          <button type="submit">
-            <div id="searchBar_button_circle"></div>
-            <span></span>
-          </button>
-        </div> */}
+
 
         </NavLink>
-        
-        <input 
-        className="searchBar_button"
-        value="GO" 
-        type="submit">
-        
-        </input>
+          <div id="searchBar_button">
+            
+            <button type="submit">
+              <div id="searchBar_button_circle"></div>
+              <span></span>
+            </button>
+          </div>
+          
+        {/* <div id="searchBar_button">
+          <button 
+          className="searchBar_button"
+          value="GO" 
+          type="submit">
+          </button>
+        </div> */}
 
       </form> 
 
     </div>
       <Result />
-   
+
   </>
   );
 }
