@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 
 const ContactFieldTextarea = ({
+  form,
   value,
   type,
   name,
@@ -19,29 +20,28 @@ const ContactFieldTextarea = ({
   };
 
   const inputId = `field-${name}`;
+  const className = `${form}-${type}-${name}`;
+  const classNameLab = `${form}-${type}-${name}-label`;
 
   return (
     <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-      {/* <label
-        htmlFor={inputId}
-        className="field-label"
-      >
-        {placeholder}
-      </label> */}
-      
       <textarea
-        // React - state
         value={value}
         onChange={handleChange}
-        // infos de base
         id={inputId}
         type={type}
-        className="field-input-textarea"
+        className={className}
         placeholder={placeholder}
         name={name}
-        required='required'
+        required 
       />
-
+      {/* <label
+        for={placeholder}
+        htmlFor={inputId}
+        className={classNameLab}
+      >
+      {placeholder}
+      </label> */}
 
     </div>
   );

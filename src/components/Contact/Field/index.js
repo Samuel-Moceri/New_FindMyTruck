@@ -18,33 +18,32 @@ const ContactField = ({
   };
 
   const inputId = `field-${name}`;
-  const className = `${form}_field_input`;
+  const className = `${form}-${type}-${name}`;
+  const classNameLab = `${form}-${type}-${name}-label`;
 
 
   return (
+    <>
     <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-      <input
-        // React - state
+      <input 
         value={value}
         onChange={handleChange}
-        // infos de base
         id={inputId}
         type={type}
-        className="field-input"
-        placeholder={placeholder}
         className={className}
-        required='required'
-
+        placeholder=""
         name={name}
+        required 
       />
-
-      {/* <label
+      <label
+        htmlFor={placeholder}
         htmlFor={inputId}
-        className="field-label"
+        className={classNameLab}
       >
-        {placeholder}
-      </label> */}
+      {placeholder}
+      </label>
     </div>
+    </>
   );
 };
 

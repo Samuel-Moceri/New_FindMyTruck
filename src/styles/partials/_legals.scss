@@ -1,0 +1,44 @@
+@use '../../styles/partials/vars';
+
+.legals_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: .2rem;
+  margin: 5rem auto;
+  width: 90%;
+  height: 70vh;
+  background-color: #FFF;
+  @include BoxShadow(4);
+}
+
+.legals_title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem auto ;
+  font-weight: bold;
+  color: vars.$retroorange ;
+  text-shadow : 0 1px 1px  rgba(0, 0, 0, .14), 0 2px 1px  rgba(0, 0, 0, .12), 0 1px 3px  rgba(0, 0, 0, .20);
+}
+
+.legals_contain {
+  overflow: auto;
+}
+
+// ----- RESPONSIVE ----- //
+
+.legals_box {
+  @include for-size(phone-only) {
+    width: 90%;
+    height: 30rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.legals_title{
+  @include for-size(phone-only) {
+  font-size: 1.5rem;
+}
+}
+
