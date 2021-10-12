@@ -130,6 +130,7 @@ const Map = ({
           onViewportChange={handleGeocoderViewportChange}
           mapboxApiAccessToken={mapboxApiKey}
           containerRef
+          position="bottom-right"
         />
 
         {/* // MARKER // */}

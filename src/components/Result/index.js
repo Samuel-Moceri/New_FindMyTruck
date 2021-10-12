@@ -53,7 +53,7 @@ const Result = ({
 
         <div 
           className="result_cards" 
-          onClick={toggleModal}
+          // onClick={toggleModal}
           >
             {foodtrucks.map((foodtruck) => (<Card key={foodtruck.id} {...foodtruck} />))}
 
