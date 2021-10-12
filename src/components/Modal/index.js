@@ -12,25 +12,26 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
             <div className="modal_container">
               <div className="modal">
 
-                <div className="modal_header">
-                  <p className="modal_header_name">{name}</p>
-                  <button type="button" className="modal_header_closebutton" onClick={hide}>
+                <div className="modal_top">
+                  <img className="modal_body_picture" src={pictureURL}/>
+                  <p className="modal_top_name">{name}</p>
+                  <button type="button" className="modal_top_closebutton" onClick={hide}>
                     <span><MdClose /></span>
                   </button>
                 </div>
 
-                <div className="modal_body">
-              
-                  <p className="modal_body_description">{description}</p>
-
-                  <p className="modal_body_street">{street}</p>
-                  <p className="modal_body_postalcode">{postal_code}</p>
-                  <p className="modal_body_city">{city}</p>
-                  <p className="modal_body_phone">0{phone}</p>
-                  <p className="modal_body_payment">{payment}</p>
-                  <p className="modal_body_planning">{planning}</p>
-                  <img className="modal_body_menu" src={menuURL}/>
-                  <img className="modal_body_picture" src={pictureURL}/>
+                <div className="modal_middle">
+                  <p className="modal_middle_description">{description}</p>
+                  <div className="modal_middle_adress">
+                    <p className="modal_middle_adress_street">{street}</p>
+                    <p className="modal_middle_adress_postalcode">{postal_code}</p>
+                    <p className="modal_middle_adress_city">{city}</p>
+                  </div>
+                  <p className="modal_middle_phone">0{phone}</p>
+                  <p className="modal_middle_payment">{payment}</p>
+                  <div className="modal_bottom"></div>
+                    <p className="modal_bottom_planning">{planning}</p>
+                    <img className="modal_bottom_menu" src={menuURL}/>
                 </div>
 
 

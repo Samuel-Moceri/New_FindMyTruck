@@ -60,14 +60,29 @@
   top: -.7rem;
   text-transform: uppercase;
   z-index: 3;
-
 }
 
-.profil_form_pro_menu img {
-  width: 10rem;
-  &:hover {
+.menu_foodtruck_content_header_img {
+  width: 5rem;
+}
 
-  }
+li:hover .large {
+  left: 20px;
+  top: -150px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  position: relative;
+  z-index: 5;
+  transition: .3s ease-in-out;
+}
+
+.large{
+  position: absolute;
+  left: -9999px;
+  width: 15rem;
 }
 
 

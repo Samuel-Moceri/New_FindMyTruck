@@ -110,7 +110,16 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
           <div className="profil_form_pro_payment"> Paiement accepté : {paymentProfil} </div>
           <div className="profil_form_pro_menu"> Menu : 
           {pictureURL && 
-            <img className="menu_foodtruck_content_header_img" src={pictureURL} />
+
+            <>
+            <li>
+              <img className="menu_foodtruck_content_header_img" src={pictureURL} />
+              <span class="large">
+                <img className="img_large" src={pictureURL} />
+              </span>
+            </li>
+            </>
+
           }
           </div>
         </div>
@@ -118,7 +127,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         <div className="profil_form_compagny">
           <span className="profil_form_compagny_title"><MdOutlineBusiness />Société</span>
           <div className="profil_form_compagny_address"> Ton adresse de société {proaddressProfil} </div>
-        </div>  
+        </div> 
+
       </>
       }
 
