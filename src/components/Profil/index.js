@@ -1,6 +1,3 @@
-
-
-
 import { useDispatch, useSelector } from 'react-redux';
 import { typeValues } from 'src/actions/profil';
 
@@ -39,11 +36,13 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
   const modify = useSelector(state=> state.profil.modify);
   const role = useSelector(state=> state.profil.roles);
 
-  console.log(role);
+  // console.log(role);
 
-  
-  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-  // const pictureURL = baseURL+`${informationsFoodtruck.menu}`;
+  let pictureURL = '';
+  if(informationsFoodtruck) {
+    const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+    pictureURL = baseURL+`${informationsFoodtruck.menu}`;
+  }
 
   const dispatch = useDispatch();
   // Action qui se déclenche au chargement du composant et c'est tout
@@ -103,20 +102,22 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
       <>
         <div className="profil_form_pro">
           <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck</span>
-          <div className="profil_form_pro_name"> Nom de ton FoodTruck : {informationsFoodtruck.name} </div>
-          <div className="profil_form_pro_city"> Adresse de stationnement : {informationsFoodtruck.city} </div>
-          <div className="profil_form_pro_description"> Ta description : {informationsFoodtruck.description} </div>
-          <div className="profil_form_pro_planning"> Ton planning : {informationsFoodtruck.planning} </div>
-          <div className="profil_form_pro_phone"> Numéro de téléphone : {informationsFoodtruck.phone} </div>
-          <div className="profil_form_pro_payment"> Paiement accepté : {informationsFoodtruck.payment} </div>
+          <div className="profil_form_pro_name"> Nom de ton FoodTruck : {nameFtProfil} </div>
+          <div className="profil_form_pro_city"> Adresse de stationnement : {cityProfil} </div>
+          <div className="profil_form_pro_description"> Ta description : {descriptionProfil} </div>
+          <div className="profil_form_pro_planning"> Ton planning : {planningProfil} </div>
+          <div className="profil_form_pro_phone"> Numéro de téléphone : {phoneProfil} </div>
+          <div className="profil_form_pro_payment"> Paiement accepté : {paymentProfil} </div>
           <div className="profil_form_pro_menu"> Menu : 
-          {/* <img className="menu_foodtruck_content_header_img" src={pictureURL} /> */}
+          {pictureURL && 
+            <img className="menu_foodtruck_content_header_img" src={pictureURL} />
+          }
           </div>
         </div>
         
         <div className="profil_form_compagny">
           <span className="profil_form_compagny_title"><MdOutlineBusiness />Société</span>
-          <div className="profil_form_compagny_address"> Ton adresse de société {informationsFoodtruck.proadress} </div>
+          <div className="profil_form_compagny_address"> Ton adresse de société {proaddressProfil} </div>
         </div>  
       </>
       }
@@ -131,7 +132,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 name="nicknameProfil"
                 value={nicknameProfil}
                 type="text"
-                placeholder='IDENTIFIANT'
+                placeholder='Identifiant'
                 onFieldChange={onFieldChange}
               />
             </div>
@@ -287,9 +288,9 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         <button className="profil_form_button" onClick={hideModify}> Annuler les changements </button>
       }
 
-      {warning===true &&
+      {/* {warning===true &&
         <div className="warning">vos modifications seront visibles à votre prochaine connexion</div>
-      }
+      } */}
     </div>
       
     );

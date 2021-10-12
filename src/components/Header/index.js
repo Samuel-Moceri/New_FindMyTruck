@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 // import ajax from 'src/components/middlewares';
@@ -10,7 +11,6 @@ import loginLogo from 'src/assets/images/logo-login.png';
 
 
 import './style.scss';
-import { useEffect } from 'react';
 
 
 const Header = ({
@@ -20,6 +20,8 @@ const Header = ({
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
   const nickname = useSelector(state => state.profil.nicknameProfil);
+  const logout= useSelector(state=> state.user.logout);
+  {console.log(logout);}
 
   const dispatch = useDispatch();
 
@@ -27,87 +29,88 @@ const Header = ({
     event.preventDefault();
     dispatch({
       type: 'LOGOUT',
+      logout: true,
     })
     sessionStorage.clear();
   }
-
+  
+  
   if (logged===true ){
     dispatch({
       type: 'GET_USER_INFOS'
     })
-}
+  }
   
 
  return (
+  <>
+    {logout===true && 
+      <Redirect to="/" />
+    }
 
-  <header className="header">
-    <section className="header_left">
-      <NavLink 
-        className='logo'
-        to="/"
-        exact
-        >
-        <div className='logo_img'> 
-          <img src={textlogo} alt="Logo FindMyTruck"/>
-        </div>
-      </NavLink>
-    </section>
-
-    <section className="header_right">      
-      {!logged && (
-        <NavLink
-          className="header_right_connexion"
-          to="/connexion"
+    <header className="header">
+      <section className="header_left">
+        <NavLink 
+          className='logo'
+          to="/"
           exact
           >
-          <div className="header_right_connexion_text">
-            <p>Connexion</p>
+          <div className='logo_img'> 
+            <img src={textlogo} alt="Logo FindMyTruck"/>
           </div>
         </NavLink>
-      )}
-    
-      {!registered && !logged &&(
-        <NavLink
-          className="header_right_inscription"
-          to="/inscription"
-          exact
-          >
-          <div className="header_right_inscription_text">
-          <p>Inscription</p>
-          </div>
-        </NavLink> 
-      )}
+      </section>
 
-      {logged===true && (
-        <>
-        <div className="header_right_logged">
-          <div className="header_right_logged_hello">Bonjour <span className="header_right_logged_hello_nickname">{nickname}</span> !</div>
-
-          <form  onSubmit={handleSubmit} className="header_right_link_logged_logout">
-            <input to="/" type="submit" className="header_right_link_logged_logout_button" value="Deconnexion" />
-          </form>
-
+      <section className="header_right">      
+        {!logged && (
           <NavLink
-            className='header_right_link' 
-            to="/profil"
+            className="header_right_connexion"
+            to="/connexion"
             exact
             >
-            <button className='header_right_link_logged_icon'>
-              <FiUser />      
-            </button>
+            <div className="header_right_connexion_text">
+              <p>Connexion</p>
+            </div>
+          </NavLink>
+        )}
+      
+        {!registered && !logged &&(
+          <NavLink
+            className="header_right_inscription"
+            to="/inscription"
+            exact
+            >
+            <div className="header_right_inscription_text">
+            <p>Inscription</p>
+            </div>
           </NavLink> 
+        )}
 
+        {logged===true && (
+        <>
+          <div className="header_right_logged">
+            <div className="header_right_logged_hello">Bonjour <span className="header_right_logged_hello_nickname">{nickname}</span> !</div>
 
+            <form  onSubmit={handleSubmit} className="header_right_link_logged_logout" >
+              <input  type="submit" className="header_right_link_logged_logout_button" value="Deconnexion" />
+            </form>
 
-        </div>
-
-
-          
+            <NavLink
+              className='header_right_link' 
+              to="/profil"
+              exact
+              >
+              <button className='header_right_link_logged_icon'>
+                <FiUser />      
+              </button>
+            </NavLink> 
+          </div>
         </>        
-      )}
-    </section>
+        )}
+      </section>
 
-  </header>
+    </header>
+  </>
  );
 };
 

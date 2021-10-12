@@ -17,14 +17,20 @@ const Card = ({
   payment,
   street,
   phone,
+  menu,
+  description,
+  planning,
+  // {...foodtruck}
 }) => {
-    
+
   const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
   const categoryName = category.name
   const categoryColor = category.color
 
   const pictureURL = baseURL+`${picture}`;
+  const menuURL = baseURL+`${menu}`;
+  // console.log(menuURL);
 
   // MODAL //
   const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
@@ -52,7 +58,7 @@ const Card = ({
               <div className="card_foodtruck_content_description_adress">
                 <p className="card_foodtruck_content_description_adress_street">{street}</p>
                 <div className="card_foodtruck_content_description_adress_postalcodeandcity">
-                  <p className="card_foodtruck_content_description_adress_postalcode">{postal_code} &nbsp;</p>
+                  <p className="card_foodtruck_content_description_adress_postalcode">{postal_code}</p>
                   <p className="card_foodtruck_content_description_adress_city">{city}</p>
                 </div>
               </div>
@@ -64,16 +70,22 @@ const Card = ({
             <Modal
               isShowing={isModalShowed}
               hide={toggleModal}
-              name="NOM DU FOODTRUCK"
+              // {...foodtruck}
+              name={name}
+              category={category}
+              picture={picture}
+              slug={slug}
+              street={street}
+              city={city}
+              postal_code={postal_code}
+              payment={payment}
+              phone={phone}
+              menuURL={menuURL}
+              pictureURL={pictureURL}
+              description={description}
+              planning={planning}
             >
-              <form>
-                <div className="form-group">
-                  <div type="text" placeholder="FOODTRUCK">CATEGORIE</div>
-                </div>
-                <div className="form-group">
-                  <div type="text" placeholder="FOODTRUCK">ADRESSE</div>
-                </div>
-              </form>
+              <div></div>
             </Modal>
           </>
 

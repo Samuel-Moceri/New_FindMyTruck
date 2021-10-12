@@ -21,6 +21,8 @@ export const initialState = {
   planningProfil: '',
   paymentProfil: '',
   proaddressProfil: '',
+  menuProfil: '',
+  pictureProfil: '',
   roles:'',
   warning:false,
   modify:false,
@@ -77,23 +79,35 @@ const reducer = (state = initialState, action = {}) => {
 
     case 'SAVE_USER_INFOS': 
     // console.log(action.userData);
-      return {
+
+      state = {
         ...state,
         nicknameProfil: action.userData.nickname,
         emailProfil: action.userData.email,
-        firstnameProfil: action.userData.firstname,
-        lastnameProfil: action.userData.lastname,
-        streetProfil: action.userData.foodtruck.street,
-        cityProfil: action.userData.foodtruck.city,
-        postalCodeProfil: action.userData.foodtruck.postal_code,
-        nameFtProfil:action.userData.foodtruck.name,
-        phoneProfil: action.userData.foodtruck.phone,
-        descriptionProfil: action.userData.foodtruck.description,
-        planningProfil: action.userData.foodtruck.planning,
-        paymentProfil: action.userData.foodtruck.payment,
-        proaddressProfil: action.userData.foodtruck.proaddress,
+        firstnameProfil: action.userData.firstname ? action.userData.firstname : '',
+        lastnameProfil: action.userData.lastname ? action.userData.lastname  : '',
         roles: action.userData.roles,
       }
+
+      if(action.userData.foodtruck) {
+      
+        state = {
+          ...state, 
+          streetProfil: action.userData.foodtruck.street,
+          cityProfil: action.userData.foodtruck.city,
+          postalCodeProfil: action.userData.foodtruck.postal_code,
+          nameFtProfil:action.userData.foodtruck.name,
+          phoneProfil: action.userData.foodtruck.phone,
+          descriptionProfil: action.userData.foodtruck.description,
+          planningProfil: action.userData.foodtruck.planning,
+          paymentProfil: action.userData.foodtruck.payment,
+          proaddressProfil: action.userData.foodtruck.proaddress,
+          menuProfil: action.userData.foodtruck.menu,
+          pictureProfil: action.userData.foodtruck.picture,
+        };
+      }
+
+      return state;
       break;
     default:
       return state;

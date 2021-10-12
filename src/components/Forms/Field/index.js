@@ -15,6 +15,8 @@ const Field = ({
     onFieldChange(name, evt.target.value);
   };
 
+  console.log(name, value);
+
   const inputId = `field-${name}`;
   const className = `${form}-${type}-${name}`;
   const classNameLab = `${form}-${type}-${name}-label`;
@@ -56,7 +58,6 @@ const Field = ({
         checked 
       />
       <label
-        for={placeholder}
         htmlFor={inputId}
         className={classNameLab}
       >

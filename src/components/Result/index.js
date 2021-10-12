@@ -55,13 +55,15 @@ const Result = ({
           className="result_cards" 
           // onClick={toggleModal}
           >
-            {foodtrucks.map((foodtruck) => (<Card key={foodtruck.id} {...foodtruck} />))}
+            {foodtrucks.map((foodtruck) => (
+            <Card key={foodtruck.id} {...foodtruck} />
+            ))}
 
-          <Fake_Card />
+          {/* <Fake_Card /> */}
         </div>
             
             {/* // MODAL // */}
-            <Modal
+            {/* <Modal
               isShowing={isModalShowed}
               hide={toggleModal}
               name="NOM DU FOODTRUCK"
@@ -74,7 +76,7 @@ const Result = ({
                   <div type="text" placeholder="FOODTRUCK">ADRESSE</div>
                 </div>
               </form>
-            </Modal>
+            </Modal> */}
             {/* // /MODAL // */}
             
       </div>
