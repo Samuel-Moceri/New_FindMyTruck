@@ -1,7 +1,8 @@
 import React from 'react';
 import { MdLocationOn } from "react-icons/md";
 
-
+import Modal from 'src/components/Modal';
+import useModal from "src/components/Modal/useModal";
 
 // import './style.scss';
 
@@ -25,9 +26,21 @@ const Card = ({
 
   const pictureURL = baseURL+`${picture}`;
 
+  // MODAL //
+  const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
+  const {
+    isShowing: isRegistrationFormShowed,
+    toggle: toggleRegistrationForm
+  } = useModal();
+  // /MODAL //
+
   return(
-    <section className="card_foodtruck">
-          <div className="card_foodtruck_content">
+    <>
+    <section 
+      className="card_foodtruck"
+      
+    >
+          <div className="card_foodtruck_content" onClick={toggleModal}>
             <div className="card_foodtruck_content_header">
               <img className="card_foodtruck_content_header_img" src={pictureURL} alt={slug}/>
               <p className="card_foodtruck_content_header_title">{name}</p>
@@ -47,7 +60,22 @@ const Card = ({
           </div>
         </section>
 
-
+          
+            <Modal
+              isShowing={isModalShowed}
+              hide={toggleModal}
+              name="NOM DU FOODTRUCK"
+            >
+              <form>
+                <div className="form-group">
+                  <div type="text" placeholder="FOODTRUCK">CATEGORIE</div>
+                </div>
+                <div className="form-group">
+                  <div type="text" placeholder="FOODTRUCK">ADRESSE</div>
+                </div>
+              </form>
+            </Modal>
+          </>
 
   // <>
   //   <section className="card_foodtruck">

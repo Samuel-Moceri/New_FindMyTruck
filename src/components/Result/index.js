@@ -9,10 +9,11 @@ import Map from 'src/components/Map';
 
 import Fake_Card from 'src/components/Card/fake_card';
 import Modal from 'src/components/Modal';
+import useModal from "src/components/Modal/useModal";
+
 import MarkerPin from '../MarkerPin';
 
 
-import { AiOutlineCloseCircle } from "react-icons/ai";
 
 
 // import './style.scss';
@@ -30,65 +31,56 @@ const Result = ({
   // console.log(foodtrucks);
 
   // MODAL //
-  const [openModal, setOpenModal] = useState (false);
-  const showModal = id => {
-    setOpenModal(true)
-  };
-  const hideModal = () => {
-    setOpenModal(false)
-  };
+    const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
+  const {
+    isShowing: isRegistrationFormShowed,
+    toggle: toggleRegistrationForm
+  } = useModal();
   // /MODAL //
 
 
   return (
-<>
-  
-    {/* <SearchBar /> */}
-    {/* <p className="result_title">Résultats de votre recherche</p> */}
-  
-  <div className="result">
+    <>
+      
+        {/* <SearchBar /> */}
+        {/* <p className="result_title">Résultats de votre recherche</p> */}
+      
+      <div className="result">
 
-    <div className="result_map">
-      <Map />
-    </div>
+        <div className="result_map">
+          <Map />
+        </div>
 
-    <div 
-      className="result_cards" 
-      onClick={() => showModal()}>
-        {foodtrucks.map((foodtruck) => (<Card key={foodtruck.id} {...foodtruck}/>))}
+        <div 
+          className="result_cards" 
+          onClick={toggleModal}
+          >
+            {foodtrucks.map((foodtruck) => (<Card key={foodtruck.id} {...foodtruck} />))}
 
-      <Fake_Card />
-    </div>
-        
-        {/* // MODAL // */}
-        <Modal className="modalMain" showModal= {openModal}  hideModal={hideModal}>
-          <div className="modalHeader">
-              NOMDUFOODTRUCK
-          </div>
-          <div className="modalBody">
-              DESCRIPTION
-          </div>
-          <div className="modalFooter" >
-            <div className="modalBtn" onClick={hideModal}> <AiOutlineCloseCircle /></div>
-          </div>
-        </Modal>
+          <Fake_Card />
+        </div>
+            
+            {/* // MODAL // */}
+            <Modal
+              isShowing={isModalShowed}
+              hide={toggleModal}
+              name="NOM DU FOODTRUCK"
+            >
+              <form>
+                <div className="form-group">
+                  <div type="text" placeholder="FOODTRUCK">CATEGORIE</div>
+                </div>
+                <div className="form-group">
+                  <div type="text" placeholder="FOODTRUCK">ADRESSE</div>
+                </div>
+              </form>
+            </Modal>
+            {/* // /MODAL // */}
+            
+      </div>
 
-        {/* {foodtrucks.map((foodtruck) => (<Modal key={foodtruck.id} {...foodtruck}/>))} */}
-
-
-        {/* <div className="result_modal">
-        {foodtrucks.map((foodtruck) => (<Modal key={foodtruck.id} {...foodtruck}/>))}
-        </div> */}
-
-        {/* // /MODAL // */}
-
-
-    
-
-  </div>
-
-</>
-);
+    </>
+  );
 }
 
 export default Result;

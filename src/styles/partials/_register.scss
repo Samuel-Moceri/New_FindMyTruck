@@ -12,7 +12,6 @@
   height: 35rem;
   background-color: #FFF;
   @include BoxShadow(4);
-  text-shadow : 0 1px 1px  rgba(0, 0, 0, .14), 0 2px 1px  rgba(0, 0, 0, .12), 0 1px 3px  rgba(0, 0, 0, .20);
 
 }
 
@@ -22,6 +21,8 @@
   margin: 1rem auto ;
   font-weight: bold;
   color: vars.$palegreendark;
+  text-shadow : 0 1px 1px  rgba(0, 0, 0, .14), 0 2px 1px  rgba(0, 0, 0, .12), 0 1px 3px  rgba(0, 0, 0, .20);
+
 }
 
 
