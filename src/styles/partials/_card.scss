@@ -28,7 +28,7 @@
         opacity: 1;
         transform: translateY(7px);
       }
-      &_adress_street, &_adress_postalcode, &_adress_city {
+      &_address_street, &_address_postalcode, &_address_city {
         opacity: 1;
         transform: translateY(5px);
       }
@@ -94,20 +94,20 @@
     height: 1.5rem;
     width: auto;
   }
-  &_adress_street {
+  &_address_street {
     opacity: 0;
     transform: translateY(80px);
     transition: 0.3s ease-in ;
   }
-  &_adress_postalcodeandcity {
+  &_address_postalcodeandcity {
     display: flex;
   }
-  &_adress_postalcode {
+  &_address_postalcode {
     opacity: 0;
     transform: translateY(80px);
     transition: 0.4s ease-in ;
   }
-  &_adress_city {
+  &_address_city {
     opacity: 0;
     transform: translateY(80px);
     transition: 0.5s ease-in ;
@@ -145,22 +145,22 @@
     }
 }
 
-.card_foodtruck_content_description_adress_street,
-.card_foodtruck_content_description_adress_postalcode,
-.card_foodtruck_content_description_adress_city {
+.card_foodtruck_content_description_address_street,
+.card_foodtruck_content_description_address_postalcode,
+.card_foodtruck_content_description_address_city {
   @include for-size(phone-only) {
     transform: translateY(18px);
     opacity: 1;
     }
 }
 
-// .card_foodtruck_content_description_adress_postalcodeandcity {
+// .card_foodtruck_content_description_address_postalcodeandcity {
 //   @include for-size(phone-only) {
 //     transform: translateY(17px);
 //     opacity: 1;
 //     }
 // }
-// &_adress_street, &_adress_postalcode, &_adress_city {
+// &_address_street, &_address_postalcode, &_address_city {
 //   opacity: 1;
 //   transform: translateY(5px);
 // }
@@ -222,7 +222,7 @@
 //   color: vars.$retroredhot;
 // }
 
-// .card_foodtruck_content_description_adress {
+// .card_foodtruck_content_description_address {
 //   display: flex;
 // }
 
@@ -230,7 +230,7 @@
 //   display: none;
 // }
 
-// .card_foodtruck_content_description_adress {
+// .card_foodtruck_content_description_address {
 //   display: block;
 // }
 

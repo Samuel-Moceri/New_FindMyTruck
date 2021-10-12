@@ -19,9 +19,8 @@ const Header = ({
 
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
-  const nickname = useSelector(state => state.profil.nicknameProfil);
+  const nickname = useSelector(state => state.user.nickname);
   const logout= useSelector(state=> state.user.logout);
-  {console.log(logout);}
 
   const dispatch = useDispatch();
 
@@ -34,13 +33,11 @@ const Header = ({
     sessionStorage.clear();
   }
   
-  
-  if (logged===true ){
-    dispatch({
-      type: 'GET_USER_INFOS'
-    })
-  }
-  
+  // if (logged===true ){
+  //   dispatch({
+  //     type: 'GET_USER_INFOS'
+  //   })
+  // }
 
  return (
   <>

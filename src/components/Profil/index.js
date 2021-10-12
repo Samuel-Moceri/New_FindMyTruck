@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { typeValues } from 'src/actions/profil';
+import ContactFieldTextarea from 'src/components/Contact/Field/textarea';
 
 import './style.scss';
 
@@ -52,14 +53,15 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
     })
   }, []);
   
-  
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch({
-      type: 'UPDATE_INFORMATIONS',
-      warning:true,
-    })
+      dispatch({
+        type: 'UPDATE_INFORMATIONS',
+        warning:true,
+      })
+      window.location.reload(false);
   }
+  
   
   const onFieldChange = (key, value) => {
     dispatch(
@@ -67,20 +69,22 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
       );
     }
     
-    const handleClick = (event) => {
-      // console.log('blabla');
-      dispatch({
-        type: 'SHOW_MODIFY_INFORMATIONS',
-        modify:true
-      })
-    }
-    const hideModify = (event) => {
-      // console.log('blabla');
-      dispatch({
-        type: 'HIDE_MODIFY_INFORMATIONS',
-        modify:false
-      })
-    }
+  const handleClick = (event) => {
+    // console.log('blabla');
+    dispatch({
+      type: 'SHOW_MODIFY_INFORMATIONS',
+      modify:true
+    })
+  }
+
+  const hideModify = (event) => {
+    // console.log('blabla');
+    dispatch({
+      type: 'HIDE_MODIFY_INFORMATIONS',
+      modify: false,
+    })
+    window.location.reload(false);
+  }
     
     return (
     <div className="profil_form_element">
@@ -103,20 +107,20 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         <div className="profil_form_pro">
           <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck</span>
           <div className="profil_form_pro_name"> Nom de ton FoodTruck : {nameFtProfil} </div>
-          <div className="profil_form_pro_city"> Adresse de stationnement : {cityProfil} </div>
+          <div className="profil_form_pro_city"> addresse de stationnement : {cityProfil} </div>
           <div className="profil_form_pro_description"> Ta description : {descriptionProfil} </div>
-          <div className="profil_form_pro_planning"> Ton planning : {planningProfil} </div>
-          <div className="profil_form_pro_phone"> Numéro de téléphone : {phoneProfil} </div>
+          <div  className="profil_form_pro_planning"> Ton planning : {planningProfil} </div>
+          <div className="profil_form_pro_phone"> Numéro de téléphone : 0{phoneProfil} </div>
           <div className="profil_form_pro_payment"> Paiement accepté : {paymentProfil} </div>
           <div className="profil_form_pro_menu"> Menu : 
           {pictureURL && 
 
             <>
             <li>
-              <img className="menu_foodtruck_content_header_img" src={pictureURL} />
-              <span class="large">
+              {/* <img className="menu_foodtruck_content_header_img" src={pictureURL} />
+              <span className="large">
                 <img className="img_large" src={pictureURL} />
-              </span>
+              </span> */}
             </li>
             </>
 
@@ -144,6 +148,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 type="text"
                 placeholder='Identifiant'
                 onFieldChange={onFieldChange}
+                required='required'
               />
             </div>
 
@@ -155,6 +160,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 type="email"
                 placeholder="E-Mail"
                 onFieldChange={onFieldChange}
+                required='required'
               />
             </div>
               
@@ -166,6 +172,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 type="text"
                 placeholder="Prénom"
                 onFieldChange={onFieldChange}
+                required='required'
               />
             </div>
               
@@ -177,6 +184,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 type="text"
                 placeholder="Nom de famille"
                 onFieldChange={onFieldChange}
+                required='required'
               />
             </div>
 
@@ -191,6 +199,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     type="text"
                     placeholder="Nom du FoodTruck"
                     onFieldChange={onFieldChange}
+                    required='required'
                   />
                 </div>
 
@@ -202,6 +211,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   type="number"
                   placeholder="Téléphone du FoodTruck"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
 
@@ -213,18 +223,20 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   type="text"
                   placeholder="Description du FoodTruck"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
               
               <div className='planningProfilForm'>
-                <Field
-                  form="profil"
-                  name="planningProfil"
-                  value={planningProfil}
-                  type="text"
-                  placeholder="Planning du FoodTruck"
-                  onFieldChange={onFieldChange}
-                />
+              <ContactFieldTextarea 
+                form="profil"
+                name="planningProfil"
+                value={planningProfil}
+                type="message"          
+                placeholder="Votre planning"
+                onFieldContactChange={onFieldChange}
+                required='required'
+              />
               </div>
 
               <div className='paymentProfilForm'>
@@ -235,6 +247,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   type="text"
                   placeholder="Moyen de paiement accepté"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
 
@@ -244,8 +257,9 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   name="proaddressProfil"
                   value={proaddressProfil}
                   type="text"
-                  placeholder="Adresse de la société"
+                  placeholder="addresse de la société"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
 
@@ -257,6 +271,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   type="text"
                   placeholder="Position du Foodtruck"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
 
@@ -268,6 +283,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   type="text"
                   placeholder="Ville"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
 
@@ -279,6 +295,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   type="number"
                   placeholder="Code Postal"
                   onFieldChange={onFieldChange}
+                  required='required'
                 />
               </div>
             </div>

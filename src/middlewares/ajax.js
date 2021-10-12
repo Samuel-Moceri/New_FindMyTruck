@@ -29,6 +29,7 @@ const ajax = (store) => (next) => (action) => {
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
         console.log(response.data);
+        console.log(response.data.data.roles);
         
         sessionStorage.setItem('key',JSON.stringify(response.data))
         api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
@@ -79,7 +80,7 @@ const ajax = (store) => (next) => (action) => {
           return;
         }
 
-        console.log(response);
+        // console.log(response);
         store.dispatch({
           type: 'SAVE_FOODTRUCKLIST',
           foodtruck: response.data,
@@ -93,11 +94,11 @@ const ajax = (store) => (next) => (action) => {
       const stateFoodtruck = store.getState();
       const address = stateFoodtruck.user.address;
 
-      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}`)
+      axios.get(`https://api-addresse.data.gouv.fr/search/?q=${address}`)
       .then((response)=> {
 
         if(!response.data.features.length) {
-          console.log();('Votre adresse ne correspond à aucune connue.');
+          console.log();('Votre addresse ne correspond à aucune connue.');
           return;
         }
         console.log(response);

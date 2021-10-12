@@ -23,9 +23,13 @@
 @import './partials/searchbar';
 @import './partials/team';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// @use '../styles/partials/vars';
+
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   position: relative;
@@ -56,3 +60,21 @@ body {
 
 
 // ----- TEST CSS ----- //
+// .backoffice {
+//   width: 8rem;
+//   font-weight: bold;
+//   text-transform: uppercase;
+//   background-color: purple;
+//   border: 1px solid purple;
+//   border-radius: .2rem;
+//   @include BoxShadow(1);
+//   transition: all 0.3s;
+//   &:hover {
+//     @include BoxShadow(4);
+//     transform: scale(1.03);
+//   }
+//   &:active {
+//     @include BoxShadow(2);
+//       transform: scale(0.98);
+//   }
+// }

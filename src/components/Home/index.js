@@ -14,10 +14,10 @@ const Home = () => {
 
   return (
     <div className="home">
-    <SearchBar /> 
-    <div className="test">
-    {/* <Map /> */}
-    </div>  
+      <SearchBar /> 
+        <div className="test">
+        {/* <Map /> */}
+        </div>
     </div>
   )
 };

@@ -42,6 +42,7 @@ function App() {
     logged: true,
     nickname: data.data.nickname,
     token: data.token,
+    roles: data.data.roles,
     })
   }
 

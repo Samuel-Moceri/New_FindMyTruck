@@ -3,9 +3,8 @@ import FieldSwitch from 'src/components/Forms/Field/switch';
 
 import { changeValueRegister } from 'src/actions/register';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
-
+import { Redirect } from 'react-router';
 
 import './style.scss';
 
@@ -36,6 +35,7 @@ const RegisterForm = () => {
       changeValueRegister(key, value)
     );
   }
+
   const onFieldSwitchChange = (key, value) => {
     dispatch(
       changeValueRegister(key, value)
@@ -45,10 +45,9 @@ const RegisterForm = () => {
     <>
       {!registered && 
 
-
         <form autoComplete="off" className="register_form_element" onSubmit={handleSubmit}>
         <div className="register_form_title">Inscription</div>
-
+        {/* //TODO erreur - Found 2 elements with non-unique id #field-role */}
         <div className="register_form_switch">
           <FieldSwitch 
             form="register"
@@ -109,19 +108,25 @@ const RegisterForm = () => {
           S'inscrire
         </button>
 
-          <div className="login_form_member"> <a href="/connexion">Déjà inscrit ?</a></div>
+      <NavLink 
+      to="/connexion"
+      exact
+      > 
+      {/* //TODO css a refaire sur le bouton */}
+        <div className="login_form_member_register">Déjà inscrit ?</div>
+      </NavLink>
+          
 
       </form>   
       }
 
       {registered &&
       <>
-        <h1> Vous pouvez dorénavant vous connecter à votre compte.</h1>
         <NavLink 
         to="/connexion"
         exact
         >
-        <li  className="">CONNECTONS NOUS ENSEMBLE TEL DES NAVII</li>        
+        <li  className="">Parfait tu peux maintenant te connecter !</li>        
         </NavLink>
        </> 
         

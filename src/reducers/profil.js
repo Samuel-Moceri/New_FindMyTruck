@@ -90,20 +90,21 @@ const reducer = (state = initialState, action = {}) => {
       }
 
       if(action.userData.foodtruck) {
+        // console.log(action.userData.foodtruck);
       
         state = {
           ...state, 
-          streetProfil: action.userData.foodtruck.street,
-          cityProfil: action.userData.foodtruck.city,
-          postalCodeProfil: action.userData.foodtruck.postal_code,
-          nameFtProfil:action.userData.foodtruck.name,
-          phoneProfil: action.userData.foodtruck.phone,
-          descriptionProfil: action.userData.foodtruck.description,
-          planningProfil: action.userData.foodtruck.planning,
-          paymentProfil: action.userData.foodtruck.payment,
-          proaddressProfil: action.userData.foodtruck.proaddress,
-          menuProfil: action.userData.foodtruck.menu,
-          pictureProfil: action.userData.foodtruck.picture,
+          streetProfil: action.userData.foodtruck.street ? action.userData.foodtruck.firstname : '',
+          cityProfil: action.userData.foodtruck.city ? action.userData.foodtruck.firstname : '',
+          postalCodeProfil: action.userData.foodtruck.postal_code ? action.userData.foodtruck.postal_code : '',
+          nameFtProfil:action.userData.foodtruck.name ? action.userData.foodtruck.name : '',
+          phoneProfil: action.userData.foodtruck.phone ? action.userData.foodtruck.phone : '',
+          descriptionProfil: action.userData.foodtruck.description ? action.userData.foodtruck.description : '',
+          planningProfil: action.userData.foodtruck.planning ? action.userData.foodtruck.planning : '',
+          paymentProfil: action.userData.foodtruck.payment ? action.userData.foodtruck.payment : '',
+          proaddressProfil: action.userData.proaddress ? action.userData.proaddress : '',
+          menuProfil: action.userData.foodtruck.menu ? action.userData.foodtruck.menu : '',
+          pictureProfil: action.userData.foodtruck.picture ? action.userData.foodtruck.picture : '',
         };
       }
 

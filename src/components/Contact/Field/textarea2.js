@@ -3,15 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // == Composant
-const ContactField = ({
+
+
+const ProfilFieldTextarea = ({
   form,
   value,
   type,
   name,
   placeholder,
   onFieldContactChange,
-  required
-
+  required,
   
 }) => {
   const handleChange = (evt) => {
@@ -22,34 +23,31 @@ const ContactField = ({
   const className = `${form}-${type}-${name}`;
   const classNameLab = `${form}-${type}-${name}-label`;
 
-
   return (
-    <>
     <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-      <input 
+      <textarea
         value={value}
         onChange={handleChange}
         id={inputId}
         type={type}
         className={className}
-        placeholder=""
+        placeholder={placeholder}
         name={name}
-        required
-
+        required 
       />
-      <label
-        htmlFor={placeholder}
+      {/* <label
+        for={placeholder}
         htmlFor={inputId}
         className={classNameLab}
       >
       {placeholder}
-      </label>
+      </label> */}
+
     </div>
-    </>
   );
 };
 
-ContactField.propTypes = {
+ContactFieldTextarea.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -58,10 +56,10 @@ ContactField.propTypes = {
 };
 
 // Valeurs par défaut pour les props
-ContactField.defaultProps = {
+ContactFieldTextarea.defaultProps = {
   value: '',
   type: 'text',
 };
 
 // == Export
-export default ContactField;
+export default ProfilFieldTextarea;

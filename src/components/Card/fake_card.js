@@ -24,11 +24,11 @@ const Fake_Card = ({}) => {
 
         <div className="card_foodtruck_content_description">
           <MdLocationOn /> 
-          <div className="card_foodtruck_content_description_adress">
-            <p className="card_foodtruck_content_description_adress_street">Rue</p>
-            <div className="card_foodtruck_content_description_adress_postalcodeandcity">
-              <p className="card_foodtruck_content_description_adress_postalcode">Code postal &nbsp;</p>
-              <p className="card_foodtruck_content_description_adress_city">Ville</p>
+          <div className="card_foodtruck_content_description_address">
+            <p className="card_foodtruck_content_description_address_street">Rue</p>
+            <div className="card_foodtruck_content_description_address_postalcodeandcity">
+              <p className="card_foodtruck_content_description_address_postalcode">Code postal &nbsp;</p>
+              <p className="card_foodtruck_content_description_address_city">Ville</p>
             </div>
           </div>
         </div>

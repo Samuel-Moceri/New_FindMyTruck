@@ -10,12 +10,13 @@ const Field = ({
   name,
   placeholder,
   onFieldChange,
+  required
 }) => {
   const handleChange = (evt) => {
     onFieldChange(name, evt.target.value);
   };
 
-  console.log(name, value);
+  // console.log(name, value);
 
   const inputId = `field-${name}`;
   const className = `${form}-${type}-${name}`;
@@ -56,6 +57,7 @@ const Field = ({
         placeholder=""
         name={name}
         checked 
+        required
       />
       <label
         htmlFor={inputId}

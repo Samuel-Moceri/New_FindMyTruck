@@ -1,9 +1,8 @@
 import Field from 'src/components/Forms/Field';
 
-
-import { changeValue } from 'src/actions/users';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router';
+import { NavLink, Redirect } from 'react-router-dom';
+import { changeValue } from 'src/actions/users';
 
 import './style.scss';
 
@@ -71,7 +70,13 @@ const LoginForm = () => {
         </button>
         {!registered &&
         <>
-          <div className="login_form_joinus"> <a href="/inscription">Rejoins-nous !</a> </div>
+          <NavLink 
+        to="/inscription"
+        exact
+        >
+          <div className="login_form_joinus"> Rejoins nous ! </div>
+        </NavLink>
+        
         </>
         }
       </form>   

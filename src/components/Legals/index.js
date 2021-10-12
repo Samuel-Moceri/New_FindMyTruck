@@ -99,12 +99,12 @@ const Legals = () => {
             
           <li>pour permettre la navigation sur le Site et la gestion et la traçabilité des prestations et services commandés par l’utilisateur : données de connexion et d’utilisation du Site, facturation, historique des commandes, etc. </li>
             
-          <li>pour prévenir et lutter contre la fraude informatique (spamming, hacking…) : matériel informatique utilisé pour la navigation, l’adresse IP, le mot de passe (hashé) </li>
+          <li>pour prévenir et lutter contre la fraude informatique (spamming, hacking…) : matériel informatique utilisé pour la navigation, l’addresse IP, le mot de passe (hashé) </li>
             
           <li>pour améliorer la navigation sur le Site : données de connexion et d’utilisation </li>
             
-          <li>pour mener des enquêtes de satisfaction facultatives sur <a href="https://findmytruck.com">https://findmytruck.com</a> : adresse email </li>
-          <li>pour mener des campagnes de communication (sms, mail) : numéro de téléphone, adresse email</li>
+          <li>pour mener des enquêtes de satisfaction facultatives sur <a href="https://findmytruck.com">https://findmytruck.com</a> : addresse email </li>
+          <li>pour mener des campagnes de communication (sms, mail) : numéro de téléphone, addresse email</li>
 
 
           </ul>
@@ -132,7 +132,7 @@ const Legals = () => {
 
           <p>Dès que <a href="https://findmytruck.com">https://findmytruck.com</a> a connaissance du décès d’un Utilisateur et à défaut d’instructions de sa part, <a href="https://findmytruck.com">https://findmytruck.com</a> s’engage à détruire ses données, sauf si leur conservation s’avère nécessaire à des fins probatoires ou pour répondre à une obligation légale.</p>
             
-          <p>Si l’Utilisateur souhaite savoir comment <a href="https://findmytruck.com">https://findmytruck.com</a> utilise ses Données Personnelles, demander à les rectifier ou s’oppose à leur traitement, l’Utilisateur peut contacter <a href="https://findmytruck.com">https://findmytruck.com</a> par écrit à l’adresse suivante : </p>
+          <p>Si l’Utilisateur souhaite savoir comment <a href="https://findmytruck.com">https://findmytruck.com</a> utilise ses Données Personnelles, demander à les rectifier ou s’oppose à leur traitement, l’Utilisateur peut contacter <a href="https://findmytruck.com">https://findmytruck.com</a> par écrit à l’addresse suivante : </p>
             
           FIND MY TRUCK – DPO, FIND MY TRUCK <br />
           10 rue de Penthievre 75008 Paris.
@@ -202,7 +202,7 @@ const Legals = () => {
 
           <p>
 
-          <a href="https://findmytruck.com">https://findmytruck.com</a> peut employer occasionnellement des balises Internet (également appelées « tags », ou balises d’action, GIF à un pixel, GIF transparents, GIF invisibles et GIF un à un) et les déployer par l’intermédiaire d’un partenaire spécialiste d’analyses Web susceptible de se trouver (et donc de stocker les informations correspondantes, y compris l’adresse IP de l’Utilisateur) dans un pays étranger.</p>
+          <a href="https://findmytruck.com">https://findmytruck.com</a> peut employer occasionnellement des balises Internet (également appelées « tags », ou balises d’action, GIF à un pixel, GIF transparents, GIF invisibles et GIF un à un) et les déployer par l’intermédiaire d’un partenaire spécialiste d’analyses Web susceptible de se trouver (et donc de stocker les informations correspondantes, y compris l’addresse IP de l’Utilisateur) dans un pays étranger.</p>
             
           <p>
           Ces balises sont placées à la fois dans les publicités en ligne permettant aux internautes d’accéder au Site, et sur les différentes pages de celui-ci. 

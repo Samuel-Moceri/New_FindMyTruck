@@ -73,7 +73,7 @@ const Result = ({
                   <div type="text" placeholder="FOODTRUCK">CATEGORIE</div>
                 </div>
                 <div className="form-group">
-                  <div type="text" placeholder="FOODTRUCK">ADRESSE</div>
+                  <div type="text" placeholder="FOODTRUCK">addressE</div>
                 </div>
               </form>
             </Modal> */}

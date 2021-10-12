@@ -55,11 +55,11 @@ const Card = ({
 
             <div className="card_foodtruck_content_description">
               <MdLocationOn />
-              <div className="card_foodtruck_content_description_adress">
-                <p className="card_foodtruck_content_description_adress_street">{street}</p>
-                <div className="card_foodtruck_content_description_adress_postalcodeandcity">
-                  <p className="card_foodtruck_content_description_adress_postalcode">{postal_code}</p>
-                  <p className="card_foodtruck_content_description_adress_city">{city}</p>
+              <div className="card_foodtruck_content_description_address">
+                <p className="card_foodtruck_content_description_address_street">{street}</p>
+                <div className="card_foodtruck_content_description_address_postalcodeandcity">
+                  <p className="card_foodtruck_content_description_address_postalcode">{postal_code}</p>
+                  <p className="card_foodtruck_content_description_address_city">{city}</p>
                 </div>
               </div>
             </div>
@@ -72,7 +72,8 @@ const Card = ({
               hide={toggleModal}
               // {...foodtruck}
               name={name}
-              category={category}
+              category={categoryName}
+              categorycolor={categoryColor}
               picture={picture}
               slug={slug}
               street={street}
@@ -85,7 +86,6 @@ const Card = ({
               description={description}
               planning={planning}
             >
-              <div></div>
             </Modal>
           </>
 

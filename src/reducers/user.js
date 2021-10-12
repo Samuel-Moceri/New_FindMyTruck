@@ -11,6 +11,7 @@ export const initialState = {
     lat: '',
     lon: '',
     logout:false,
+    roles: '',
 };
 
 // define the reducer's properties/params
@@ -30,6 +31,7 @@ const reducer = (state = initialState, action = {}) => {
         email: '',
         nickname: action.nickname,
         token: action.token,
+        roles: action.roles,
       }
     case 'SAVE_LAT_LNG': 
       return {
