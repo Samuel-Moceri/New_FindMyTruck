@@ -56,6 +56,7 @@ const Header = ({
           >
           <div className='logo_img'> 
             <img src={textlogo} alt="Logo FindMyTruck"/>
+            <span>FMT</span>
           </div>
         </NavLink>
       </section>

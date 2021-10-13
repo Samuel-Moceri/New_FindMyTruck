@@ -95,5 +95,17 @@
 }
 
 
+.logo_img {
+  @include for-size(phone-only) {
+    display: none;
+  }
+}
+.logo_img span {
+  display: none;
+  @include for-size(phone-only) {
+    display: block;
+    font-size: 5rem;
+  }
+}
 
 
