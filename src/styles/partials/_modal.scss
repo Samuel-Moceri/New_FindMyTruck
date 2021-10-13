@@ -1,50 +1,193 @@
-//   // MODAL //
+@use '../../styles/partials/vars';
 
-// .modalBackground {
-//   display: flex;
-//   position: absolute;
-//   height:72%;
-//   width: 90%;
-//   margin: 0;
-//   background-color: #fff;
-//   // padding: 0.5rem;
-//   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) ;
-//   z-index: 2 ;
-//   border-radius: .5rem;
-// }
+//shadow behind Modal
+.modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-// .modalContainer {
-//   border-radius: .5rem;
-// }
+//everything behing modal - full page
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  display: flex;
+  align-items: center; //center the modal on the page
+}
 
-// .modalBtn {
-//   position: absolute;
-//   top: .5rem;
-//   right: .5rem;
-//   & svg {
-//     height: 100%;
-//     width: 2rem;
-//     &:hover {
-//       transform: scale(1.1);
-//       transition: all .3s ease-in;
-//     }
-//   }
-// }
+.modal {
+  display: grid;
+  gap: .5rem;
 
-// // ----- RESPONSIVE ----- //
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  z-index: 12;
+  background: #fff;
+  position: relative;
+  margin: auto;
+  border-radius: .2rem;
+  @include BoxShadow(4);
+  max-width: 900px;
+  width: 90%;
+  height: 90%;
+  animation: zoom 0.6s;
+}
 
-// .modalBackground {
-//   @include for-size(phone-only) {
-//     height:72%;
-//     background-color: salmon;
-//   }
-//   @include for-size(tablet-portrait-only) {
-//     height:76.5%;
-//     background-color: skyblue;
-//   }
-//   @include for-size(desktop-up) {
-//     height:67.5%;
-//     background-color: teal;
-//   }
-// }
-// // /MODAL //
+@keyframes zoom {
+  0% {transform:scale(0)} 
+  80% {transform:scale(1.05)} 
+  100% {transform:scale(1)}
+}
+
+//FT name/category and ESC button
+.modal_top {
+  width: 100%;
+  text-align: center;
+}
+
+.modal_top_name {
+  position: absolute;
+  top: 1rem;
+  padding: 2rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.modal_top_category{
+  position: absolute;
+  top: 5rem;
+  width: 10rem;
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .2rem 0;
+  border-radius: .3rem;
+  @include BoxShadow(4);
+
+}
+
+.modal_top_closebutton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.modal_top_closebutton svg {
+  transition: all 0.3s;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  &:hover {
+  transform: scale(1.2);
+  }
+}
+
+.modal_top_picture {
+  position:relative ;
+  margin: auto auto;
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+  opacity: .6;
+  border-radius: .2rem .2rem 0 0;
+  @include BoxShadow(1);
+}
+
+.modal_middle_description{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal_middle{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-content: center;
+  font-size: 1.5rem;
+}
+
+.modal_middle_contact,
+.modal_middle_other{
+  padding: 0 3rem;
+}
+
+.modal_middle_contact_city {
+margin-bottom : 1rem
+}
+
+.modal_middle_contact_street svg,
+.modal_middle_contact_phone svg,
+.modal_middle_other_payment svg {
+  position: absolute;
+  transform: translateX(-3rem);
+  // top: 3rem;
+  color: vars.$retromidnight;
+  height: 1.5rem;
+  width: auto;
+}
+
+.modal_middle_other_link {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  & svg {
+    height: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.modal_bottom{
+  display: flex;
+  justify-content: space-between;
+  padding:  0 3rem 1rem 3rem ;
+  width: 100%;
+  height:80%;
+}
+
+.modal_bottom_planning{
+  justify-content: space-between;
+  // border: 1px solid black;
+  border-radius: 0.2rem;
+  padding: 1rem 1rem 0 1rem;
+  // @include BoxShadow(4);
+
+}
+
+.modal_bottom_planning_day{
+  font-weight: bold;
+}
+
+.modal_bottom_planning_hours{
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: .4rem;
+}
+
+.modal_bottom_menu{
+  height: 15rem;
+  border-radius: 0.2rem;
+  @include BoxShadow(4);
+
+}
+
+

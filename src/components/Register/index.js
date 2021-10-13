@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router';
 
-import './style.scss';
 
 const RegisterForm = () => {
 

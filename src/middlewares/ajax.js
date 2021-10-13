@@ -8,7 +8,9 @@ import { UPDATE_INFORMATIONS } from '../actions/profil';
 // set the baseURl
 const api = axios.create({
   // baseURL: 'http://ec2-100-26-195-84.compute-1.amazonaws.com/api',
-  baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
+  // baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
+  baseURL: 'http://localhost:8080',
+
 });
 
 const ajax = (store) => (next) => (action) => {
@@ -45,6 +47,30 @@ const ajax = (store) => (next) => (action) => {
         console.error(error);
 
         alert('Authentification échouée');
+      });
+
+      next(action);
+    break;
+
+    case 'SEND_EMAIL' : 
+      const stateEmailLost = store.getState();
+
+      // API request that will add itself to the baseURL with username/pass params
+      api.post('/api/forgot', {
+        emaillost: stateEmailLost.user.email,
+      })
+
+      // What we do if the request worked
+      .then((response) => {
+        // if the connection is successful, we save the token
+        // https://github.com/axios/axios#custom-instance-defaults
+        console.log(response.data);
+      })
+
+      .catch((error) => {
+        console.error(error);
+
+        alert('E-mail non-envoyé');
       });
 
       next(action);
@@ -94,7 +120,7 @@ const ajax = (store) => (next) => (action) => {
       const stateFoodtruck = store.getState();
       const address = stateFoodtruck.user.address;
 
-      axios.get(`https://api-addresse.data.gouv.fr/search/?q=${address}`)
+      axios.get(`https://api-adresse.data.gouv.fr/search/?q=${address}`)
       .then((response)=> {
 
         if(!response.data.features.length) {

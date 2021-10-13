@@ -8,9 +8,9 @@ import { NavLink } from 'react-router-dom';
  */
  const Footer = () => {
 
-  const role = useSelector(state=> state.user.roles);
+  // const role = useSelector(state=> state.user.roles);
   // console.log(role);
- 
+
   return (
 
     <footer className="footer">
@@ -19,7 +19,7 @@ import { NavLink } from 'react-router-dom';
         to="/contact"
         exact
         >
-          <li  className="footer_list_el">Contact </li>
+          <li  className="footer_list_el"> Contact </li>
         </NavLink>
 
         <NavLink 
@@ -38,23 +38,6 @@ import { NavLink } from 'react-router-dom';
           </li>
         </NavLink>
       
-        {role[0]==="ROLE_ADMIN" && 
-          <li className="footer_list_el backoffice">
-            <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
-              target="_blank" >
-              BackOffice
-            </a>
-          </li>
-        }
-
-        {role[0]==="ROLE_MODO" &&
-          <li className="footer_list_el backoffice">
-            <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
-              target="_blank" >
-              BackOffice
-            </a>
-          </li>
-        }
 
       </ul>
     </footer>
@@ -62,3 +45,25 @@ import { NavLink } from 'react-router-dom';
 };
 
 export default Footer;
+
+{/* {role[0]==="ROLE_ADMIN" && 
+  <li className="footer_list_el backoffice">
+    <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
+      target="_blank" >
+        <a href="http://localhost:8080"
+      target="_blank" >          
+      BackOffice
+    </a>
+  </li>
+}
+
+{role[0]==="ROLE_MODO" &&
+  <li className="footer_list_el backoffice">
+    <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
+      target="_blank" >
+      <a href="http://localhost:8080"
+      target="_blank" > 
+      BackOffice
+    </a>
+  </li>
+} */}

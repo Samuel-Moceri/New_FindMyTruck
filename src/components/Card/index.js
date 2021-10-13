@@ -23,7 +23,8 @@ const Card = ({
   // {...foodtruck}
 }) => {
 
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  const baseURL= 'http://localhost:8080';
 
   const categoryName = category.name
   const categoryColor = category.color

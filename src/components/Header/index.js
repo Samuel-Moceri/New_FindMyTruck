@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // import ajax from 'src/components/middlewares';
 import { FiUser } from 'react-icons/fi';
+import { MdExitToApp } from 'react-icons/md';
+
 
 import logo from 'src/assets/images/logo.png';
 import textlogo from 'src/assets/images/FMT_clear.png';
@@ -89,7 +91,7 @@ const Header = ({
             <div className="header_right_logged_hello">Bonjour <span className="header_right_logged_hello_nickname">{nickname}</span> !</div>
 
             <form  onSubmit={handleSubmit} className="header_right_link_logged_logout" >
-              <input  type="submit" className="header_right_link_logged_logout_button" value="Deconnexion" />
+              <button  type="submit" className="header_right_link_logged_logout_button" value="Deconnexion"><MdExitToApp /> </button>
             </form>
 
             <NavLink

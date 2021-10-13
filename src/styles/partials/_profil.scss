@@ -7,9 +7,9 @@
   justify-content: space-around;
   // padding: 2rem;
   border-radius: .2rem;
-  margin: 5rem auto;
+  margin: 3rem auto;
   width: 40rem;
-  height: 35rem;
+  height: 40rem;
   background-color: #FFF;
   @include BoxShadow(4);
 }
@@ -28,7 +28,7 @@
 .profil_form_compagny {
   position: relative;
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem auto;
   border : 1px solid vars.$retroyellow;
   border-radius: .2rem;
   padding: 1rem .5rem .5rem .5rem;
@@ -87,6 +87,10 @@ li {
 
 
 
+.profil_form_button_save {
+  position:relative;
+  left: 5%;
+}
 
 
 
@@ -94,29 +98,106 @@ li {
 
 
 
-
-.profil_form_button {
+.profil_form_button_modify,
+.profil_form_button_save {
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: .5rem;
   border: none;
   border-radius: .2rem;
-  margin: 1rem auto;
+  margin: .5rem auto;
   width:90%;
   background-color: vars.$retroyellow;
   color: #FFF;
   @include BoxShadow(1);
   transition: all 0.3s;
-
 }
 
-.profil_form_button:hover {
+.profil_form_button_save {
+  text-align: center;
+}
+
+.profil_form_button_modify:hover,
+.profil_form_button_save:hover {
   @include BoxShadow(4);
   transform: scale(1.03);
 
 }
 
-.profil_form_button:active {
+.profil_form_button_modify:active,
+.profil_form_button_save:active {
   @include BoxShadow(2);
     transform: scale(0.98);
+}
+
+.profil_form_button_cancel {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+// .profil-text-nicknameProfil
+// .emailForm,
+// .firstnameForm,
+// .lastnameForm,
+// .nameFtProfilForm,
+// .phoneProfilForm,
+// .descriptionProfilForm,
+// .planningProfilForm,
+// .paymentProfilForm,
+// .proaddressProfilForm,
+// .streetForm,
+// .cityForm,
+// .postal_codeForm 
+// {
+//   padding: 0 1rem;
+//   position: relative;
+//   width: 100%;
+//   border: none;
+//   border-bottom: 2px solid #999;
+//   padding: .5rem;
+//   font-size: 1.5rem;
+//   color: #666;
+//   transition: 0.3s ease-in ;
+  
+// }
+
+
+.profil-email-emailProfil,
+.profil-text-nicknameProfil,
+.profil-text-firstnameProfil,
+.profil-text-lastnameProfil,
+.profil-text-nameFtProfil,
+.profil-number-phoneProfil,
+.profil-text-descriptionProfil,
+.profil-message-planningProfil,
+.profil-text-paymentProfil,
+.profil-text-proaddressProfil,
+.profil-text-streetProfil,
+.profil-text-cityProfil,
+.profil-number-postalCodeProfil {
+  width: 40%;
+  padding: .2rem;
+  margin: 0.1rem;
+  position: relative;
+  transform: translateX(13rem);
+}
+
+
+.profil-email-emailProfil-label,
+.profil-text-nicknameProfil-label,
+.profil-text-firstnameProfil-label,
+.profil-text-lastnameProfil-label,
+.profil-text-nameFtProfil-label,
+.profil-number-phoneProfil-label,
+.profil-text-descriptionProfil-label,
+.profil-message-planningProfil-label,
+.profil-text-paymentProfil-label,
+.profil-text-proaddressProfil-label,
+.profil-text-streetProfil-label,
+.profil-text-cityProfil-label,
+.profil-number-postalCodeProfil-label {
+  position: absolute;
+  transform: translateX(-14.7rem)translateY(7px);
+  align-items: center;
 }

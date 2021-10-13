@@ -4,7 +4,7 @@ import ContactField from 'src/components/Contact/Field';
 import ContactFieldTextarea from 'src/components/Contact/Field/textarea';
 
 
-import './style.scss';
+// import './style.scss';
 
 const Contact = () => {
 

@@ -18,6 +18,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         [action.key]: action.value
       }
+
     case REGISTER:
       // the new state will have the new values (action.value)
       return {

@@ -21,6 +21,7 @@
 .result_map {
   // background-color: blue;
   width:  33.33%;
+  height: 35rem;
   min-height: 15rem;
   max-height: 50rem; 
   padding : 0.5rem;
@@ -29,6 +30,8 @@
 }
 
 .result_cards {
+  // background-color: yellow;
+
   overflow-y:auto;
   display: grid;
   gap: .5rem;
@@ -81,7 +84,7 @@ opacity: 1;
     display: none;
   }
   @include for-size(tablet-portrait-only) {
-    height: 5rem;
+    height: 15rem;
     width: 100%;
     display: block;
   }

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { LOGIN } from '../../actions/users';
 
-import './style.scss';
+// import './style.scss';
 
 import Header from 'src/components/Header';
 import Home from 'src/components/Home';
@@ -15,6 +15,7 @@ import Contact from 'src/components/Contact';
 import Team from 'src/components/Team';
 import Legals from 'src/components/Legals';
 import Profil from 'src/components/Profil';
+import Error from 'src/components/Error';
 
 // == Composant
 function App() {
@@ -71,6 +72,7 @@ return (
         <Route path="/contact" exact component={Contact} />
         <Route path="/equipe" exact component={Team} />
         <Route path="/mentions_legales" exact component={Legals} />
+        <Route path="/404" exact component={Error} />
 
       </Switch>
 

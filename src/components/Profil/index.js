@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { typeValues } from 'src/actions/profil';
 import ContactFieldTextarea from 'src/components/Contact/Field/textarea';
 
-import './style.scss';
 
 import Field from 'src/components/Forms/Field';
 import { useEffect } from 'react';
@@ -41,7 +40,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
 
   let pictureURL = '';
   if(informationsFoodtruck) {
-    const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+    // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+    const baseURL= 'http://localhost:8080';
     pictureURL = baseURL+`${informationsFoodtruck.menu}`;
   }
 
@@ -140,58 +140,60 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         <form onSubmit={handleSubmit} className="profil_form"> 
           <div className='profilForm'>
 
-            <div className='nicknameForm'>
-              <Field
-                form="profil"
-                name="nicknameProfil"
-                value={nicknameProfil}
-                type="text"
-                placeholder='Identifiant'
-                onFieldChange={onFieldChange}
-                required='required'
-              />
-            </div>
-
-            <div className='emailForm'>
-              <Field
-                form="profil"
-                name="emailProfil"
-                value={emailProfil}
-                type="email"
-                placeholder="E-Mail"
-                onFieldChange={onFieldChange}
-                required='required'
-              />
-            </div>
-              
-            <div className='firstnameForm'>
-              <Field
-                form="profil"
-                name="firstnameProfil"
-                value={firstnameProfil}
-                type="text"
-                placeholder="Prénom"
-                onFieldChange={onFieldChange}
-                required='required'
-              />
-            </div>
-              
-            <div className='lastnameForm'>
-              <Field
-                form="profil"
-                name="lastnameProfil"
-                value={lastnameProfil}
-                type="text"
-                placeholder="Nom de famille"
-                onFieldChange={onFieldChange}
-                required='required'
-              />
+            <div className="profil_form_user">
+              <span className="profil_form_user_title"><MdOutlinePersonPin /> Utilisateur</span>
+              <div className='nicknameForm'>
+                <Field
+                  form="profil"
+                  name="nicknameProfil"
+                  value={nicknameProfil}
+                  type="text"
+                  placeholder='Identifiant'
+                  onFieldChange={onFieldChange}
+                  required='required'
+                />
+              </div>
+              <div className='firstnameForm'>
+                <Field
+                  form="profil"
+                  name="firstnameProfil"
+                  value={firstnameProfil}
+                  type="text"
+                  placeholder="Prénom"
+                  onFieldChange={onFieldChange}
+                  required='required'
+                />
+              </div>
+              <div className='lastnameForm'>
+                <Field
+                  form="profil"
+                  name="lastnameProfil"
+                  value={lastnameProfil}
+                  type="text"
+                  placeholder="Nom de famille"
+                  onFieldChange={onFieldChange}
+                  required='required'
+                />
+              </div>
+              <div className='emailForm'>
+                <Field
+                  form="profil"
+                  name="emailProfil"
+                  value={emailProfil}
+                  type="email"
+                  placeholder="E-Mail"
+                  onFieldChange={onFieldChange}
+                  required='required'
+                />
+              </div>
             </div>
 
             {role[0]==="ROLE_PRO" &&
             <div>
 
-              <div className='nameFtProfilForm'>
+              <div className="profil_form_pro">
+                <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck</span>
+                <div className='nameFtProfilForm'>
                   <Field
                     form="profil"
                     name="nameFtProfil"
@@ -202,117 +204,111 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     required='required'
                   />
                 </div>
-
-              <div className='phoneProfilForm'>
-                <Field
-                  form="profil"
-                  name="phoneProfil"
-                  value={phoneProfil}
-                  type="number"
-                  placeholder="Téléphone du FoodTruck"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
+                <div className='phoneProfilForm'>
+                  <Field
+                    form="profil"
+                    name="phoneProfil"
+                    value={phoneProfil}
+                    type="number"
+                    placeholder="Téléphone du FoodTruck"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='descriptionProfilForm'>
+                  <Field
+                    form="profil"
+                    name="descriptionProfil"
+                    value={descriptionProfil}
+                    type="text"
+                    placeholder="Description du FoodTruck"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='planningProfilForm'>
+                  <ContactFieldTextarea 
+                    form="profil"
+                    name="planningProfil"
+                    value={planningProfil}
+                    type="message"          
+                    placeholder="Votre planning"
+                    onFieldContactChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='paymentProfilForm'>
+                  <Field
+                    form="profil"
+                    name="paymentProfil"
+                    value={paymentProfil}
+                    type="text"
+                    placeholder="Moyen de paiement accepté"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='proaddressProfilForm'>
+                  <Field
+                    form="profil"
+                    name="proaddressProfil"
+                    value={proaddressProfil}
+                    type="text"
+                    placeholder="addresse de la société"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='streetForm'>
+                  <Field
+                    form="profil"
+                    name="streetProfil"
+                    value={streetProfil}
+                    type="text"
+                    placeholder="Position du Foodtruck"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='cityForm'>
+                  <Field
+                    form="profil"
+                    name="cityProfil"
+                    value={cityProfil}
+                    type="text"
+                    placeholder="Ville"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
+                <div className='postal_codeForm'>
+                  <Field
+                    form="profil"
+                    name="postalCodeProfil"
+                    value={postalCodeProfil}
+                    type="number"
+                    placeholder="Code Postal"
+                    onFieldChange={onFieldChange}
+                    required='required'
+                  />
+                </div>
               </div>
 
-              <div className='descriptionProfilForm'>
-                <Field
-                  form="profil"
-                  name="descriptionProfil"
-                  value={descriptionProfil}
-                  type="text"
-                  placeholder="Description du FoodTruck"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
-              
-              <div className='planningProfilForm'>
-              <ContactFieldTextarea 
-                form="profil"
-                name="planningProfil"
-                value={planningProfil}
-                type="message"          
-                placeholder="Votre planning"
-                onFieldContactChange={onFieldChange}
-                required='required'
-              />
-              </div>
-
-              <div className='paymentProfilForm'>
-                <Field
-                  form="profil"
-                  name="paymentProfil"
-                  value={paymentProfil}
-                  type="text"
-                  placeholder="Moyen de paiement accepté"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
-
-              <div className='proaddressProfilForm'>
-                <Field
-                  form="profil"
-                  name="proaddressProfil"
-                  value={proaddressProfil}
-                  type="text"
-                  placeholder="addresse de la société"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
-
-              <div className='streetForm'>
-                <Field
-                  form="profil"
-                  name="streetProfil"
-                  value={streetProfil}
-                  type="text"
-                  placeholder="Position du Foodtruck"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
-
-              <div className='cityForm'>
-                <Field
-                  form="profil"
-                  name="cityProfil"
-                  value={cityProfil}
-                  type="text"
-                  placeholder="Ville"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
-
-              <div className='postal_codeForm'>
-                <Field
-                  form="profil"
-                  name="postalCodeProfil"
-                  value={postalCodeProfil}
-                  type="number"
-                  placeholder="Code Postal"
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
             </div>
             }
             
           </div>
 
-          <input type="submit" className="modified_button" value="ENREGISTRER LES INFORMATIONS"></input>
+          <input type="submit" className="profil_form_button_save" value="ENREGISTRER LES INFORMATIONS"></input>
         </form>
         
       }
       {modify===false &&
-        <button className="profil_form_button" onClick={handleClick}> Modifier les informations </button>
+        <button className="profil_form_button_modify" onClick={handleClick}> Modifier les informations </button>
         }
 
       {modify===true &&
-        <button className="profil_form_button" onClick={hideModify}> Annuler les changements </button>
+        <button className="profil_form_button_cancel" onClick={hideModify}> Annuler les changements </button>
       }
 
       {/* {warning===true &&

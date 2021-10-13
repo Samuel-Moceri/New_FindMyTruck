@@ -1,4 +1,3 @@
-// import './style.scss';
 
 /* global document */
 import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
@@ -22,7 +21,8 @@ const Map = ({
   longitude,
 }) => {
     
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  const baseURL= 'http://localhost:8080';
 
   const lat = Number(latitude);
   const lng = Number(longitude);
@@ -40,7 +40,7 @@ const Map = ({
     width: "100%",
     height: "100%",
     // starting zoom level
-    zoom: 15
+    zoom: 5
     ,
   });
 
@@ -116,6 +116,7 @@ const Map = ({
           positionOptions={{enableHighAccuracy: true}}
           trackUserLocation={false}
           showUserHeading={false}
+          fitBoundsOptions ={{maxZoom: 5}}
           auto 
           // onGeolocate= {GeolocationCoordinates}
         />

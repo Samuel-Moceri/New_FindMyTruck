@@ -9,6 +9,7 @@
   padding: 0.5rem 1rem ;
   // background-color: #fff;
   // @include BoxShadow(1)
+  z-index: 99;
 
   ;
 
@@ -62,17 +63,37 @@
   font-weight: bold;
 }
 
-.header_right_link_logged_icon {
+.header_right_link_logged_icon,
+.header_right_link_logged_logout_button {
   border: none;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   background-color: vars.$palepink;
   margin-left: 1rem;
+  cursor: pointer;
+  @include BoxShadow(1);
+  transition: all 0.3s;
   & svg {
     text-align: center;
     height: 100%;
     width: 1.5rem;
   }
 }
+
+.header_right_link_logged_icon:hover,
+.header_right_link_logged_logout_button:hover {
+  @include BoxShadow(4);
+  transform: scale(1.03);
+
+}
+
+.header_right_link_logged_icon:active,
+.header_right_link_logged_logout_button:active {
+  @include BoxShadow(2);
+    transform: scale(0.98);
+}
+
+
+
 

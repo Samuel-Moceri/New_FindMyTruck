@@ -4,6 +4,7 @@ import { CHANGE_VALUE, LOGIN } from 'src/actions/users';
 export const initialState = {
     logged: false,
     email: '',
+    emaillost: '',
     password: '',
     nickname: '',
     token: '',
@@ -22,6 +23,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         [action.key]: action.value,
       }
+
     case LOGIN:
       // the new state will have the new values (action.value)
       return {
@@ -33,12 +35,20 @@ const reducer = (state = initialState, action = {}) => {
         token: action.token,
         roles: action.roles,
       }
+
     case 'SAVE_LAT_LNG': 
       return {
         ...state,
         lat: action.lat,
         lon: action.lon,
       }
+
+      case 'SEND_EMAIL': 
+      return {
+        ...state,
+        emaillost: action.emaillost,
+      }
+
       case 'LOGOUT':
         return {
           ...state,

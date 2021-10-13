@@ -5,7 +5,9 @@ import './style.scss';
 
 const Foodtruck = ({ slug }) => {
 
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  const baseURL= 'http://localhost:8080';
+
   const categoryName = category.name;
   const pictureURL = baseURL+`${picture}`;
 

@@ -1,4 +1,9 @@
+import React from 'react';
 import Field from 'src/components/Forms/Field';
+
+import Modal_lostemail from 'src/components/Modal/modal_lostemail';
+import useModal from "src/components/Modal/useModal";
+
 
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, Redirect } from 'react-router-dom';
@@ -6,7 +11,7 @@ import { changeValue } from 'src/actions/users';
 
 import './style.scss';
 
-const LoginForm = () => {
+const LoginForm = ({emaillost}) => {
 
   /**
    * We get the state values in several const
@@ -33,13 +38,25 @@ const LoginForm = () => {
       changeValue(key, value)
     );
   }
+
+  // MODAL //
+  const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
+  const {
+    isShowing: isRegistrationFormShowed,
+    toggle: toggleRegistrationForm
+  } = useModal();
+  // /MODAL //
+
+  // onClick={toggleModal}
+
+
   return (
     <>
       {logged && 
       <Redirect to="/" />
       }
       <form autoComplete="off" className="login_form_element" onSubmit={handleSubmit}>
-        <div className="login_form_title">Connexion</div>
+        <div className="login_form_title" >Connexion</div>
         <Field
           form="login"
           name="email"
@@ -60,7 +77,8 @@ const LoginForm = () => {
           onFieldChange={onFieldChange}
           required='required'
         />
-        <div className="login_form_forget"> <a href="">Mot de passe oublié ?</a> </div>
+
+        <div onClick={toggleModal} className="login_form_forget"> Mot de passe oublié ?</div>
 
         <button 
         type="submit"
@@ -68,6 +86,7 @@ const LoginForm = () => {
         >
           Se connecter
         </button>
+
         {!registered &&
         <>
           <NavLink 
@@ -79,9 +98,17 @@ const LoginForm = () => {
         
         </>
         }
-      </form>   
+      </form> 
+
+      <Modal_lostemail
+        isShowing={isModalShowed}
+        hide={toggleModal}
+        emaillost={emaillost}
+      >
+      </Modal_lostemail>
     </>
-     
+
+    
   );
 };
 
