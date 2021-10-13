@@ -1,3 +1,4 @@
+import { bindActionCreators } from 'redux';
 import { TYPE_VALUES, UPDATE_INFORMATIONS, SHOW_MODIFY_INFORMATIONS, HIDE_MODIFY_INFORMATIONS } from 'src/actions/profil';
 
 // const data = JSON.parse(sessionStorage.getItem('key'));
@@ -27,6 +28,7 @@ export const initialState = {
   warning:false,
   modify:false,
   reload: false,
+  idFt: '',
 };
 
 // define the reducer's properties/params
@@ -56,10 +58,11 @@ const reducer = (state = initialState, action = {}) => {
       paymentProfil: '',
       proaddressProfil: '',
       roles: '',
-      siret:'',
+      siretProfil:'',
       warning:true,
       modify: false,
       reload: true,
+      idFt:'',
       }
 
     case SHOW_MODIFY_INFORMATIONS:
@@ -105,6 +108,7 @@ const reducer = (state = initialState, action = {}) => {
           menuProfil: action.userData.foodtruck.menu ? action.userData.foodtruck.menu : '',
           pictureProfil: action.userData.foodtruck.picture ? action.userData.foodtruck.picture : '',
           siretProfil: action.userData.siret ? action.userData.siret: '',
+          idFt: action.userData.foodtruck.id ? action.userData.foodtruck.id: '',
         };
       }
 
