@@ -26,6 +26,7 @@ export const initialState = {
   roles:'',
   warning:false,
   modify:false,
+  reload: false,
 };
 
 // define the reducer's properties/params
@@ -37,15 +38,11 @@ const reducer = (state = initialState, action = {}) => {
         [action.key]: action.value
       }
     case UPDATE_INFORMATIONS:
-      // const data = JSON.parse(sessionStorage.getItem('key'));
-      // const informations = data.data;
-      // const informationsFoodtruck = informations.user_foodtruck;
-      
-      // console.log(informationsFoodtruck);
+    
       // the new state will have the new values (action.value)
       return {
         ...state,
-      nicknameProfil: '',
+      // nicknameProfil: '',
       emailProfil: '',
       firstnameProfil: '',
       lastnameProfil: '',
@@ -59,8 +56,10 @@ const reducer = (state = initialState, action = {}) => {
       paymentProfil: '',
       proaddressProfil: '',
       roles: '',
+      siret:'',
       warning:true,
       modify: false,
+      reload: true,
       }
 
     case SHOW_MODIFY_INFORMATIONS:
@@ -94,8 +93,8 @@ const reducer = (state = initialState, action = {}) => {
       
         state = {
           ...state, 
-          streetProfil: action.userData.foodtruck.street ? action.userData.foodtruck.firstname : '',
-          cityProfil: action.userData.foodtruck.city ? action.userData.foodtruck.firstname : '',
+          streetProfil: action.userData.foodtruck.street ? action.userData.foodtruck.street : '',
+          cityProfil: action.userData.foodtruck.city ? action.userData.foodtruck.city : '',
           postalCodeProfil: action.userData.foodtruck.postal_code ? action.userData.foodtruck.postal_code : '',
           nameFtProfil:action.userData.foodtruck.name ? action.userData.foodtruck.name : '',
           phoneProfil: action.userData.foodtruck.phone ? action.userData.foodtruck.phone : '',
@@ -105,6 +104,7 @@ const reducer = (state = initialState, action = {}) => {
           proaddressProfil: action.userData.proaddress ? action.userData.proaddress : '',
           menuProfil: action.userData.foodtruck.menu ? action.userData.foodtruck.menu : '',
           pictureProfil: action.userData.foodtruck.picture ? action.userData.foodtruck.picture : '',
+          siretProfil: action.userData.siret ? action.userData.siret: '',
         };
       }
 

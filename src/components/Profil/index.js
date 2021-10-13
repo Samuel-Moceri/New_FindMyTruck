@@ -14,7 +14,6 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
   const data = JSON.parse(sessionStorage.getItem('key'));
   const informations = data.data;
   const informationsFoodtruck = informations.user_foodtruck;
-  // console.log(informationsFoodtruck);
   
 
   // const for the state
@@ -32,16 +31,17 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
   const streetProfil = useSelector(state => state.profil.streetProfil);
   const cityProfil = useSelector(state => state.profil.cityProfil);
   const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
+  const siretProfil = useSelector(state => state.profil.siretProfil);
   const warning = useSelector(state=> state.profil.warning);
   const modify = useSelector(state=> state.profil.modify);
   const role = useSelector(state=> state.profil.roles);
+  const reload = useSelector(state=> state.profil.reload);
 
   // console.log(role);
 
   let pictureURL = '';
   if(informationsFoodtruck) {
-    // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-    const baseURL= 'http://localhost:8080';
+    const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
     pictureURL = baseURL+`${informationsFoodtruck.menu}`;
   }
 
@@ -58,8 +58,9 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
       dispatch({
         type: 'UPDATE_INFORMATIONS',
         warning:true,
+        reload: true,
       })
-      window.location.reload(false);
+      // window.location.reload();
   }
   
   
@@ -70,28 +71,29 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
     }
     
   const handleClick = (event) => {
-    // console.log('blabla');
     dispatch({
       type: 'SHOW_MODIFY_INFORMATIONS',
       modify:true
     })
   }
 
+  const handleReload = (event) => {
+    window.location.reload();
+  }
+
   const hideModify = (event) => {
-    // console.log('blabla');
     dispatch({
       type: 'HIDE_MODIFY_INFORMATIONS',
       modify: false,
     })
-    window.location.reload(false);
+    window.location.reload();
   }
     
     return (
     <div className="profil_form_element">
       <div className="profil_form_title">Profil de {nicknameProfil} </div>
-      {modify===false &&
+      {modify===false && reload===false &&
         <>
-          
           <div className="profil_form_user">
             <span className="profil_form_user_title"><MdOutlinePersonPin /> Utilisateur</span>
             <div className="profil_firstname"> Prénom : {firstnameProfil} </div>
@@ -101,7 +103,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         </>
       }
 
-      {role[0]==="ROLE_PRO" && modify===false &&
+      {role[0]==="ROLE_PRO" && modify===false  &&
 
       <>
         <div className="profil_form_pro">
@@ -130,29 +132,19 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         
         <div className="profil_form_compagny">
           <span className="profil_form_compagny_title"><MdOutlineBusiness />Société</span>
-          <div className="profil_form_compagny_address"> Ton adresse de société {proaddressProfil} </div>
+          <div className="profil_form_compagny_address"> Ton adresse de société : {proaddressProfil} </div>
+          <div className="profil_form_compagny_siret"> Ton SIRET : {siretProfil} </div>
         </div> 
 
       </>
       }
 
-      {modify===true &&
+      {modify===true && reload === false &&
         <form onSubmit={handleSubmit} className="profil_form"> 
           <div className='profilForm'>
 
             <div className="profil_form_user">
               <span className="profil_form_user_title"><MdOutlinePersonPin /> Utilisateur</span>
-              <div className='nicknameForm'>
-                <Field
-                  form="profil"
-                  name="nicknameProfil"
-                  value={nicknameProfil}
-                  type="text"
-                  placeholder='Identifiant'
-                  onFieldChange={onFieldChange}
-                  required='required'
-                />
-              </div>
               <div className='firstnameForm'>
                 <Field
                   form="profil"
@@ -188,7 +180,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
               </div>
             </div>
 
-            {role[0]==="ROLE_PRO" &&
+            {role[0]==="ROLE_PRO" && reload === false &&
             <div>
 
               <div className="profil_form_pro">
@@ -245,7 +237,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     type="text"
                     placeholder="Moyen de paiement accepté"
                     onFieldChange={onFieldChange}
-                    required='required'
+                    // required='required'
                   />
                 </div>
                 <div className='proaddressProfilForm'>
@@ -256,7 +248,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     type="text"
                     placeholder="addresse de la société"
                     onFieldChange={onFieldChange}
-                    required='required'
+                    // required='required'
                   />
                 </div>
                 <div className='streetForm'>
@@ -267,7 +259,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     type="text"
                     placeholder="Position du Foodtruck"
                     onFieldChange={onFieldChange}
-                    required='required'
+                    // required='required'
                   />
                 </div>
                 <div className='cityForm'>
@@ -278,7 +270,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     type="text"
                     placeholder="Ville"
                     onFieldChange={onFieldChange}
-                    required='required'
+                    // required='required'
                   />
                 </div>
                 <div className='postal_codeForm'>
@@ -289,7 +281,18 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     type="number"
                     placeholder="Code Postal"
                     onFieldChange={onFieldChange}
-                    required='required'
+                    // required='required'
+                  />
+                </div>
+                <div className='siretForm'>
+                  <Field
+                    form="profil"
+                    name="siretProfil"
+                    value={siretProfil}
+                    type="text"
+                    placeholder="Numéro SIRET"
+                    onFieldChange={onFieldChange}
+                    // required='required'
                   />
                 </div>
               </div>
@@ -301,9 +304,13 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
 
           <input type="submit" className="profil_form_button_save" value="ENREGISTRER LES INFORMATIONS"></input>
         </form>
-        
       }
-      {modify===false &&
+
+      {reload===true &&
+        <button className="profil_form_button_modify" onClick={handleReload}> Retourner sur ton profil </button>
+      }
+      
+      {modify===false && reload === false &&
         <button className="profil_form_button_modify" onClick={handleClick}> Modifier les informations </button>
         }
 
@@ -311,9 +318,6 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         <button className="profil_form_button_cancel" onClick={hideModify}> Annuler les changements </button>
       }
 
-      {/* {warning===true &&
-        <div className="warning">vos modifications seront visibles à votre prochaine connexion</div>
-      } */}
     </div>
       
     );

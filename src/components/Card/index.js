@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdLocationOn } from "react-icons/md";
 
+
 import Modal from 'src/components/Modal';
 import useModal from "src/components/Modal/useModal";
 
@@ -23,15 +24,17 @@ const Card = ({
   // {...foodtruck}
 }) => {
 
-  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-  const baseURL= 'http://localhost:8080';
+  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
   const categoryName = category.name
   const categoryColor = category.color
 
-  const pictureURL = baseURL+`${picture}`;
-  const menuURL = baseURL+`${menu}`;
+  // const pictureURL = baseURL+`${picture}`;
+  const pictureHTTP = picture;
+  // const menuURL = baseURL+`${menu}`;
+  const menuHTTP = menu;
   // console.log(menuURL);
+  // console.log(menuHTTP);
 
   // MODAL //
   const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
@@ -45,11 +48,10 @@ const Card = ({
     <>
     <section 
       className="card_foodtruck"
-      
     >
           <div className="card_foodtruck_content" onClick={toggleModal}>
             <div className="card_foodtruck_content_header">
-              <img className="card_foodtruck_content_header_img" src={pictureURL} alt={slug}/>
+              <img className="card_foodtruck_content_header_img" src={pictureHTTP} alt={slug}/>
               <p className="card_foodtruck_content_header_title">{name}</p>
               <p className="card_foodtruck_content_header_subtitle" style={{backgroundColor: categoryColor}}>{categoryName}</p>
             </div>
@@ -82,8 +84,8 @@ const Card = ({
               postal_code={postal_code}
               payment={payment}
               phone={phone}
-              menuURL={menuURL}
-              pictureURL={pictureURL}
+              menuHTTP={menuHTTP}
+              pictureHTTP={pictureHTTP}
               description={description}
               planning={planning}
             >

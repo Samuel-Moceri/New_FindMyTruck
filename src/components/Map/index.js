@@ -21,8 +21,7 @@ const Map = ({
   longitude,
 }) => {
     
-  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-  const baseURL= 'http://localhost:8080';
+  const baseURL= 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
   const lat = Number(latitude);
   const lng = Number(longitude);
@@ -116,7 +115,7 @@ const Map = ({
           positionOptions={{enableHighAccuracy: true}}
           trackUserLocation={false}
           showUserHeading={false}
-          fitBoundsOptions ={{maxZoom: 5}}
+          fitBoundsOptions ={{maxZoom: 12}}
           auto 
           // onGeolocate= {GeolocationCoordinates}
         />

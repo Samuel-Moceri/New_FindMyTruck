@@ -108,4 +108,19 @@
   }
 }
 
-
+.backoffice {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: vars.$palepink;
+  margin-left: 1rem;
+  cursor: pointer;
+  @include BoxShadow(1);
+  transition: all 0.3s;
+  & svg {
+    text-align: center;
+    height: 100%;
+    width: 1.5rem;
+  }
+}

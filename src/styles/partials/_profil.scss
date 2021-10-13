@@ -175,7 +175,8 @@ li {
 .profil-text-proaddressProfil,
 .profil-text-streetProfil,
 .profil-text-cityProfil,
-.profil-number-postalCodeProfil {
+.profil-number-postalCodeProfil,
+.profil-string-siretProfil {
   width: 40%;
   padding: .2rem;
   margin: 0.1rem;
@@ -196,7 +197,8 @@ li {
 .profil-text-proaddressProfil-label,
 .profil-text-streetProfil-label,
 .profil-text-cityProfil-label,
-.profil-number-postalCodeProfil-label {
+.profil-number-postalCodeProfil-label,
+.profil-string-siretProfil-label {
   position: absolute;
   transform: translateX(-14.7rem)translateY(7px);
   align-items: center;

@@ -16,13 +16,17 @@ import './style.scss';
 
 
 const Header = ({
-  // console.log('blabla');
 }) => {
 
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
   const nickname = useSelector(state => state.user.nickname);
   const logout= useSelector(state=> state.user.logout);
+  const role= useSelector(state=> state.user.roles);
+
+  // const data = JSON.parse(sessionStorage.getItem('key'));
+  // const role = data.data.roles;
+  // console.log(data);
 
   const dispatch = useDispatch();
 
@@ -33,13 +37,14 @@ const Header = ({
       logout: true,
     })
     sessionStorage.clear();
+    window.location.reload();
   }
   
-  // if (logged===true ){
+  // useEffect(() => {
   //   dispatch({
   //     type: 'GET_USER_INFOS'
   //   })
-  // }
+  // })
 
  return (
   <>
@@ -104,6 +109,15 @@ const Header = ({
                 <FiUser />      
               </button>
             </NavLink> 
+          
+            {( role !== undefined && (role[0]==="ROLE_ADMIN" || role[0]==="ROLE_MODO" )) &&
+              <li className="footer_list_el backoffice">
+                <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
+                  target="_blank" >
+                  BackOffice
+                </a>
+              </li>
+            }
           </div>
         </>        
         )}
@@ -115,11 +129,3 @@ const Header = ({
 };
 
 export default Header;
-
-
-{/* <NavLink
-  className="menu-link"
-  activeClassName="menu-link--active"
-  to="/"
-  exact
-> */}

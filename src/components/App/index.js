@@ -28,24 +28,21 @@ function App() {
   const dispatch = useDispatch();
   
   useEffect(() => { 
-    // On emet donc l'action avec le type 'LOG_USER'
-    dispatch({
-      type: 'LOG_USER',
-    });
+    const data = JSON.parse(sessionStorage.getItem('key'));
+    // console.log(data);
+    
+    if(data){
+      dispatch({
+      type: LOGIN,
+      logged: true,
+      nickname: data.data.nickname,
+      token: data.token,
+      roles: data.data.roles,
+      })
+    }
   }, []);
 
-  const data = JSON.parse(sessionStorage.getItem('key'));
-  // console.log(data);
   
-  if(data){
-    dispatch({
-    type: LOGIN,
-    logged: true,
-    nickname: data.data.nickname,
-    token: data.token,
-    roles: data.data.roles,
-    })
-  }
 
 // We call the views to display them on the page
 return (

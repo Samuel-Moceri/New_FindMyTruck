@@ -11,7 +11,8 @@ import { IoLogoInstagram } from "react-icons/io";
 
 
 
-const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, payment, menuURL, pictureURL, description, planning, category, categorycolor}) =>
+const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, payment, menuHTTP, pictureHTTP, description, planning, category, categorycolor}) =>
+
   isShowing
     ? ReactDOM.createPortal(
         <>
@@ -20,7 +21,7 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
               <div className="modal">
 
                 <div className="modal_top">
-                  <img className="modal_top_picture" src={pictureURL}/>
+                  <img className="modal_top_picture" src={pictureHTTP}/>
                   <p className="modal_top_name">{name}</p>
                   <p className="modal_top_category" style={{backgroundColor: categorycolor}}>{category}</p>
                   <button type="button" className="modal_top_closebutton" onClick={hide}>
@@ -74,7 +75,8 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
 
                     
                   </div>
-                  <img className="modal_bottom_menu" src={menuURL}/>
+                  <img className="modal_bottom_menu" src={menuHTTP}/>
+                  
                 </div>
 
 

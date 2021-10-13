@@ -24,15 +24,13 @@ const Result = ({
   name,
   }) => {
 
-  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-  const baseURL= "http://localhost:8080";
-
+  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
   const foodtrucks = useSelector(state => state.foodtruck.list);
   // console.log(foodtrucks);
 
   // MODAL //
-    const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
+  const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
   const {
     isShowing: isRegistrationFormShowed,
     toggle: toggleRegistrationForm

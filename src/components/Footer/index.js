@@ -1,4 +1,5 @@
 // import './style.scss';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
@@ -7,9 +8,6 @@ import { NavLink } from 'react-router-dom';
  * Composant to make our 'footer' with different 'li' and links
  */
  const Footer = () => {
-
-  // const role = useSelector(state=> state.user.roles);
-  // console.log(role);
 
   return (
 
@@ -37,33 +35,10 @@ import { NavLink } from 'react-router-dom';
           Mentions légales
           </li>
         </NavLink>
-      
-
+        
       </ul>
     </footer>
   );
 };
 
 export default Footer;
-
-{/* {role[0]==="ROLE_ADMIN" && 
-  <li className="footer_list_el backoffice">
-    <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
-      target="_blank" >
-        <a href="http://localhost:8080"
-      target="_blank" >          
-      BackOffice
-    </a>
-  </li>
-}
-
-{role[0]==="ROLE_MODO" &&
-  <li className="footer_list_el backoffice">
-    <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
-      target="_blank" >
-      <a href="http://localhost:8080"
-      target="_blank" > 
-      BackOffice
-    </a>
-  </li>
-} */}

@@ -8,8 +8,7 @@ import { UPDATE_INFORMATIONS } from '../actions/profil';
 // set the baseURl
 const api = axios.create({
   // baseURL: 'http://ec2-100-26-195-84.compute-1.amazonaws.com/api',
-  // baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
-  baseURL: 'http://localhost:8080',
+  baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
 
 });
 
@@ -30,8 +29,6 @@ const ajax = (store) => (next) => (action) => {
       .then((response) => {
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
-        console.log(response.data);
-        console.log(response.data.data.roles);
         
         sessionStorage.setItem('key',JSON.stringify(response.data))
         api.defaults.headers.common.Authorization = `bearer ${response.data.token}`;
@@ -40,6 +37,7 @@ const ajax = (store) => (next) => (action) => {
           type: LOGIN,
           nickname: response.data.data.nickname,
           token: response.data.token,
+          roles: response.data.data.roles,
         })
       })
 
@@ -64,7 +62,6 @@ const ajax = (store) => (next) => (action) => {
       .then((response) => {
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
-        console.log(response.data);
       })
 
       .catch((error) => {
@@ -88,7 +85,7 @@ const ajax = (store) => (next) => (action) => {
 
       // What we do if the request worked
       .then((response) => {
-        console.log(response);
+
       })
 
       next(action);
@@ -97,7 +94,7 @@ const ajax = (store) => (next) => (action) => {
     case 'FETCH_FOODTRUCK_ON_LOAD' :
       const stateFoodtruckOnLoad = store.getState();
 
-      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=1000`)
+      api.get(`/api/v1/search?lat=${stateFoodtruckOnLoad.user.lat}&lon=${stateFoodtruckOnLoad.user.lon}&km=20`)
 
       .then((response)=> {
 
@@ -106,7 +103,6 @@ const ajax = (store) => (next) => (action) => {
           return;
         }
 
-        // console.log(response);
         store.dispatch({
           type: 'SAVE_FOODTRUCKLIST',
           foodtruck: response.data,
@@ -124,6 +120,7 @@ const ajax = (store) => (next) => (action) => {
       .then((response)=> {
 
         if(!response.data.features.length) {
+          console.log(response);
           console.log();('Votre addresse ne correspond à aucune connue.');
           return;
         }
@@ -189,6 +186,7 @@ const ajax = (store) => (next) => (action) => {
         planning: stateProfil.profil.planningProfil,
         payment: stateProfil.profil.paymentProfil,
         proaddress: stateProfil.profil.proaddressProfil,
+        siret: stateProfil.profil.siretProfil,
       })
 
     .then((response) => {

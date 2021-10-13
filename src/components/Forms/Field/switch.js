@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 
 const FieldSwitch = ({
+  id,
   form,
   value,
   type,
