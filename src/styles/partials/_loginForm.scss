@@ -42,6 +42,11 @@
   border-bottom: 2px solid vars.$orange;
 }
 
+.login-email-email:focus ~ .login-email-email-label,
+.login-password-password:focus ~ .login-password-password-label {
+  color: vars.$orange;
+}
+
 // placeholder
 .login-email-email-label,
 .login-password-password-label {

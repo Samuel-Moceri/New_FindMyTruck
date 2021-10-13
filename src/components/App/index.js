@@ -73,6 +73,7 @@ return (
         <Route path="/equipe" exact component={Team} />
         <Route path="/mentions_legales" exact component={Legals} />
         <Route path="/404" exact component={Error} />
+        <Route path="/aze" exact component={Error} />
 
       </Switch>
 

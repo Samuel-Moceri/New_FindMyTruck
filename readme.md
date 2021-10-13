@@ -11,7 +11,7 @@
 4. watch your code live on [http://localhost:8080](http://localhost:8080) .
 5. enjoy .
 
-![this is a gif of a ranom foodtruck found on internet](https://i.pinimg.com/originals/fc/d5/ee/fcd5ee36eb745fd51c61ec01c5910529.gif)
+![this is a gif of a random foodtruck found on internet](https://i.pinimg.com/originals/fc/d5/ee/fcd5ee36eb745fd51c61ec01c5910529.gif)
 
 Welcome in the Projet d'Apothéose FIND MY TRUCK.
 

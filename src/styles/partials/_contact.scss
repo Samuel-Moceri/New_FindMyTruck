@@ -44,6 +44,12 @@
   border-bottom: 2px solid vars.$palepink;
 }
 
+.contact-name-nameContact:focus ~ .contact-name-nameContact-label,
+.contact-email-emailContact:focus ~ .contact-email-emailContact-label,
+.contact-object-objectContact:focus ~ .contact-object-objectContact-label {
+  color: vars.$palepink;;
+}
+
 // placeholder
 .contact-name-nameContact-label,
 .contact-email-emailContact-label,
