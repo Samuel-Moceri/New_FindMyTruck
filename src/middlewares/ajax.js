@@ -128,7 +128,7 @@ const ajax = (store) => (next) => (action) => {
         const lon = response.data.features[0].geometry.coordinates[0];
         const lat = response.data.features[0].geometry.coordinates[1];
 
-        api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=10`)
+        api.get(`/api/v1/search?lat=${lat}&lon=${lon}&km=20`)
 
         .then((response)=> {
           if(!response.data.length) {
@@ -169,25 +169,27 @@ const ajax = (store) => (next) => (action) => {
   case UPDATE_INFORMATIONS:
       const stateProfil = store.getState();
       const data = JSON.parse(sessionStorage.getItem('key'));
-      const id = data.data.id;;
-      console.log(id);
+      const id = data.data.id;
+      console.log(typeof id);
 
       api.patch(`api/v1/users/${id}`, {
         nickname: stateProfil.profil.nicknameProfil,
         email: stateProfil.profil.emailProfil,
         firstname: stateProfil.profil.firstnameProfil,
         lastname: stateProfil.profil.lastnameProfil,
-        street: stateProfil.profil.streetProfil,
-        city: stateProfil.profil.cityProfil,
-        postal_code: stateProfil.profil.postalCodeProfil,
-        name: stateProfil.profil.nameFtProfil,
-        phone: stateProfil.profil.phoneProfil,
-        description: stateProfil.profil.descriptionProfil,
-        planning: stateProfil.profil.planningProfil,
-        payment: stateProfil.profil.paymentProfil,
-        proaddress: stateProfil.profil.proaddressProfil,
-        siret: stateProfil.profil.siretProfil,
-        id: stateProfil.profil.idFt
+        street: stateProfil.profil.streetFoodtruck,
+        city: stateProfil.profil.cityFoodtruck,
+        postal_code: stateProfil.profil.postalCodeFoodtruck,
+        name: stateProfil.profil.nameFoodtruck,
+        phone: stateProfil.profil.phoneFoodtruck,
+        description: stateProfil.profil.descriptionFoodtruck,
+        planning: stateProfil.profil.planningFoodtruck,
+        payment: stateProfil.profil.paymentFoodtruck,
+        proaddress: stateProfil.profil.proaddressFoodtruck,
+        siret: stateProfil.profil.siretFoodtruck,
+        menu: stateProfil.profil.menuFoodtruck,
+        picture: stateProfil.profil.pictureFoodtruck
+
       })
 
     .then((response) => {

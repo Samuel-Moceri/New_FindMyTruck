@@ -6,6 +6,7 @@ export const initialState = {
     emailContact: '',
     objectContact: '',
     messageContact: '',
+    contactSent: false,
 };
 
 // define the reducer's properties/params
@@ -24,6 +25,7 @@ const reducer = (state = initialState, action = {}) => {
         emailContact: '',
         objectContact: '',
         messageContact: '',
+        contactSent: true,
       }
     default:
       return state;

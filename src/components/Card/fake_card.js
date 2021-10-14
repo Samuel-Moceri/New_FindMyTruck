@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { MdLocationOn } from "react-icons/md";
 
 import FMT_Mockup from 'src/assets/images/background/FMT_Mockup.jpg';

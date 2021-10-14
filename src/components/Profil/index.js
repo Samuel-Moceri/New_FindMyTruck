@@ -21,25 +21,28 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
   const emailProfil = useSelector(state => state.profil.emailProfil);
   const firstnameProfil = useSelector(state => state.profil.firstnameProfil);
   const lastnameProfil = useSelector(state => state.profil.lastnameProfil);
+  const role = useSelector(state=> state.profil.roles);
 
-  const nameFtProfil = useSelector(state=> state.profil.nameFtProfil);
-  const phoneProfil = useSelector(state => state.profil.phoneProfil);
-  const descriptionProfil = useSelector(state => state.profil.descriptionProfil);
-  const planningProfil = useSelector(state => state.profil.planningProfil);
-  const paymentProfil = useSelector(state => state.profil.paymentProfil);
-  const proaddressProfil = useSelector(state => state.profil.proaddressProfil);
-  const streetProfil = useSelector(state => state.profil.streetProfil);
-  const cityProfil = useSelector(state => state.profil.cityProfil);
-  const postalCodeProfil = useSelector(state => state.profil.postalCodeProfil);
-  const siretProfil = useSelector(state => state.profil.siretProfil);
+  const nameFoodtruck = useSelector(state=> state.profil.nameFoodtruck);
+  const phoneFoodtruck = useSelector(state => state.profil.phoneFoodtruck);
+  const descriptionFoodtruck = useSelector(state => state.profil.descriptionFoodtruck);
+  const planningFoodtruck = useSelector(state => state.profil.planningFoodtruck);
+  const paymentFoodtruck = useSelector(state => state.profil.paymentFoodtruck);
+  const proaddressFoodtruck = useSelector(state => state.profil.proaddressFoodtruck);
+  const streetFoodtruck = useSelector(state => state.profil.streetFoodtruck);
+  const cityFoodtruck = useSelector(state => state.profil.cityFoodtruck);
+  const postalCodeFoodtruck = useSelector(state => state.profil.postalCodeFoodtruck);
+  const siretFoodtruck = useSelector(state => state.profil.siretFoodtruck);
+  const menuFoodtruck = useSelector(state => state.profil.menuFoodtruck);
+  const pictureFoodtruck = useSelector(state => state.profil.pictureFoodtruck);
   const warning = useSelector(state=> state.profil.warning);
   const modify = useSelector(state=> state.profil.modify);
-  const role = useSelector(state=> state.profil.roles);
   const reload = useSelector(state=> state.profil.reload);
 
   // console.log(role);
 
   let pictureURL = '';
+
   if(informationsFoodtruck) {
     const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
     pictureURL = baseURL+`${informationsFoodtruck.menu}`;
@@ -107,33 +110,24 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
 
       <>
         <div className="profil_form_pro">
-          <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck</span>
-          <div className="profil_form_pro_name"> Nom de ton FoodTruck : {nameFtProfil} </div>
-          <div className="profil_form_pro_city"> addresse de stationnement : {cityProfil} </div>
-          <div className="profil_form_pro_description"> Ta description : {descriptionProfil} </div>
-          <div  className="profil_form_pro_planning"> Ton planning : {planningProfil} </div>
-          <div className="profil_form_pro_phone"> Numéro de téléphone : 0{phoneProfil} </div>
-          <div className="profil_form_pro_payment"> Paiement accepté : {paymentProfil} </div>
-          <div className="profil_form_pro_menu"> Menu : 
-          {pictureURL && 
+          <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck </span>
+          <div className="profil_form_pro_name"> Nom de ton FoodTruck : {nameFoodtruck} </div>
+          <div className="profil_form_pro_city"> Adresse de stationnement : {cityFoodtruck} </div>
+          <div className="profil_form_pro_description"> Ta description : {descriptionFoodtruck} </div>
+          <div  className="profil_form_pro_planning"> Ton planning : {planningFoodtruck} </div>
+          <div className="profil_form_pro_phone"> Numéro de téléphone : 0{phoneFoodtruck} </div>
+          <div className="profil_form_pro_payment"> Paiement accepté : {paymentFoodtruck} </div>
 
-            <>
-            <li>
-              {/* <img className="menu_foodtruck_content_header_img" src={pictureURL} />
-              <span className="large">
-                <img className="img_large" src={pictureURL} />
-              </span> */}
-            </li>
-            </>
-
-          }
-          </div>
+          <div className="profil_form_pro_menu">Menu :</div>
+            <img src={menuFoodtruck} alt="menu du foodtruck" />
+          <div className="profil_form_pro_menu"> Image du FoodTruck :</div>
+            <img src={pictureFoodtruck} alt="menu du foodtruck" />
         </div>
         
         <div className="profil_form_compagny">
           <span className="profil_form_compagny_title"><MdOutlineBusiness />Société</span>
-          <div className="profil_form_compagny_address"> Ton adresse de société : {proaddressProfil} </div>
-          <div className="profil_form_compagny_siret"> Ton SIRET : {siretProfil} </div>
+          <div className="profil_form_compagny_address"> Ton adresse de société : {proaddressFoodtruck} </div>
+          <div className="profil_form_compagny_siret"> Ton SIRET : {siretFoodtruck} </div>
         </div> 
 
       </>
@@ -188,8 +182,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='nameFtProfilForm'>
                   <Field
                     form="profil"
-                    name="nameFtProfil"
-                    value={nameFtProfil}
+                    name="nameFoodtruck"
+                    value={nameFoodtruck}
                     type="text"
                     placeholder="Nom du FoodTruck"
                     onFieldChange={onFieldChange}
@@ -199,8 +193,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='phoneProfilForm'>
                   <Field
                     form="profil"
-                    name="phoneProfil"
-                    value={phoneProfil}
+                    name="phoneFoodtruck"
+                    value={phoneFoodtruck}
                     type="number"
                     placeholder="Téléphone du FoodTruck"
                     onFieldChange={onFieldChange}
@@ -210,8 +204,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='descriptionProfilForm'>
                   <Field
                     form="profil"
-                    name="descriptionProfil"
-                    value={descriptionProfil}
+                    name="descriptionFoodtruck"
+                    value={descriptionFoodtruck}
                     type="text"
                     placeholder="Description du FoodTruck"
                     onFieldChange={onFieldChange}
@@ -221,8 +215,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='planningProfilForm'>
                   <ContactFieldTextarea 
                     form="profil"
-                    name="planningProfil"
-                    value={planningProfil}
+                    name="planningFoodtruck"
+                    value={planningFoodtruck}
                     type="message"          
                     placeholder="Votre planning"
                     onFieldContactChange={onFieldChange}
@@ -232,30 +226,20 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='paymentProfilForm'>
                   <Field
                     form="profil"
-                    name="paymentProfil"
-                    value={paymentProfil}
+                    name="paymentFoodtruck"
+                    value={paymentFoodtruck}
                     type="text"
                     placeholder="Moyen de paiement accepté"
                     onFieldChange={onFieldChange}
                     // required='required'
                   />
                 </div>
-                <div className='proaddressProfilForm'>
-                  <Field
-                    form="profil"
-                    name="proaddressProfil"
-                    value={proaddressProfil}
-                    type="text"
-                    placeholder="addresse de la société"
-                    onFieldChange={onFieldChange}
-                    // required='required'
-                  />
-                </div>
+
                 <div className='streetForm'>
                   <Field
                     form="profil"
-                    name="streetProfil"
-                    value={streetProfil}
+                    name="streetFoodtruck"
+                    value={streetFoodtruck}
                     type="text"
                     placeholder="Position du Foodtruck"
                     onFieldChange={onFieldChange}
@@ -265,8 +249,8 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='cityForm'>
                   <Field
                     form="profil"
-                    name="cityProfil"
-                    value={cityProfil}
+                    name="cityFoodtruck"
+                    value={cityFoodtruck}
                     type="text"
                     placeholder="Ville"
                     onFieldChange={onFieldChange}
@@ -276,21 +260,59 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                 <div className='postal_codeForm'>
                   <Field
                     form="profil"
-                    name="postalCodeProfil"
-                    value={postalCodeProfil}
+                    name="postalCodeFoodtruck"
+                    value={postalCodeFoodtruck}
                     type="number"
                     placeholder="Code Postal"
                     onFieldChange={onFieldChange}
                     // required='required'
                   />
                 </div>
+
+                <div className='menuProfil'>
+                  <Field
+                    form="profil"
+                    name="menuFoodtruck"
+                    value={menuFoodtruck}
+                    type="text"
+                    placeholder="Menu"
+                    onFieldChange={onFieldChange}
+                    // required='required'
+                  />
+                </div>
+                <div className='pictureProfil'>
+                  <Field
+                    form="profil"
+                    name="pictureFoodtruck"
+                    value={pictureFoodtruck}
+                    type="text"
+                    placeholder="Image du Foodtruck"
+                    onFieldChange={onFieldChange}
+                    // required='required'
+                  />
+                </div>
+              </div>
+
+              <div className="profil_form_compagny">
+                <span className="profil_form_pro_title"><MdOutlineBusiness /> Société </span>
                 <div className='siretForm'>
                   <Field
                     form="profil"
-                    name="siretProfil"
-                    value={siretProfil}
-                    type="text"
+                    name="siretFoodtruck"
+                    value={siretFoodtruck}
+                    type="number"
                     placeholder="Numéro SIRET"
+                    onFieldChange={onFieldChange}
+                    // required='required'
+                  />
+                </div>
+                <div className='proaddressProfilForm'>
+                  <Field
+                    form="profil"
+                    name="proaddressFoodtruck"
+                    value={proaddressFoodtruck}
+                    type="text"
+                    placeholder="Adresse de la société"
                     onFieldChange={onFieldChange}
                     // required='required'
                   />
@@ -319,9 +341,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
       }
 
     </div>
-      
     );
-      
     
 };
 

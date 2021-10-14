@@ -1,12 +1,12 @@
 import './style.scss';
-import Arnaud from 'src/assets/images/equipe/Arnaud_clear.png';
+import Arnaud from 'src/assets/images/equipe/Arnaud_clear_02.png';
 import Julien from 'src/assets/images/equipe/Julien_clear.png';
 import Ludo from 'src/assets/images/equipe/Ludo_clear.png';
-import Samuel from 'src/assets/images/equipe/Samuel_clear.png';
-import Vincent from 'src/assets/images/equipe/Vincent_clear_02.png';
+import Samuel from 'src/assets/images/equipe/Samuel_clear_03.png';
+import Vincent from 'src/assets/images/equipe/Vincent_clear_03.png';
 import Anaglyph from 'src/assets/images/equipe/Anaglyph.png';
 import Oakley from 'src/assets/images/equipe/Oakley_02.png';
-
+import Synthwave from 'src/assets/images/equipe/synthwave.png';
 
 
 
@@ -26,7 +26,8 @@ const Team = () => {
         <div className="team_card team_card_1">
           <div className="team_card_circle color_1" />
           <img className="team_card_img" src={Arnaud} />
-          <div className="team_card_text">
+          <img id="synthwave_img" className="team_card_img_bonus" src={Synthwave} />
+          <div id="synthwave_txt" className="team_card_text">
             <div className="team_card_name">Arnaud</div>
             <div className="team_card_role">Git Master</div>
             <div className="team_card_contact">

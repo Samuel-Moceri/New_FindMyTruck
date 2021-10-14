@@ -35,6 +35,14 @@
   @include BoxShadow(2);
 }
 
+.profil_form_pro {
+  overflow-y: auto;
+  height: 15rem;
+}
+
+.profil_form_compagny {
+  height: 7rem;
+}
 
 
 .profil_form_user:before,
@@ -167,16 +175,18 @@ li {
 .profil-text-nicknameProfil,
 .profil-text-firstnameProfil,
 .profil-text-lastnameProfil,
-.profil-text-nameFtProfil,
-.profil-number-phoneProfil,
-.profil-text-descriptionProfil,
-.profil-message-planningProfil,
-.profil-text-paymentProfil,
-.profil-text-proaddressProfil,
-.profil-text-streetProfil,
-.profil-text-cityProfil,
-.profil-number-postalCodeProfil,
-.profil-string-siretProfil {
+.profil-text-nameFoodtruck,
+.profil-number-phoneFoodtruck,
+.profil-text-descriptionFoodtruck,
+.profil-message-planningFoodtruck,
+.profil-text-paymentFoodtruck,
+.profil-text-proaddressFoodtruck,
+.profil-text-streetFoodtruck,
+.profil-text-cityFoodtruck,
+.profil-text-menuFoodtruck,
+.profil-text-pictureFoodtruck,
+.profil-number-postalCodeFoodtruck,
+.profil-number-siretFoodtruck {
   width: 40%;
   padding: .2rem;
   margin: 0.1rem;
@@ -189,16 +199,18 @@ li {
 .profil-text-nicknameProfil-label,
 .profil-text-firstnameProfil-label,
 .profil-text-lastnameProfil-label,
-.profil-text-nameFtProfil-label,
-.profil-number-phoneProfil-label,
-.profil-text-descriptionProfil-label,
-.profil-message-planningProfil-label,
-.profil-text-paymentProfil-label,
-.profil-text-proaddressProfil-label,
-.profil-text-streetProfil-label,
-.profil-text-cityProfil-label,
-.profil-number-postalCodeProfil-label,
-.profil-string-siretProfil-label {
+.profil-text-nameFoodtruck-label,
+.profil-number-phoneFoodtruck-label,
+.profil-text-descriptionFoodtruck-label,
+.profil-message-planningFoodtruck-label,
+.profil-text-paymentFoodtruck-label,
+.profil-text-proaddressFoodtruck-label,
+.profil-text-streetFoodtruck-label,
+.profil-text-cityFoodtruck-label,
+.profil-text-menuFoodtruck-label,
+.profil-text-pictureFoodtruck-label,
+.profil-number-postalCodeFoodtruck-label,
+.profil-number-siretFoodtruck-label {
   position: absolute;
   transform: translateX(-14.7rem)translateY(7px);
   align-items: center;

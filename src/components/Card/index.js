@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MdLocationOn } from "react-icons/md";
 
 
@@ -8,7 +9,6 @@ import useModal from "src/components/Modal/useModal";
 // import './style.scss';
 
 const Card = ({
-  id,
   name,
   category,
   picture,
@@ -24,15 +24,16 @@ const Card = ({
   // {...foodtruck}
 }) => {
 
-  const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
   const categoryName = category.name
   const categoryColor = category.color
 
-  // const pictureURL = baseURL+`${picture}`;
   const pictureHTTP = picture;
-  // const menuURL = baseURL+`${menu}`;
   const menuHTTP = menu;
+  // const pictureURL = baseURL+`${picture}`;
+  // const menuURL = baseURL+`${menu}`;
+
   // console.log(menuURL);
   // console.log(menuHTTP);
 
@@ -71,14 +72,13 @@ const Card = ({
 
           
             <Modal
+              // {...foodtruck}
               isShowing={isModalShowed}
               hide={toggleModal}
-              // {...foodtruck}
               name={name}
               category={categoryName}
               categorycolor={categoryColor}
               picture={picture}
-              slug={slug}
               street={street}
               city={city}
               postal_code={postal_code}
@@ -92,41 +92,19 @@ const Card = ({
             </Modal>
           </>
 
-  // <>
-  //   <section className="card_foodtruck">
-  //     <img 
-  //       className="card_foodtruck_img"
-  //       src={pictureURL} 
-  //       // src={thumbnail} 
-  //       alt={slug}  
-  //     />
-  //     <div className="card_foodtruck_content">
-  //       <p className="card_foodtruck_content_title">{name}</p>
-  //       <div className="card_foodtruck_content_subtitle">
-  //         <p className="card_foodtruck_content_category">{categoryName}</p>
-  //         <p className="card_foodtruck_content_rating"></p>
-  //       </div>
-  //       <div className="card_foodtruck_content_description">
-  //         <CgPin />
-  //         <p>{street}</p>
-  //         <p>{city}</p>
-  //         <p>{postal_code}</p>
-  //         <p>{payment}</p>
-  //         <p>{phone}</p>
-  //       </div>
-  //     </div>
-  //   </section>  
-  // </>
-
-
 );
 }
 
-// Card.propTypes = {
-//   thumbnail: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-//   difficulty: PropTypes.string.isRequired,
-//   slug: PropTypes.string.isRequired,
-// };
+Card.propTypes = {
+  name : PropTypes.string.isRequired,
+  picture : PropTypes.string.isRequired,
+  street : PropTypes.string.isRequired,
+  city : PropTypes.string.isRequired,
+  postal_code : PropTypes.number.isRequired,
+  payment : PropTypes.string.isRequired,
+  phone : PropTypes.number.isRequired,
+  description : PropTypes.string.isRequired,
+  planning : PropTypes.string.isRequired,
+};
 
 export default Card;

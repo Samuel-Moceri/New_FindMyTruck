@@ -25,6 +25,8 @@ const Map = ({
 
   const lat = Number(latitude);
   const lng = Number(longitude);
+  // console.log(typeof lat);
+  // console.log(typeof lng);
   
 
   //Map generator

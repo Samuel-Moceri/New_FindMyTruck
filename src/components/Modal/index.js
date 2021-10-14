@@ -92,6 +92,17 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
 Modal.propTypes = {
   isShowing: PropTypes.bool.isRequired,
   hide: PropTypes.func.isRequired,
+  name : PropTypes.string.isRequired,
+  street : PropTypes.string.isRequired,
+  postal_code : PropTypes.number.isRequired,
+  city : PropTypes.string.isRequired,
+  phone : PropTypes.number.isRequired,
+  payment : PropTypes.string.isRequired,
+  menuHTTP : PropTypes.string.isRequired,
+  pictureHTTP : PropTypes.string.isRequired,
+  description : PropTypes.string.isRequired,
+  planning : PropTypes.string.isRequired,
+  category : PropTypes.string.isRequired,
 };
 
 export default Modal;
