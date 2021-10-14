@@ -54,12 +54,13 @@ const ajax = (store) => (next) => (action) => {
       const stateEmailLost = store.getState();
 
       // API request that will add itself to the baseURL with username/pass params
-      api.post('/api/forgot', {
-        emaillost: stateEmailLost.user.email,
+      api.post('/api/v1/forgot', {
+        email: stateEmailLost.user.emailLost,
       })
 
       // What we do if the request worked
       .then((response) => {
+        console.log(response);
         // if the connection is successful, we save the token
         // https://github.com/axios/axios#custom-instance-defaults
       })
@@ -106,6 +107,7 @@ const ajax = (store) => (next) => (action) => {
         store.dispatch({
           type: 'SAVE_FOODTRUCKLIST',
           foodtruck: response.data,
+          search: true,
         })
       })
     break;
@@ -124,7 +126,6 @@ const ajax = (store) => (next) => (action) => {
           console.log();('Votre addresse ne correspond à aucune connue.');
           return;
         }
-        console.log(response);
         const lon = response.data.features[0].geometry.coordinates[0];
         const lat = response.data.features[0].geometry.coordinates[1];
 
@@ -158,7 +159,7 @@ const ajax = (store) => (next) => (action) => {
       })
 
     .then((response) => {
-      console.log(response);
+
     })
     
     next(action);
@@ -170,7 +171,7 @@ const ajax = (store) => (next) => (action) => {
       const stateProfil = store.getState();
       const data = JSON.parse(sessionStorage.getItem('key'));
       const id = data.data.id;
-      console.log(typeof id);
+      c
 
       api.patch(`api/v1/users/${id}`, {
         nickname: stateProfil.profil.nicknameProfil,
@@ -193,20 +194,19 @@ const ajax = (store) => (next) => (action) => {
       })
 
     .then((response) => {
-      console.log(response);
+
     })
     
       next(action);
     break;
 
   case 'GET_USER_INFOS' :
-    // const stateProfilInformation = store.getState();
     const dataInformations = JSON.parse(sessionStorage.getItem('key'));
     const idInformations = dataInformations.data.id;
     api.get(`api/v1/users/${idInformations}`)
 
     .then((response) => {
-      console.log('user', response);
+   
       store.dispatch({
         type: 'SAVE_USER_INFOS',
         userData: response.data

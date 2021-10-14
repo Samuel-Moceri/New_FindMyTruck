@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { LOGIN } from '../../actions/users';
 
-// import './style.scss';
 
 import Header from 'src/components/Header';
 import Home from 'src/components/Home';
@@ -22,14 +21,12 @@ function App() {
   const logged = useSelector(state => state.user.logged);
   const foodtruckList = useSelector((state) => state.foodtruck.list);
 
-  // const isLogged = useSelector(state => state.user.isLogged);
-  // const { pathname } = useLocation();
+ 
   // We use a hook to dispatch our action
   const dispatch = useDispatch();
   
   useEffect(() => { 
     const data = JSON.parse(sessionStorage.getItem('key'));
-    // console.log(data);
     
     if(data){
       dispatch({
@@ -42,8 +39,6 @@ function App() {
     }
   }, []);
 
-  
-
 // We call the views to display them on the page
 return (
     <div className="app">
@@ -55,16 +50,6 @@ return (
         <Route path="/inscription" exact component={Register} />
         {logged && (<Route path="/profil" exact component={Profil} />)}
 
-        {/* <Route path="/resultat" exact component={Result} /> */}
-
-        {/* {foodtruckList.map((foodtruck) => (
-          <Route
-          key={foodtruck.id}
-          path={`/foodtruck/${foodtruck.slug}`}
-          exact
-          component={Foodtruck}
-          />
-        ))} */}
 
         <Route path="/contact" exact component={Contact} />
         <Route path="/equipe" exact component={Team} />

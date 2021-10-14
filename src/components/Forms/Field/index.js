@@ -12,39 +12,16 @@ const Field = ({
   onFieldChange,
   required
 }) => {
+
   const handleChange = (evt) => {
     onFieldChange(name, evt.target.value);
   };
-
-  // console.log(name, value);
 
   const inputId = `field-${name}`;
   const className = `${form}-${type}-${name}`;
   const classNameLab = `${form}-${type}-${name}-label`;
 
   return (
-    // <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-    //   <input
-    //     // React - state
-    //     value={value}
-    //     onChange={handleChange}
-    //     // infos de base
-    //     id={inputId}
-    //     type={type}
-    //     className={className}
-    //     placeholder=""
-
-    //     // placeholder="{placeholder}
-    //     name={name}
-    //   />
-
-    //   <label
-    //     htmlFor={inputId}
-    //     className={classNameLab}
-    //   >
-    //     {placeholder}
-    //   </label>
-    // </div>
 
     <>
     <div className={value.length > 0 ? 'field field--has-content' : 'field'}>

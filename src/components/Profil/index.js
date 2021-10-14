@@ -39,8 +39,6 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
   const modify = useSelector(state=> state.profil.modify);
   const reload = useSelector(state=> state.profil.reload);
 
-  // console.log(role);
-
   let pictureURL = '';
 
   if(informationsFoodtruck) {
@@ -63,7 +61,6 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         warning:true,
         reload: true,
       })
-      // window.location.reload();
   }
   
   

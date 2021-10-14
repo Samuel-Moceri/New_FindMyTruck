@@ -6,7 +6,6 @@ import { MdLocationOn } from "react-icons/md";
 import Modal from 'src/components/Modal';
 import useModal from "src/components/Modal/useModal";
 
-// import './style.scss';
 
 const Card = ({
   name,
@@ -21,21 +20,14 @@ const Card = ({
   menu,
   description,
   planning,
-  // {...foodtruck}
 }) => {
 
-  // const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
 
   const categoryName = category.name
   const categoryColor = category.color
 
   const pictureHTTP = picture;
   const menuHTTP = menu;
-  // const pictureURL = baseURL+`${picture}`;
-  // const menuURL = baseURL+`${menu}`;
-
-  // console.log(menuURL);
-  // console.log(menuHTTP);
 
   // MODAL //
   const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
@@ -72,7 +64,6 @@ const Card = ({
 
           
             <Modal
-              // {...foodtruck}
               isShowing={isModalShowed}
               hide={toggleModal}
               name={name}

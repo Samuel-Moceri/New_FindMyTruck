@@ -2,7 +2,7 @@
 
 export const initialState = {
     list: [],
-    // search: false,
+    search: false,
   };
   
   const reducer = (state = initialState, action = {}) => {
@@ -11,7 +11,7 @@ export const initialState = {
         return {
           ...state,
           list: action.foodtruck,
-          // search: true,
+          search: true,
         }
       default:
         return state;

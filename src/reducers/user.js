@@ -4,7 +4,7 @@ import { CHANGE_VALUE, LOGIN } from 'src/actions/users';
 export const initialState = {
     logged: false,
     email: '',
-    emaillost: '',
+    emailLost: '',
     password: '',
     nickname: '',
     token: '',
@@ -43,20 +43,20 @@ const reducer = (state = initialState, action = {}) => {
         lon: action.lon,
       }
 
-      case 'SEND_EMAIL': 
+    case 'SEND_EMAIL': 
       return {
         ...state,
-        emaillost: action.emaillost,
+        emailLost: action.emailLost,
       }
 
-      case 'LOGOUT':
-        return {
-          ...state,
-          logged: false,
-          nickname: '',
-          token: '',
-          logout: true,
-        };
+    case 'LOGOUT':
+      return {
+        ...state,
+        logged: false,
+        nickname: '',
+        token: '',
+        logout: true,
+      };
     default:
       return state;
   }
@@ -64,4 +64,3 @@ const reducer = (state = initialState, action = {}) => {
 
 export default reducer;
 
-// const pseudo = useSelector((state) => state.user.pseudo);

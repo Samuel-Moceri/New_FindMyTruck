@@ -1,4 +1,4 @@
-import './style.scss';
+
 import background from 'src/assets/images/background/background_03.jpg';
 
 

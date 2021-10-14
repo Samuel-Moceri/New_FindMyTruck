@@ -1,23 +1,16 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Redirect } from 'react-router-dom';
-// import Result from 'src/components/Result';
-
 
 import Result from 'src/components/Result';
 import TypeWriter_search from 'src/components/Typewriter/typewriter_search';
 
-
-// import './style.scss';
 import {FiTruck} from 'react-icons/fi';
-
 
 const SearchBar = () => {
 
   const address = useSelector(state => state.user.address);
-  const addressvalue = useSelector(state => state.user.address.value);
 
-  // const search = useSelector(state =>state.foodtruck.search);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -46,7 +39,6 @@ const SearchBar = () => {
 
   }, []);
  
-
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch({
@@ -93,8 +85,6 @@ const SearchBar = () => {
           exact
         >
 
-
-
         </NavLink>
           <div id="searchBar_button">
             
@@ -104,13 +94,6 @@ const SearchBar = () => {
             </button>
           </div>
           
-        {/* <div id="searchBar_button">
-          <button 
-          className="searchBar_button"
-          value="GO" 
-          type="submit">
-          </button>
-        </div> */}
 
       </form> 
 

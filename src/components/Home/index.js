@@ -8,16 +8,13 @@ import React, { useState } from 'react';
 import './style.scss';
 
 const Home = () => { 
-  // window.onunload = function () {
-  //   sessionStorage.clear();
-  // }
+
 
   return (
     <div className="home">
       <SearchBar /> 
-        <div className="test">
-        {/* <Map /> */}
-        </div>
+        {/* <div className="test">
+        </div> */}
     </div>
   )
 };

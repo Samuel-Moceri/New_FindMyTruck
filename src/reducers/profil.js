@@ -43,7 +43,6 @@ const reducer = (state = initialState, action = {}) => {
       // the new state will have the new values (action.value)
       return {
         ...state,
-      // nicknameProfil: '',
       emailProfil: '',
       firstnameProfil: '',
       lastnameProfil: '',
@@ -80,7 +79,7 @@ const reducer = (state = initialState, action = {}) => {
     }
 
     case 'SAVE_USER_INFOS': 
-    // console.log(action.userData);
+  
 
       state = {
         ...state,
@@ -92,7 +91,7 @@ const reducer = (state = initialState, action = {}) => {
       }
 
       if(action.userData.foodtruck) {
-        // console.log(action.userData.foodtruck);
+     
       
         state = {
           ...state, 

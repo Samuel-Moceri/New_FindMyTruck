@@ -9,9 +9,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, Redirect } from 'react-router-dom';
 import { changeValue } from 'src/actions/users';
 
-import './style.scss';
 
-const LoginForm = ({emaillost}) => {
+const LoginForm = () => {
 
   /**
    * We get the state values in several const
@@ -47,7 +46,6 @@ const LoginForm = ({emaillost}) => {
   } = useModal();
   // /MODAL //
 
-  // onClick={toggleModal}
 
 
   return (
@@ -63,7 +61,6 @@ const LoginForm = ({emaillost}) => {
           value={email}
           type="email"
           placeholder="E-mail"
-          // className="login_form_email_text"
           onFieldChange={onFieldChange}
           required='required'
         />
@@ -103,7 +100,6 @@ const LoginForm = ({emaillost}) => {
       <Modal_lostemail
         isShowing={isModalShowed}
         hide={toggleModal}
-        emaillost={emaillost}
       >
       </Modal_lostemail>
     </>

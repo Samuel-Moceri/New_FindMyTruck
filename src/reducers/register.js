@@ -29,7 +29,6 @@ const reducer = (state = initialState, action = {}) => {
         verifPasswordRegister: '',
         registered: true,
         role: '',
-        // checked : false,
       }
     default:
       return state;

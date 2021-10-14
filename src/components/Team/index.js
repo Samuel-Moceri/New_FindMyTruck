@@ -1,4 +1,3 @@
-import './style.scss';
 import Arnaud from 'src/assets/images/equipe/Arnaud_clear_02.png';
 import Julien from 'src/assets/images/equipe/Julien_clear.png';
 import Ludo from 'src/assets/images/equipe/Ludo_clear.png';
@@ -100,7 +99,7 @@ const Team = () => {
 
       </div>
 
-      {/* TEST: Shadow behing a clear png - HTML part  */}
+
       <svg height="0" xmlns="http://www.w3.org/2000/svg">
         <filter id="drop-shadow">
           <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>

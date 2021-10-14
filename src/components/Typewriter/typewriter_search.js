@@ -1,4 +1,4 @@
-import './style.scss';
+
 import Typewriter from 'typewriter-effect';
 
 

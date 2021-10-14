@@ -1,33 +1,31 @@
-import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import React , { useState } from 'react';
+import React  from 'react';
 
-import SearchBar from 'src/components/SearchBar';
-import Foodtruck from 'src/components/Foodtruck';
 import Card from 'src/components/Card';
 import Map from 'src/components/Map';
+import Welcome from 'src/components/Welcome';
 
-import Fake_Card from 'src/components/Card/fake_card';
-import Modal from 'src/components/Modal';
+
 import useModal from "src/components/Modal/useModal";
 
-import MarkerPin from '../MarkerPin';
+import FMT_logo_full from 'src/assets/images/FMT_logo_full.png';
 
 
 
 
-// import './style.scss';
 
 
 const Result = ({
   id,
   name,
-  }) => {
-
+}) => {
+  
   const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-
+  
   const foodtrucks = useSelector(state => state.foodtruck.list);
-  // console.log(foodtrucks);
+
+  const search = useSelector(state => state.foodtruck.search);
+
 
   // MODAL //
   const { isShowing: isModalShowed, toggle: toggleModal } = useModal();
@@ -40,10 +38,13 @@ const Result = ({
 
   return (
     <>
+    {search===false &&
       
-        {/* <SearchBar /> */}
-        {/* <p className="result_title">Résultats de votre recherche</p> */}
-      
+      <Welcome />
+    }
+
+    {search===true &&
+
       <div className="result">
 
         <div className="result_map">
@@ -52,34 +53,18 @@ const Result = ({
 
         <div 
           className="result_cards" 
-          // onClick={toggleModal}
           >
             {foodtrucks.map((foodtruck) => (
-            <Card key={foodtruck.id} {...foodtruck} />
+              <Card key={foodtruck.id} {...foodtruck} />
             ))}
 
-          {/* <Fake_Card /> */}
+ 
         </div>
-            
-            {/* // MODAL // */}
-            {/* <Modal
-              isShowing={isModalShowed}
-              hide={toggleModal}
-              name="NOM DU FOODTRUCK"
-            >
-              <form>
-                <div className="form-group">
-                  <div type="text" placeholder="FOODTRUCK">CATEGORIE</div>
-                </div>
-                <div className="form-group">
-                  <div type="text" placeholder="FOODTRUCK">addressE</div>
-                </div>
-              </form>
-            </Modal> */}
-            {/* // /MODAL // */}
+
             
       </div>
 
+    }
     </>
   );
 }

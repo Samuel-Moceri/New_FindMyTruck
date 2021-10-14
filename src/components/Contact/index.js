@@ -5,7 +5,6 @@ import ContactFieldTextarea from 'src/components/Contact/Field/textarea';
 import { Link, Redirect } from 'react-router-dom';
 
 
-// import './style.scss';
 
 const Contact = () => {
 
@@ -21,10 +20,7 @@ const Contact = () => {
       type: 'SEND_MESSAGE'
     })
   }
-  // const handleClick = (event) => {
-  //   console.log('cc');
-  //   <Redirect to="/" />
-  // }
+
 
   const dispatch = useDispatch();
   const onFieldContactChange = (key, value) => {
@@ -86,10 +82,13 @@ const Contact = () => {
   }
 
   {contactSent===true &&
-    <button className=''  >
-    <a href="/" >Ta demande a bien été envoyée, tu peux retourner à l'accueil.</a>
-  </button>
 
+  <div className="contact_result">
+    <div className="contact_result_message" >Ta demande a bien été envoyée</div>
+    <button className="contact_result_button"  >
+      <a href="/" >Retour à l'accueil</a>
+    </button>
+  </div>
   }
 
 

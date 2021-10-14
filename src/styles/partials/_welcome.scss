@@ -1,0 +1,14 @@
+.welcome {
+  display: flex;
+  width: 90%;
+  margin: 1rem auto;
+
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.welcome_logo_img {
+  height: 20rem;
+  width: 25rem;
+}

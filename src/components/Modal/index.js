@@ -6,11 +6,6 @@ import { MdClose } from "react-icons/md";
 import { MdLocationOn, MdOutlineFacebook, MdWebAsset, MdLocalPhone,MdCreditCard, MdEuroSymbol  } from "react-icons/md";
 import { IoLogoInstagram } from "react-icons/io";
 
-
-// import MarkerPin from '../MarkerPin'
-
-
-
 const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, payment, menuHTTP, pictureHTTP, description, planning, category, categorycolor}) =>
 
   isShowing
@@ -32,11 +27,9 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
                   <p className="modal_middle_description">{description}</p>
                 <div className="modal_middle">
                   <div className="modal_middle_contact">
-                    {/* <MdLocationOn /> */}
                     <p className="modal_middle_contact_street"><MdLocationOn />{street}</p>
                     <p className="modal_middle_contact_postalcode">{postal_code}</p>
                     <p className="modal_middle_contact_city">{city}</p>
-                    {/* <MdLocalPhone /> */}
                     <p className="modal_middle_contact_phone"><MdLocalPhone />{phone}</p>
                   </div>
                   <div className="modal_middle_other">
@@ -50,7 +43,6 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
                 </div>
                 <div className="modal_bottom">
                   <div className="modal_bottom_planning">
-                  {/* {planning} */}
                     <div className="modal_bottom_planning_day">LUNDI: 
                       <p className="modal_bottom_planning_hours"> 12:00-14:00 / - </p>
                     </div>

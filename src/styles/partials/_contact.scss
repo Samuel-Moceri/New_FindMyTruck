@@ -77,7 +77,8 @@
   }
 }
 
-.contact_form_button {
+.contact_form_button,
+.contact_result_button {
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: .5rem;
@@ -92,15 +93,35 @@
 
 }
 
-.contact_form_button:hover {
+.contact_form_button:hover,
+.contact_result_button:hover {
   @include BoxShadow(4);
   transform: scale(1.03);
 
 }
 
-.contact_form_button:active {
+.contact_form_button:active,
+.contact_result_button:active {
   @include BoxShadow(2);
     transform: scale(0.98);
+}
+
+.contact_result{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: .2rem;
+  margin: 5rem auto;
+  width: 40rem;
+  height: 10rem;
+  background-color: #FFF;
+  @include BoxShadow(4);
+}
+
+.contact_result_message {
+text-align: center;
+font-size: 1.5rem;
 }
 
 // ----- RESPONSIVE ----- //

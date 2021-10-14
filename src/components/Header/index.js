@@ -8,7 +8,6 @@ import { MdExitToApp, MdOutlineAdminPanelSettings } from 'react-icons/md';
 
 
 import FMT_logo from 'src/assets/images/FMT_logo_clean_01.png';
-
 import FMT_logo_responsive from 'src/assets/images/FMT_logo.png';
 
 
@@ -20,9 +19,6 @@ const Header = ({}) => {
   const logout= useSelector(state=> state.user.logout);
   const role= useSelector(state=> state.user.roles);
 
-  // const data = JSON.parse(sessionStorage.getItem('key'));
-  // const role = data.data.roles;
-  // console.log(data);
 
   const dispatch = useDispatch();
 
@@ -35,12 +31,6 @@ const Header = ({}) => {
     sessionStorage.clear();
     window.location.reload();
   }
-  
-  // useEffect(() => {
-  //   dispatch({
-  //     type: 'GET_USER_INFOS'
-  //   })
-  // })
 
  return (
   <>

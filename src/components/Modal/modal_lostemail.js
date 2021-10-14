@@ -1,65 +1,72 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+import Field from 'src/components/Forms/Field';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeValue } from 'src/actions/users';
 import { MdClose } from "react-icons/md";
 
-const Modal_lostemail = ({ isShowing, hide, emaillost}) => {
+const Modal_lostemail = ({ isShowing, hide}) => {
+
+  const emailLost = useSelector(state => state.user.emailLost);
+  console.log(emailLost);
 
   const dispatch = useDispatch();
-
-  const handleChangeEmail = (evt) => {
-    onFieldChange(name, evt.target.value);
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch({
-      type: 'SEND_EMAIL',
-      // hide = true
+      type: 'SEND_EMAIL'
+      
     })
+
   }
 
-return (
-isShowing ? ReactDOM.createPortal(
-        <>
-          <div className="modal_background_lostemail">
-            <div className="modal_container_lostemail">
-              {/* <div className="modal_lostemail"> */}
-                <form autoComplete="off" className="modal_lostemail" onSubmit={handleSubmit}>
-                  <input
-                  form="send"
-                  name="emaillost"
-                  type="email"
-                  placeholder="Entrez votre email"
-                  className="modal_lostemail_email"
-                  onChange={handleChangeEmail}
-                  required='required'
-                  >                  
-                  </input>
+  const onFieldChange = (key, value) => {
+    dispatch(
+      changeValue(key, value)
+    );
+  }
 
-                  <button
-                  type="submit"
-                  className="modal_lostemail_email_button"
-                  >
-                    ENVOYER
-                  </button>
+  return (
+    isShowing ? ReactDOM.createPortal(
+      <>
+        <div className="modal_background_lostemail">
+          <div className="modal_container_lostemail">
+            {/* <div className="modal_lostemail"> */}
+              <form autoComplete="off" className="modal_lostemail" onSubmit={handleSubmit}>
+                <Field
+                form="emailLost"
+                name="emailLost"
+                type="email"
+                value={emailLost}
+                placeholder="Entrez votre email"
+                className="modal_lostemail_email"
+                onFieldChange={onFieldChange}
+                required='required'
+                />
 
-                  <button type="button" className="modal_lostemail_top_closebutton" onClick={hide}>
-                      <span><MdClose /></span>
-                  </button>
-                </form>
-              </div>
+                <button
+                type="submit"
+                className="modal_lostemail_email_button"
+                >
+                  ENVOYER
+                </button>
+
+                <button type="button" className="modal_lostemail_top_closebutton" onClick={hide}>
+                    <span><MdClose /></span>
+                </button>
+              </form>
             </div>
-          {/* </div> */}
-        </>,
+          </div>
+        {/* </div> */}
+      </>,
 
-        document.body
+      document.body
     )
     : null
-)
+  )
 };
 
 Modal_lostemail.propTypes = {

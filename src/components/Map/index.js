@@ -25,13 +25,11 @@ const Map = ({
 
   const lat = Number(latitude);
   const lng = Number(longitude);
-  // console.log(typeof lat);
-  // console.log(typeof lng);
+ 
   
 
   //Map generator
   const [viewport, setViewport] = useState({
-
     
     // lat & long : starting position on the map (O'Clock's office)
     latitude: 47.7,
@@ -47,7 +45,6 @@ const Map = ({
 
   //TEST //
   const foodtrucks = useSelector(state => state.foodtruck.list);
-  // console.log(foodtrucks);
   // /TEST //
 
   // Create a constante with an initial value & return a reference (ref)
