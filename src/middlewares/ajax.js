@@ -7,8 +7,8 @@ import { UPDATE_INFORMATIONS } from '../actions/profil';
 
 // set the baseURl
 const api = axios.create({
-  // baseURL: 'http://ec2-100-26-195-84.compute-1.amazonaws.com/api',
   baseURL: 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public',
+  // baseURL: 'http://ec2-18-205-163-149.compute-1.amazonaws.com',
 
 });
 
@@ -171,7 +171,7 @@ const ajax = (store) => (next) => (action) => {
       const stateProfil = store.getState();
       const data = JSON.parse(sessionStorage.getItem('key'));
       const id = data.data.id;
-      c
+      
 
       api.patch(`api/v1/users/${id}`, {
         nickname: stateProfil.profil.nicknameProfil,

@@ -1,7 +1,15 @@
 .welcome {
+  // display: flex;
+  // width: 100%;
+  // margin: .5 auto;
   display: flex;
   width: 90%;
-  margin: 1rem auto;
+  max-width: 100rem;
+  padding: 1rem;
+  border-radius: .2rem;
+  margin: 2rem auto 1rem;
+  background-color: #FFF;
+  @include BoxShadow(1);
 
   flex-direction: column;
   justify-content: center;
@@ -9,6 +17,62 @@
 }
 
 .welcome_logo_img {
-  height: 20rem;
-  width: 25rem;
+  width: 20%;
+  margin: .5rem auto 1rem auto;
+}
+
+.welcome_logo_txt_01 {
+  margin: .5rem auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1E3030;
+}
+.welcome_logo_txt_01_5 {
+  margin: 0.1rem auto;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #1E3030;
+}
+
+.welcome_logo_txt_02 {
+  margin: .5rem auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1E3030;
+}
+
+.welcome_logo_txt_03 {
+  margin: .2rem auto;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1E3030;
+}
+
+.welcome_logo_txt_04 {
+  margin: 1rem auto .2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1E3030;
+}
+
+// ----- RESPONSIVE ----- //
+
+.welcome_logo_img {
+  @include for-size(phone-only) {
+    width: 100%;
+  }
+}
+
+.welcome_logo_txt_01 {
+  @include for-size(phone-only) {
+    font-size: 1.3rem;
+  }
+}
+
+.welcome_logo_txt_02,
+.welcome_logo_txt_03,
+.welcome_logo_txt_04 {
+  @include for-size(phone-only) {
+    display: none;
+  }
 }

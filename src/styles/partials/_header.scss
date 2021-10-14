@@ -132,5 +132,11 @@
   display: none;
   @include for-size(phone-only) {
     display: block;
+    margin: -.5rem;    
   }
+  & img {
+    @include for-size(phone-only) {
+      display: block;
+    }
+}
 }

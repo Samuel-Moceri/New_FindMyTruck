@@ -2,10 +2,13 @@ import Arnaud from 'src/assets/images/equipe/Arnaud_clear_02.png';
 import Julien from 'src/assets/images/equipe/Julien_clear.png';
 import Ludo from 'src/assets/images/equipe/Ludo_clear.png';
 import Samuel from 'src/assets/images/equipe/Samuel_clear_03.png';
-import Vincent from 'src/assets/images/equipe/Vincent_clear_03.png';
+import Vincent from 'src/assets/images/equipe/Vincent_clear_02.png';
 import Anaglyph from 'src/assets/images/equipe/Anaglyph.png';
 import Oakley from 'src/assets/images/equipe/Oakley_02.png';
 import Synthwave from 'src/assets/images/equipe/synthwave.png';
+import Julienhair from 'src/assets/images/equipe/Julien_clear_hair.png';
+import ColonelVincent from 'src/assets/images/equipe/Vincent_clear_03.png';
+
 
 
 
@@ -41,7 +44,8 @@ const Team = () => {
         <div className="team_card team_card_2">
           <div className="team_card_circle color_2" />
           <img className="team_card_img" src={Julien} />
-          <div className="team_card_text">
+          <img id="hair_img" className="team_card_img_bonus" src={Julienhair} />
+          <div id="hair_txt" className="team_card_text">
             <div className="team_card_name">Julien</div>
             <div className="team_card_role">Lead Dev Back</div>
             <div className="team_card_contact">
@@ -85,7 +89,8 @@ const Team = () => {
         <div className="team_card team_card_5">
           <div className="team_card_circle color_5" />
           <img className="team_card_img" src={Vincent} />
-          <div className="team_card_text">
+          <img id="colonel_img" className="team_card_img_bonus" src={ColonelVincent} />
+          <div id="colonel_txt" className="team_card_text">
             <div className="team_card_name">Vincent</div>
             <div className="team_card_role">Project Manager</div>
             <div className="team_card_contact"></div>

@@ -21,13 +21,9 @@ const Map = ({
   longitude,
 }) => {
     
-  const baseURL= 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
-
   const lat = Number(latitude);
   const lng = Number(longitude);
- 
   
-
   //Map generator
   const [viewport, setViewport] = useState({
     

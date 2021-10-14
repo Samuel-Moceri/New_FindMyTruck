@@ -1,1 +1,1 @@
-export const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+export const baseURL = 'http://ec2-18-205-163-149.compute-1.amazonaws.com';

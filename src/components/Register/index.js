@@ -117,7 +117,11 @@ const RegisterForm = () => {
         to="/connexion"
         exact
         >
-        <li  className="">Parfait tu peux maintenant te connecter !</li>        
+          <div className="contact_result">
+            <div className="contact_result_message" >Ton inscription a bien été prise en compte</div>
+            <div className="contact_result_message" >tu peux maintenant te connecter</div>
+            <button className="login_form_button">CONNEXION</button>
+          </div>        
         </NavLink>
        </> 
         

@@ -12,6 +12,7 @@ const MarkerPin = ({
 }) => {
     
   const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+  // const baseURL = 'http://ec2-18-205-163-149.compute-1.amazonaws.com';
 
   const lat = Number(latitude);
   const lng = Number(longitude);
