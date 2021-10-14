@@ -80,7 +80,6 @@ const Error = ({}) => {
     <div className="cloud" id="cloud-3"></div>
     <div className="cloud" id="cloud-4"></div>
     <div className="cloud" id="cloud-5"></div>
-    
 </div>
 
 
