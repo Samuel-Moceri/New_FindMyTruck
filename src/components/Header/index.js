@@ -4,19 +4,15 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // import ajax from 'src/components/middlewares';
 import { FiUser } from 'react-icons/fi';
-import { MdExitToApp } from 'react-icons/md';
+import { MdExitToApp, MdOutlineAdminPanelSettings } from 'react-icons/md';
 
 
-import logo from 'src/assets/images/logo.png';
-import textlogo from 'src/assets/images/FMT_clear.png';
-import loginLogo from 'src/assets/images/logo-login.png';
+import FMT_logo from 'src/assets/images/FMT_logo_clean_01.png';
+
+import FMT_logo_responsive from 'src/assets/images/FMT_logo.png';
 
 
-import './style.scss';
-
-
-const Header = ({
-}) => {
+const Header = ({}) => {
 
   const registered = useSelector(state => state.register.registered);
   const logged = useSelector(state => state.user.logged);
@@ -59,10 +55,11 @@ const Header = ({
           to="/"
           exact
           >
-          <div className='logo_img'> 
-            <img src={textlogo} alt="Logo FindMyTruck"/>
-            <span>FMT</span>
+          <div className='logo'> 
+            <img className='logo_img' src={FMT_logo} alt="Logo FindMyTruck"/>
+
           </div>
+            <img className='logo_img_responsive' src={FMT_logo_responsive} alt="Logo FindMyTruck"/>
         </NavLink>
       </section>
 
@@ -111,12 +108,12 @@ const Header = ({
             </NavLink> 
           
             {( role !== undefined && (role[0]==="ROLE_ADMIN" || role[0]==="ROLE_MODO" )) &&
-              <li className="footer_list_el backoffice">
+              <button className='header_right_link_backoffice'  >
                 <a href="http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public"
                   target="_blank" >
-                  BackOffice
+                  <MdOutlineAdminPanelSettings />
                 </a>
-              </li>
+              </button>
             }
           </div>
         </>        

@@ -41,8 +41,9 @@
 .logo {
   display: flex;
   align-items: center;
-  &_img img {
-    height :50px;
+  & img{
+    height :3rem;
+    margin: .5rem 0 -.5rem .5rem;
   }
   &_title {
     font-size: 3em;
@@ -57,6 +58,9 @@
 
 .header_right_logged_hello {
   font-size: 1.5rem;
+  @include for-size(phone-only) {
+    display: none;
+  }
 }  
 
 .header_right_logged_hello_nickname{
@@ -64,7 +68,8 @@
 }
 
 .header_right_link_logged_icon,
-.header_right_link_logged_logout_button {
+.header_right_link_logged_logout_button, 
+.header_right_link_backoffice {
   border: none;
   width: 3rem;
   height: 3rem;
@@ -82,18 +87,26 @@
 }
 
 .header_right_link_logged_icon:hover,
-.header_right_link_logged_logout_button:hover {
+.header_right_link_logged_logout_button:hover,
+.header_right_link_backoffice:hover {
   @include BoxShadow(4);
   transform: scale(1.03);
 
 }
 
 .header_right_link_logged_icon:active,
-.header_right_link_logged_logout_button:active {
+.header_right_link_logged_logout_button:active,
+.header_right_link_backoffice:active {
   @include BoxShadow(2);
     transform: scale(0.98);
 }
 
+.header_right_link_backoffice {
+  background-color: vars.$retropurple;
+  & svg {
+    color: #FFF;
+  }
+}
 
 .logo_img {
   @include for-size(phone-only) {
@@ -108,19 +121,16 @@
   }
 }
 
-.backoffice {
-  border: none;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: vars.$palepink;
-  margin-left: 1rem;
-  cursor: pointer;
-  @include BoxShadow(1);
-  transition: all 0.3s;
-  & svg {
-    text-align: center;
-    height: 100%;
-    width: 1.5rem;
+.header_right_link_backoffice {
+  background-color: vars.$retropurple;
+}
+
+
+// ----- RESPONSIVE ----- //
+
+.logo_img_responsive {
+  display: none;
+  @include for-size(phone-only) {
+    display: block;
   }
 }

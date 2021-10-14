@@ -1,4 +1,3 @@
-// import './style.scss';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -7,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 /**
  * Composant to make our 'footer' with different 'li' and links
  */
- const Footer = () => {
+ const Footer = ({}) => {
 
   return (
 

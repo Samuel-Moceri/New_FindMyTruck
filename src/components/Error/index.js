@@ -1,6 +1,5 @@
 
-const Error = () => {
-
+const Error = ({}) => {
 
   return(
     <div className="container">
@@ -24,8 +23,10 @@ const Error = () => {
                     <div className="light-front"></div>
                     <div className="chimney"></div>
                     <div className="logo">
-                        <div className="logo-text"> FIND MY TRUCK</div>
-                    </div>
+                        {/* <div className="logo-text"> FIND MY TRUCK</div> */}
+                        <div className="mug"></div>
+                          <div className="oclock"></div>
+                    </div> 
                 </div>
                 <div>
                     <div className="wheel spin">
@@ -64,12 +65,14 @@ const Error = () => {
 
 
     <div className="background-stuff">
-<div className="error_message">
-<div className="error_message_1">4</div>
-<div className="error_message_2">0</div>
-<div className="error_message_3">4</div>
-</div>
-
+      <div className="error_message">
+          <div className="error_message_QCQ">
+            <div className="error_message_QCQ_1">4</div>
+            <div className="error_message_QCQ_2">0</div>
+            <div className="error_message_QCQ_3">4</div>
+          </div>
+          <div className="error_message_message">This is not the <span className="strikethrough">MUG</span> page you're looking for ...</div>
+      </div>
 
 <div className="cloud-container">
     <div className="cloud" id="cloud-1"></div>
@@ -77,6 +80,7 @@ const Error = () => {
     <div className="cloud" id="cloud-3"></div>
     <div className="cloud" id="cloud-4"></div>
     <div className="cloud" id="cloud-5"></div>
+    
 </div>
 
 
