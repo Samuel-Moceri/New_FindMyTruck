@@ -45,9 +45,9 @@
   100% {transform:scale(1)}
 }
 
-.modal_lostemail_email {
+.emailLost-email-emailLost {
   position: relative;
-  margin: 4rem auto .5rem auto;
+  margin: 6rem 1rem .5rem 1rem;
   width: 90%;
   border: none;
   border-bottom: 2px solid #999;
@@ -56,9 +56,20 @@
   color: #666;
   transition: 0.3s ease-in ;
   &:focus {
-    border-bottom: 2px solid vars.$orange;;
-
+    border-bottom: 2px solid vars.$orange;
   }
+}
+.emailLost-email-emailLost-label {
+position: relative;
+  top: -4rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+.emailLost-email-emailLost:focus ~ .emailLost-email-emailLost-label,
+.emailLost-email-emailLost:active ~ .emailLost-email-emailLost-label {
+  color: vars.$orange;
 }
 
 .modal_lostemail_email_button {

@@ -67,7 +67,18 @@ const Modal = ({ isShowing, hide, name, street, postal_code, city, phone, paymen
 
                     
                   </div>
-                  <img className="modal_bottom_menu" src={menuHTTP}/>
+
+                  <figure>
+                    <a href="#image_modal"><img className="image_small" src={menuHTTP} alt="Image"/></a>
+                    <div className="image_up" id="image_modal">
+                      <a title="Menu " href="#ferme">
+                      <img className="modal_bottom_menu" src={menuHTTP}/>
+                      </a>
+                    </div>
+                  </figure>
+
+
+                  {/* <img className="modal_bottom_menu" src={menuHTTP}/> */}
                   
                 </div>
 

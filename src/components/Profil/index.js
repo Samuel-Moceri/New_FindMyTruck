@@ -96,9 +96,18 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
         <>
           <div className="profil_form_user">
             <span className="profil_form_user_title"><MdOutlinePersonPin /> Utilisateur</span>
-            <div className="profil_firstname"> Prénom : {firstnameProfil} </div>
-            <div className="profil_lastname"> Nom de famille : {lastnameProfil} </div>
-            <div className="profil_email"> E-mail : {emailProfil} </div>
+            <div className="profil_first_part profil_firstname"> 
+              Prénom : 
+              <span>{firstnameProfil}</span> 
+            </div>
+            <div className="profil_first_part profil_lastname"> 
+              Nom : 
+              <span>{lastnameProfil}</span>
+            </div>
+            <div className="profil_first_part profil_email"> 
+              E-mail : 
+              <span>{emailProfil}</span>
+            </div>
           </div>
         </>
       }
@@ -108,24 +117,57 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
       <>
         <div className="profil_form_pro">
           <span className="profil_form_pro_title"><MdLocalShipping /> FoodTruck </span>
-          <div className="profil_form_pro_name"> Nom de ton FoodTruck : {nameFoodtruck} </div>
-          <div className="profil_form_pro_city"> Adresse de stationnement : {cityFoodtruck} </div>
-          <div className="profil_form_pro_description"> Ta description : {descriptionFoodtruck} </div>
-          <div  className="profil_form_pro_planning"> Ton planning : {planningFoodtruck} </div>
-          <div className="profil_form_pro_phone"> Numéro de téléphone : 0{phoneFoodtruck} </div>
-          <div className="profil_form_pro_payment"> Paiement accepté : {paymentFoodtruck} </div>
+          <div className="profil_first_part profil_form_pro_name "> 
+            Nom : 
+            <span>{nameFoodtruck}</span>
+          </div>
+          <div className="profil_first_part profil_form_pro_city">
+            Stationnement : 
+            <span>{cityFoodtruck} </span>
+          </div>
+          <div className="profil_first_part profil_form_pro_description "> 
+            Description : 
+            <span>{descriptionFoodtruck}</span>
+          </div>
+          <div  className="profil_first_part profil_form_pro_planning"> 
+            Planning : 
+            <span>{planningFoodtruck} </span>
+          </div>
+          <div className="profil_first_part profil_form_pro_phone"> 
+            N° Téléphone : 
+            <span>0{phoneFoodtruck} </span>
+          </div>
+          <div className="profil_first_part profil_form_pro_payment"> 
+          Paiement : 
+          <span>{paymentFoodtruck}</span> 
+          </div>
 
-          <div className="profil_form_pro_menu">Menu :</div>
+          <div className="menuandimage">
+            <div className="profil_form_pro_menu">
+              {/* Menu : */}
             <img src={menuFoodtruck} alt="menu du foodtruck" />
-          <div className="profil_form_pro_menu"> Image du FoodTruck :</div>
-            <img src={pictureFoodtruck} alt="menu du foodtruck" />
+
+            </div>
+            <div className="profil_form_pro_image"> 
+            {/* Image du FoodTruck : */}
+            <img src={pictureFoodtruck} alt="image du foodtruck" />
+            </div>
+          </div> 
         </div>
         
         <div className="profil_form_compagny">
           <span className="profil_form_compagny_title"><MdOutlineBusiness />Société</span>
-          <div className="profil_form_compagny_address"> Ton adresse de société : {proaddressFoodtruck} </div>
-          <div className="profil_form_compagny_siret"> Ton SIRET : {siretFoodtruck} </div>
-        </div> 
+          <div className="profil_first_part profil_form_compagny_address">
+            Domiciliation : 
+            <span>{proaddressFoodtruck}</span>
+          </div>
+          <div className="profil_first_part profil_form_compagny_siret"> 
+            SIRET : 
+            <span>{siretFoodtruck} </span>
+          </div>
+        </div>
+        
+         
 
       </>
       }
@@ -153,7 +195,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   name="lastnameProfil"
                   value={lastnameProfil}
                   type="text"
-                  placeholder="Nom de famille"
+                  placeholder="Nom"
                   onFieldChange={onFieldChange}
                   required='required'
                 />
@@ -182,7 +224,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     name="nameFoodtruck"
                     value={nameFoodtruck}
                     type="text"
-                    placeholder="Nom du FoodTruck"
+                    placeholder="Nom"
                     onFieldChange={onFieldChange}
                     required='required'
                   />
@@ -193,7 +235,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     name="phoneFoodtruck"
                     value={phoneFoodtruck}
                     type="number"
-                    placeholder="Téléphone du FoodTruck"
+                    placeholder="N° Téléphone"
                     onFieldChange={onFieldChange}
                     required='required'
                   />
@@ -204,7 +246,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     name="descriptionFoodtruck"
                     value={descriptionFoodtruck}
                     type="text"
-                    placeholder="Description du FoodTruck"
+                    placeholder="Description"
                     onFieldChange={onFieldChange}
                     required='required'
                   />
@@ -215,7 +257,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     name="planningFoodtruck"
                     value={planningFoodtruck}
                     type="message"          
-                    placeholder="Votre planning"
+                    placeholder="Planning"
                     onFieldContactChange={onFieldChange}
                     required='required'
                   />
@@ -226,7 +268,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     name="paymentFoodtruck"
                     value={paymentFoodtruck}
                     type="text"
-                    placeholder="Moyen de paiement accepté"
+                    placeholder="Paiement"
                     onFieldChange={onFieldChange}
                     // required='required'
                   />
@@ -238,7 +280,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                     name="streetFoodtruck"
                     value={streetFoodtruck}
                     type="text"
-                    placeholder="Position du Foodtruck"
+                    placeholder="Stationnement"
                     onFieldChange={onFieldChange}
                     // required='required'
                   />
@@ -266,50 +308,54 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
                   />
                 </div>
 
-                <div className='menuProfil'>
-                  <Field
-                    form="profil"
-                    name="menuFoodtruck"
-                    value={menuFoodtruck}
-                    type="text"
-                    placeholder="Menu"
-                    onFieldChange={onFieldChange}
-                    // required='required'
-                  />
-                </div>
-                <div className='pictureProfil'>
-                  <Field
-                    form="profil"
-                    name="pictureFoodtruck"
-                    value={pictureFoodtruck}
-                    type="text"
-                    placeholder="Image du Foodtruck"
-                    onFieldChange={onFieldChange}
-                    // required='required'
-                  />
+
+                <div className="menuandimage_edit">
+                  <div className='menuProfil'>
+                    <Field
+                      form="profil"
+                      name="menuFoodtruck"
+                      value={menuFoodtruck}
+                      type="text"
+                      placeholder="Menu"
+                      onFieldChange={onFieldChange}
+                      // required='required'
+                    />
+                  </div>
+                  <div className='pictureProfil'>
+                    <Field
+                      form="profil"
+                      name="pictureFoodtruck"
+                      value={pictureFoodtruck}
+                      type="text"
+                      placeholder="Photo / Logo"
+                      onFieldChange={onFieldChange}
+                      // required='required'
+                    />
+                  </div>
                 </div>
               </div>
 
               <div className="profil_form_compagny">
                 <span className="profil_form_pro_title"><MdOutlineBusiness /> Société </span>
-                <div className='siretForm'>
-                  <Field
-                    form="profil"
-                    name="siretFoodtruck"
-                    value={siretFoodtruck}
-                    type="number"
-                    placeholder="Numéro SIRET"
-                    onFieldChange={onFieldChange}
-                    // required='required'
-                  />
-                </div>
+                
                 <div className='proaddressProfilForm'>
                   <Field
                     form="profil"
                     name="proaddressFoodtruck"
                     value={proaddressFoodtruck}
                     type="text"
-                    placeholder="Adresse de la société"
+                    placeholder="Domiciliation"
+                    onFieldChange={onFieldChange}
+                    // required='required'
+                  />
+                </div>
+                <div className='siretForm'>
+                  <Field
+                    form="profil"
+                    name="siretFoodtruck"
+                    value={siretFoodtruck}
+                    type="number"
+                    placeholder="SIRET"
                     onFieldChange={onFieldChange}
                     // required='required'
                   />
@@ -321,7 +367,7 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
             
           </div>
 
-          <input type="submit" className="profil_form_button_save" value="ENREGISTRER LES INFORMATIONS"></input>
+          <input type="submit" className="profil_form_button_save" value="ENREGISTRER"></input>
         </form>
       }
 
@@ -330,11 +376,11 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
       }
       
       {modify===false && reload === false &&
-        <button className="profil_form_button_modify" onClick={handleClick}> Modifier les informations </button>
+        <button className="profil_form_button_modify" onClick={handleClick}> Modifier</button>
         }
 
       {modify===true &&
-        <button className="profil_form_button_cancel" onClick={hideModify}> Annuler les changements </button>
+        <button className="profil_form_button_cancel" onClick={hideModify}> Annuler les modifications </button>
       }
 
     </div>

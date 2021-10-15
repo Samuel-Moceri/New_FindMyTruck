@@ -774,5 +774,34 @@ transform: rotate(-20deg);
   transform: rotate(20deg);
   }
 
+  
+// .error_message_button {
+//   width: 25rem;
+//   margin: 0 auto;
+//   font-size: 1.5rem;
+//   text-transform: uppercase;
+//   padding: .5rem;
+//   border: none;
+//   border-radius: .2rem;
+//   margin: 1rem auto;
+//   // width:100%;
+//   // transform: translateY(-25rem);
+//   background-color: vars.$palepink;
+//   color: #FFF;
+//   @include BoxShadow(1);
+//   transition: all 0.3s;
+//   z-index: 6;
+// }
 
+
+// .error_message_button:hover {
+//   @include BoxShadow(4);
+//   transform: scale(1.03);
+
+// }
+
+// .error_message_button:active {
+//   @include BoxShadow(2);
+//     transform: scale(0.98);
+// }
 

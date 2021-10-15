@@ -7,8 +7,8 @@ import { FiUser } from 'react-icons/fi';
 import { MdExitToApp, MdOutlineAdminPanelSettings } from 'react-icons/md';
 
 
-import FMT_logo from 'src/assets/images/FMT_logo_clean_01.png';
-import FMT_logo_responsive from 'src/assets/images/FMT_logo.png';
+import FMT_logo from 'src/assets/images/FMT_logo_full.png';
+import FMT_logo_responsive from 'src/assets/images/FMT_logo_full.png';
 
 
 const Header = ({}) => {

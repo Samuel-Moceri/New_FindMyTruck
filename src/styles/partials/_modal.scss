@@ -191,3 +191,96 @@ margin-bottom : 1rem
 }
 
 
+// ----- RESPONSIVE ----- //
+
+.modal {
+  @include for-size(phone-only) {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+  }
+
+.modal_middle,
+.modal_bottom {
+  @include for-size(phone-only) {
+    padding: .5rem;
+  }
+}
+
+
+.modal_top_name {
+  @include for-size(phone-only) {
+  position: absolute;
+  top: 1rem;
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  }
+}
+
+  .modal_middle_description {
+    @include for-size(phone-only) {
+      font-size: 1rem;
+  }
+}
+
+  .modal_middle_other {
+    @include for-size(phone-only) {
+      display: none;
+    }
+  }
+
+.modal_bottom {
+  @include for-size(phone-only) {
+    display: block;
+  }
+}
+
+.modal_bottom_menu{
+  @include for-size(phone-only) {
+width: 100%;  }
+}
+
+
+
+//FAUX MODAL FULL CSS IMAGE AGRANDIE //
+
+.image_small {
+  width: 20rem;
+  border-radius: .2rem;
+}
+
+.image_up {
+  /* fond gris */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0,0,0,0.7);
+}
+
+.image_up a {
+  /* zone qui centre l'image */
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.image_up img {
+  /* Le contour de l’image */
+  width: 80%;
+  height: auto;
+  max-width:1200px;
+  padding: .2rem;
+  background: #FFF;
+}
+
+/* Selecteur "target" pour afficher l’image */
+.image_up:target { display: table; }
+

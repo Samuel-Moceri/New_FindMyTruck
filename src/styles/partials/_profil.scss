@@ -7,9 +7,9 @@
   justify-content: space-around;
   // padding: 2rem;
   border-radius: .2rem;
-  margin: 3rem auto;
-  width: 40rem;
-  height: 40rem;
+  margin: 1.5rem auto;
+  width: 50rem;
+  height: 42rem;
   background-color: #FFF;
   @include BoxShadow(4);
 }
@@ -35,9 +35,13 @@
   @include BoxShadow(2);
 }
 
+.profil_form_user {
+  height: 9rem;
+}
+
 .profil_form_pro {
   overflow-y: auto;
-  height: 15rem;
+  height: 11.5rem;
 }
 
 .profil_form_compagny {
@@ -45,9 +49,9 @@
 }
 
 
-.profil_form_user:before,
-.profil_form_pro:before,
-.profil_form_compagny:before {
+.profil_form_user:after,
+.profil_form_pro:after,
+.profil_form_compagny:after {
   content: "";
   position: absolute;
   left: 0;
@@ -65,19 +69,21 @@
 .profil_form_compagny_title{
   font-weight: bold;
   position: relative;
-  top: -.7rem;
+  top: -.85rem;
   text-transform: uppercase;
   z-index: 3;
+}
+
+.profil_form_user_title svg,
+.profil_form_pro_title svg,
+.profil_form_compagny_title svg{
+ margin-right: 1rem;
+ transform: translateY(2px);
 }
 
 .menu_foodtruck_content_header_img {
   width: 5rem;
 }
-
-// li:hover .large {
-//   left: 20px;
-//   top: -150px;
-// }
 
 li {
   list-style-type: none;
@@ -99,12 +105,6 @@ li {
   position:relative;
   left: 5%;
 }
-
-
-
-
-
-
 
 .profil_form_button_modify,
 .profil_form_button_save {
@@ -141,34 +141,59 @@ li {
 .profil_form_button_cancel {
   border: none;
   background-color: transparent;
+  font-weight: bold;
   font-size: 1rem;
 }
 
-// .profil-text-nicknameProfil
-// .emailForm,
-// .firstnameForm,
-// .lastnameForm,
-// .nameFtProfilForm,
-// .phoneProfilForm,
-// .descriptionProfilForm,
-// .planningProfilForm,
-// .paymentProfilForm,
-// .proaddressProfilForm,
-// .streetForm,
-// .cityForm,
-// .postal_codeForm 
-// {
-//   padding: 0 1rem;
-//   position: relative;
-//   width: 100%;
-//   border: none;
-//   border-bottom: 2px solid #999;
-//   padding: .5rem;
-//   font-size: 1.5rem;
-//   color: #666;
-//   transition: 0.3s ease-in ;
-  
-// }
+.profil_first_part {
+  font-weight: bold;
+  padding: .2rem;
+  margin: 0.1rem;
+  width: 8rem;
+
+}
+
+.profil_first_part span {
+  font-weight: normal;
+  position: absolute;
+}
+
+.profil_firstname span {
+  transform: translateX(3.4rem);
+}
+.profil_lastname span {
+transform: translateX(4.8rem);
+  }
+.profil_email span {
+  transform: translateX(4rem);
+}
+
+.profil_form_pro_name span {
+  transform: translateX(4.9rem);
+}
+.profil_form_pro_city span {
+  transform: translateX(.2rem);
+}
+.profil_form_pro_description span {
+  transform: translateX(1.6rem);
+}
+.profil_form_pro_planning span {
+  transform: translateX(2.9rem);
+  text-overflow: ellipsis;
+}
+.profil_form_pro_phone span {
+  transform: translateX(.8rem);
+}
+.profil_form_pro_payment span {
+  transform: translateX(2.7rem);
+}
+.profil_form_compagny_address span {
+  transform: translateX(.9rem);
+}
+.profil_form_compagny_siret span {
+  transform: translateX(4.3rem);
+}
+
 
 
 .profil-email-emailProfil,
@@ -214,4 +239,68 @@ li {
   position: absolute;
   transform: translateX(-14.7rem)translateY(7px);
   align-items: center;
+}
+
+.menuandimage {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: .5rem;
+  & img {
+    width: 5rem;
+  transition: transform .1s;
+}
+}
+
+.profil-message-planningFoodtruck {
+  resize:none;
+
+}
+
+.profil_form_pro_menu img,
+.profil_form_pro_image img {
+  position:relative ;
+  margin: auto auto;
+  width: 100%;
+  height: 5rem;
+  object-fit: cover;
+}
+
+
+
+.profil_form_element {
+  @include for-size(phone-only) {
+    width: auto;
+  }
+}
+
+.profil_first_part span {
+  @include for-size(phone-only) {
+    width: 14rem;
+    text-overflow: clip;
+  }
+}
+
+.profil-email-emailProfil,
+.profil-text-nicknameProfil,
+.profil-text-firstnameProfil,
+.profil-text-lastnameProfil,
+.profil-text-nameFoodtruck,
+.profil-number-phoneFoodtruck,
+.profil-text-descriptionFoodtruck,
+.profil-message-planningFoodtruck,
+.profil-text-paymentFoodtruck,
+.profil-text-proaddressFoodtruck,
+.profil-text-streetFoodtruck,
+.profil-text-cityFoodtruck,
+.profil-text-menuFoodtruck,
+.profil-text-pictureFoodtruck,
+.profil-number-postalCodeFoodtruck,
+.profil-number-siretFoodtruck {
+  @include for-size(phone-only) {
+    width: 14rem;
+    margin-bottom: 0px;
+    text-overflow: clip;
+    transform: translateX(7.3rem);
+  }
 }
