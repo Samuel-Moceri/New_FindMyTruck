@@ -19,9 +19,8 @@ import Error from 'src/components/Error';
 // == Composant
 function App() {
   const logged = useSelector(state => state.user.logged);
-  const foodtruckList = useSelector((state) => state.foodtruck.list);
+  // const foodtruckList = useSelector((state) => state.foodtruck.list);
 
- 
   // We use a hook to dispatch our action
   const dispatch = useDispatch();
   
@@ -49,7 +48,6 @@ return (
         <Route path="/connexion" exact component={LoginForm} />
         <Route path="/inscription" exact component={Register} />
         {logged && (<Route path="/profil" exact component={Profil} />)}
-
 
         <Route path="/contact" exact component={Contact} />
         <Route path="/equipe" exact component={Team} />

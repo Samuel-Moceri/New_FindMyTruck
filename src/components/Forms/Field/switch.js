@@ -20,7 +20,7 @@ const FieldSwitch = ({
     onFieldSwitchChange(name, evt.target.value);
   };
 
-  const inputId = `field-${name}`;
+  const inputId = `field-${name}-${placeholder}`;
   const className = `${form}-${type}-${name}`;
   const classNameLab = `${form}-${type}-${name}-label`;
 

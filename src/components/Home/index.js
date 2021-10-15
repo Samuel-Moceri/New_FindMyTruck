@@ -1,8 +1,8 @@
-import { useSelector } from 'react-redux';
 import SearchBar from 'src/components/SearchBar';
-import Map from 'src/components/Map';
-import Result from 'src/components/Result';
-import React, { useState } from 'react';
+// import { useSelector } from 'react-redux';
+// import Map from 'src/components/Map';
+// import Result from 'src/components/Result';
+// import React, { useState } from 'react';
 
 
 import './style.scss';

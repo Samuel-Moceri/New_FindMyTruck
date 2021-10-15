@@ -42,7 +42,9 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
   let pictureURL = '';
 
   if(informationsFoodtruck) {
-    const baseURL = 'http://julien-bonnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+    const baseURL = 'http://arnaud-cousin.vpnuser.lan/projet-find-my-truck/findmytruck/public';
+    // const baseURL = 'http://arnaud.vpnuser.lan/Sz-Apo/projet-find-my-truck/findmytruck/public';
+
     pictureURL = baseURL+`${informationsFoodtruck.menu}`;
   }
 
@@ -143,15 +145,33 @@ import { MdOutlinePersonPin, MdLocalShipping, MdOutlineBusiness } from "react-ic
           </div>
 
           <div className="menuandimage">
-            <div className="profil_form_pro_menu">
-              {/* Menu : */}
-            <img src={menuFoodtruck} alt="menu du foodtruck" />
-
+          <figure>
+            <a href="#image_modal_menu"><img className="image_small_menu" src={menuFoodtruck} alt="Image"/></a>
+              <div className="image_up_menu" id="image_modal_menu">
+                <a title="Menu " 
+                href="#/profil"
+                >
+                  <img className="modal_bottom_menu" src={menuFoodtruck}/>
+                </a>
+              </div>
+          </figure>
+          <figure>
+            <a href="#image_modal_image"><img className="image_small_image" src={pictureFoodtruck} alt="Image"/></a>
+              <div className="image_up_image" id="image_modal_image">
+                <a title="Menu "
+                 href="/profil"
+                 >
+                  <img className="modal_bottom_image" src={pictureFoodtruck}/>
+                </a>
+              </div>
+          </figure>
+          
+            {/* <div className="profil_form_pro_menu">
+              <img src={menuFoodtruck} alt="menu du foodtruck" />
             </div>
             <div className="profil_form_pro_image"> 
-            {/* Image du FoodTruck : */}
-            <img src={pictureFoodtruck} alt="image du foodtruck" />
-            </div>
+              <img src={pictureFoodtruck} alt="image du foodtruck" />
+            </div> */}
           </div> 
         </div>
         

@@ -194,8 +194,6 @@ transform: translateX(4.8rem);
   transform: translateX(4.3rem);
 }
 
-
-
 .profil-email-emailProfil,
 .profil-text-nicknameProfil,
 .profil-text-firstnameProfil,
@@ -246,10 +244,6 @@ transform: translateX(4.8rem);
   justify-content: space-evenly;
   align-content: center;
   padding: .5rem;
-  & img {
-    width: 5rem;
-  transition: transform .1s;
-}
 }
 
 .profil-message-planningFoodtruck {
@@ -304,3 +298,47 @@ transform: translateX(4.8rem);
     transform: translateX(7.3rem);
   }
 }
+
+
+//FAUX MODAL FULL CSS IMAGE AGRANDIE //
+
+.image_small_image,
+.image_small_menu {
+  width: 15rem;
+  border-radius: .2rem;
+}
+
+.image_up_menu,
+.image_up_image {
+  /* fond gris */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0,0,0,0.7);
+}
+
+.image_up_menu a,
+.image_up_image a {
+  /* zone qui centre l'image */
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.image_up_menu img,
+.image_up_image img {
+  /* Le contour de l’image */
+  width: 80%;
+  height: auto;
+  max-width:1200px;
+  padding: .2rem;
+  background: #FFF;
+}
+
+/* Selecteur "target" pour afficher l’image */
+.image_up_menu:target { display: table; }
+.image_up_image:target { display: table; }

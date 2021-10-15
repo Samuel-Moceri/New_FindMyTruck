@@ -45,7 +45,6 @@ const RegisterForm = () => {
 
         <form autoComplete="off" className="register_form_element" onSubmit={handleSubmit}>
         <div className="register_form_title">Inscription</div>
-        {/* //TODO erreur - Found 2 elements with non-unique id #field-role */}
         <div className="register_form_switch">
           <FieldSwitch 
             form="register"

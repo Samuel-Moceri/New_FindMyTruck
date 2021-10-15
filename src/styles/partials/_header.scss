@@ -151,6 +151,11 @@
 }
 
 
+.header_right_connexion_text,
+.header_right_inscription_text  {
+  font-weight: bold;
+}
+
 // ----- RESPONSIVE ----- //
 
 .logo_img_responsive {
@@ -164,4 +169,41 @@
       display: block;
     }
 }
+}
+
+.header_right{
+  @include for-size(phone-only) {
+    display: flex;
+    flex-direction: column;  }
+}
+
+.header_right_connexion_text,
+.header_right_inscription_text  {
+  @include for-size(phone-only) {
+    font-weight: lighter;   
+  }
+}
+
+
+.header_right_connexion,
+.header_right_inscription {
+  @include for-size(phone-only) {
+    padding: .5rem;
+    margin-bottom: 0.5rem;
+    height: 2rem;
+  }
+  // display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  margin-left: 1rem;
+  background-color: vars.$palepink;
+  text-transform: uppercase;
+  border: none;
+  width: 7rem;
+  height: 3rem;
+  border-radius: .2rem;
+  cursor: pointer;
+  @include BoxShadow(1);
+  transition: all 0.3s;
 }
